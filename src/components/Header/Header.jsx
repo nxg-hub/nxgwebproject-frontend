@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     // This is the main navigation bar
-    <nav className='nav'>
+    <nav className='w-screen center'>
       {/* The container for the navigation bar */}
       <div className='nav_container'>
         {/* Your website's logo */}
@@ -32,7 +32,7 @@ const Header = () => {
             <NavLink exact to='/'>
               <img src={logo} alt="Logo" />
             </NavLink>
-          </div>
+        </div>
           
         {/* The main menu items */}
           <ul className={`nav-menu ${open ? 'active' : ''}`}>
@@ -71,10 +71,8 @@ const Header = () => {
                 </NavLink>
               </li>
 
-              
-
               {/* Social media icons */}
-              <div className='platforms'>
+              <div className='platforms center'>
                 <div style={{ backgroundColor: "white", color: "#2596BE", padding: "5px", borderRadius: "20px" }}>
                   <FaLinkedin />
                 </div>
