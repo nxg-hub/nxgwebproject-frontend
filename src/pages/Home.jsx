@@ -1,4 +1,3 @@
-import React from 'react'
 import Slider from '../components/Carousel/Slider'
 import { NavLink } from 'react-router-dom'
 import REC from '../assets/REC.jpg'
@@ -171,7 +170,7 @@ const Home = () => {
 
       <div className=''>
       <div><img src="" alt="" /></div>
-      <h1> LET'S START YOUR PROJECT </h1>
+      <h1> LET&apos;S START YOUR PROJECT </h1>
       </div>
 
       <div className=''>
