@@ -10,7 +10,7 @@ import {
   FaTwitter
 } from 'react-icons/fa'; // Icons for social media
 import { BsArrowRight } from 'react-icons/bs'; // An arrow icon
-import logo from '../../assets/logo.png'; // Your website's logo image
+import logo from '../../assets/images/logo.png'; // Your website's logo image
 
 // Define the Header component
 const Header = () => {
@@ -42,31 +42,31 @@ const Header = () => {
 
           
               <li className='nav_item'>
-                <NavLink exact to='/' activeClassName="active" className="nav-links" onClick={toggleMenu}>
+                <NavLink exact to='/'  className="nav-links" onClick={toggleMenu}>
                   Home
                 </NavLink>
               </li>
 
               <li className='nav_item'>
-                <NavLink exact to='/about' activeClassName="active" className="nav-links" onClick={toggleMenu}>
+                <NavLink exact to='/about' className="nav-links" onClick={toggleMenu}>
                   About
                 </NavLink>
               </li>
 
               <li className='nav_item'>
-                <NavLink exact to='/services' activeClassName="active" className="nav-links" onClick={toggleMenu}>
+                <NavLink exact to='/services'  className="nav-links" onClick={toggleMenu}>
                   Services
                 </NavLink>
               </li>
 
               <li className='nav_item'>
-                <NavLink exact to='/career' activeClassName="active" className="nav-links" onClick={toggleMenu}>
+                <NavLink exact to='/career'  className="nav-links" onClick={toggleMenu}>
                   Career
                 </NavLink>
               </li>
 
               <li className='nav_item'>
-                <NavLink exact to='/contact' activeClassName="active" className="nav-links" onClick={toggleMenu}>
+                <NavLink exact to='/contact' className="nav-links" onClick={toggleMenu}>
                   Contact                   
                 </NavLink>
               </li>

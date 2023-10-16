@@ -2,26 +2,30 @@
 
 
 *{
-  padding:0;
-  marging:0;
+  padding: 0;
+  margin: 0;
 }
+
 body{
   font-family:'manrope'
 }
+
 .About-desc{
   border: 2px solid black;
   margin:30px;
   display:flex;
 }
+
 .About-content{
   display: flex;
   justify-content:space-inbetween;
 }
+
 .About-section1{
-  border:2px solid white;
+  border: 2px solid white;
   border-radius:20px;
-  
 }
+
 .About-section2{
   border:2px solid white;
   border-radius:20px;

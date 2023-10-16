@@ -1,12 +1,13 @@
+// @ts-ignore
 import Slider from '../components/Carousel/Slider'
 import { NavLink } from 'react-router-dom'
-import REC from '../assets/REC.jpg'
-import smoke from '../assets/smoke.png'
-import IT from '../assets/IT.jpg'
-import software from'../assets/software.jpg'
-import icon2 from'../assets/icon2.jpg'
-import consulting from '../assets/consulting.jpg'
-import icon1 from'../assets/icon1.jpg'
+import REC from '../assets/images/REC.jpg'
+import smoke from '../assets/images/smoke.png'
+import IT from '../assets/images/IT.jpg'
+import software from'../assets/images/software.jpg'
+import icon2 from'../assets/icons/icon2.jpg'
+import consulting from '../assets/images/consulting.jpg'
+import icon1 from'../assets/icons/icon1.jpg'
 import { BsArrowRight,BsArrowUpRight } from 'react-icons/bs'
 
 
