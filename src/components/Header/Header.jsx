@@ -9,100 +9,82 @@ import {
   FaTimes,
   FaTwitter
 } from 'react-icons/fa'; // Icons for social media
-import { BsArrowRight } from 'react-icons/bs'; // An arrow icon
-import logo from '../../assets/images/logo.png'; // Your website's logo image
+import logo from '../../assets/svgs/logo.svg';
+import arrow from '../../assets/svgs/arrowNav.svg';
 
 // Define the Header component
 const Header = () => {
-  // State variable to keep track of whether the mobile menu is open or closed
-  const [open, setOpen] = useState(false);
-
-  // Function to toggle (open/close) the mobile menu
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
+  const [active, setActive] = useState(false);
 
   return (
-    // This is the main navigation bar
-    <nav className='w-screen center'>
-      {/* The container for the navigation bar */}
-      <div className='nav_container'>
-        {/* Your website's logo */}
-        <div >
-            <NavLink exact to='/'>
-              <img src={logo} alt="Logo" />
-            </NavLink>
-        </div>
-          
-        {/* The main menu items */}
-          <ul className={`nav-menu ${open ? 'active' : ''}`}>
-            {/* Each item in the menu */}
-          
-            <div className='nav-list'>
-
-          
-              <li className='nav_item'>
-                <NavLink exact to='/'  className="nav-links" onClick={toggleMenu}>
+    <header className='w-screen center'>
+      <nav className='w-[95%] between my-3 h-[52px]'>
+        <div className='between gap-6 h-full w-[75%]'>
+          <div className='bg-secondary center h-full rounded-[3rem] p-0'>
+              <NavLink exact to='/'>
+                <img src={logo} alt="Logo" className='object-cover' />
+              </NavLink>
+          </div>
+            
+          <div className='nav-list w-full between h-full px-[0.40rem] rounded-[4rem]'>
+            <ul className={`nav-menu h-full between ${active ? 'active center' : ''}`}>
+        
+              <li className='nav_item h-full center'>
+                <NavLink exact to='/'  className="nav-links">
                   Home
                 </NavLink>
               </li>
 
-              <li className='nav_item'>
-                <NavLink exact to='/about' className="nav-links" onClick={toggleMenu}>
+              <li className='nav_item h-full center'>
+                <NavLink exact to='/about' className="nav-links">
                   About
                 </NavLink>
               </li>
 
-              <li className='nav_item'>
-                <NavLink exact to='/services'  className="nav-links" onClick={toggleMenu}>
+              <li className='nav_item h-full center'>
+                <NavLink exact to='/services'  className="nav-links">
                   Services
                 </NavLink>
               </li>
 
-              <li className='nav_item'>
-                <NavLink exact to='/career'  className="nav-links" onClick={toggleMenu}>
+              <li className='nav_item h-full center'>
+                <NavLink exact to='/career'  className="nav-links">
                   Career
                 </NavLink>
               </li>
 
-              <li className='nav_item'>
-                <NavLink exact to='/contact' className="nav-links" onClick={toggleMenu}>
+              <li className='nav_item h-full center'>
+                <NavLink exact to='/contact' className="nav-links">
                   Contact                   
                 </NavLink>
               </li>
 
-              {/* Social media icons */}
-              <div className='platforms center'>
-                <div style={{ backgroundColor: "white", color: "#2596BE", padding: "5px", borderRadius: "20px" }}>
+            </ul>
+
+            <div className='platforms center h-full center'>
+                <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                   <FaLinkedin />
                 </div>
-                <div style={{ backgroundColor: "white", color: "#2596BE", padding: "5px", borderRadius: "20px" }}>
+                <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                   <FaFacebookSquare />
                 </div>
-                <div style={{ backgroundColor: "white", color: "#2596BE", padding: "5px", borderRadius: "20px" }}>
+                <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                   <FaTwitter />
                 </div>
-              </div>
             </div>
-
-            {/* Contact Us link */}
-            <div className='contact_info'>
-              <NavLink exact to='/contact' style={{display:"flex", color: "#2596BE", textDecoration: "none", gap:"2rem",width:"200px" }}>
-                <div style={{color:"white",marginLeft:"29px", paddingTop:"7px", border:"2px sl"}}> Contact Us </div>
-                <div className='bg-white text-primarycolor px-[5px] py-[11px] rounded-full'>
-                <BsArrowRight  className='group-hover: w-10 h-5 ' />
-                </div>
-              </NavLink>
-            </div>
-          </ul>
-
-        {/* Hamburger button for mobile */}
-        <div className='hamburger' onClick={toggleMenu}>
-          <span className='sr-only'></span>
-          {open ? <FaTimes /> : <FaBars />}
+          </div>
         </div>
-      </div>
-    </nav>
+        
+        <div className='pr-2 pl-6 bg-secondary rounded-[3rem] h-full between'>
+            <NavLink exact to='/contact' className="between gap-3">
+              <div style={{color:"white"}}> Contact Us </div>
+                <div className='bg-primary w-[40px] h-[40px] center rounded-full'>
+                  <img src={arrow} alt="arrow" />
+                </div>
+            </NavLink>
+        </div>
+      </nav>
+    </header>
   );
 };
 
