@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className="bg-[#F1F1F1] w-full py-8 center text-primary">
             <div className="w-[95%] bg-gray py-10 rounded-[20px] flex-col center">
-                <div className="w-[90%] flex flex-wrap justify-between font-light">
+                <div className="w-[90%] flex flex-wrap justify-between lg:gap-0 gap-6  font-light">
                     <div className="md:w-[25%] flex-col gap-5 flex items-start">
                         <div className='center gap-1'>
                             <div className='flex items-start'>
@@ -52,7 +52,7 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="md:w-[15%] flex-col gap-4 flex items-start">
+                    <div className="md:w-[15%] w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US
                         </h2>
@@ -62,7 +62,7 @@ const Footer = () => {
                         <p>Terms & Condition</p>
                         <p>Privacy Policy</p>
                     </div>
-                    <div className="md:w-[15%] flex-col gap-4 flex items-start">
+                    <div className="md:w-[15%] w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             USEFUL LINKS
                         </h2>
@@ -72,15 +72,15 @@ const Footer = () => {
                         <p>Contact</p>
                         <p>FAQ</p>
                     </div>
-                    <div className="md:w-[30%] flex-col gap-4 flex items-start">
+                    <div className="md:w-[30%] w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             SUBSCRIPTION
                         </h2>
                         <p>
                             Combining Our Expertise Yields A Versatile Team Ready To Accomplish All Your Brand Or Career Requirements. Stay Tuned For Our Latest Updates By Subscribing Here.
                         </p>
-                        <div className='border border-primary rounded-md between p-1'>
-                            <input type="email" name="email" id="email" required className='border-none outline-none bg-gray pl-4' />
+                        <div className='border border-primary rounded-md between p-1 w-full'>
+                            <input type="email" name="email" id="email" required className='border-none outline-none bg-gray pl-4 w-full' />
                             <CustomButton children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
                         </div>
                     </div>
