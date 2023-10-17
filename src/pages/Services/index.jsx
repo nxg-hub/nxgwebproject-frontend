@@ -12,12 +12,12 @@ const Services = () => {
       <div className="w-full h-full flex-col center overflow-x-hidden">
 
         {/* Banner */}
-        <div className="w-[95%] h-[848px] banner center text-primary overflow-hidden rounded-[20px]">
-          <div className='flex-col w-[85%] items-start flex gap-4'>
-            <h1 className='leading-[76px] text-[64px] w-[825px] font-semibold'>
+        <div className="w-[95%] lg:h-[848px] h-[100vh] banner center text-primary overflow-hidden rounded-[20px]">
+          <div className='flex-col w-[85%] md:items-start items-center flex md:gap-4 gap-3'>
+            <h1 className='lg:leading-[76px] text-lg md:text-xl lg:text-[64px] lg:w-[825px]  font-semibold text-center md:text-left'>
               Engineering The Future Through Technology Innovation 
             </h1>
-            <h3 className='text-[28px]'>
+            <h3 className='lg:text-[28px] textt-lg'>
               With NXG-HUB
             </h3>
             <div className='pt-10'>
@@ -43,14 +43,14 @@ const Services = () => {
           </div>
 
           <div className='w-full center flex-wrap services py-8 text-primary'>
-            <div className='center w-[95%] gap-4'>
+            <div className='center flex-wrap w-[95%] gap-4'>
               {ServicesUtils.map((service) => (
-                <div key={service.id} className='bg-gray h-[550px] w-full p-4 flex-col flex rounded-[26px]'>
+                <div key={service.id} className='bg-gray md:h-[590px] lg:w-[32%] md:w-[48%] w-full p-4 flex-col flex rounded-[26px]'>
                   <div>
                     <img src={service.image} alt="service image" className='rounded-[20px]' />
                   </div>
                   <div className='flex-col flex items-start w-full mt-6'>
-                    <h3 className='text-[28px] font-semibold mb-3'>
+                    <h3 className='text-[24px] font-semibold mb-3'>
                       {service.title}
                     </h3>
                     <p className='font-light leading-[28px]'>
