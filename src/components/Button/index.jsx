@@ -8,18 +8,19 @@ const CustomButton = ({
   borderRadius,
   onClick,
   children,
+  padding,
 }) => {
   const buttonStyle = {
     border,
     backgroundColor,
     color: textColor,
     borderRadius,
-    padding: "10px 20px",
+    padding,
     cursor: "pointer",
   };
 
   return (
-    <button style={buttonStyle} onClick={onClick} className="hover:scale-95 duration-300">
+    <button style={buttonStyle} onClick={onClick} className="hover:scale-95 duration-300 center gap-2">
       {children}
     </button>
   );
@@ -32,13 +33,15 @@ CustomButton.propTypes = {
   borderRadius: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.node,
+  padding: PropTypes.string,
 };
 
 CustomButton.defaultProps = {
-  border: "1px solid #000",
-  backgroundColor: "#007bff",
+  border: "1px solid #2596BE",
+  backgroundColor: "#2596BE",
   textColor: "#ffffff",
-  borderRadius: "5px",
+  borderRadius: "6px",
+  padding: "10px 20px",
 };
 
 export default CustomButton;
