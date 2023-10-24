@@ -1,9 +1,11 @@
 import React from 'react';
-import './index.css'; 
+import './index.css';
 import CustomButton from '../../components/Button';
-import NLogo from '../../assets/icons/n.png'; 
+import NLogo from '../../assets/icons/n.png';
 import Footer from '../../components/Footer';
-import AboutOne from '../../assets/images/aboutOne.jpg'
+import AboutOne from '../../assets/images/aboutOne.jpg';
+import AboutTwo from '../../assets/images/aboutTwo.jpg';
+import AboutThree from '../../assets/images/aboutThree.jpg';
 
 const About = () => {
   return (
@@ -33,9 +35,9 @@ const About = () => {
             </div>
           </div>
 
-          {/* DUPLICATE THIS */}
-          <div className='between w-[90%]'>
-            <div className='flex-col gap-10 items-start flex w-[60%]'>
+          {/* We Bring You Creativity At Its Best */}
+          <div className="between w-[90%]">
+            <div className="flex-col gap-10 items-start flex w-[60%]">
               <h3 className="text-[32px] font-semibold text-secondary">
                 We bring you Creativity at its best!
               </h3>
@@ -43,11 +45,38 @@ const About = () => {
             </div>
 
             <div className="w-[35%]">
-              <img src={AboutOne} alt="About"/>
+              <img src={AboutOne} alt="About" />
             </div>
           </div>
-          {/* DUPLICATE ENDS HERE */}
-          
+        </div>
+
+        {/* OUR MISSION */}
+<div className="between w-[90%]">
+  <div className="w-[35%] float-left">
+    <img src={AboutTwo} alt="About" />
+  </div>
+
+  <div className="flex-col gap-10 items-start flex w-[60%]">
+    <h3 className="text-[32px] font-semibold text-secondary">
+      Our Mission
+    </h3>
+    <p>NXG-HUB Digital Technologies Aims To Empower Numerous Youth By Offering Industry-Relevant Skill Training, Thus Enhancing Their Prospects For A More Promising Livelihood. Simultaneously, We Are Dedicated To Delivering Real-World Technological Solutions To Both Corporate And Government Entities, Contributing To The Digitization Of Africa's Economy.</p>
+  </div>
+</div>
+
+
+        {/* WHAT WE DO */}
+        <div className="between w-[90%]">
+          <div className="flex-col gap-10 items-start flex w-[60%]">
+            <h3 className="text-[32px] font-semibold text-secondary">
+              What We Do
+            </h3>
+            <p>We Assist You In Constructing Top-Tier Digital Solutions And Products Following Best Practices, While Also Offering An Extensive Array Of Associated Professional Services. Our Commitment Is To Provide Unparalleled Service To Our Esteemed Clients On A Global Scale.</p>
+          </div>
+
+          <div className="w-[35%]">
+            <img src={AboutThree} alt="About" />
+          </div>
         </div>
 
         {/* Footer */}
