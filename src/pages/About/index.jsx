@@ -39,7 +39,7 @@ const About = () => {
           <div className="between w-[90%]">
             <div className="flex-col gap-10 items-start flex w-[60%]">
               <h3 className="text-[32px] font-semibold text-secondary">
-                We bring you Creativity at its best!
+                We Bring You Creativity At Its Best!
               </h3>
               <p>NextGenHub (NXG-Hub) is a group of software developers and IT consultants from all spheres of the information technology world, endowed with experiences, bright minds, and exposure. We are a group of innovative minds engaged in constant brainstorming for exceptional ideas. Our collective skills result in a dynamic force that can fulfill all the requirements of your brand or career, no matter how diverse they may be. We are on a mission to re-engineer the world through technology.</p>
             </div>
@@ -78,6 +78,10 @@ const About = () => {
             <img src={AboutThree} alt="About" />
           </div>
         </div>
+
+        <div className="pt-10">
+              <CustomButton>Learn More</CustomButton>
+            </div>
 
         {/* Footer */}
         <Footer />
