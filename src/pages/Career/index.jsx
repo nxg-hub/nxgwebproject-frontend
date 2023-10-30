@@ -1,6 +1,6 @@
-import "../App.css";
+import "./index.css";
 import { FiArrowUpRight } from "react-icons/fi";
-import CustomButton from "../components/Button";
+import CustomButton from "../../components/Button";
 const Career = () => {
   return (
     <>

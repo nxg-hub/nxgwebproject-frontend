@@ -34,15 +34,3 @@
   grid-gap: 20px; /* Adds space between grid items */
   margin: 30px;
 }
-
-input::file-selector-button {
-  background-color: #a8d5e5;
-  color: #717171;
-  border: none;
-  padding: 8px;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #89939e;
-}
