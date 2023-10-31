@@ -24,18 +24,18 @@ const Career = () => {
         </p>
       </div>
 
-      <div className='text-center py-[5.5rem] px-[0.7rem]'>
-        <div className='relative rounded-[20px] border-[#eef2f6] border-[0.5px] ml-24 mb-8 w-[40%] md:w-[20%] md:ml-[33rem] pr-4 pl-[1.5rem] py-2'>
+      <div className='flex flex-col items-center py-[5.5rem]'>
+        <div className='text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2'>
           <h2 className='text-[#2596BE] font-semibold text-md md:text-[36px]'>
             Careers
           </h2>
           <img
             src='/tag.png'
             alt='icon'
-            className='absolute bottom-[1rem] w-[50px] md:bottom-[2rem] right-[6rem] md:right-[11.7rem] px-4'
+            className='absolute bottom-[1rem] w-[50px] md:bottom-[2rem] right-[6.4rem] md:right-[11.7rem] px-4'
           />
         </div>
-        <span className='text-[#717171] text-normal md:text-[18px] font-normal'>
+        <span className='text-[#717171] md:px-0 px-4 text-center text-normal md:text-[18px] font-normal'>
           Job Opening At NXG-HUB Digital Technologies. Apply Now!
         </span>
       </div>
@@ -143,14 +143,14 @@ const Career = () => {
                   Upload your resume
                 </h2>
                 <input className='p-4' type='file' name='' id='' />
-              </div>
-              <div className='ml-20 mt-8'>
-                <button className='text-primary rounded-[32px] py-2 pl-6 pr-2 bg-[#2596be] flex items-center'>
-                  <span className='text-[20px] font-bold mr-10'>Submit</span>
-                  <span className='rounded-full p-2 text-[#46A6C8] bg-primary'>
-                    <FiArrowUpRight size={25} />
-                  </span>
-                </button>
+                <div className='ml-[3.2rem] md:ml-[5.8rem] mt-8'>
+                  <button className='text-primary rounded-[32px] py-2 pl-6 pr-2 bg-[#2596be] flex items-center'>
+                    <span className='text-[20px] font-bold mr-10'>Submit</span>
+                    <span className='rounded-full p-2 text-[#46A6C8] bg-primary'>
+                      <FiArrowUpRight size={25} />
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
