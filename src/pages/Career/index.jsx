@@ -10,10 +10,10 @@ const Career = () => {
         style={{ backgroundImage: "url(/bgImg.png)" }}
       >
         <div className='text-left pl-8 md:pl-20 pt-28 max-w-[60rem] font-semibold'>
-          <p className='mt-16 text-lg font-medium md:text-[64px]'>
+          <p className='mt-16 text-[28px] font-semibold md:font-medium md:text-[64px]'>
             Engineering The Future <br /> Through Technology <br /> Innovation
           </p>
-          <p className='text-[18px] md:text-[28px] py-4 md:py-6'>
+          <p className='text-[18px] font-semibold md:font-medium md:text-[28px] py-4 md:py-6'>
             With NXG-HUB
           </p>
 
@@ -32,7 +32,7 @@ const Career = () => {
           <img
             src='/tag.png'
             alt='icon'
-            className='absolute bottom-[1rem] w-[50px] md:bottom-[2rem] right-[6.4rem] md:right-[11.7rem] px-4'
+            className='absolute bottom-[0.9rem] w-[51px] md:bottom-[2rem] right-[6.9rem] md:right-[11.7rem] px-4'
           />
         </div>
         <span className='text-[#717171] md:px-0 px-4 text-center text-normal md:text-[18px] font-normal'>
@@ -75,7 +75,7 @@ const Career = () => {
 
               <div className='px-[15px] md:px-0 md:py-0'>
                 <textarea
-                  className='py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[140%] w-[75%]  border border-[#A8D5E5]'
+                  className='py-2 md:py-4 px-6 mt-3 rounded-[20px] focus:outline-0 md:w-[140%] w-[75%]  border border-[#A8D5E5]'
                   type='text'
                   placeholder='Other Details'
                 />
@@ -87,9 +87,9 @@ const Career = () => {
                 <h2 className='text-[18px] pl-6 md:pl-0 md:text-[28px] mb-2 whitespace-nowrap font-semibold text-[#717171]'>
                   Applying for which post
                 </h2>
-                <div className='p-2 pl-10 md:pl-0 flex text-[#717171] text-normal md:text-[20px]'>
+                <div className='p-2 font-semibold pl-10 md:pl-0 flex text-[#717171] text-normal md:text-[20px]'>
                   <input
-                    className='mr-4'
+                    className='mr-6'
                     type='radio'
                     name='post'
                     id='product_designer'
@@ -97,9 +97,9 @@ const Career = () => {
                   />
                   Product Designer (UI/UX)
                 </div>
-                <div className='p-2  pl-10 md:pl-0  flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-semibold pl-10 md:pl-0  flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
-                    className='mr-4'
+                    className='mr-6'
                     type='radio'
                     name='post'
                     id='product_manager'
@@ -107,9 +107,9 @@ const Career = () => {
                   />
                   Project/Product Manager
                 </div>
-                <div className='p-2  pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-semibold pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
-                    className='mr-4'
+                    className='mr-6'
                     type='radio'
                     name='post'
                     id='software_developer'
@@ -117,9 +117,9 @@ const Career = () => {
                   />
                   Software Developer
                 </div>
-                <div className='p-2  pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-semibold pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
-                    className='mr-4'
+                    className='mr-6'
                     type='radio'
                     name='post'
                     id='digital_marketer'
@@ -127,9 +127,9 @@ const Career = () => {
                   />
                   Digital Marketer
                 </div>
-                <div className='p-2  pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-semibold pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
-                    className='mr-4'
+                    className='mr-6'
                     type='radio'
                     name='post'
                     id='it_instructor'
@@ -145,7 +145,7 @@ const Career = () => {
                 <input className='p-4' type='file' name='' id='' />
                 <div className='ml-[3.2rem] md:ml-[5.8rem] mt-8'>
                   <button className='text-primary rounded-[32px] py-2 pl-6 pr-2 bg-[#2596be] flex items-center'>
-                    <span className='text-[20px] font-bold mr-10'>Submit</span>
+                    <span className='text-[20px] font-bold mr-20'>Submit</span>
                     <span className='rounded-full p-2 text-[#46A6C8] bg-primary'>
                       <FiArrowUpRight size={25} />
                     </span>

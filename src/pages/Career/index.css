@@ -3,6 +3,13 @@ input::file-selector-button {
   color: #717171;
   border: none;
   padding: 8px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+input[type="file"] {
+  color: #717171;
+  text-transform: capitalize;
 }
 
 input::placeholder,
