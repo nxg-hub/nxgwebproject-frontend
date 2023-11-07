@@ -92,7 +92,7 @@ const Header = ({ open, handleMenu }) => {
         </div>
       </nav>
       {/* {open && ( */}
-        <div className={`${open ? "left-[5.3rem]" : "left-[25rem]"} lg:hidden transition-all z-40 md:ml-0 absolute w-[80vw] h-[90vh] top-0 bottom-0 px-2 py-6 bg-[#4D4D4D] text-primary flex-col flex`}>
+        <div className={`${open ? "left-[5.3rem]" : "left-[45rem]"} lg:hidden transition-all z-40 md:ml-0 absolute w-[80vw] h-[90vh] top-0 bottom-0 px-2 py-6 bg-[#4D4D4D] text-primary flex-col flex`}>
           <div className='flex items-end text-xl justify-end w-full' onClick={handleMenu}>
             <FaTimes />
           </div>
