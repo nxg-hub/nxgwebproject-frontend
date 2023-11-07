@@ -13,9 +13,9 @@ import {
 const Footer = () => {
     return (
         <div className="bg-[#F1F1F1] w-full py-8 center text-primary">
-            <div className="w-[95%] bg-gray py-10 rounded-[20px] flex-col center">
-                <div className="w-[90%] flex flex-wrap justify-between lg:gap-0 gap-6  font-light">
-                    <div className="md:w-[25%] flex-col gap-5 flex items-start">
+            <div className="relative w-[95%] bg-gray py-10 rounded-[20px] flex-col center">
+                <div className="w-[90%] flex flex-wrap md:justify-center md:flex-nowrap justify-between lg:gap-0 gap-6  font-light">
+                    <div className="md:w-[60%] mb-18 md:mb-0 flex-col gap-5 flex items-start">
                         <div className='center gap-1'>
                             <div className='flex items-start'>
                                 <img src={NLogo} alt="logo" />
@@ -52,7 +52,8 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="md:w-[15%] w-full flex-col gap-4 flex items-start">
+                    <div className='flex flex-row md:justify-center md:gap-[6rem] mt-24 md:mt-0 gap-[2.5rem] w-full'>
+                    <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US
                         </h2>
@@ -62,7 +63,7 @@ const Footer = () => {
                         <p>Terms & Condition</p>
                         <p>Privacy Policy</p>
                     </div>
-                    <div className="md:w-[15%] w-full flex-col gap-4 flex items-start">
+                    <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             USEFUL LINKS
                         </h2>
@@ -72,7 +73,8 @@ const Footer = () => {
                         <p>Contact</p>
                         <p>FAQ</p>
                     </div>
-                    <div className="md:w-[30%] w-full flex-col gap-4 flex items-start">
+                    </div>
+                    <div className="md:w-[50%] w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             SUBSCRIPTION
                         </h2>
@@ -85,7 +87,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='mt-16 flex items-start w-[90%] gap-5'>
+                <div className='absolute md:static top-[13rem] md:top-0 mt-16 flex items-start w-[90%] gap-6'>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                         <FaTwitter />
                     </div>

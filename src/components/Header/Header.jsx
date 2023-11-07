@@ -4,6 +4,7 @@ import './Header.css'; // Styling for the header
 import { NavLink } from 'react-router-dom'; // Helps with navigation
 import {
   FaBars,
+  FaInstagram,
   FaFacebookSquare,
   FaLinkedin,
   FaTimes,
@@ -13,19 +14,15 @@ import logo from '../../assets/svgs/logo.svg';
 import arrow from '../../assets/svgs/arrowNav.svg';
 
 // Define the Header component
-const Header = () => {
+const Header = ({ open, handleMenu }) => {
   const [active, setActive] = useState(false);
-  const [open, setOpen] = useState(false);
 
-  const handleMenu = () => {
-    setOpen(!open);
-  }
 
   return (
     <header className='w-screen center'>
-      <nav className='w-[95%] between my-3 h-[52px]'>
-        <div className='between gap-6 h-full w-[75%]'>
-          <div className='bg-secondary center h-full rounded-[3rem] p-0'>
+      <nav className='w-[95%] between gap-[10px] md:gap-0 my-3 h-[52px]'>
+        <div className='between gap-6 h-full'>
+          <div className='bg-secondary center w-[136%] h-full rounded-[3rem] p-0'>
               <NavLink exact to='/'>
                 <img src={logo} alt="Logo" className='object-cover' />
               </NavLink>
@@ -88,55 +85,70 @@ const Header = () => {
                 </div>
             </NavLink>
         </div>
-
-        <div className='text-secondary text-xl lg:hidden' onClick={handleMenu}>
-            <FaBars />
+<div className='lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] w-[120%] flex flex-col items-end justify-center md:pr-2'>
+        <div className='text-secondary hover:bg-[#4D4D4D] transition hover:text-primary bg-primary rounded-full md:text-xl lg:hidden p-[0.7rem] mr-2 md:mr-0 flex items-center md:px-2.5 md:w-1/5' onClick={handleMenu}>
+            <FaBars size={20} />
+        </div>
         </div>
       </nav>
-      {open && (
-        <div className='absolute w-screen h-[60vh] top-0 bottom-0 px-2 py-6 bg-secondary text-primary flex-col flex'>
+      {/* {open && ( */}
+        <div className={`${open ? "left-[5.3rem]" : "left-[25rem]"} lg:hidden transition-all z-40 md:ml-0 absolute w-[80vw] h-[90vh] top-0 bottom-0 px-2 py-6 bg-[#4D4D4D] text-primary flex-col flex`}>
           <div className='flex items-end text-xl justify-end w-full' onClick={handleMenu}>
             <FaTimes />
           </div>
 
-          <div className='flex items-start mt-8 w-full'>
+          <div className='transition flex items-start mt-8 w-full'>
             <ul className={`flex-col gap-4 h-full flex w-full`}>
           
-              <li className='w-full'>
-                <NavLink exact to='/'  className="nav-links">
+              <li className='w-full border-b border-[#b2b2b2] py-4 '>
+                <NavLink exact to='/' className="nav-links transition-all active:underline-offset-4">
                   Home
                 </NavLink>
               </li>
 
-              <li className='w-full'>
+              <li className='w-full border-b border-[#b2b2b2] pb-2 py-2'>
                 <NavLink exact to='/about' className="nav-links">
                   About
                 </NavLink>
               </li>
 
-              <li className='w-full'>
+              <li className='w-full border-b border-[#b2b2b2] py-2'>
                 <NavLink exact to='/services'  className="nav-links">
                   Services
                 </NavLink>
               </li>
 
-              <li className='w-full'>
+              <li className='w-full border-b border-[#b2b2b2] py-2'>
                 <NavLink exact to='/career'  className="nav-links">
-                  Career
+                  Careers
                 </NavLink>
               </li>
 
-              <li className='w-full'>
+              <li className='w-full border-b border-[#b2b2b2] py-2'>
                 <NavLink exact to='/contact' className="nav-links">
-                  Contact                   
+                  Contact Us               
                 </NavLink>
               </li>
 
             </ul>
 
           </div>
+          <div className='mt-10 flex justify-center w-[75vw] gap-5'>
+          <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
+              <FaTwitter />
+          </div>
+          <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
+              <FaLinkedin />
+          </div>
+          <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
+              <FaInstagram />
+          </div>
+          <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
+              <FaFacebookSquare />
+          </div>
+      </div>
         </div>
-      )}
+      {/* // )} */}
     </header>
   );
 };
