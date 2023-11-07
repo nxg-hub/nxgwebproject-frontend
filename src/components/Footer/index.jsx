@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
     return (
-        <div className="bg-[#F1F1F1] w-full py-8 center text-primary">
+        <div className="bg-[#F1F1F1] w-full pt-8 center text-primary">
             <div className="relative w-[95%] bg-gray py-10 rounded-[20px] flex-col center">
                 <div className="w-[90%] flex flex-wrap md:justify-center md:flex-nowrap justify-between lg:gap-0 gap-6  font-light">
                     <div className="md:w-[60%] mb-18 md:mb-0 flex-col gap-5 flex items-start">
@@ -52,7 +52,7 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-row md:justify-center md:gap-[6rem] mt-24 md:mt-0 gap-[2.5rem] w-full'>
+                    <div className='flex flex-row md:justify-center md:gap-[6rem] mt-24 md:mt-0 gap-[4rem] w-full'>
                     <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US
