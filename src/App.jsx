@@ -14,6 +14,7 @@ function App() {
   const handleMenu = () => {
     setOpen(!open);
   };
+  
   return (
     <>
       <Header open={open} handleMenu={handleMenu} />

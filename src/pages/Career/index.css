@@ -1,4 +1,5 @@
-.flyout::after {
+/* Overlay styles */
+.overlay::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -7,6 +8,7 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.15);
 }
+/* Overlay styles ends */
 
 input::file-selector-button {
   background-color: #a8d5e5;
