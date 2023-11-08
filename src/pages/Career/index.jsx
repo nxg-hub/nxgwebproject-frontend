@@ -6,23 +6,23 @@ const Career = ({ open }) => {
   return (
     <>
       {/* Dark overlay on page, when mobile menu is opened */}
-      <div className={`${open ? "overlay" : "hidden"}`}></div>
+      <div className={`${open ? "overlay" : "hidden"}  md:hidden`}></div>
 
       <div
-        className='relative min-h-[550px] text-primary rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-8'
+        className='relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-8'
         style={{ backgroundImage: "url(/bgImg.png)" }}
       >
-        <div className='text-left pl-8 md:pl-20 pt-28 max-w-[60rem] font-semibold'>
-          <p className='mt-16 text-[28px] font-medium md:text-[64px]'>
+        <div className='text-left pl-8 md:pl-20 pt-28 max-w-[60rem]'>
+          <p className='mt-16 text-[28px] md:text-[64px]'>
             Engineering The Future <br /> Through Technology <br /> Innovation
           </p>
-          <p className='text-[18px] font-medium md:text-[28px] py-4 md:py-6'>
+          <p className='text-[18px] md:text-[28px] py-4 md:py-6'>
             With NXG-HUB
           </p>
 
           <CustomButton children='Learn More' className='text-sm' />
         </div>
-        <p className='text-center md:text-[20px] py-4 mt-[9rem]'>
+        <p className='text-center text-[16px] md:text-[20px] py-4 mt-[9rem]'>
           NXG-HUB | CAREERS
         </p>
       </div>
@@ -42,7 +42,7 @@ const Career = ({ open }) => {
           Job Opening At NXG-HUB Digital Technologies. Apply Now!
         </span>
       </div>
-      <div className='bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:px-16 px-8'>
+      <div className='bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:py-[3rem] md:px-4 px-8'>
         <div className='md:mx-16 mx-auto rounded-2xl bg-primary md:px-14 py-10 md:p-20'>
           <div className='grid md:grid-cols-2 gap-6 md:gap-[20rem] '>
             <div className='flex flex-col pl-[0.55rem] md:pl-0'>

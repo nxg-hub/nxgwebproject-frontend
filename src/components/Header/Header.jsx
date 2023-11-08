@@ -18,7 +18,6 @@ const Header = ({ open, handleMenu }) => {
   const [active, setActive] = useState(false);
   const ref = useRef();
   const location = useLocation();
-  console.log(open);
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
@@ -193,7 +192,6 @@ const Header = ({ open, handleMenu }) => {
           </div>
         </div>
       </div>
-      {/* // )} */}
     </header>
   );
 };
