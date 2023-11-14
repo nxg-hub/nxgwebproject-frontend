@@ -1,5 +1,6 @@
-// @ts-ignore
-import Slider from '../components/Carousel/Slider'
+import'./Home.css'
+import React, { useRef } from 'react';
+import Slider from '../components/Slider/Slider'
 import { NavLink } from 'react-router-dom'
 import REC from '../assets/images/REC.jpg'
 import smoke from '../assets/images/smoke.png'
@@ -9,215 +10,247 @@ import icon2 from'../assets/icons/icon2.jpg'
 import consulting from '../assets/images/consulting.jpg'
 import icon1 from'../assets/icons/icon1.jpg'
 import { BsArrowRight,BsArrowUpRight } from 'react-icons/bs'
+import FaqList from '../components/FAQ/FaqList'
+import contactbg from '../assets/images/contactbg.png'
+import Footer from '../components/Footer/index'
+
 
 
 const Home = () => {
+  const faqSectionRef = useRef(null);
+  const contactSectionRef = useRef(null);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollToFAQ = () => {
+    if (faqSectionRef.current) {
+      faqSectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <>
-  <Slider/>;
-  {/*------------about us section------------*/}
-  <section style={{margin:"",  width:"1352px", justifyContent:"space-between",height:"527px",objectFit:"cover"}}>
-    <div className='About-content'>
+<Slider/>
+ {/*------------about us section------------*/}
+ <section className="About-section">
+  <div className="About-content">
 
-    <div style={{ marginLeft:"10px",height:"417px"}} className='about-image'>
-      <img style={{height:"475px",width:"600px"}} src={REC} alt="" />
+    <div className="about-image">
+      <img className="img" src={REC} alt="" />
     </div>
 
-  <div className='About-word' style={{backgroundImage: `url(${smoke})`,  marginLeft:"30px", borderRadius:"20px", height:"417px"}}>
-    
-    <div className='About-section1 bg-sky-100'>
+    <div className="About-word">
 
-      <div className='About' style={{ display:"flex", margin:"20px",justifyContent:"space-between"}}>
-        <div style={{display:"flex"}}>
-        <div><img src={icon1} alt="" /></div>
-        <h1 style={{fontFamily:"Manrope",fontWeight:"600",fontSize:"36px",color:"#717171"}}>ABOUT US </h1>
+      <div className="About-section1">
+        <div className="About-heading">
+
+          <div className="About-desc">
+            <div>
+              <img className='logo-icon' src={icon1} alt="" />
+            </div>
+            <div className='about-us'>
+            <h1>ABOUT US</h1>
+            </div>
+          </div>
+
+          <NavLink to="/about">
+            <div className= "About-us-arrow bg-primary text-secondary px-[10px] py-[11px] rounded-full">
+              <BsArrowRight className="group-hover:text-primary w-6 h-5" />
+            </div>
+          </NavLink>
         </div>
 
-        <NavLink to='/about'>
-              <div className='bg-white text-primarycolor px-[10px] py-[11px] rounded-full'>
-                <BsArrowRight className='group-hover:text-primarycolor w-6 h-5'/>
-              </div>
-              </NavLink>
-              
+        <div className="text1">
+          <h3 className='intro-text'>We bring you Creativity at its best!</h3>
+          <div className="About-section1-text">
+            <p className='sub-text'>
+              NextGenHub is a Group Of Software Developers And IT Consultants From All Spheres Of The Information Technology World, Endued With Experiences, Bright Minds And Exposure. We Are A Group Of Innovative Minds Engaged In Constant Brainstorming For Exceptional Ideas.
+            </p>
+          </div>
+        </div>
       </div>
 
-    <div className=''>
-      <h3 style={{marginTop:"20px",marginLeft:"20px",marginBottom:"15px", color:"#717171",fontSize:"20px", fontFamily:"Manrope",fontWeight:"600",}}>We bring you Creativity at its best!</h3>
-
-      <div  style={{margintop:"15px",marginBottom:"25px",marginRight:"15px",marginLeft:"15px",fontSize:"18px",color:"#717171", fontWeight:"400"}} className='text1'>
-      <p>NextGenHub is A Group Of Software Developers And IT <br /> Consultants From All Spheres Of The Information Technology World,<br /> Endued With Experiences, Bright ,Minds And Exposure. We Are A Group Of Innovative <br />Minds Engaged In Constant Brainstorming For Exceptional Ideas</p>
+      <div className="About-section2">
+        <p className='sub-text'>
+          Our Collective Skills Result in A Dynamic Force That Can Fulfill All The Requirement of Your Brand Or Career, No Matter How Diverse They May Be. We Are On A Mission To Re-engineer The World Through Technology.
+        </p>
       </div>
+
+      
+    <div className='learn-more-arrow1'>
+      <button>
+        <a className='BsArrowUpRight' href="/about" style={{color:" #717171"}}>Learn More <BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></a>
+      </button>
     </div>
+ 
     </div>
-
-
-    <div  className='About-section2  bg-sky-100'>
-      <p style={{margin:"30px",fontSize:"18px",fontWeight:"400",color:"#717171"}}>Our Collective Skills Result in A Dynamic Force That Can Fulfill All The <br /> Requirement of Your Brand Or Career ,No Matter How Diverse <br /> They May Be. We Are On A Mission To Re-engineer The World Through Technology</p>
-      
-      
-      </div>
-      
   </div>
   
-    </div>
-    <div style={{margin:"100px"}}>
-    <div style={{ display:"grid", placeItems:"center", }}>
-        <button style={{border:"2px solid #717171",paddingTop:"8px",paddingBottom:"8px",paddingLeft:"20px",paddingRight:"20px",borderRadius:"20px",width:"200px", display:"grid", placeItems:"center",color:"#717171"}}>
-          <a  style={{display:"flex",fontWeight:"400"}} href="/about">learn more <BsArrowUpRight className='group-hover:text-primarycolor w-6 h-5'/></a>
-        </button>
-      </div>
-    </div>
-
-  </section>
+</section>
 
 
-  {/*------------Services section----------------------*/}
-  <section style={{marginTop:"30px", border:"2px solid white", width:"1376px", }}>
-    <div className='service-content'>
-
-      <div  style={{ display:"flex",margin:"30px",justifyContent:"space-between"}} className='service-desc'>
-        <div style={{display:"flex"}}>
-          <div>
-            <img src={icon2} alt="" />
-          </div>
-        <div  style={{ color:"#2596BE",fontSize:"36px",fontWeight:"600",}} className=''>
-      <h1 style={{}}> OUR SERVICES </h1>
-        </div>
-        </div>
-
-        <div style={{ margin:"0px", fontSize:"18px",fontWeight:"400",color:"#717171"}} className=''>
-        <p style={{fontSize:"18px",fontWeight:"400",color:"#717171"}}>
-          We Assist You In Constructing Top-Tier Digital Solution And Products  Following Best <br /> Practices While Also Offering AnExtensive Array Of Associated Professional Services. <br /> Our Commitments To Provide Unparalleled Service To Our Esteemed Clients On A <br />  Global Scale. 
-        </p>
-
-        </div>
-
-      </div>
-
-      <div  className='section-2services'>
-
-      <div style={{border:"2px solid white", borderRadius:"20px"}} className='IT-Training'>
-        <div style={{margin:"20px",backgroundColor:"#FAF9F6", border:"2px solid white"}}>
-
-        <div>
-          <img src={IT} alt="" />
-        </div>
-        <div style={{marginTop:"30px",marginBottom:"30px"}} className=''>
-        <h1 style={{fontSize:"28px",fontWeight:"600",color:"#717171"}}>IT Training </h1>
-        </div>
-
-        <div style={{margin:""}}>
-        <p style={{fontSize:"18px",fontWeight:"400",color:"#717171"}}>We Organize Software Development Training <br /> To Tech Professionals And Aspiring Tech <br /> Professionals, Equiping Them With <br /> Necessary Skills Required To Three In The <br /> Tech Industry
-        </p>
-        </div>
-        </div>
+ {/*------------Services section----------------------*/}
+ <section className="service-section">
   
-      </div>
-
-     
-
-
-      <div style={{ borderRadius:"20px"}} className='Software Development'>
-        <div style={{margin:"20px", border:"2px solid white",backgroundColor:"#FAF9F6",padding:"20px"}}>
-
-        <div>
-        <img src={software} alt="" />
-        </div>
-
-        <div style={{marginTop:"30px",marginBottom:"30px"}}>
-        <h1 style={{fontSize:"28px",fontWeight:"600",color:"#717171"}}>Software Development</h1>
-        </div>
-
-        <div>
-        <p style={{fontSize:"18px", fontWeight:"400", color:"#717171"}}> Our Team Of Professional Engineers Are <br /> Involved In Building Real World Solutions <br /> And Applications From Conceptualization To <br /> Deployment For Business Use Case Our <br /> Custom Software Development Services
-        </p>
-        </div>
-        </div>
-      </div >
-
-      <div style={{ borderRadius:"20px"}}  className='Consulting Services'>
-        <div style={{margin:"20px", border:"2px solid white", backgroundColor:"#FAF9F6",padding:"20px"}}>
-        <div>
-        <img src={consulting} alt="" />
-        </div>
-
-        <div style={{marginTop:"30px",marginBottom:"30px"}}>
-        <h1 style={{fontSize:"28px",fontWeight:"600",color:"#717171"}}>Consulting Services </h1>
-        </div>
-        <p style={{fontSize:"18px", fontWeight:"400", color:"#717171"}} >We Offer IT Consultancy Services... <br />Including Technical Recruiting Contact Us <br />Today!</p>
-
-      </div>
+  <div className='service-heading'>
+    
+    <div className="service-desc">
+      <div>
+        <img src={icon2} alt="" />
       </div>
       <div>
-          <button>Learn More</button>
+        <div className='ourservices'>OUR SERVICES</div>
+      </div>
+    </div>
+    <div className='service-text-sub'>
+    <div className='services-text'>We Assist You In Constructing Top-Tier Digital Solutions And Products Following Best Practices, While Also Offering An Extensive Array Of Associated Professional Services. Our Commitment Is To Provide Unparalleled Service To Our Esteemed Clients On A Global Scale.</div>
+    </div>
+    
+  </div>
+    
+
+  <div className="service-content"> 
+
+    <div className="section-2services">
+      <div className="IT-Training">
+        <div className='services-image'>
+          <img className='image-IT' src={consulting} alt="" />
+        </div>
+        <div className="service-details">
+          <h1 className='Intro-services'>IT Training</h1>
+          <div className='SPACE services-info'>We Organize Software Development Training To Tech Professionals And Aspiring Tech Professionals, Equipping Them With Necessary Skills Required To Thrive In The Tech Industry.</div>
         </div>
       </div>
 
-    </div> 
+      <div className="Software-Development">
+        <div>
+          <img className='image-software' src={software} alt="" />
+        </div>
+        <div className="service-details">
+          <h1 className='Intro-services'>Software Development</h1>
+          <div className='SPACE services-info'>Our Team Of Professional Engineers Are Involved In Building Real World Solutions And Applications From Conceptualization To Deployment For Business Use Cases. Our Custom Software Development Services.</div>
+        </div>
+      </div>
 
+      <div className="Consulting-Services">
+        <div>
+          <img className='image-consulting' src={IT} alt="" />
+        </div>
+        <div className="service-details">
+          <h1 className='Intro-services'>Consulting Services</h1>
+          <div className='SPACE services-info'>We Offer IT Consultancy Services, Including Technical Recruiting. <a style={{ textDecoration: "underline" }} href="/contact">Contact Us Today!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  </section>
+  <div className='learn-more-arrow1' style={{ display: "grid", placeContent: "center", }}>
+    <button >
+      <a className='BsArrowUpRight' style={{ display: "flex", fontWeight: "400" ,color:" #717171"}} href="/services">Learn More <BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></a>
+    </button>
+  </div>
+</section>
+
 
 
   {/*-------- Contact Section----------*/}
-  <section>
-    <div className=''>
-      <img src="" alt="" />
-      <p>Get In Touch</p>
+  <section style={{marginTop:"50px",marginleft:"0"}}>
+    <div style={{display:"grid",placeContent:"center"}}>
+      
+    <div className='get-intouch-heading'>
+      <div>
+      <img src={icon2} alt="" />
+      </div>
+      <div>
+      <div className='get-inTouch'>Get In Touch</div>
+      </div>
     </div>
+    </div>
+<div style={{backgroundImage: `url(${contactbg})`,}} className='contact-container' >
     <div className='Contact-content'>
 
-      <div className='contact-section1'>
+      <div style={{}} className='contact-section1'>
 
-      <div className=''>
-      <div><img src="" alt="" /></div>
-      <h1> LET&apos;S START YOUR PROJECT </h1>
+      <div style={{display:"flex",marginBottom:"16px"}} className='contact-subsection'>
+
+      <div><img style={{borderRadius:"25px", boxShadow: " 0.1em 0.1em 0.15em #717171",marginRight:"10px"}} src={icon1} alt="" /></div>
+      <h1  className='contact-intro'> LET'S START YOUR PROJECT </h1>
       </div>
 
-      <div className=''>
-      <p>Planning Your Next Project?</p>
-      <p>Message A Consultant! And Our Team Will Get Back To <br /> You Shortly!</p>
-      <p>We Go Beyond Software Development, We <br /> Shape Businesses And Careers.</p>
-      <p>Write your email and we will contact you to <br /> discuss your project!</p>
+      <div style={{width:"100%"}} className=''>
+      <div className='contact-main-text'>Planning Your Next Project?</div>
+      <div className='contact-main-text'>Message A Consultant! And Our Team Will Get Back To <br /> You Shortly!</div>
+      
+      <div className='contact-text'>We Go Beyond Software Development, We <br /> Shape Businesses And Careers.</div>
+      <div className='contact-text' >Write your email and we will contact you to <br /> discuss your project!</div>
+      
       </div>
       </div>
 
-      <div className='contact-section2'>
+      <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'>
 
           <div>
-          <input type="text" placeholder='Name' name='User_name' />
-          <div/>
-
-            <div>
-          <input type="number" placeholder='Phone Number' name='User_Phone Number' />
+          <input  className="input" type="text" placeholder='Name' name='User_name' />
           </div>
 
           <div>
-          <input type="email" placeholder='Email' name='User_Email' />
+          <input className="input" type="number" placeholder='Phone Number' name='User_Phone Number' />
           </div>
 
-          <div>
-          <input type="text" placeholder='Subject' name='User_Subject' />
+          <div style={{margin:"0"}}>
+          <input  className="input" type="email" placeholder='Email' name='User_Email' />
           </div>
 
-          <div>
-          <textarea name="message" cols="30" rows="5"></textarea>
+          <div style={{}}>
+          <textarea className='textarea' name="message" cols="30" rows="4"></textarea>
           </div>
 
-          <div>
-          <button className='Btn'>Submit</button>
+          <div className='contact-button'>
+            <button  className='contact-submit'>submit </button>
           </div>
-    
       </div>
 
     </div>
-    </div>
+</div>
   </section>
+
+
+
   {/*-------------Faq section---------*/}
-  <section>
-    <div>
-      <h1>FAQ</h1>
+  <section className='faq-container'>
+  <div >
+    <div className='Faq-head'>
+  <div className='Faq-text'>FAQ</div>
+  </div>
+    <div className='flex justify-center w-full '>
+      <div className='w-full md:w-1/2'>
+        <div className="flex justify-center"> {/* Center the FaqList */}
+          <FaqList />
+          
+        </div>
+      </div>
     </div>
+    <div className='learn-more-arrow1' style={{ display: "grid", placeContent: "center", }}>
+    <button >
+      <div className='BsArrowUpRight' style={{ display: "flex", fontWeight: "400",  color:" #717171"}}onClick={scrollToTop} >Back to Top<BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></div>
+    </button>
+  </div>
+  </div>
+</section>
+
+
+{/* ----------------------Footer Section---------------------- */}
+
+  {/*-------------Footer section---------*/}
+  <section>
+  <Footer/>
   </section>
     </>
   )

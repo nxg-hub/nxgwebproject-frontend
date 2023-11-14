@@ -1,0 +1,599 @@
+
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  font-family:'manrope';
+
+}
+.faq-container{
+  background-color:#F1F1F1;
+}
+
+.About-section{
+  margin-top:30px;
+}
+.about-image{
+  width:100%;
+  margin-bottom:20px;
+}
+.About-heading{
+  display:flex;
+  justify-content: space-between;
+  padding:20px;
+}
+.About-desc{
+  display:flex;
+ 
+}
+.About-content{
+  display: flex;
+  justify-content:space-inbetween;
+  margin:20px;
+}
+.About-section1{
+  margin-left:20px;
+  border-radius:20px;
+  background-color:#DEEFF5;
+  width:98%;
+  padding-bottom:30px;
+  
+}
+.about-us{
+font-weight:600;
+font-size:36px;
+color:#717171;
+}
+.logo-icon{
+  border-radius: 25px;
+   boxShadow: 0.1em 0.1em 0.15em #717171;
+}
+.intro-text{
+  padding-left:30px;
+  padding-right:30px;
+  padding-bottom:30px;
+  font-weight:600;
+  font-size:20px;
+  color: #717171;
+}
+.About-section2{
+  padding-top:20px;
+  border:2px solid white;
+  margin-left:20px;
+  border-radius:20px;
+  margin-top:17px;
+  background-color:#DEEFF5;
+  height:180px;
+  width:98%;
+
+  
+
+}
+.About-section1-text{
+  width:100%;
+  padding-right:20px;
+}
+.BsArrowUpRight{
+  display:flex;
+  font-size:16px;
+  padding:8px;
+
+}
+
+.learn-more-arrow1{
+  margin-left:30px;
+  padding-top:24px;
+  display:grid;
+  place-items:;
+}
+button{
+  padding:8px;
+  width:180px;
+  border:1px solid #ABBED1;
+  display:grid;
+  place-items:center;
+  border-radius:20px;
+  
+}
+button:hover{
+  background-color:#A4CDDC;
+}
+.sub-text{
+  width:90%;
+  font-size:18px;
+  font-weight:400;
+  padding-left:30px;
+  color: #717171;
+  
+}
+
+
+
+.ourservices{
+  font-size:36px;
+  font-weight:600;
+  color:#2596BE;
+}
+.service-desc {
+  display: flex;
+  margin-right: 0;
+  margin-bottom:20px;
+  margin-top:0;
+  padding-top: %;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+  width: 100%;
+  height: 100%;
+}
+
+
+.service-heading{
+  display:flex;
+  justify-items:space-inbetween;
+  margin-top:60px;
+  padding-right:20px;
+  margin-bottom:20px;
+}
+.services-text{
+  width:100%;
+  text-align:right;
+  font-weight: 400;
+  color: #717171;
+  font-size: 18px;
+}
+
+.service-desc h1 {
+  color: #2596BE;
+  font-size: 36px;
+  font-weight: 600;
+}
+.service-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-2services{
+   margin:20px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.8fr); /* Define 3 columns with equal width */
+  grid-gap: 23px; /* Add 20px of space between grid items */
+  max-width:1340px;
+}
+.Intro-services{
+  padding-top:32px;
+  padding-bottom:8px;
+  font-size:28px;
+  font-weight:600;
+  color:#717171;
+}
+.services-info{
+font-size:18px;
+font-weight:400;
+color: #717171;
+}
+.IT-Training{
+border:0.5px solid  #ABBED1;
+padding:16px;
+border-radius:20px;
+
+}
+.Software-Development{
+border:0.5px solid #ABBED1;
+padding:16px;
+border-radius:20px;
+}
+.Consulting-Services{
+border:0.5px solid  #ABBED1;
+padding:16px;
+border-radius:20px;
+
+}
+.Software-Development:hover{
+background-color:
+#4D4D4D;
+
+}
+.Software-Development:hover .Intro-services{
+  color:white;
+}
+.Software-Development:hover .services-info{
+  color:white;
+}
+
+
+.Consulting-Services:hover{
+  background-color:
+  #4D4D4D;
+  
+  }
+  .Consulting-Services:hover .Intro-services{
+    color:white;
+  }
+  .Consulting-Services:hover .services-info{
+    color:white;
+  }
+
+  .IT-Training:hover{
+    background-color:
+    #4D4D4D;
+    
+    }
+    .IT-Training:hover .Intro-services{
+      color:white;
+    }
+    .IT-Training:hover .services-info{
+      color:white;
+    }
+
+
+
+.image-consulting{
+  width:100%;
+  border-radius:26px;
+}
+.image-IT{
+  width:100%;
+  border-radius:26px;
+}
+.image-software{
+  width:100%;
+  border-radius:25px;
+}
+
+
+.contact-header{
+  display:flex;
+  padding-top:91px;
+  padding-bottom:20px;
+}
+.contact-section {
+}
+
+.contact-header-wrapper{
+  display:grid;
+  place-content:center;
+}
+.contact-subsection{
+  display:flex;
+  padding-bottom:30px;
+}
+.contact-section1{
+  padding-left:px;
+}
+
+
+.Contact-content{
+  display: grid;
+  grid-template-columns: repeat(2, 0.8fr); 
+  grid-gap:80px; /* Adds space between grid items */
+  padding-top:50px;
+  height:80vh;
+  width:90vw;
+  background-color:white;
+  margin-left:10px;
+  margin-right:40px;
+  padding-top:30px;
+  padding-left:30px;
+  padding-right:30px;
+  padding-bottom:0px;
+  
+}
+.contact-section2{
+
+}
+.contact-intro{
+  font-size: 30px;
+  font-weight:600;
+  color:#717171;
+}
+.contact-main-text{
+  font-size:20px;
+  font-weight:600;
+  color:#717171;
+}
+.contact-text{
+  font-size: 18px;
+  font-weight: 400;
+  color:#717171;
+  margin-top:16px;
+}
+.contact-container{
+  width: 98%;
+  height: 100%;
+  padding-top:40px;
+  padding-right:40px;
+  padding-left:40px;
+  padding-bottom:40px;
+  margin-top:10px;
+  border-radius:30px;
+
+
+}
+
+
+ 
+
+ .input{
+  padding-top:18px;
+  padding-bottom:18px;
+  padding-left:24px;
+  padding-right:24px;
+  width:100%;
+  border:2px solid #ABBED1;
+  margin-right:16px;
+  margin-bottom:16px;
+  border-radius:32px;
+}
+.textarea{
+  height:12%;
+  width:100%;
+  border:2px solid #ABBED1;
+  border-radius:32px;
+  padding-top:18px;
+  padding-bottom:18px;
+  padding-left:24px;
+  padding-right:24px;
+}
+
+.submit{
+  padding:10px;
+  width:180px;
+  border:1px solid #ABBED1;
+  background-color:#2596BE;
+}
+.contact-button{
+  margin-top:10px;
+  display:grid;
+  place-content:end;
+}
+.contact-submit{
+  padding:10px;
+  width:150px;
+  border:1px solid #ABBED1;
+  border-radius:25px;
+  color:white;
+  background-color:#2596BE;
+}
+.img{
+  height:90%;
+}
+
+
+
+
+/* Default styles outside of media query */
+/* ... (your default styles here) */
+
+
+/* Default styles outside of media query */
+/* ... (your default styles here) */
+
+
+.service-section {
+  margin-top: 50px;
+  border: 2px solid white;
+  width: 100%;
+}
+
+.service-content {
+  display: flex;
+  justify-content: space-between;
+}
+.get-inTouch{
+font-size:36px;
+font-weight:600;
+color:#2596BE;
+margin:0;
+}
+.get-intouch-heading{
+  display:flex;
+
+}
+.faq-section{
+  max-width:100%;
+  width:100%;
+
+}
+.faq-container{
+  display:grid;
+  place-content:center;
+}
+.Faq-text{
+  color:#717171;
+  font-size:36px;
+  text-align:center;
+  margin-top:30px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:38px;
+  padding-right:38px;
+  background-color:#ABBED1;
+  border-radius:50px;
+
+}
+.Faq-head {
+  display:grid;
+  place-content:center;
+}
+
+
+
+
+
+
+@media screen and 
+(max-width: 768px) {
+  .About-content {
+    display: block;
+  }
+  .About-section1 {
+    margin-left: 5px;
+    padding-bottom: 30px;
+  }
+  .About-us-arrow {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .About-heading {
+    padding: 30px;
+  }
+  .About-section2 {
+    margin-left: 5px;
+    margin-top: 12px;
+    padding-top: 30px;
+    padding-bottom:40px;
+  }
+  .about-image {
+    display: grid;
+    justify-items: center;
+    width: 97%;
+    margin-left: 5px;
+  }
+  .about-us {
+    font-size: 20px;
+  }
+  .intro-text {
+    font-size: 18px;
+  }
+  .img {
+    margin-top: 50px;
+    height: 519px;
+    width: 100%;
+  }
+
+  .learn-more-arrow1 {
+    display: grid;
+    place-items: center;
+  }
+  .BsArrowUpRight {
+    font-size: 14px;
+  }
+  .section-2services {
+    display: block;
+    padding-right:20px;
+  }
+  .contact-subsection {
+    
+  }
+  .sub-text {
+    text-align: left;
+    font-size: 14px;
+  }
+  button {
+    padding: 5px;
+    width: 150px;
+  }
+  .ourservices{
+    font-size:20px;
+  }
+  .service-heading {
+    display: block;
+    padding-right: 20px;
+    padding-left:0;
+
+  }
+  .service-desc {
+    display: flex;
+    justify-content: center;
+  }
+  .services-info{
+    font-size:14.5px;
+    font-weight:400;
+  }
+  .services-text{
+    font-size:15px;
+    width:80%;
+  }
+  .service-text-sub{
+    width:;
+  }
+  .service-details{
+    padding-bottom:px;
+  }
+  .IT-Training{
+    margin-bottom:30px;
+  }
+  .Software-Development{
+    margin-bottom:30px; 
+  }
+  .Consulting-Services{
+    margin-bottom:30px; 
+  }
+  .services-text{
+    width:100%;
+    padding:20px;
+  }
+  .service-section {
+    margin-top: 10px;
+    border: 2px solid white;
+    width: 100%;
+    margin-left:20px;
+  }
+  .Intro-services{
+    font-size:18px;
+  }
+  .Contact-content{
+    margin:px;
+    display:block;
+    height:140vh;
+    width:100%;
+    padding-bottom:20px;
+    margin-bottom:30px;
+  }
+  .contact-container{
+  background-size:cover;
+  padding:40px;
+  height:100%;
+  margin-top:30px;
+  margin-right:30px;
+  
+  }
+  .contact-intro{
+    font-size:20px;
+  }
+  .contact-main-text{
+    font-size:18px;
+    text-align:left;
+  }
+  .contact-text{
+    font-size:16px;
+    text-align:left;
+    
+  }
+  .contact-section2{
+    margin-top:50px;
+  }
+  .input{
+    padding:15px;
+  }
+  .textarea{
+    padding:15px;
+  }
+  .contact-submit{
+    padding:10px;
+    width:150px;
+  }
+  .get-inTouch{
+    font-size:20px;
+    font-weight:600;
+    color:#2596BE;
+    margin:0;
+    } 
+    .w-full {
+      width: 100%; 
+  }
+  .SPACE{
+    padding-bottom:60px;
+  }
+  .Faq-text{
+    font-size:20px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:10px;
+    padding-right:10px;
+  }
+}
