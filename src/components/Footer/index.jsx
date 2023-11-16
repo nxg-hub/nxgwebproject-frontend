@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import NLogo from '../../assets/icons/n.png';
 import Location from '../../assets/svgs/location.svg';
 import Call from '../../assets/svgs/call.svg';
@@ -9,6 +10,7 @@ import {
     FaTwitter,
     FaInstagram
   } from 'react-icons/fa';
+import { address } from '../../utils/address';
 
 const Footer = () => {
     return (
@@ -28,9 +30,11 @@ const Footer = () => {
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Location} alt="logo" />
-                            </div>
+                            </div>                            <
                             <p className='w-[60%]'>
-                                1 Chris Okafor Street Isolo, Lagos, Nigeria.
+                                <Link to={address} target='_blank' >
+                                1, Chris Okafor Street Isolo, Lagos, Nigeria.
+                                </Link>
                             </p>
                         </div>
 
@@ -39,7 +43,9 @@ const Footer = () => {
                                 <img src={Call} alt="logo" />
                             </div>
                             <p className='w-[80%]'>
+                                <Link to='tel:+2348138563840'>
                                 Phone:  +234-813-856-3840 || +234 706 885 8151 || +234 706 784 7829
+                                </Link>
                             </p>
                         </div>
 
@@ -48,7 +54,9 @@ const Footer = () => {
                                 <img src={Mail} alt="logo" />
                             </div>
                             <p className=''>
-                                Email: Info@Nextgenhub.Com.Ng
+                                <Link to='mailto:info@nextgenhub.com.ng'>
+                                Email: info@nextgenhub.com.ng
+                                </Link>
                             </p>
                         </div>
                     </div>
@@ -57,21 +65,21 @@ const Footer = () => {
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US
                         </h2>
-                        <p>Home</p>
-                        <p>About Us</p>
-                        <p>Our Services</p>
-                        <p>Terms & Condition</p>
-                        <p>Privacy Policy</p>
+                        <p><Link to='/'>Home</Link></p>
+                        <p><Link to='/about'>About Us</Link></p>
+                        <p><Link to='/services'>Our Service</Link></p>
+                        <p><Link to='#'>Terms & Condition</Link></p>
+                        <p><Link to='#'>Privacy Policy</Link></p>
                     </div>
                     <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             USEFUL LINKS
                         </h2>
-                        <p>Training</p>
-                        <p>NXG-Job-Hub</p>
-                        <p>Career</p>
-                        <p>Contact</p>
-                        <p>FAQ</p>
+                       <p> <Link to='#'>Training</Link></p>
+                       <p><Link to='#'>NXG-Job-Hub</Link></p>
+                       <p> <Link to='/career'>Career</Link></p>
+                        <p><Link to='#'>Contact</Link></p>
+                        <p><Link to='#'>FAQ</Link></p>
                     </div>
                     </div>
                     <div className="md:w-[50%] w-full flex-col gap-4 flex items-start">
@@ -89,16 +97,16 @@ const Footer = () => {
                 </div>
                 <div className='absolute md:static top-[13rem] md:top-0 mt-16 flex items-start w-[90%] gap-6'>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
-                        <FaTwitter />
+                        <Link to='https://twiiter.com/' target='_blank'><FaTwitter /></Link>
                     </div>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
-                        <FaLinkedin />
+                    <Link to='https://linkedin.com/company/nextgenhub-digital' target='_blank'><FaLinkedin /></Link>
                     </div>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
-                        <FaInstagram />
+                    <Link to='https://instagram.com/' target='_blank'><FaInstagram /></Link>
                     </div>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
-                        <FaFacebookSquare />
+                    <Link to='https://facebook.com' target='_blank'><FaFacebookSquare /></Link>
                     </div>
                 </div>
             </div>
