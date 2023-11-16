@@ -35,7 +35,7 @@ const Career = ({ open }) => {
           <img
             src='/tag.png'
             alt='icon'
-            className='absolute bottom-[0.9rem] w-[51px] md:bottom-[2rem] right-[6.5rem] md:right-[11.7rem] px-4'
+            className='absolute bottom-[0.9rem] w-[51px] md:bottom-[2rem] right-[7rem] md:right-[11.7rem] px-4'
           />
         </div>
         <span className='text-[#717171] md:px-0 px-4 text-center text-normal md:text-[18px] font-normal'>
@@ -90,7 +90,7 @@ const Career = ({ open }) => {
                 <h2 className='text-[18px] pl-6 md:pl-0 md:text-[28px] mb-2 whitespace-nowrap font-medium text-[#717171]'>
                   Applying for which post
                 </h2>
-                <div className='p-2 font-medium pl-10 md:pl-0 flex text-[#717171] text-normal md:text-[20px]'>
+                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171] text-normal md:text-[20px]'>
                   <input
                     className='mr-6'
                     type='radio'
@@ -100,7 +100,7 @@ const Career = ({ open }) => {
                   />
                   Product Designer (UI/UX)
                 </div>
-                <div className='p-2 font-medium pl-10 md:pl-0  flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
                     className='mr-6'
                     type='radio'
@@ -110,7 +110,7 @@ const Career = ({ open }) => {
                   />
                   Project/Product Manager
                 </div>
-                <div className='p-2 font-medium pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
                     className='mr-6'
                     type='radio'
@@ -120,7 +120,7 @@ const Career = ({ open }) => {
                   />
                   Software Developer
                 </div>
-                <div className='p-2 font-medium pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
                     className='mr-6'
                     type='radio'
@@ -130,7 +130,7 @@ const Career = ({ open }) => {
                   />
                   Digital Marketer
                 </div>
-                <div className='p-2 font-medium pl-10 md:pl-0 flex text-[#717171]  text-normal md:text-[20px]'>
+                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
                   <input
                     className='mr-6'
                     type='radio'
@@ -145,10 +145,10 @@ const Career = ({ open }) => {
                 <h2 className='text-[18px]  md:text-[28px] mb-2 font-medium text-[#717171]'>
                   Upload your resume
                 </h2>
-                <input className='p-4' type='file' name='' id='' />
+                <input className='p-4 sm:pl-0' type='file' name='' id='' />
                 <div className='ml-[3.2rem] md:ml-[5.8rem] mt-8'>
-                  <button className='text-primary rounded-[32px] py-2 pl-6 pr-2 bg-[#2596be] flex items-center'>
-                    <span className='text-[20px] font-bold mr-20'>Submit</span>
+                  <button className='text-primary rounded-[32px] py-2  pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]'>
+                    <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]'>Submit</span>
                     <span className='rounded-full p-2 text-[#46A6C8] bg-primary'>
                       <FiArrowUpRight size={25} />
                     </span>
