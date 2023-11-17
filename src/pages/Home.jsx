@@ -237,7 +237,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className='learn-more-arrow1' style={{ display: "grid", placeContent: "center", }}>
+    <div className='learn-more-arrow1' style={{ display: "grid", placeContent: "center",paddingBottom:"100px" }}>
     <button >
       <div className='BsArrowUpRight' style={{ display: "flex", fontWeight: "400",  color:" #717171"}}onClick={scrollToTop} >Back to Top<BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></div>
     </button>
