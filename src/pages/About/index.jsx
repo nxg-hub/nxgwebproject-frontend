@@ -25,14 +25,14 @@ const About = () => {
           </div>
         </div>
 
-        {/* About */}
+        {/* About Us */}
         <div className="w-full center my-12 flex-col gap-10">
           <div className="flex-col gap-6 center w-[80%]">
             <div className="center">
               <div className="flex items-start">
                 <img src={NLogo} alt="logo" />
               </div>
-              <h2 className="text-secondary lg:text-[36px] md:text-[20px] font-semibold">About us</h2>
+              <h2 className="ml-4 text-secondary lg:text-[36px] md:text-[20px] font-semibold">About us</h2>
             </div>
           </div>
 
