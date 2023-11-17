@@ -81,3 +81,8 @@
   }
   
 } 
+@media (max-width: 500px){
+  .faq-list{
+    width:60%;
+  }
+}

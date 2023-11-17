@@ -269,12 +269,12 @@ background-color:
   grid-template-columns: repeat(2, 0.8fr); 
   grid-gap:80px; /* Adds space between grid items */
   padding-top:50px;
-  height:80vh;
+  height:90vh;
   width:90vw;
   background-color:white;
   margin-left:10px;
   margin-right:40px;
-  padding-top:30px;
+  padding-top:20px;
   padding-left:30px;
   padding-right:30px;
   padding-bottom:0px;
@@ -302,12 +302,13 @@ background-color:
 .contact-container{
   width: 98%;
   height: 100%;
-  padding-top:40px;
+  padding-top:20px;
   padding-right:40px;
   padding-left:40px;
   padding-bottom:40px;
   margin-top:10px;
   border-radius:30px;
+  background-size:cover;
 
 
 }
@@ -537,16 +538,15 @@ margin:0;
     font-size:18px;
   }
   .Contact-content{
-    margin:px;
     display:block;
-    height:140vh;
+    height:100%;
     width:100%;
     padding-bottom:20px;
     margin-bottom:30px;
   }
   .contact-container{
   background-size:cover;
-  padding:40px;
+  padding:px;
   height:100%;
   margin-top:30px;
   margin-right:30px;
@@ -575,7 +575,7 @@ margin:0;
   }
   .contact-submit{
     padding:10px;
-    width:150px;
+    width:130px;
   }
   .get-inTouch{
     font-size:20px;
@@ -597,3 +597,10 @@ margin:0;
     padding-right:10px;
   }
 }
+@media 
+(max-width: 500px){
+  .input{
+    padding:10px;
+  }
+}
+
