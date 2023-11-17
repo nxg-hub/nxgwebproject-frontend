@@ -42,7 +42,7 @@ const Slider = () => {
   }, [currentSlide]);
 
   return (
-    <div  style={{backgroundImage: `url(${background})`}} className='slider '>
+    <div  style={{backgroundImage: `url(${background})`}} className='slider relative'>
       <div className='ARROW'>
       <AiOutlineArrowLeft className=' arrow prev ' onClick={prevSlide}/>
       <AiOutlineArrowRight className=' arrow next ' onClick={nextSlide}/>
@@ -56,7 +56,7 @@ const Slider = () => {
               <img className='vector' src={slide.image} alt="" />
               </div>
               <div className='content '>
-                <h2 style={{whiteSpace: "pre-line", }} className='Title-slide'>{slide.title}</h2>
+                <h2 style={{whiteSpace: "pre-line", }} className='Title-slide text-center text-[28px] md:text-[64px] md:text-start'>{slide.title}</h2>
                 <p style={{whiteSpace: "pre-line"}} className='Text-slide'>{slide.description.replace(/\\n/g, '\n')}</p>
                 <div className='Button-Container'>
 

@@ -51,7 +51,7 @@ const Header = ({ open, handleMenu }) => {
             </NavLink>
           </div>
 
-          <div className='nav-list w-full between h-full px-[0.40rem] rounded-[4rem] sm:hidden lg:flex'>
+          <div className='nav-list w-full between h-full px-[0.40rem] rounded-[4rem] sm:hidden lg:flex gap-[8rem]'>
             <ul
               className={`nav-menu h-full between ${
                 active ? "active center" : ""
@@ -78,12 +78,6 @@ const Header = ({ open, handleMenu }) => {
               <li className='nav_item h-full center'>
                 <NavLink exact to='/career' className='nav-links'>
                   Career
-                </NavLink>
-              </li>
-
-              <li className='nav_item h-full center'>
-                <NavLink exact to='/contact' className='nav-links'>
-                  Contact
                 </NavLink>
               </li>
             </ul>
