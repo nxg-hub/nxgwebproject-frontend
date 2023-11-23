@@ -83,13 +83,14 @@ const About = () => {
     <img src={AboutThree} alt="About" className="mb-4" />
   </div>
 </div>
-
 <div className="lg:text-left md:text-center my-4">
-    <CustomButton backgroundColor="#FFF" border="1px solid #717171" textColor="#717171" borderRadius="20px" padding="5px 40px">
-        <p>Learn</p>
+    <CustomButton backgroundColor="#FFF" border="1px solid #717171" textColor="#717171" borderRadius="20px" padding="8px">
+        <p>Learn More</p>
             <img src={LearnArrow} alt="learn arrow" />
     </CustomButton>
 </div>
+
+
 
 
         {/* Footer */}

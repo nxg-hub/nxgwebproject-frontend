@@ -13,15 +13,13 @@ const Services = () => {
 
         {/* Banner */}
         <div className="w-[95%] lg:h-[848px] h-[100vh] banner center text-primary overflow-hidden rounded-[20px]">
-          <div className='flex-col w-[85%] md:items-start items-center flex md:gap-4 gap-3'>
-            <h1 className='lg:leading-[76px] text-lg md:text-xl lg:text-[64px] lg:w-[825px]  font-semibold text-center md:text-left'>
-              Engineering The Future Through Technology Innovation 
+          <div className="flex-col w-[85%] md:items-start flex md:gap-4 gap-3">
+            <h1 className="lg:leading-[76px] text-lg md:text-xl lg:text-[64px] lg:w-[825px] font-semibold md:text-left">
+              Engineering The Future Through Technology Innovation
             </h1>
-            <h3 className='lg:text-[28px] textt-lg'>
-              With NXG-HUB
-            </h3>
-            <div className='pt-10'>
-              <CustomButton children="Learn More" />
+            <h3 className="lg:text-[28px] md:text-[18px]">With NXG-HUB</h3>
+            <div className="pt-10">
+              <CustomButton>Learn More</CustomButton>
             </div>
           </div>
         </div>
@@ -33,11 +31,11 @@ const Services = () => {
               <div className='flex items-start'>
                 <img src={NLogo} alt="logo" />
               </div>
-              <h2 className='text-secondary text-[36px] font-semibold'>
+              <h2 className='text-secondary lg:text-[36px]  md:text-[18px]font-semibold'>
                 Our Services
               </h2>
             </div>
-            <p className='text-center text-[18px] text-gray leading-[28px]'>
+            <p className='text-center lg:text-[18px]  md:text-[16px] text-gray leading-[28px]'>
               We Assist You In Constructing Top-Tier Digital Solutions And Products Following Best Practices, While Also Offering An Extensive Array Of Associated Professional Services. Our Commitment Is To Provide Unparalleled Service To Our Esteemed Clients On A Global Scale.
             </p>
           </div>
@@ -70,11 +68,11 @@ const Services = () => {
                     <div className='flex items-start'>
                       <img src={NLogo} alt="logo" />
                     </div>
-                    <h2 className='text-secondary text-[36px] font-semibold'>
+                    <h2 className='text-secondary lg:text-[36px]  md:text-[20px] font-semibold'>
                       Training
                     </h2>
                 </div>
-                <div className='text-[28px]'>
+                <div className='lg:text-[28px]  lg:text-[18px]'>
                   <p className='text-center font-semibold text-gray leading-[36px]'>
                     Register For Our Next Cohort
                   </p>
@@ -84,7 +82,7 @@ const Services = () => {
                 </div>
                 <div className='my-4'>
                   <CustomButton backgroundColor="#FFF" border="1px solid #717171" textColor="#717171" borderRadius="20px" padding="5px 40px">
-                    <p>Learn</p>
+                    <p>Here</p>
                     <img src={LearnArrow} alt="learn arrow" />
                   </CustomButton>
                 </div>
