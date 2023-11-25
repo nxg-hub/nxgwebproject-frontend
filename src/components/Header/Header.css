@@ -1,4 +1,3 @@
-
 /* Platforms container */
 .platforms {
   gap: 2rem;
@@ -6,8 +5,8 @@
   padding: 10px;
 }
 
-.nav-list{
-  background-color: #2596BE;
+.nav-list {
+  background-color: #2596be;
   text-align: center;
 }
 
@@ -28,11 +27,29 @@
 
 /* Active navigation link */
 .nav_item .active {
-  color: #2596BE;
+  color: #2596be;
   background: white;
   border-radius: 2.5rem;
   height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav_underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.25rem;
+  width: 50%;
+  height: 0.15em;
+  background-color: #2596be;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav_underline:hover::after,
+.nav_underline:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
 }

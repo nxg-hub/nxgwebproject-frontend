@@ -106,7 +106,7 @@ const Header = ({ open, handleMenu }) => {
         </div>
         <div className='lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] w-[120%] flex flex-col items-end justify-center md:pr-2'>
           <div
-            className='text-secondary hover:bg-[#4D4D4D] transition hover:text-primary bg-primary rounded-full md:text-xl lg:hidden p-[0.7rem] mr-2 md:mr-0 flex items-center md:px-2.5 md:w-1/5'
+            className='text-secondary hover:bg-[#4D4D4D] transition duration-400 hover:text-primary bg-primary rounded-full md:text-xl lg:hidden p-[0.7rem] mr-2 md:mr-0 flex items-center md:px-2.5 md:w-1/5'
             onClick={handleMenu}
           >
             <FaBars size={20} />
@@ -120,7 +120,7 @@ const Header = ({ open, handleMenu }) => {
         ref={ref}
       >
         <div
-          className='flex items-end text-xl justify-end w-full'
+          className='flex items-end text-xl justify-end w-full hover:bg-[#4D4D4D] transition duration-400 hover:text-secondary'
           onClick={handleMenu}
         >
           <FaTimes />
@@ -132,14 +132,18 @@ const Header = ({ open, handleMenu }) => {
               <NavLink
                 exact
                 to='/'
-                className='nav-links transition-all hover:underline'
+                className='nav-links transition-all relative nav_underline'
               >
                 Home
               </NavLink>
             </li>
 
             <li className='w-full border-b border-[#b2b2b2] pb-2 py-2'>
-              <NavLink exact to='/about' className='nav-links hover:underline'>
+              <NavLink
+                exact
+                to='/about'
+                className='nav-links relative nav_underline'
+              >
                 About
               </NavLink>
             </li>
@@ -148,14 +152,18 @@ const Header = ({ open, handleMenu }) => {
               <NavLink
                 exact
                 to='/services'
-                className='nav-links hover:underline'
+                className='nav-links relative nav_underline'
               >
                 Services
               </NavLink>
             </li>
 
             <li className='w-full border-b border-[#b2b2b2] py-2'>
-              <NavLink exact to='/career' className='nav-links hover:underline'>
+              <NavLink
+                exact
+                to='/career'
+                className='nav-links relative nav_underline'
+              >
                 Careers
               </NavLink>
             </li>
@@ -164,7 +172,7 @@ const Header = ({ open, handleMenu }) => {
               <NavLink
                 exact
                 to='/contact'
-                className='nav-links hover:underline'
+                className='nav-links relative nav_underline'
               >
                 Contact Us
               </NavLink>
