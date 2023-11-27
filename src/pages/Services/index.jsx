@@ -23,7 +23,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-
+        
         {/* Services */}
         <div className='w-full center my-12 flex-col gap-10'>
           <div className='flex-col gap-6 center w-[80%]'>
@@ -31,11 +31,19 @@ const Services = () => {
               <div className='flex items-start'>
                 <img src={NLogo} alt="logo" />
               </div>
+<<<<<<< HEAD
               <h2 className='text-secondary lg:text-[36px]  md:text-[18px]font-semibold'>
                 Our Services
               </h2>
             </div>
             <p className='text-center lg:text-[18px]  md:text-[16px] text-gray leading-[28px]'>
+=======
+              <h2 className='text-secondary lg:text-center text-[36px] md:text-center text-[20px] font-semibold'>
+                Our Services
+              </h2>
+            </div>
+            <p className='lg:text-center text-[18px] md:text-center text-[16px] text-gray leading-[28px]'>
+>>>>>>> main
               We Assist You In Constructing Top-Tier Digital Solutions And Products Following Best Practices, While Also Offering An Extensive Array Of Associated Professional Services. Our Commitment Is To Provide Unparalleled Service To Our Esteemed Clients On A Global Scale.
             </p>
           </div>
@@ -68,11 +76,19 @@ const Services = () => {
                     <div className='flex items-start'>
                       <img src={NLogo} alt="logo" />
                     </div>
+<<<<<<< HEAD
                     <h2 className='text-secondary lg:text-[36px]  md:text-[20px] font-semibold'>
                       Training
                     </h2>
                 </div>
                 <div className='lg:text-[28px]  lg:text-[18px]'>
+=======
+                    <h2 className=' text-secondary lg:text-center text-[36px] md:text-center text-[20px] font-semibold'>
+                      Training
+                    </h2>
+                </div>
+                <div className='lg:text-[28px] md:text-[18px]'>
+>>>>>>> main
                   <p className='text-center font-semibold text-gray leading-[36px]'>
                     Register For Our Next Cohort
                   </p>

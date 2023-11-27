@@ -83,16 +83,28 @@ const About = () => {
     <img src={AboutThree} alt="About" className="mb-4" />
   </div>
 </div>
+<<<<<<< HEAD
 <div className="lg:text-left md:text-center my-4">
     <CustomButton backgroundColor="#FFF" border="1px solid #717171" textColor="#717171" borderRadius="20px" padding="8px">
         <p>Learn More</p>
             <img src={LearnArrow} alt="learn arrow" />
     </CustomButton>
+=======
+
+<div className="lg:text-left-[16px] md:text-center-[16px] my-4">
+  <CustomButton backgroundColor="#FFF" border="1px solid #717171" textColor="#717171" borderRadius="20px" padding="5px 40px">
+    <p style={{ whiteSpace: 'nowrap' }}>Learn More</p>
+    <img src={LearnArrow} alt="learn arrow" />
+  </CustomButton>
+>>>>>>> main
 </div>
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
         {/* Footer */}
         <Footer />
       </div>
