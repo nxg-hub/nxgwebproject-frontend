@@ -30,12 +30,14 @@ const Footer = () => {
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Location} alt="logo" />
-                            </div>                            <
+                            </div>
                             <p className='w-[60%]'>
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
                                 </Link>
+
                             </p>
+
                         </div>
 
                         <div className='flex items-center gap-2'>
