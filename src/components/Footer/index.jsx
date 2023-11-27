@@ -35,7 +35,9 @@ const Footer = () => {
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
                                 </Link>
+
                             </p>
+
                         </div>
 
                         <div className='flex items-center gap-2'>
