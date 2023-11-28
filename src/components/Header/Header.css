@@ -41,24 +41,6 @@
   font-weight: 700;
   transition: transform 300ms ease-out;
   transform-origin: left center; /* Set the transform origin to the left */
-<<<<<<< HEAD
-  transform: scale(1); /* Set the initial scale */
-}
-
-/* Hover effect for active link */
-.nav_item .active:hover {
-  transform: scale(1.1); /* Adjust the scale for the desired expansion effect */
-}
-
-/* Transition for inactive links */
-.nav-links:not(.active) {
-  transition: transform 300ms ease-out;
-}
-
-/* Apply styles to inactive links when active link is clicked */
-.nav-menu.clicked .nav-links:not(.active) {
-  transform: translateX(100%); /* Adjust the translation distance for inactive links */
-=======
   transform: scale(1.1); /* Set the initial scale for the active state */
 }
 
@@ -115,5 +97,4 @@
 /* Expand and shift other buttons to the right when one button is active */
 .nav_item .active ~ .nav-links {
   transform: translateX(20px) scale(1); /* Adjust the translation distance to your preference */
->>>>>>> main
 }
