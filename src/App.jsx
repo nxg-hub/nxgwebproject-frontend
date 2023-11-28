@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Career from "./pages/Career";
-import Contact from "./pages/Contact";
 import Header from "./components/Header/Header";
 import { useState } from "react";
 
@@ -24,7 +23,6 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
           <Route path='/career' element={<Career open={open} />} />
-          <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
     </>

@@ -8,6 +8,7 @@
 }
 .slide{
   position:absolute;
+  background-size:cover; 
   top:0;
   left:0;
   width:100%;
@@ -80,7 +81,7 @@
     background-size:;
   }
   .content{
-  right:3rem;
+  right:rem;
   left:rem;
   top:19rem;
   width:100%;
@@ -95,11 +96,11 @@
     top:;
     width:50vw;
   }
-  h2{
+  /* h2{
     font-size:28px;
     text-align:center;
 
-  }
+  } */
   .Title-slide{
     font-size:28px;
     font-weight:700;
@@ -137,6 +138,33 @@
   }
   
 }
+
+@media  (max-width:500px){
+  .content{
+    top:27.3rem;
+    left:0;
+
+   
+    padding-top:1.4rem;
+    padding-left:1.4rem;
+    padding-right:2.4rem;
+    padding-bottom:1.4rem;
+  }
+  .vector{
+    height:40%;
+    width:80vw;
+    left:3.5rem;
+  }
+  .all-dots {
+    height:60%;
+    }
+    .Title-slide{
+      width:100%;
+    }
+
+  
+}
+
 
 
 
