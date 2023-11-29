@@ -12,6 +12,7 @@ import {
   } from 'react-icons/fa';
 import { address } from '../../utils/address';
 
+
 const Footer = () => {
     return (
         <div className="bg-[#F1F1F1] w-full pt-8 center text-primary">
