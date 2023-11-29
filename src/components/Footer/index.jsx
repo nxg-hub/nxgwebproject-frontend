@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import NLogo from '../../assets/icons/n.png';
 import Location from '../../assets/svgs/location.svg';
 import Call from '../../assets/svgs/call.svg';
@@ -30,11 +30,13 @@ const Footer = () => {
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Location} alt="logo" />
-                            </div>                            <
-                            <p className='w-[60%]'>
+                            </div>                            
+                            <p className='w-[60%] group '>
+                                <div className='group-hover:border-b-[2px] '>
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
                                 </Link>
+                                </div>
                             </p>
                         </div>
 
@@ -42,10 +44,12 @@ const Footer = () => {
                             <div className='flex items-start'>
                                 <img src={Call} alt="logo" />
                             </div>
-                            <p className='w-[80%]'>
+                            <p className='w-[80%] group'>
+                                <div className='group-hover:border-b-[2px]'>
                                 <Link to='tel:+2348138563840'>
                                 Phone:  +234-813-856-3840 || +234 706 885 8151 || +234 706 784 7829
                                 </Link>
+                                </div>
                             </p>
                         </div>
 
@@ -53,10 +57,12 @@ const Footer = () => {
                             <div className='flex items-start'>
                                 <img src={Mail} alt="logo" />
                             </div>
-                            <p className=''>
+                            <p className='group'>
+                                <div className='group-hover:border-b-[2px]'>
                                 <Link to='mailto:info@nextgenhub.com.ng'>
                                 Email: info@nextgenhub.com.ng
                                 </Link>
+                                </div>
                             </p>
                         </div>
                     </div>
@@ -65,21 +71,62 @@ const Footer = () => {
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US
                         </h2>
-                        <p><Link to='/'>Home</Link></p>
-                        <p><Link to='/about'>About Us</Link></p>
-                        <p><Link to='/services'>Our Service</Link></p>
-                        <p><Link to='#'>Terms & Condition</Link></p>
-                        <p><Link to='#'>Privacy Policy</Link></p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px]'>
+                        <Link to='/'>Home</Link>
+                        </div>
+                        </p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px]'>
+                            <Link to='/about'>About Us</Link>
+                        </div>
+                        </p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px]'>
+                        <Link to='/services'>Our Service</Link>
+                        </div>
+                        </p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px]'>
+                        <Link to='#'>Terms & Condition</Link>
+                        </div>
+                        </p>
+
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px]'>
+                        <Link to='#'>Privacy Policy</Link>
+                        </div>
+                        </p>
                     </div>
                     <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             USEFUL LINKS
                         </h2>
-                       <p> <Link to='#'>Training</Link></p>
-                       <p><Link to='#'>NXG-Job-Hub</Link></p>
-                       <p> <Link to='/career'>Career</Link></p>
-                        <p><Link to='#'>Contact</Link></p>
-                        <p><Link to='#'>FAQ</Link></p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px]'>
+                        <Link to='#'>Training</Link>
+                        </div> 
+                        </p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px] '>
+                        <Link to='#'>NXG-Job-Hub</Link>
+                        </div>
+                        </p>
+                        <p className='group '>
+                        <div className='group-hover:border-b-[2px] w-[30px]'>
+                        <Link to='/career'>Career</Link>
+                        </div> 
+                        </p>
+                        <p className='group'>
+                        <div className='group-hover:border-b-[2px] w-[40px]'> 
+                        <Link to='/'>contact</Link>
+                        </div>
+                        </p>
+                        <p className='group'> 
+                        <div className='group-hover:border-b-[2px]  w-[15px]'>
+                        <Link to='#'>FAQ</Link>
+                        </div>
+                        </p>
                     </div>
                     </div>
                     <div className="md:w-[50%] w-full flex-col gap-4 flex items-start">
