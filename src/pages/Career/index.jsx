@@ -146,14 +146,14 @@ const Career = ({ open }) => {
                   Upload your resume
                 </h2>
                 <input className='p-4 sm:pl-0' type='file' name='' id='' />
-                <div className='ml-[3.2rem] md:ml-[5.8rem] mt-8'>
-                  <button className='text-primary rounded-[32px] py-2  pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]'>
-                    <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]'>Submit</span>
-                    <span className='rounded-full p-2 text-[#46A6C8] bg-primary'>
-                      <FiArrowUpRight size={25} />
-                    </span>
+                <div className='contact-button'>
+                <button className='group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]'>
+                  <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform'>Submit</span>
+                  <span className='group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary'>
+                  <FiArrowUpRight size={25} />
+                  </span>
                   </button>
-                </div>
+                  </div>
               </div>
             </div>
           </div>
