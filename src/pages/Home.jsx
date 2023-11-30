@@ -217,9 +217,9 @@ const Home = () => {
       </div>
       </div>
 
-      <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'  onClick={scrollToContactSection}>
+      <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'  >
 
-          <div>
+          <div  onClick={scrollToContactSection}>
           <input  className="input" type="text" placeholder='Name' name='User_name' />
           </div>
 

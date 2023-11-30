@@ -275,7 +275,7 @@ background-color:
   grid-template-columns: repeat(2, 0.8fr); 
   grid-gap:80px; /* Adds space between grid items */
   height:80%;
-  width:93vw;
+  width:100%;
   background-color:white;
   margin-right: 20px;
   padding-top:20px;

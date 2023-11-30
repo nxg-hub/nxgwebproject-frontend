@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NLogo from '../../assets/icons/n.png';
 import Location from '../../assets/svgs/location.svg';
 import Call from '../../assets/svgs/call.svg';
@@ -30,22 +30,24 @@ const Footer = () => {
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Location} alt="logo" />
-                            </div>                            
-                            <p className='w-[60%] group '>
-                                <div className='group-hover:border-b-[2px] '>
+                            </div>
+                            <p className='group w-[60%]'>
+                                <div className='group-hover:border-b-[2px]'>
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
                                 </Link>
                                 </div>
+
                             </p>
+
                         </div>
 
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Call} alt="logo" />
                             </div>
-                            <p className='w-[80%] group'>
-                                <div className='group-hover:border-b-[2px]'>
+                            <p className='group w-[80%]'>
+                                <div className='group-hover:border-b-[2px]' >
                                 <Link to='tel:+2348138563840'>
                                 Phone:  +234-813-856-3840 || +234 706 885 8151 || +234 706 784 7829
                                 </Link>
@@ -72,30 +74,34 @@ const Footer = () => {
                             ABOUT US
                         </h2>
                         <p className='group'>
-                        <div className='group-hover:border-b-[2px]'>
-                        <Link to='/'>Home</Link>
-                        </div>
-                        </p>
-                        <p className='group'>
-                        <div className='group-hover:border-b-[2px]'>
-                            <Link to='/about'>About Us</Link>
-                        </div>
-                        </p>
-                        <p className='group'>
-                        <div className='group-hover:border-b-[2px]'>
-                        <Link to='/services'>Our Service</Link>
-                        </div>
-                        </p>
-                        <p className='group'>
-                        <div className='group-hover:border-b-[2px]'>
-                        <Link to='#'>Terms & Condition</Link>
-                        </div>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='/'>Home</Link>
+                            </div>
                         </p>
 
                         <p className='group'>
-                        <div className='group-hover:border-b-[2px]'>
-                        <Link to='#'>Privacy Policy</Link>
-                        </div>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='/about'>About Us</Link>
+                            </div>
+                        </p>
+
+
+                        <p className='group'>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='/services'>Our Services</Link>
+                            </div>
+                        </p>
+                        
+                        <p className='group'>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='#'>Terms & condition</Link>
+                            </div>
+                        </p>
+
+                        <p className='group'>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='#'>Privacy Policy</Link>
+                            </div>
                         </p>
                     </div>
                     <div className="md:w-fit w-full flex-col gap-4 flex items-start">
@@ -103,29 +109,29 @@ const Footer = () => {
                             USEFUL LINKS
                         </h2>
                         <p className='group'>
-                        <div className='group-hover:border-b-[2px]'>
-                        <Link to='#'>Training</Link>
-                        </div> 
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='#'>Training</Link>
+                            </div>
                         </p>
                         <p className='group'>
-                        <div className='group-hover:border-b-[2px] '>
-                        <Link to='#'>NXG-Job-Hub</Link>
-                        </div>
-                        </p>
-                        <p className='group '>
-                        <div className='group-hover:border-b-[2px] w-[30px]'>
-                        <Link to='/career'>Career</Link>
-                        </div> 
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='#'>NXG-Job-Hub</Link>
+                            </div>
                         </p>
                         <p className='group'>
-                        <div className='group-hover:border-b-[2px] w-[40px]'> 
-                        <Link to='/'>contact</Link>
-                        </div>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='/career'>career</Link>
+                            </div>
                         </p>
-                        <p className='group'> 
-                        <div className='group-hover:border-b-[2px]  w-[15px]'>
-                        <Link to='#'>FAQ</Link>
-                        </div>
+                        <p className='group'>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='/'>Contact </Link>
+                            </div>
+                        </p>
+                        <p className='group'>
+                            <div className='group-hover:border-b-[2px]'>
+                            <Link to='#'>FAQ</Link>
+                            </div>
                         </p>
                     </div>
                     </div>

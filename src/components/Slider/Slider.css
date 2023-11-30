@@ -138,8 +138,8 @@
  
   .all-dots {
   width:90%;
-  margin-top: 31rem;
-  height:50%;
+  margin-top:31rem;
+  height:150%;
   }
   .all-dots .dot{
     width:10px;
@@ -219,7 +219,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32.8rem;
+  margin-top: 38%;
   z-index:10;
 }
 

@@ -84,7 +84,6 @@ const About = () => {
     <img src={AboutThree} alt="About" className="mb-4" />
   </div>
 </div>
-
  <div className='learn-more-arrow2 mb-[40px]' >
   <button className='group p-[8px]'>
     <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/career">
@@ -95,8 +94,6 @@ const About = () => {
     </a>
   </button>
   </div>
-
-
         {/* Footer */}
         <Footer />
       </div>
