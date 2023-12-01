@@ -30,7 +30,7 @@ const Footer = () => {
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Location} alt="logo" />
-                            </div>                            <
+                            </div>                            
                             <p className='w-[60%]'>
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
@@ -90,7 +90,7 @@ const Footer = () => {
                             Combining Our Expertise Yields A Versatile Team Ready To Accomplish All Your Brand Or Career Requirements. Stay Tuned For Our Latest Updates By Subscribing Here.
                         </p>
                         <div className='border border-primary rounded-md between p-1 w-full'>
-                            <input type="email" name="email" id="email" required className='border-none outline-none bg-gray pl-4 w-full' />
+                            <input type="email" placeholder="Email Address" name="email" id="email" required className=' placeholder-primary border-none outline-none bg-gray pl-4 w-full' />
                             <CustomButton children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
                         </div>
                     </div>

@@ -32,10 +32,13 @@ const Career = ({ open }) => {
           <h2 className='text-[#2596BE] font-semibold text-md md:text-[36px]'>
             Careers
           </h2>
+          <span className='hidden absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)]'>
+            <img src='/tag.png' alt='icon' className='px-4 ' />
+          </span>
           <img
             src='/tag.png'
             alt='icon'
-            className='absolute bottom-[0.9rem] w-[51px] md:bottom-[2rem] right-[7rem] md:right-[11.7rem] px-4'
+            className='md:hidden px-4 w-[51px] absolute bottom-[0.9rem] right-[7rem] '
           />
         </div>
         <span className='text-[#717171] md:px-0 px-4 text-center text-normal md:text-[18px] font-normal'>
@@ -44,9 +47,34 @@ const Career = ({ open }) => {
       </div>
       <div className='bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:py-[3rem] md:px-4 px-8'>
         <div className='md:mx-16 mx-auto rounded-2xl bg-primary md:px-14 py-10 md:py-8 md:relative'>
-          <div className='grid md:grid-cols-2 gap-6 md:gap-[20rem] '>
-            <div className='flex flex-col pl-[0.55rem] md:pl-0 md:pt-[3rem]'>
-              <div className='md:px-0 md:py-0'>
+          <div className='grid md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-6 md:gap-[10rem] '>
+            <div className='flex flex-col w-[20rem] md:w-auto pl-[0.55rem] md:pl-0 md:pt-[3rem]'>
+              <input
+                className='py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]'
+                type='text'
+                placeholder='Name'
+              />
+              <input
+                className='py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]'
+                type='tel'
+                placeholder='Contact Number'
+              />
+              <input
+                className='py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]'
+                type='email'
+                placeholder='Email'
+              />
+              <input
+                className='py-2 md:py-4 px-6  mt-3  rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]'
+                type='number'
+                placeholder='Years of Experience'
+              />
+              <textarea
+                className='py-2 md:py-4 px-6 mt-3 rounded-[20px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]'
+                type='text'
+                placeholder='Other Details'
+              />
+              {/* <div className='md:px-0 md:py-0'>
                 <input
                   className='py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[140%] w-[79vw] border border-[#A8D5E5]'
                   type='text'
@@ -82,73 +110,78 @@ const Career = ({ open }) => {
                   type='text'
                   placeholder='Other Details'
                 />
-              </div>
+              </div> */}
             </div>
 
-            <div>
-              <div className='flex flex-col'>
-                <h2 className='text-[18px] pl-6 md:pl-0 md:text-[28px] mb-2 whitespace-nowrap font-medium text-[#717171]'>
-                  Applying for which post
-                </h2>
-                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171] text-normal md:text-[20px]'>
-                  <input
-                    className='mr-6'
-                    type='radio'
-                    name='post'
-                    id='product_designer'
-                    value='product_designer'
-                  />
-                  Product Designer (UI/UX)
-                </div>
-                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
-                  <input
-                    className='mr-6'
-                    type='radio'
-                    name='post'
-                    id='product_manager'
-                    value='product_manager'
-                  />
-                  Project/Product Manager
-                </div>
-                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
-                  <input
-                    className='mr-6'
-                    type='radio'
-                    name='post'
-                    id='software_developer'
-                    value='software_developer'
-                  />
-                  Software Developer
-                </div>
-                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
-                  <input
-                    className='mr-6'
-                    type='radio'
-                    name='post'
-                    id='digital_marketer'
-                    value='digital_marketer'
-                  />
-                  Digital Marketer
-                </div>
-                <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
-                  <input
-                    className='mr-6'
-                    type='radio'
-                    name='post'
-                    id='it_instructor'
-                    value='it_instructor'
-                  />
-                  IT Instructor
-                </div>
+            <div className='flex flex-col md:justify-self-end sm:justify-self-start '>
+              <h2 className='text-[18px] pl-6 md:pl-0 md:text-[28px] mb-2 whitespace-nowrap font-medium text-[#717171]'>
+                Applying for which post
+              </h2>
+              <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171] text-normal md:text-[20px]'>
+                <input
+                  className='mr-6'
+                  type='radio'
+                  name='post'
+                  id='product_designer'
+                  value='product_designer'
+                />
+                Product Designer (UI/UX)
+              </div>
+              <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
+                <input
+                  className='mr-6'
+                  type='radio'
+                  name='post'
+                  id='product_manager'
+                  value='product_manager'
+                />
+                Project/Product Manager
+              </div>
+              <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
+                <input
+                  className='mr-6'
+                  type='radio'
+                  name='post'
+                  id='software_developer'
+                  value='software_developer'
+                />
+                Software Developer
+              </div>
+              <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
+                <input
+                  className='mr-6'
+                  type='radio'
+                  name='post'
+                  id='digital_marketer'
+                  value='digital_marketer'
+                />
+                Digital Marketer
+              </div>
+              <div className='p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]'>
+                <input
+                  className='mr-6'
+                  type='radio'
+                  name='post'
+                  id='it_instructor'
+                  value='it_instructor'
+                />
+                IT Instructor
               </div>
               <div className='flex pl-10 md:pl-0  flex-col mt-6'>
                 <h2 className='text-[18px]  md:text-[28px] mb-2 font-medium text-[#717171]'>
                   Upload your resume
                 </h2>
-                <input className='p-4 sm:pl-0 md:mb-[5rem]' type='file' name='' id='' />
-                <div className='ml-[3.2rem] md:absolute md:bottom-[20px]'>
+                <input
+                  className='p-4 sm:pl-0 md:mb-[5rem]'
+                  type='file'
+                  name=''
+                  id=''
+                />
+                <div className='md:ml-[3.2rem] md:absolute md:bottom-[20px]'>
                   <button className='text-primary rounded-[32px] py-2 my-[2.5rem] md:my-0 pr-2 md:ml-0 ml-[3rem] bg-[#2596be] flex items-center sm:w-[200px]'>
-                    <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]'>Submit</span>
+                    <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]'>
+                      Submit
+                    </span>
                     <span className='rounded-full p-2 text-[#46A6C8] bg-primary'>
                       <FiArrowUpRight size={25} />
                     </span>
