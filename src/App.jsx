@@ -16,7 +16,7 @@ function App() {
   
   return (
     <>
-      <Header open={open} handleMenu={handleMenu} />
+      <Header  open={open} handleMenu={handleMenu} />
       <div className='pages'>
         <Routes>
           <Route path='/' element={<Home />} />

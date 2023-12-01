@@ -9,10 +9,11 @@ import software from'../assets/images/software.jpg'
 import icon2 from'../assets/icons/icon2.jpg'
 import consulting from '../assets/images/consulting.jpg'
 import icon1 from'../assets/icons/icon1.jpg'
-import { BsArrowRight,BsArrowUpRight } from 'react-icons/bs'
+import { BsArrowRight,BsArrowUp,BsArrowUpRight } from 'react-icons/bs'
 import FaqList from '../components/FAQ/FaqList'
-import contactbg from '../assets/images/contactbg.png'
+import contactbackground from '../assets/images/contactbackground.svg'
 import Footer from '../components/Footer/index'
+import { FiArrowUpRight } from 'react-icons/fi';
 
 
 
@@ -34,6 +35,16 @@ const Home = () => {
       });
     }
   };
+  
+  const scrollToContactSection = () => {
+    if (contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+
+
 
   return (
     <>
@@ -51,7 +62,7 @@ const Home = () => {
       <div className="About-section1">
         <div className="About-heading">
 
-          <div className="About-desc">
+          <div className="About-description">
             <div>
               <img className='logo-icon' src={icon1} alt="" />
             </div>
@@ -85,9 +96,16 @@ const Home = () => {
 
       
     <div className='learn-more-arrow1'>
-      <button>
-        <a className='BsArrowUpRight' href="/about" style={{color:" #717171"}}>Learn More <BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></a>
-      </button>
+
+    <button className='group p-[8px]'>
+    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/about">
+      <span className='text-[#717171]'>
+        Learn More
+      </span>
+      <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
+    </a>
+  </button>
+
     </div>
  
     </div>
@@ -119,7 +137,7 @@ const Home = () => {
   <div className="service-content"> 
 
     <div className="section-2services">
-      <div className="IT-Training">
+      <div className="IT-Training border-[#eef2f6] border-[0.5px]">
         <div className='services-image'>
           <img className='image-IT' src={consulting} alt="" />
         </div>
@@ -129,7 +147,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="Software-Development">
+      <div className="Software-Development border-[#eef2f6] border-[0.5px]">
         <div>
           <img className='image-software' src={software} alt="" />
         </div>
@@ -139,7 +157,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="Consulting-Services">
+      <div className="Consulting-Services border-[#eef2f6] border-[0.5px]">
         <div>
           <img className='image-consulting' src={IT} alt="" />
         </div>
@@ -151,29 +169,34 @@ const Home = () => {
     </div>
   </div>
 
-  <div className='learn-more-arrow1' style={{ display: "grid", placeContent: "center", }}>
-    <button >
-      <a className='BsArrowUpRight' style={{ display: "flex", fontWeight: "400" ,color:" #717171"}} href="/services">Learn More <BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></a>
-    </button>
+  <div className='learn-more-arrow1 grid place-content-center' >
+  <button className='group p-[8px]'>
+    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/services">
+      <span className='text-[#717171]'>
+        Learn More
+      </span>
+      <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
+    </a>
+  </button>
   </div>
 </section>
 
 
 
   {/*-------- Contact Section----------*/}
-  <section style={{marginTop:"50px",marginleft:"0"}}>
+  <section  id='contact' style={{marginTop:"50px",marginLeft:"0",marginBottom:'0',padding:"0"}} ref={contactSectionRef}  >
     <div style={{display:"grid",placeContent:"center"}}>
       
-    <div className='get-intouch-heading'>
+    <div className='get-intouch-heading rounded-[20px] border-[#eef2f6] border-[0.5px]'>
       <div>
       <img src={icon2} alt="" />
       </div>
       <div>
-      <div className='get-inTouch'>Get In Touch</div>
+      <div  className='get-inTouch'    onClick={scrollToContactSection}>Get In Touch</div>
       </div>
     </div>
     </div>
-<div style={{backgroundImage: `url(${contactbg})`,}} className='contact-container' >
+<div style={{backgroundImage: `url(${contactbackground})`,}} className='contact_container' >
     <div className='Contact-content'>
 
       <div style={{}} className='contact-section1'>
@@ -194,9 +217,9 @@ const Home = () => {
       </div>
       </div>
 
-      <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'>
+      <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'  >
 
-          <div>
+          <div  onClick={scrollToContactSection}>
           <input  className="input" type="text" placeholder='Name' name='User_name' />
           </div>
 
@@ -213,8 +236,14 @@ const Home = () => {
           </div>
 
           <div className='contact-button'>
-            <button  className='contact-submit'>submit </button>
-          </div>
+  <button className='group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]'>
+    <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform'>Submit</span>
+    <span className='group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary'>
+      <FiArrowUpRight size={25} />
+    </span>
+  </button>
+</div>
+
       </div>
 
     </div>
@@ -237,9 +266,12 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className='learn-more-arrow1' style={{ display: "grid", placeContent: "center",paddingBottom:"100px" }}>
-    <button >
-      <div className='BsArrowUpRight' style={{ display: "flex", fontWeight: "400",  color:" #717171"}}onClick={scrollToTop} >Back to Top<BsArrowUpRight className="group-hover:text-primarycolor w-6 h-5" /></div>
+    <div className='learn-more-arrow1 grid place-content-center pb-[50px]'>
+    <button className='group' >
+      <div className='BsArrowUpRight flex font-[400] text-[#717171]  group-hover:translate-x-2 transition-transform' onClick={scrollToTop} >
+        Back to Top
+      <BsArrowUpRight className=" transform transition-transform group-hover:rotate-45 w-6 h-5 mx-[5px]" />
+      </div>
     </button>
   </div>
   </div>

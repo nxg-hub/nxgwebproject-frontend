@@ -7,6 +7,7 @@ import AboutOne from '../../assets/images/aboutOne.jpg';
 import AboutTwo from '../../assets/images/aboutTwo.jpg';
 import AboutThree from '../../assets/images/aboutThree.jpg';
 import LearnArrow from '../../assets/svgs/learnArrow.svg';
+import { BsArrowUpRight } from 'react-icons/bs';
 
 const About = () => {
   return (
@@ -25,14 +26,14 @@ const About = () => {
           </div>
         </div>
 
-        {/* About Us */}
+        {/* About */}
         <div className="w-full center my-12 flex-col gap-10">
           <div className="flex-col gap-6 center w-[80%]">
             <div className="center">
               <div className="flex items-start">
                 <img src={NLogo} alt="logo" />
               </div>
-              <h2 className="ml-4 text-secondary lg:text-[36px] md:text-[20px] font-semibold">About us</h2>
+              <h2 className="text-secondary lg:text-[36px] md:text-[20px] font-semibold">About us</h2>
             </div>
           </div>
 
@@ -83,16 +84,16 @@ const About = () => {
     <img src={AboutThree} alt="About" className="mb-4" />
   </div>
 </div>
-
-<div className="lg:text-left-[16px] md:text-center-[16px] my-4">
-  <CustomButton backgroundColor="#FFF" border="1px solid #717171" textColor="#717171" borderRadius="20px" padding="5px 40px">
-    <p style={{ whiteSpace: 'nowrap' }}>Learn More</p>
-    <img src={LearnArrow} alt="learn arrow" />
-  </CustomButton>
-</div>
-
-
-
+ <div className='learn-more-arrow2 mb-[40px]' >
+  <button className='group p-[8px]'>
+    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/career">
+      <span className='text-[#717171]'>
+        Learn More
+      </span>
+      <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
+    </a>
+  </button>
+  </div>
         {/* Footer */}
         <Footer />
       </div>

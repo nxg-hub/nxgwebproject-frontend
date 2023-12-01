@@ -19,9 +19,23 @@ const Header = ({ open, handleMenu }) => {
   const ref = useRef();
   const location = useLocation();
 
+  const handleClickContact = (event) => {
+    event.preventDefault();
+
+    // Assuming you have a function scrollToContactSection that scrolls to the contact section
+    // You can replace this with your actual scrolling logic
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close the menu if it's open
+    handleMenu(false);
+  };
+
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      // If the mobile menu is open and clicked taget is not within the menu
+      // If the mobile menu is open and clicked target is not within the menu
       if (open && ref.current && !ref.current.contains(e.target)) {
         // close the menu
         handleMenu(false);
@@ -37,7 +51,7 @@ const Header = ({ open, handleMenu }) => {
   }, [open]);
 
   useEffect(() => {
-    // close mobile menu on locaton change
+    // close mobile menu on location change
     handleMenu(false);
   }, [location]);
 
@@ -97,12 +111,13 @@ const Header = ({ open, handleMenu }) => {
         </div>
 
         <div className='pr-2 pl-6 bg-secondary rounded-[3rem] h-full between sm:hidden lg:flex'>
-          <NavLink exact to='/contact' className='between gap-3'>
+          {/* Change from NavLink to anchor tag */}
+          <a href="#contact" className='between gap-3' onClick={handleClickContact}>
             <div style={{ color: "white" }}> Contact Us </div>
             <div className='bg-primary w-[40px] h-[40px] center rounded-full'>
               <img src={arrow} alt='arrow' />
             </div>
-          </NavLink>
+          </a>
         </div>
         <div className='lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] w-[120%] flex flex-col items-end justify-center md:pr-2'>
           <div
@@ -128,7 +143,7 @@ const Header = ({ open, handleMenu }) => {
 
         <div className='transition flex items-start mt-8 w-full'>
           <ul className={`flex-col gap-4 h-full flex w-full`} ref={ref}>
-            <li className='w-full border-b border-[#b2b2b2] py-4 '>
+            <li className='w-full border-b border-[#573636] py-4 '>
               <NavLink
                 exact
                 to='/'
@@ -169,13 +184,11 @@ const Header = ({ open, handleMenu }) => {
             </li>
 
             <li className='w-full border-b border-[#b2b2b2] py-2'>
-              <NavLink
-                exact
-                to='/contact'
-                className='nav-links relative nav_underline'
-              >
+              {/* Change from NavLink to div */}
+              <a href="#contact" className='nav-links hover:underline'onClick={handleClickContact} >
+            
                 Contact Us
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>
