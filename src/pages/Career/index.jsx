@@ -38,7 +38,7 @@ const Career = ({ open }) => {
           <img
             src='/tag.png'
             alt='icon'
-            className='md:hidden px-4 w-[51px] absolute bottom-[0.9rem] right-[7rem] '
+            className='md:hidden px-4 w-[51px] absolute bottom-[0.9rem] right-[calc(100%-3rem)] '
           />
         </div>
         <span className='text-[#717171] md:px-0 px-4 text-center text-normal md:text-[18px] font-normal'>
