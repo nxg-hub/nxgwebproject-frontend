@@ -26,20 +26,24 @@ const Career = ({ open }) => {
           NXG-HUB | CAREERS
         </p>
       </div>
-
       <div className='flex flex-col items-center py-[5.5rem]'>
-        <div className='text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2'>
-          <h2 className='text-[#2596BE] font-semibold text-md md:text-[36px]'>
+        <div className='md:hidden flex justify-center gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2'>
+          <span>
+            <img src='/tag.png' alt='icon' className='' />
+          </span>
+          <span>
+            <h2 className='text-[#2596BE] font-semibold text-md md:text-[36px]'>
+              Careers
+            </h2>
+          </span>
+        </div>
+        <div className='hidden md:block gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2'>
+          <h2 className='text-[#2596BE] font-semibold text-md md:text-[36px] ml-4'>
             Careers
           </h2>
-          <span className='hidden absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)]'>
+          <span className='absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)] ml-2'>
             <img src='/tag.png' alt='icon' className='px-4 ' />
           </span>
-          <img
-            src='/tag.png'
-            alt='icon'
-            className='md:hidden px-4 w-[51px] absolute bottom-[0.9rem] right-[calc(100%-3rem)] '
-          />
         </div>
         <span className='text-[#717171] md:px-0 px-4 text-center text-normal md:text-[18px] font-normal'>
           Job Opening At NXG-HUB Digital Technologies. Apply Now!
