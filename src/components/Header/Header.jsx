@@ -130,7 +130,7 @@ const Header = ({ open, handleMenu }) => {
       </nav>
       <div
         className={`${
-          open ? "left-[5.3rem]" : "left-[45rem]"
+          open ? "translate-x-[15%]" : "translate-x-[150%]"
         } lg:hidden transition-all z-40 md:ml-0 absolute w-[80vw] h-[90vh] top-0 bottom-0 px-2 py-6 bg-[#4D4D4D] text-primary flex-col flex`}
         ref={ref}
       >
