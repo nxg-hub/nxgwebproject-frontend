@@ -93,7 +93,7 @@ const Footer = () => {
                             Combining Our Expertise Yields A Versatile Team Ready To Accomplish All Your Brand Or Career Requirements. Stay Tuned For Our Latest Updates By Subscribing Here.
                         </p>
                         <div className='border border-primary rounded-md between p-1 w-full'>
-                            <input type="email" name="email" id="email" required className='border-none outline-none bg-gray pl-4 w-full' />
+                            <input type="email" placeholder="Email Address" name="email" id="email" required className=' placeholder-primary border-none outline-none bg-gray pl-4 w-full' />
                             <CustomButton children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
                         </div>
                     </div>
