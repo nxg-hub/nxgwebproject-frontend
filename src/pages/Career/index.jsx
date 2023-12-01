@@ -47,8 +47,8 @@ const Career = ({ open }) => {
       </div>
       <div className='bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:py-[3rem] md:px-4 px-8'>
         <div className='md:mx-16 mx-auto rounded-2xl bg-primary md:px-14 py-10 md:py-8 md:relative'>
-          <div className='grid md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-6 md:gap-[10rem] '>
-            <div className='flex flex-col w-[20rem] md:w-auto pl-[0.55rem] md:pl-0 md:pt-[3rem]'>
+          <div className='grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-6 md:gap-[10rem] '>
+            <div className='flex flex-col w-full md:w-auto px-[0.55rem] md:pl-0 md:pt-[3rem]'>
               <input
                 className='py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]'
                 type='text'
