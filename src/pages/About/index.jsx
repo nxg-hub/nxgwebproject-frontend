@@ -25,17 +25,20 @@ const About = () => {
             </div>
           </div>
         </div>
+    
 
         {/* About */}
-        <div className="w-full center my-12 flex-col gap-10">
-          <div className="flex-col gap-6 center w-[80%]">
-            <div className="center">
-              <div className="flex items-start">
-                <img src={NLogo} alt="logo" />
-              </div>
-              <h2 className="text-secondary lg:text-[36px] md:text-[20px] font-semibold">About us</h2>
-            </div>
-          </div>
+        <div className='flex flex-col items-center py-[5.5rem]'>
+        <div className='text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2'>
+          <h2 className='ml-6 text-[#2596BE] font-semibold text-md md:text-[36px]'>
+            About Us
+          </h2>
+          <img
+            src='/tag.png'
+            alt='icon'
+            className='absolute bottom-[0.9rem] w-[51px] md:bottom-[2rem] right-[7rem] md:right-[11.7rem] px-4'
+          />
+        </div>
 
         {/* We Bring You Creativity At Its Best */}
       <div className="between flex-col md:flex-row w-[90%]">
