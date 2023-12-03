@@ -12,6 +12,7 @@ import {
   } from 'react-icons/fa';
 import { address } from '../../utils/address';
 
+
 const Footer = () => {
     return (
         <div className="bg-[#F1F1F1] w-full pt-8 center text-primary">
@@ -35,7 +36,9 @@ const Footer = () => {
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
                                 </Link>
+
                             </p>
+
                         </div>
 
                         <div className='flex items-center gap-2'>

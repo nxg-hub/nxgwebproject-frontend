@@ -1,6 +1,6 @@
 /* FaqItem.css */
 .faq-item {
-  padding: 1rem;
+  padding: 0.7rem;
   border: 1px solid #D9DCE2;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -23,7 +23,7 @@
 }
 
 .question {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.75;
   font-weight: 600;
   color:#717171;
@@ -59,7 +59,7 @@
 }
 
 .answer {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
   font-weight: 400;
    color:#717171; /* Adjust color as needed */
@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 768px){
   .faq-list{
-    margin-left:3%;
+
     width:70%;
   }
   .faq-item {
@@ -81,3 +81,8 @@
   }
   
 } 
+@media (max-width: 500px){
+  .faq-list{
+    width:50%;
+  }
+}

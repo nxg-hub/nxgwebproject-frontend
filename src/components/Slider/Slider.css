@@ -8,6 +8,7 @@
 }
 .slide{
   position:absolute;
+  background-size:cover; 
   top:0;
   left:0;
   width:100%;
@@ -41,7 +42,7 @@
   animation-fill-mode:  forwards; 
 }
 .Title-slide{
-  color:#46A6C8;
+  color:#717171;
   font-size:64px;
   font-family:manrope;
   font-weight:600;
@@ -69,7 +70,7 @@
 
 
 }
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:600px) {
   .vector-heading{
     display:grid;
     place-items:center;
@@ -77,23 +78,31 @@
     height:30%;
   }
   .slider{
-    background-size:;
+    background-size:cover;
+  }
+  .slide{
+    height:100%;
   }
   .content{
-  right:3rem;
+  right:rem;
   left:rem;
-  top:19rem;
+  top:24.8rem;
   width:100%;
   animation: slide-right 1s ease .5s;
   animation-fill-mode:  forwards; 
   margin-bottom:100px;
+  padding-top:1.4rem;
+  padding-left:1.4rem;
+  padding-right:2.4rem;
+  padding-bottom:1.4rem;
 
   }
   .vector{ 
-    left:9rem;
     height:40%;
     top:;
-    width:50vw;
+    width:50%;
+    height:40%;
+    left:3.5rem;
   }
   /* h2{
     font-size:28px;
@@ -112,7 +121,8 @@
   
   }
   .ARROW{
-    display: ; 
+    display:; 
+    color:#717171;
   }
   .Button-Container{
     display:grid;
@@ -128,7 +138,8 @@
  
   .all-dots {
   width:90%;
-  margin-top: 31rem;
+  margin-top:31rem;
+  height:150%;
   }
   .all-dots .dot{
     width:10px;
@@ -139,10 +150,29 @@
 }
 
 
+@media  only screen and  (max-width:600px){
+  
+  .vector{
+    height:40%;
+    width:80vw;
+    left:3.5rem;
+  }
+ 
+    .Title-slide{
+      width:100%;
+    }
+    .slider{
+      background-size:cover;
+    }
+  
+}
+
+
+
 
 .vector{
   position:absolute; 
-  top: 7rem;
+  top: 6rem;
   right:5rem; 
    
   
@@ -156,10 +186,10 @@
 }
 .arrow{
   display:transparent;
-  border:2px solid white ;
+  border:2px solid #4D4D4D ;
   border-radius:50%; 
   background: transparent;
-  color:white;
+  color:#4D4D4D;
   width:2rem;
   height:2rem;
   cursor:pointer;
@@ -167,8 +197,8 @@
   Z-index: 999; 
 }
 .arrow:hover{
-  background: white;
-  color:#777;
+  background:;
+  color:#4D4D4D;
 }
 .next{
   top: 15rem;
@@ -189,7 +219,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32.8rem;
+  margin-top: 38%;
   z-index:10;
 }
 
