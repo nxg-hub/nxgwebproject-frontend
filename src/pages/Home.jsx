@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import Slider from '../components/Slider/Slider'
 import { NavLink } from 'react-router-dom'
 import REC from '../assets/images/REC.jpg'
-import smoke from '../assets/images/smoke.png'
 import IT from '../assets/images/IT.jpg'
 import software from'../assets/images/software.jpg'
 import icon2 from'../assets/icons/icon2.jpg'
@@ -163,7 +162,7 @@ const Home = () => {
         </div>
         <div className="service-details">
           <h1 className='Intro-services'>Consulting Services</h1>
-          <div className='SPACE services-info'>We Offer IT Consultancy Services, Including Technical Recruiting. <a style={{ textDecoration: "underline" }} href="/contact">Contact Us Today!</a></div>
+          <div className='SPACE services-info'>We Offer IT Consultancy Services, Including Technical Recruiting. <a style={{ textDecoration: "underline" }} href="#contact">Contact Us Today!</a></div>
         </div>
       </div>
     </div>
@@ -232,7 +231,7 @@ const Home = () => {
           </div>
 
           <div style={{}}>
-          <textarea className='textarea' name="message" cols="30" rows="4"></textarea>
+          <textarea className='textarea' name="message" placeholder='Message' cols="30" rows="4"></textarea>
           </div>
 
           <div className='contact-button'>
