@@ -1,9 +1,20 @@
-.banner {
-    background-image: url(../../assets/images/ServiceBanner.png);
-    background-position: center center;
-    background-repeat: no-repeat;
+/* Overlay styles */
+.overlay::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
 }
+/* Overlay styles ends */
 
 .services {
-    background: linear-gradient(96deg, #2596BE -0.99%, rgba(37, 150, 190, 0.50) -0.99%, rgba(172, 172, 172, 0.50) 100%);
+  background: linear-gradient(
+    96deg,
+    #2596be -0.99%,
+    rgba(37, 150, 190, 0.5) -0.99%,
+    rgba(172, 172, 172, 0.5) 100%
+  );
 }
