@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Career from './pages/Career';
-import Contact from './pages/Contact';
 import Header from './components/Header/Header';
 
 
