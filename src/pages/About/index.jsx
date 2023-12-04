@@ -3,9 +3,9 @@ import "./index.css";
 import CustomButton from "../../components/Button";
 import NLogo from "../../assets/icons/n.png";
 import Footer from "../../components/Footer";
-import AboutOne from "../../assets/images/aboutOne.jpg";
-import AboutTwo from "../../assets/images/aboutTwo.jpg";
-import AboutThree from "../../assets/images/aboutThree.jpg";
+import first from "../../assets/images/first.jpg";
+import second from "../../assets/images/aboutTwo.jpg";
+import third from "../../assets/images/aboutThree.jpg";
 import LearnArrow from "../../assets/svgs/learnArrow.svg";
 import { BsArrowUpRight } from "react-icons/bs";
 
@@ -47,14 +47,16 @@ const About = ({ open }) => {
             </h2>
           </div>
         </div>
+      </div>
 
-        {/* We Bring You Creativity At Its Best */}
-        <div className="between flex-col md:flex-row w-[90%]">
+      {/* We Bring You Creativity At Its Best */}
+      <section className="px-4 md:px-[9rem]">
+        <div className="between flex-col md:flex-row pb-20 md:pb-0">
           <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
-            <h3 className="lg:text-[32px] md:text-[20px] font-semibold text-secondary">
+            <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
               We bring you Creativity at Its best!
             </h3>
-            <p className="lg:text-[18px] md:text-[16px] text-color">
+            <p className="lg:text-[1.15rem] text-[1rem] text-[#717171]">
               NextGenHub (NXG-Hub) is a group of software developers and IT
               consultants from all spheres of the information technology world,
               endowed with experiences, bright minds, and exposure. We are a
@@ -65,61 +67,65 @@ const About = ({ open }) => {
               the world through technology.
             </p>
           </div>
-          <div className="order-first md:order-last md:w-[35%]">
-            <img src={AboutOne} alt="About" className="mb-4" />
+          <div className="order-first md:order-last md:w-[35%] flex justify-end">
+            <img src={first} alt="About" />
           </div>
         </div>
-      </div>
 
-      {/* OUR MISSION */}
-      <div className="between flex-col md:flex-row w-[90%]">
-        <div className="md:w-[35%] float-left">
-          <img src={AboutTwo} alt="About" className="mb-4" />
+        {/* OUR MISSION */}
+        <div className="between flex-col md:flex-row">
+          <div className="float-left flex justify-end">
+            <img src={second} alt="About" />
+          </div>
+          <div className="md:w-[60%] flex-col gap-4 items-start flex mb-[3rem] md:mb-0">
+            <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
+              Our Mission
+            </h3>
+            <p className="lg:text-[1.15rem] text-[1rem] text-[#717171]">
+              NXG-HUB Digital Technologies Aims To Empower Numerous Youth By
+              Offering Industry-Relevant Skill Training, Thus Enhancing Their
+              Prospects For A More Promising Livelihood. Simultaneously, We Are
+              Dedicated To Delivering Real-World Technological Solutions To Both
+              Corporate And Government Entities, Contributing To The
+              Digitization Of Africa's Economy.
+            </p>
+          </div>
         </div>
-        <div className="md:w-[60%] flex-col gap-4 items-start flex gap-4 items-start flex mb-[3rem] md:mb-0">
-          <h3 className="lg:text-[32px] md:text-[20px] font-semibold text-secondary">
-            Our Mission
-          </h3>
-          <p className="lg:text-[18px] md:text-[16px] text-color">
-            NXG-HUB Digital Technologies Aims To Empower Numerous Youth By
-            Offering Industry-Relevant Skill Training, Thus Enhancing Their
-            Prospects For A More Promising Livelihood. Simultaneously, We Are
-            Dedicated To Delivering Real-World Technological Solutions To Both
-            Corporate And Government Entities, Contributing To The Digitization
-            Of Africa's Economy.
-          </p>
-        </div>
-      </div>
 
-      {/* WHAT WE DO */}
-      <div className="between flex-col md:flex-row w-[90%]">
-        <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
-          <h3 className="lg:text-[32px] md:text-[20px] font-semibold text-secondary">
-            What We Do
-          </h3>
-          <p className="lg:text-[18px] md:text-[16px] text-color">
-            We Assist You In Constructing Top-Tier Digital Solutions And
-            Products Following Best Practices, While Also Offering An Extensive
-            Array Of Associated Professional Services. Our Commitment Is To
-            Provide Unparalleled Service To Our Esteemed Clients On A Global
-            Scale.
-          </p>
+        {/* WHAT WE DO */}
+        <div className="between flex-col md:flex-row mb-6 py-12 md:py-0">
+          <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
+            <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
+              What We Do
+            </h3>
+            <div className="flex flex-col mb-6">
+              <p className="lg:text-[1.15rem] text-[1rem] text-[#717171]">
+                We Assist You In Constructing Top-Tier Digital Solutions And
+                Products Following Best Practices, While Also Offering An
+                Extensive Array Of Associated Professional Services. Our
+                Commitment Is To Provide Unparalleled Service To Our Esteemed
+                Clients On A Global Scale.
+              </p>
+            </div>{" "}
+            {/* Button */}
+            <div className="mb-10 mx-auto md:mx-0">
+              <button className="group p-2">
+                <a
+                  className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
+                  href="/career"
+                >
+                  <span className="text-[#717171] font-normal text-normal">Learn More</span>
+                  <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
+                </a>
+              </button>
+            </div>
+          </div>
+          <div className="order-first md:order-last md:w-[35%] flex justify-end">
+            <img src={third} alt="About" />
+          </div>
         </div>
-        <div className="order-first md:order-last md:w-[35%]">
-          <img src={AboutThree} alt="About" className="mb-4" />
-        </div>
-      </div>
-      <div className="learn-more-arrow2 mb-[40px]">
-        <button className="group p-[8px]">
-          <a
-            className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
-            href="/career"
-          >
-            <span className="text-[#717171]">Learn More</span>
-            <BsArrowUpRight className="aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
-          </a>
-        </button>
-      </div>
+      </section>
+
       {/* Footer */}
       <Footer />
     </>
