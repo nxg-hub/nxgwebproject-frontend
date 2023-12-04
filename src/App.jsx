@@ -13,16 +13,16 @@ function App() {
   const handleMenu = () => {
     setOpen(!open);
   };
-  
+
   return (
     <>
-      <Header  open={open} handleMenu={handleMenu} />
-      <div className='pages'>
+      <Header open={open} handleMenu={handleMenu} />
+      <div className="pages">
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/career' element={<Career open={open} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About open={open} />} />
+          <Route path="/services" element={<Services open={open} />} />
+          <Route path="/career" element={<Career open={open} />} />
         </Routes>
       </div>
     </>
