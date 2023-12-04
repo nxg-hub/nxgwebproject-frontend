@@ -143,7 +143,7 @@ const Header = ({ open, handleMenu }) => {
 
         <div className='transition flex items-start mt-8 w-full'>
           <ul className={`flex-col gap-4 h-full flex w-full`} ref={ref}>
-            <li className='w-full border-b border-[#573636] py-4 '>
+            <li className='w-full border-b border-[#b2b2b2] py-4 '>
               <NavLink
                 exact
                 to='/'
