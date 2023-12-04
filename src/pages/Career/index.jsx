@@ -29,7 +29,7 @@ const Career = ({ open }) => {
       <div className='flex flex-col items-center py-[5.5rem]'>
         <div className='md:hidden flex justify-center gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2'>
           <span>
-            <img src='/tag.png' alt='icon' className='' />
+            <img src='/tag.png' alt='icon' />
           </span>
           <span>
             <h2 className='text-[#2596BE] font-semibold text-md md:text-[36px]'>
@@ -158,8 +158,7 @@ const Career = ({ open }) => {
             </div>
           </div>
         </div>
-      </div>
-      {/* Footer */}
+      </div>    
       <Footer />
     </>
   );
