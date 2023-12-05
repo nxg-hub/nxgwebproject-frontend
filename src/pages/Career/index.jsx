@@ -3,12 +3,9 @@ import { FiArrowUpRight } from "react-icons/fi";
 import CustomButton from "../../components/Button";
 import Footer from "../../components/Footer";
 import { BsArrowUpRight } from "react-icons/bs";
-const Career = ({ open }) => {
+const Career = () => {
   return (
     <>
-      {/* Dark overlay on page, when mobile menu is opened */}
-      <div className={`${open ? "overlay" : "hidden"}  md:hidden`}></div>
-
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
         style={{ backgroundImage: "url(/careerBg.png)" }}
