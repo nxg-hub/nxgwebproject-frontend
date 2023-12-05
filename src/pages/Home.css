@@ -276,6 +276,7 @@ background-color:
   grid-gap:80px; /* Adds space between grid items */
   height:80%;
   width:100%;
+  border-radius:30px;
   background-color:white;
   margin-right: 20px;
   padding-top:20px;
@@ -311,7 +312,7 @@ background-color:
   padding-left:40px;
   padding-bottom:40px;
   margin-top:10px;
-  
+
   border-radius:30px;
   background-size:cover;
 
@@ -447,6 +448,7 @@ margin:0;
   .About-section1 {
     margin-left: 5px;
     padding-bottom: 30px;
+    margin-top:35px;
   }
   .About-us-arrow {
     padding-left: 7px;
@@ -558,14 +560,13 @@ margin:0;
     height:100%;
     width:100%;
     padding-bottom:20px;
-    margin-bottom:30px;
   }
   .contact_container{
   background-size:cover;
   padding:px;
   height:100%;
   margin-top:30px;
-  margin-right:30px;
+
   
   }
   .contact-intro{

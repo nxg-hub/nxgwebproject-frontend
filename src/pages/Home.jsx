@@ -1,7 +1,7 @@
 import'./Home.css'
 import React, { useRef } from 'react';
 import Slider from '../components/Slider/Slider'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import REC from '../assets/images/REC.jpg'
 import IT from '../assets/images/IT.jpg'
 import software from'../assets/images/software.jpg'
@@ -97,12 +97,12 @@ const Home = () => {
     <div className='learn-more-arrow1'>
 
     <button className='group p-[8px]'>
-    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/about">
+    <Link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' to="/about">
       <span className='text-[#717171]'>
         Learn More
       </span>
       <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-    </a>
+    </Link>
   </button>
 
     </div>
@@ -169,13 +169,13 @@ const Home = () => {
   </div>
 
   <div className='learn-more-arrow1 grid place-content-center' >
-  <button className='group p-[8px]'>
-    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/services">
+  <button className='group p-[8px] mr-[40px]'>
+    <Link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' to="/services">
       <span className='text-[#717171]'>
         Learn More
       </span>
       <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-    </a>
+    </Link>
   </button>
   </div>
 </section>
