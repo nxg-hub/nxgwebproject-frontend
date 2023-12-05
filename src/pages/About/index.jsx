@@ -9,12 +9,9 @@ import third from "../../assets/images/aboutThree.jpg";
 import LearnArrow from "../../assets/svgs/learnArrow.svg";
 import { BsArrowUpRight } from "react-icons/bs";
 
-const About = ({ open }) => {
+const About = () => {
   return (
     <>
-      {/* Dark overlay on page, when mobile menu is opened */}
-      <div className={`${open ? "overlay" : "hidden"}  md:hidden`}></div>
-
       {/* Banner */}
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
@@ -114,7 +111,9 @@ const About = ({ open }) => {
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
                   href="/career"
                 >
-                  <span className="text-[#717171] font-normal text-normal">Learn More</span>
+                  <span className="text-[#717171] font-normal text-normal">
+                    Learn More
+                  </span>
                   <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
                 </a>
               </button>

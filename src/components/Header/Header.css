@@ -6,7 +6,7 @@
 }
 
 .nav-list {
-  background-color: #2596BE;
+  background-color: #2596be;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 
 /* Active navigation link */
 .nav_item .active {
-  color: #2596BE;
+  color: #2596be;
   background: white;
   border-radius: 2.5rem;
   height: 80%;
@@ -56,7 +56,7 @@
 }
 
 .nav-list {
-  background-color: #2596BE;
+  background-color: #2596be;
   text-align: center;
 }
 
@@ -80,7 +80,7 @@
 
 /* Active navigation link */
 .nav_item .active {
-  color: #2596BE;
+  color: #2596be;
   background: white;
   border-radius: 2.5rem;
   height: 80%;
@@ -97,4 +97,38 @@
 /* Expand and shift other buttons to the right when one button is active */
 .nav_item .active ~ .nav-links {
   transform: translateX(20px) scale(1); /* Adjust the translation distance to your preference */
+}
+
+.backdrop {
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 90vh;
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+}
+
+.backdrop.active {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sidebar {
+  width: 23rem;
+  height: 90vh;
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  background-color: #4d4d4d;
+  transform: translateX(23rem);
+  transition: 0.3s ease-out;
+  overflow: hidden;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+  z-index: 100;
 }
