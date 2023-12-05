@@ -98,6 +98,22 @@
 .nav_item .active ~ .nav-links {
   transform: translateX(20px) scale(1); /* Adjust the translation distance to your preference */
 }
+.nav_underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.3rem;
+  width: 50%;
+  height: 0.1rem;
+  background-color: rgb(37 150 190);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.nav_underline:hover::after,
+.nav_underline:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
 
 .backdrop {
   z-index: -1;
@@ -109,7 +125,6 @@
   transition: 0.3s ease-out;
   overflow-x: hidden;
 }
-
 .backdrop.active {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.4);
@@ -127,7 +142,6 @@
   transition: 0.3s ease-out;
   overflow: hidden;
 }
-
 .sidebar.active {
   transform: translateX(0);
   z-index: 100;
