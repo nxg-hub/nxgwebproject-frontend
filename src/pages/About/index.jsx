@@ -85,12 +85,12 @@ const About = () => {
         
         <div className='learn-more-arrow2 mb-[40px]' >
           <button className='group p-[8px]'>
-            <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/career">
+            <link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/career">
               <span className='text-[#717171]'>
                 Learn More
               </span>
               <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-            </a>
+            </link>
           </button>
         </div>
         
