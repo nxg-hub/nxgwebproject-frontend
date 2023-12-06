@@ -8,7 +8,6 @@ import AboutTwo from '../../assets/images/aboutTwo.jpg';
 import AboutThree from '../../assets/images/aboutThree.jpg';
 import LearnArrow from '../../assets/svgs/learnArrow.svg';
 import { BsArrowUpRight } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -87,12 +86,12 @@ const About = () => {
 </div>
  <div className='learn-more-arrow2 mb-[40px]' >
   <button className='group p-[8px]'>
-    <Link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/career">
+    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/career">
       <span className='text-[#717171]'>
         Learn More
       </span>
       <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-    </Link>
+    </a>
   </button>
   </div>
         {/* Footer */}
