@@ -12,6 +12,7 @@ import {
   } from 'react-icons/fa';
 import { address } from '../../utils/address';
 
+
 const Footer = () => {
     return (
         <div className="bg-[#F1F1F1] w-full pt-8 center text-primary">
@@ -30,13 +31,11 @@ const Footer = () => {
                         <div className='flex items-center gap-2'>
                             <div className='flex items-start'>
                                 <img src={Location} alt="logo" />
-                            </div>
-                            <p className='group w-[60%]'>
-                                <div className='group-hover:border-b-[2px]'>
+                            </div>                            
+                            <p className='w-[60%]'>
                                 <Link to={address} target='_blank' >
                                 1, Chris Okafor Street Isolo, Lagos, Nigeria.
                                 </Link>
-                                </div>
 
                             </p>
 
@@ -46,12 +45,10 @@ const Footer = () => {
                             <div className='flex items-start'>
                                 <img src={Call} alt="logo" />
                             </div>
-                            <p className='group w-[80%]'>
-                                <div className='group-hover:border-b-[2px]' >
+                            <p className='w-[80%]'>
                                 <Link to='tel:+2348138563840'>
                                 Phone:  +234-813-856-3840 || +234 706 885 8151 || +234 706 784 7829
                                 </Link>
-                                </div>
                             </p>
                         </div>
 
@@ -59,12 +56,10 @@ const Footer = () => {
                             <div className='flex items-start'>
                                 <img src={Mail} alt="logo" />
                             </div>
-                            <p className='group'>
-                                <div className='group-hover:border-b-[2px]'>
+                            <p className=''>
                                 <Link to='mailto:info@nextgenhub.com.ng'>
                                 Email: info@nextgenhub.com.ng
                                 </Link>
-                                </div>
                             </p>
                         </div>
                     </div>
@@ -73,66 +68,21 @@ const Footer = () => {
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US
                         </h2>
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='/'>Home</Link>
-                            </div>
-                        </p>
-
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='/about'>About Us</Link>
-                            </div>
-                        </p>
-
-
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='/services'>Our Services</Link>
-                            </div>
-                        </p>
-                        
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='#'>Terms & condition</Link>
-                            </div>
-                        </p>
-
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='#'>Privacy Policy</Link>
-                            </div>
-                        </p>
+                        <p><Link to='/'>Home</Link></p>
+                        <p><Link to='/about'>About Us</Link></p>
+                        <p><Link to='/services'>Our Service</Link></p>
+                        <p><Link to='#'>Terms & Condition</Link></p>
+                        <p><Link to='#'>Privacy Policy</Link></p>
                     </div>
                     <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             USEFUL LINKS
                         </h2>
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='#'>Training</Link>
-                            </div>
-                        </p>
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='#'>NXG-Job-Hub</Link>
-                            </div>
-                        </p>
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='/career'>career</Link>
-                            </div>
-                        </p>
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='/'>Contact </Link>
-                            </div>
-                        </p>
-                        <p className='group'>
-                            <div className='group-hover:border-b-[2px]'>
-                            <Link to='#'>FAQ</Link>
-                            </div>
-                        </p>
+                       <p> <Link to='#'>Training</Link></p>
+                       <p><Link to='#'>NXG-Job-Hub</Link></p>
+                       <p> <Link to='/career'>Career</Link></p>
+                        <p><Link to='#'>Contact</Link></p>
+                        <p><Link to='#'>FAQ</Link></p>
                     </div>
                     </div>
                     <div className="md:w-[50%] w-full flex-col gap-4 flex items-start">
@@ -143,7 +93,7 @@ const Footer = () => {
                             Combining Our Expertise Yields A Versatile Team Ready To Accomplish All Your Brand Or Career Requirements. Stay Tuned For Our Latest Updates By Subscribing Here.
                         </p>
                         <div className='border border-primary rounded-md between p-1 w-full'>
-                            <input type="email" name="email" id="email" required className='border-none outline-none bg-gray pl-4 w-full' />
+                            <input type="email" placeholder="Email Address" name="email" id="email" required className=' placeholder-primary placeholder-opacity-80 border-none outline-none bg-gray pl-4 w-full' />
                             <CustomButton children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
                         </div>
                     </div>

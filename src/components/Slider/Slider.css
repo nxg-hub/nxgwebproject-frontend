@@ -186,10 +186,10 @@
 }
 .arrow{
   display:transparent;
-  border:2px solid  #D3D3D3 ;
+  border:2px solid #4D4D4D ;
   border-radius:50%; 
   background: transparent;
-  color: #D3D3D3 ;
+  color:#4D4D4D;
   width:2rem;
   height:2rem;
   cursor:pointer;
