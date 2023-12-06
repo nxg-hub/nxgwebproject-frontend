@@ -206,7 +206,7 @@ const Home = () => {
       <h1  className='contact-intro'> LET'S START YOUR PROJECT </h1>
       </div>
 
-      <div style={{width:"100%"}} className=''>
+      <div style={{width:"100%"}} id=''>
       <div className='contact-main-text'>Planning Your Next Project?</div>
       <div className='contact-main-text'>Message A Consultant! And Our Team Will Get Back To <br /> You Shortly!</div>
       
@@ -218,6 +218,7 @@ const Home = () => {
 
       <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'  >
 
+        {/*------added the onclick function to scroll to the contact page ----*/}
           <div  onClick={scrollToContactSection}>
           <input  className="input" type="text" placeholder='Name' name='User_name' />
           </div>

@@ -125,7 +125,7 @@ const Footer = () => {
                         </p>
                         <p className='group'>
                             <div className='group-hover:border-b-[2px]'>
-                            <Link to='/'>Contact </Link>
+                            <Link to='/#contact'>Contact </Link>
                             </div>
                         </p>
                         <p className='group'>

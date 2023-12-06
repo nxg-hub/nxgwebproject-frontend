@@ -2,7 +2,9 @@ import "./index.css";
 import { FiArrowUpRight } from "react-icons/fi";
 import CustomButton from "../../components/Button";
 import Footer from "../../components/Footer";
+
 const Career = ({ open }) => {
+  
   return (
     <>
       {/* Dark overlay on page, when mobile menu is opened */}

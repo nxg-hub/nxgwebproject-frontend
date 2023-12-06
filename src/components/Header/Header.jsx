@@ -1,7 +1,7 @@
 // Importing necessary modules and styles
 import React, { useState, useRef, useEffect } from "react";
 import "./Header.css"; // Styling for the header
-import { NavLink, useLocation } from "react-router-dom"; // Helps with navigation
+import { Link, NavLink, useLocation, } from "react-router-dom"; // Helps with navigation
 import {
   FaBars,
   FaInstagram,
@@ -19,8 +19,18 @@ const Header = ({ open, handleMenu }) => {
   const ref = useRef();
   const location = useLocation();
 
+
+
+  // navigate to the contact section in the home page regardless of the current page when the Contact Us is clicked
   const handleClickContact = (event) => {
     event.preventDefault();
+    
+    // Build the anchor link to the home page and the contact section
+    const contactLink = `${window.location.origin}/#contact`;
+     // Navigate to the anchor link
+     window.location.href = contactLink;
+   
+
 
     // Assuming you have a function scrollToContactSection that scrolls to the contact section
     // You can replace this with your actual scrolling logic
@@ -112,12 +122,12 @@ const Header = ({ open, handleMenu }) => {
 
         <div className='pr-2 pl-6 bg-secondary rounded-[3rem] h-full between sm:hidden lg:flex'>
           {/* Change from NavLink to anchor tag */}
-          <a href="#contact" className='between gap-3' onClick={handleClickContact}>
+          <Link to="/#contact" className='between gap-3' onClick={handleClickContact}>
             <div style={{ color: "white" }}> Contact Us </div>
             <div className='bg-primary w-[40px] h-[40px] center rounded-full'>
               <img src={arrow} alt='arrow' />
             </div>
-          </a>
+          </Link>
         </div>
         <div className='lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] w-[120%] flex flex-col items-end justify-center md:pr-2'>
           <div
@@ -185,10 +195,10 @@ const Header = ({ open, handleMenu }) => {
 
             <li className='w-full border-b border-[#b2b2b2] py-2'>
               {/* Change from NavLink to div */}
-              <a href="#contact" className='nav-links hover:underline'onClick={handleClickContact} >
+              <Link to="#contact" className='nav-links hover:underline'onClick={handleClickContact} >
             
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
