@@ -6,6 +6,7 @@ import LearnArrow from '../../assets/svgs/learnArrow.svg';
 import { ServicesUtils } from '../../utils/services';
 import Footer from '../../components/Footer';
 import { BsArrowUpRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -84,12 +85,12 @@ const Services = () => {
                 <div className='my-4'>
                 <div className='learn-more-arrow1 grid place-content-center' >
                 <button className='group p-[8px]'>
-                <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/services">
+                <Link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/services">
                 <span className='text-[#717171]'>
                 Here
                 </span>
                 <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-                </a>
+                </Link>
                 </button>
                 </div>
                 </div>
