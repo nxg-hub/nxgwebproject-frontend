@@ -19,7 +19,6 @@ const Career = ({ open }) => {
           <p className='text-[18px] md:text-[28px] py-4 md:py-6'>
             With NXG-HUB
           </p>
-
           <CustomButton children='Learn More' className='text-sm' />
         </div>
         <p className='text-center text-[16px] md:text-[20px] py-4 mt-[9rem]'>
