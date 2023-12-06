@@ -1,9 +1,8 @@
 import'./Home.css'
 import React, { useRef } from 'react';
 import Slider from '../components/Slider/Slider'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import REC from '../assets/images/REC.jpg'
-import smoke from '../assets/images/smoke.png'
 import IT from '../assets/images/IT.jpg'
 import software from'../assets/images/software.jpg'
 import icon2 from'../assets/icons/icon2.jpg'
@@ -47,7 +46,7 @@ const Home = () => {
 
 
   return (
-    <>
+    <div className='overflow-x-hidden'>
 <Slider/>
  {/*------------about us section------------*/}
  <section className="About-section">
@@ -64,7 +63,7 @@ const Home = () => {
 
           <div className="About-description">
             <div>
-              <img className='logo-icon' src={icon1} alt="" />
+              <img className='logo-icon mr-[5px]' src={icon1} alt="" />
             </div>
             <div className='about-us'>
             <h1>ABOUT US</h1>
@@ -98,12 +97,12 @@ const Home = () => {
     <div className='learn-more-arrow1'>
 
     <button className='group p-[8px]'>
-    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/about">
+    <Link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' to="/about">
       <span className='text-[#717171]'>
         Learn More
       </span>
       <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-    </a>
+    </Link>
   </button>
 
     </div>
@@ -117,11 +116,11 @@ const Home = () => {
  {/*------------Services section----------------------*/}
  <section className="service-section">
   
-  <div className='service-heading'>
+  <div className='service-heading '>
     
-    <div className="service-desc">
+    <div className="service-desc  ">
       <div>
-        <img src={icon2} alt="" />
+        <img className='mr-[5px]' src={icon2} alt="" />
       </div>
       <div>
         <div className='ourservices'>OUR SERVICES</div>
@@ -163,20 +162,20 @@ const Home = () => {
         </div>
         <div className="service-details">
           <h1 className='Intro-services'>Consulting Services</h1>
-          <div className='SPACE services-info'>We Offer IT Consultancy Services, Including Technical Recruiting. <a style={{ textDecoration: "underline" }} href="/contact">Contact Us Today!</a></div>
+          <div className='SPACE services-info'>We Offer IT Consultancy Services, Including Technical Recruiting. <a style={{ textDecoration: "underline" }} href="#contact">Contact Us Today!</a></div>
         </div>
       </div>
     </div>
   </div>
 
   <div className='learn-more-arrow1 grid place-content-center' >
-  <button className='group p-[8px]'>
-    <a className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' href="/services">
+  <button className='group p-[8px] mr-[40px]'>
+    <Link className='flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform' to="/services">
       <span className='text-[#717171]'>
         Learn More
       </span>
       <BsArrowUpRight className='aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]' />
-    </a>
+    </Link>
   </button>
   </div>
 </section>
@@ -232,7 +231,7 @@ const Home = () => {
           </div>
 
           <div style={{}}>
-          <textarea className='textarea' name="message" cols="30" rows="4"></textarea>
+          <textarea className='textarea' name="message" placeholder='Message' cols="30" rows="4"></textarea>
           </div>
 
           <div className='contact-button'>
@@ -284,7 +283,7 @@ const Home = () => {
   <section>
   <Footer/>
   </section>
-    </>
+    </div>
   )
 }
 
