@@ -518,6 +518,7 @@ margin:0;
   .service-desc {
     display: flex;
     justify-content: center;
+    
   }
   .services-info{
     font-size:14.5px;

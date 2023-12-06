@@ -63,7 +63,7 @@ const Home = () => {
 
           <div className="About-description">
             <div>
-              <img className='logo-icon' src={icon1} alt="" />
+              <img className='logo-icon mr-[5px]' src={icon1} alt="" />
             </div>
             <div className='about-us'>
             <h1>ABOUT US</h1>
@@ -116,11 +116,11 @@ const Home = () => {
  {/*------------Services section----------------------*/}
  <section className="service-section">
   
-  <div className='service-heading'>
+  <div className='service-heading '>
     
-    <div className="service-desc">
+    <div className="service-desc  ">
       <div>
-        <img src={icon2} alt="" />
+        <img className='mr-[5px]' src={icon2} alt="" />
       </div>
       <div>
         <div className='ourservices'>OUR SERVICES</div>

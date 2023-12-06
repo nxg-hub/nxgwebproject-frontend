@@ -86,7 +86,7 @@
   .content{
   right:rem;
   left:rem;
-  top:27.8rem;
+  top:24.8rem;
   width:100%;
   animation: slide-right 1s ease .5s;
   animation-fill-mode:  forwards; 
@@ -186,10 +186,10 @@
 }
 .arrow{
   display:transparent;
-  border:2px solid #D3D3D3 ;
+  border:2px solid  #D3D3D3 ;
   border-radius:50%; 
   background: transparent;
-  color:#D3D3D3;
+  color: #D3D3D3 ;
   width:2rem;
   height:2rem;
   cursor:pointer;
