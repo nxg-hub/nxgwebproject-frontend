@@ -8,24 +8,18 @@ import Header from "./components/Header/Header";
 import { useState } from "react";
 
 function App() {
-  const [open, setOpen] = useState(false);
-
-  const handleMenu = () => {
-    setOpen(!open);
-  };
-  
   return (
-    <>
-      <Header  open={open} handleMenu={handleMenu} />
-      <div className='pages'>
+    <div className="relative md:static overflow-hidden">
+      <Header />
+      <div className="pages">
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/career' element={<Career open={open} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/career" element={<Career />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 

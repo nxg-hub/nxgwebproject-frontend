@@ -46,7 +46,7 @@ const Home = () => {
 
 
   return (
-    <>
+    <div className='overflow-x-hidden'>
 <Slider/>
  {/*------------about us section------------*/}
  <section className="About-section">
@@ -284,7 +284,7 @@ const Home = () => {
   <section>
   <Footer/>
   </section>
-    </>
+    </div>
   )
 }
 
