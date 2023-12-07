@@ -1,232 +1,207 @@
- 
-.slider{
+/* .slider {
   width: 100%;
   height: 100vh;
-  overflow:visible;
-  padding:25px;
-  background-size:cover; 
+  overflow: visible;
+  padding: 25px;
+  background-size: cover;
 }
-.slide{
-  position:absolute;
-  background-size:cover; 
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  opacity:0;
+
+.slide {
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
   transform: translateX(-40%);
   transition: all 0.5s ease;
 }
-.Title-slide{
-  font-size:64px;
-  font-weight:700;
+.Title-slide {
+  font-size: 64px;
+  font-weight: 700;
 }
-.Text-slide{
-  color:;
-  font-size:18px;
-  font-weight:400;
-  width:70%;
-  color:#717171;
-  margin-left:1.5rem;
+.Text-slide {
+  font-size: 18px;
+  font-weight: 400;
+  width: 70%;
+  color: #717171;
+  margin-left: 1.5rem;
 }
 
-.content{
-  position:absolute; 
-  top:12rem;
-  left:0.7px;
-  opacity:0;
-  width:70%;
+.content {
+  position: absolute;
+  top: 12rem;
+  left: 0.7px;
+  opacity: 0;
+  width: 70%;
   padding: 3rem;
-  background:;
-  animation: slide-up 1s ease .5s;
-  animation-fill-mode:  forwards; 
+  animation: slide-up 1s ease 0.5s;
+  animation-fill-mode: forwards;
 }
-.Title-slide{
-  color:#717171;
-  font-size:64px;
-  font-family:manrope;
-  font-weight:600;
-  margin-left:1.5rem;
+.Title-slide {
+  color: #717171;
+  font-size: 64px;
+  font-family: manrope;
+  font-weight: 600;
+  margin-left: 1.5rem;
 }
 
-.btn{
-  height:48px;
-  width:129px;
-  border-radius:6px;
+.btn {
+  height: 48px;
+  width: 129px;
+  border-radius: 6px;
 }
-.vector-heading{
-  width:100%;
+.vector-heading {
+  width: 100%;
 }
 @keyframes slide-up {
-  0%{
+  0% {
     visibility: visible;
     top: 12rem;
   }
 
-  100%{
-    visibility:visible;
-    top:8rem;
+  100% {
+    visibility: visible;
+    top: 8rem;
   }
-
-
 }
-@media only screen and (max-width:600px) {
-  .vector-heading{
-    display:grid;
-    place-items:center;
-    width:70%;
-    height:30%;
-  }
-  .slider{
-    background-size:cover;
-  }
-  .slide{
-    height:100%;
-  }
-  .content{
-  right:rem;
-  left:rem;
-  top:24.8rem;
-  width:100%;
-  animation: slide-right 1s ease .5s;
-  animation-fill-mode:  forwards; 
-  margin-bottom:100px;
-  padding-top:1.4rem;
-  padding-left:1.4rem;
-  padding-right:2.4rem;
-  padding-bottom:1.4rem;
-
-  }
-  .vector{ 
-    height:40%;
-    top:;
-    width:50%;
-    height:40%;
-    left:3.5rem;
-  }
-  /* h2{
-    font-size:28px;
-    text-align:center;
-
-  } */
-  .Title-slide{
-    font-size:28px;
-    font-weight:700;
-  }
-  .Text-slide{
-    font-size:15px;
-    text-align:center;
-    width:100%;
-    color:#717171;
-  
-  }
-  .ARROW{
-    display:; 
-    color:#717171;
-  }
-  .Button-Container{
-    display:grid;
+@media only screen and (max-width: 600px) {
+  .vector-heading {
+    display: grid;
     place-items: center;
-    padding-top:7px;
-    margin:7px;
-  
-    
+    width: 70%;
+    height: 30%;
   }
-  .btn{
+  .slider {
+    background-size: cover;
+  }
+  .slide {
+    height: 100%;
+  }
+  .content {
+    right: rem;
+    left: rem;
+    top: 24.8rem;
+    width: 100%;
+    animation: slide-right 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    margin-bottom: 100px;
+    padding-top: 1.4rem;
+    padding-left: 1.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 1.4rem;
+  }
+  .vector {
+    height: 40%;
+    width: 50%;
+    height: 40%;
+    left: 3.5rem;
+  }
 
+  .Title-slide {
+    font-size: 28px;
+    font-weight: 700;
   }
- 
+
+  .Text-slide {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    color: #717171;
+  }
+  .ARROW {
+    color: #717171;
+  }
+  .Button-Container {
+    display: grid;
+    place-items: center;
+    padding-top: 7px;
+    margin: 7px;
+  }
+
   .all-dots {
-  width:90%;
-  margin-top:31rem;
-  height:150%;
+    width: 90%;
+    margin-top: 31rem;
+    height: 150%;
   }
-  .all-dots .dot{
-    width:10px;
-    height:10px;
-    margin:0 3px;
+  .all-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
   }
-  
 }
 
-
-@media  only screen and  (max-width:600px){
-  
-  .vector{
-    height:40%;
-    width:80vw;
-    left:3.5rem;
+@media only screen and (max-width: 600px) {
+  .vector {
+    height: 40%;
+    width: 80vw;
+    left: 3.5rem;
   }
- 
-    .Title-slide{
-      width:100%;
-    }
-    .slider{
-      background-size:cover;
-    }
-  
+
+  .Title-slide {
+    width: 100%;
+  }
+  .slider {
+    background-size: cover;
+  }
 }
 
-
-
-
-.vector{
-  position:absolute; 
+.vector {
+  position: absolute;
   top: 6rem;
-  right:5rem; 
-   
-  
+  right: 5rem;
 }
-.current{
+.current {
   opacity: 1;
-  transform:translateX(0);
+  transform: translateX(0);
 }
-.current .content{
-  opacity:1;
+.current .content {
+  opacity: 1;
 }
-.arrow{
-  display:transparent;
-  border:2px solid  #D3D3D3 ;
-  border-radius:50%; 
+.arrow {
+  display: transparent;
+  border: 2px solid #d3d3d3;
+  border-radius: 50%;
   background: transparent;
-  color: #D3D3D3 ;
-  width:2rem;
-  height:2rem;
-  cursor:pointer;
-  position:absolute;
-  Z-index: 999; 
+  color: #d3d3d3;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 999;
 }
-.arrow:hover{
-  background:;
-  color:#4D4D4D;
+.arrow:hover {
+  background: ;
+  color: #4d4d4d;
 }
-.next{
+.next {
   top: 15rem;
-  right:1.5rem;
+  right: 1.5rem;
 }
-.prev{
+.prev {
   top: 15rem;
-  left:1.5rem;
+  left: 1.5rem;
 }
-.Button-Container{
-  margin:17px;
+.Button-Container {
+  margin: 17px;
 }
-.btn{
-  color:white;
-  background-color: #46A6C8;
+.btn {
+  color: white;
+  background-color: #46a6c8;
 }
 .all-dots {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 38%;
-  z-index:10;
+  z-index: 10;
 }
 
 .dot {
   width: 24px;
   height: 24px;
-  background-color:#C9E5EF;
+  background-color: #c9e5ef;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
@@ -234,8 +209,8 @@
 }
 
 .active-dot {
-  background-color: #46A6C8; /* Change to your desired active color */
-}
-.play-pause {
+  background-color: #46a6c8; /* Change to your desired active color */
+
+/* .play-pause {
   color: black;
-}
+}  */

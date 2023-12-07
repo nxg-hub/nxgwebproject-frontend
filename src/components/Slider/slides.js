@@ -4,18 +4,19 @@ import vector3 from'../../assets/images/vector3.svg'
 import vector4 from'../../assets/images/vector4.svg'
 
 
-export const SliderData =[
+export const slides =[
+  {
+    image: vector2,
+    title: 'IT Training',
+    description: 'We Organise Software DevelopmentTraining To Tech Professionals And Aspiring Tech Professionals,Equiping Them With Necessary Skills Required To Thrive In Techn Industry',
+  },
   {
     image: vector1,
     title: 'Engineering The Future \nThrough Technology \nInnovation',
     description: 'With NXG-HUB',
   
   },
-  {
-    image: vector2,
-    title: 'IT Training',
-    description: 'We Organise Software DevelopmentTraining To Tech Professionals And Aspiring Tech Professionals,Equiping Them With Necessary Skills Required To Thrive In Techn Industry',
-  },
+ 
   {
     image: vector3,
     title: 'Software Development',
