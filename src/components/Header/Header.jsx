@@ -203,7 +203,7 @@ const Header = () => {
             <li className="w-full border-b border-[#b2b2b2] py-2">
               <a
                 href="#contact"
-                className="nav-links hover:underline"
+                className="nav-links relative nav_underline"
                 onClick={handleClickContact}
               >
                 Contact Us
