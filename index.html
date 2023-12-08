@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NextGenHub</title>
+    <title>NXG-Hub Digital Technologies</title>
   </head>
   <body>
+  <!-- A little help for the Netlify post-processing bots -->
+  <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="User_name" />
+    <input type="number" name="User_Phone Number" />
+    <input type="email" name="User_Email" />
+    <textarea name="message"></textarea>
+  </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
