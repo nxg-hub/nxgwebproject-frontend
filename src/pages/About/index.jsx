@@ -54,8 +54,8 @@ const About = () => {
         </div>
 
         {/* We Bring You Creativity At Its Best */}
-        <section className="md:mb-0 px-4 md:px-[9rem] ">
-          <div className="between flex-col md:flex-row pb-20 md:pb-0">
+        <section className="mb-10 md:mb-0 px-4 md:px-[9rem] ">
+          <div className="between flex-col md:flex-row pb-10 md:pb-0">
             <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
               <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
                 We bring you Creativity at Its best!
@@ -75,10 +75,10 @@ const About = () => {
               <img src={first} alt="About" />
             </div>
           </div>
-          
+  
 
           {/* OUR MISSION */}
-          <div className="md:mb-0 between flex-col md:flex-row">
+          <div className="lg:mb-10 md:mb-0 between flex-col md:flex-row">
             <div className="mr-10 float-left flex justify-end">
               <img src={second} alt="About"/>
             </div>
@@ -96,9 +96,10 @@ const About = () => {
               </p>
             </div>
           </div>
+          
 
           {/* WHAT WE DO */}
-          <div className="mb-6 between flex-col md:flex-row py-12 md:py-0">
+          <div className="mb-6 between flex-col md:flex-row py-2 md:py-0">
             <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
               <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
                 What We Do

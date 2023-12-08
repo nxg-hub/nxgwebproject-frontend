@@ -1,7 +1,8 @@
 import "./index.css";
 import { FiArrowUpRight } from "react-icons/fi";
 import CustomButton from "../../components/Button";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer"
+
 const Career = ({ open }) => {
   return (
     <>
@@ -10,7 +11,7 @@ const Career = ({ open }) => {
 
       <div
         className='relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4'
-        style={{ backgroundImage: "url(/bgImg.png)" }}
+        style={{ backgroundImage: "url(/careerBg.png)"}}
       >
         <div className='text-left pl-8 md:pl-20 pt-28 max-w-[60rem]'>
           <p className='mt-16 text-[28px] md:text-[64px]'>
