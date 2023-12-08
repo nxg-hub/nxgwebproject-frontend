@@ -196,6 +196,9 @@ const Home = () => {
     </div>
     </div>
 <div style={{backgroundImage: `url(${contactbackground})`,}} className='contact_container' >
+  {/*netlify for submission handling*/}
+  <form name='contact-form' method='POST' data-netlify='true'>
+    <input type='hidden' name='form-name' value='contact-form' />
     <div className='Contact-content'>
 
       <div style={{}} className='contact-section1'>
@@ -235,7 +238,7 @@ const Home = () => {
           </div>
 
           <div className='contact-button'>
-  <button className='group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]'>
+  <button type='submit' className='group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]'>
     <span className='text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform'>Submit</span>
     <span className='group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary'>
       <FiArrowUpRight size={25} />
@@ -246,6 +249,7 @@ const Home = () => {
       </div>
 
     </div>
+  </form>
 </div>
   </section>
 
