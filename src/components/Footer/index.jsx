@@ -95,9 +95,9 @@ const Footer = () => {
                         </p>
                         <div className='border border-primary rounded-md between p-1 w-full'>
                             <form name='mail_subscription' method='POST' data-netlify='true'>
-                                <input type='hidden' name='form-name' value='career-form' />
+                                <input type='hidden' name='form-name' value='mail_subscription' />
                             <input type="email" placeholder="Email Address" name="email" id="email" required className=' placeholder-primary placeholder-opacity-80 border-none outline-none bg-gray pl-4 w-full' />
-                            <CustomButton type = "submit" children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
+                            <CustomButton children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
                             </form>
                         </div>
                     </div>
