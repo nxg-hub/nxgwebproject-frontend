@@ -81,7 +81,7 @@ const Footer = () => {
                        <p> <Link to='#'>Training</Link></p>
                        <p><Link to='#'>NXG-Job-Hub</Link></p>
                        <p> <Link to='/career'>Career</Link></p>
-                        <p><Link to='#'>Contact</Link></p>
+                        <p><Link to='/#contact'>Contact</Link></p>
                         <p><Link to='#'>FAQ</Link></p>
                     </div>
                     </div>

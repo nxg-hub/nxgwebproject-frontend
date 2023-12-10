@@ -4,7 +4,7 @@ import "./Slider.css"
 import { SliderData } from './Sliderdata'
 import Dots from './Dots'
 import background from '../../assets/images/background.jpg'
-import { NavLink,Link } from 'react-router-dom'; // Helps 
+import { NavLink,Link,useNavigate } from 'react-router-dom'; // Helps 
 
 
  
@@ -12,6 +12,7 @@ import { NavLink,Link } from 'react-router-dom'; // Helps
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
   const slideLength = SliderData.length;
   const autoScroll = true;
   let slideInterval;
@@ -33,11 +34,8 @@ const Slider = () => {
     // Clear the interval to stop auto-scrolling
     clearInterval(slideInterval);
 
-    // Delay the navigation to ensure it happens after the slider transition
-    setTimeout(() => {
-      // Navigate to the specified route
-      window.location.href = "/services";
-    }, 500); // Adjust the delay time as needed
+    // Navigate to the specified route
+    navigate(SliderData[currentSlide]?.route || '/default-route'); 
   };
 
   useEffect(() => {
@@ -70,7 +68,7 @@ const Slider = () => {
                   <p style={{ whiteSpace: "pre-line" }} className='Text-slide'>{slide.description.replace(/\\n/g, '\n')}</p>
                   <div className='Button-Container'>
                     {/* Use a regular button instead of NavLink */}
-                    <button className='btn' onClick={() => window.location.href = "/services"}>
+                    <button className='btn' onClick={handleButtonClick}>
                       Learn More
                     </button>
                   </div>
