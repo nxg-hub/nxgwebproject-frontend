@@ -11,6 +11,7 @@ import {
     FaInstagram
   } from 'react-icons/fa';
 import { address } from '../../utils/address';
+import React from "react";
 
 
 const Footer = () => {
@@ -93,8 +94,11 @@ const Footer = () => {
                             Combining Our Expertise Yields A Versatile Team Ready To Accomplish All Your Brand Or Career Requirements. Stay Tuned For Our Latest Updates By Subscribing Here.
                         </p>
                         <div className='border border-primary rounded-md between p-1 w-full'>
+                            <form name='mail_subscription' method='POST' data-netlify='true'>
+                                <input type='hidden' name='form-name' value='career-form' />
                             <input type="email" placeholder="Email Address" name="email" id="email" required className=' placeholder-primary placeholder-opacity-80 border-none outline-none bg-gray pl-4 w-full' />
-                            <CustomButton children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
+                            <CustomButton type = "submit" children="Subscribe" backgroundColor="#FFF" textColor="#717171" border="1px solid #fff"/>
+                            </form>
                         </div>
                     </div>
                 </div>
