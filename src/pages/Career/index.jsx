@@ -48,33 +48,33 @@ const Career = () => {
           Job Opening At NXG-HUB Digital Technologies. Apply Now!
         </span>
       </div>
-      <form name='contact' method='POST' data-netlify='true'>
-        <input type='hidden' name='form-name' value='contact' />
+      <form name='career-form' method='POST' data-netlify='true'>
+        <input type='hidden' name='form-name' value='career-form' />
       <div className="bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:py-[3rem] md:px-4 px-8">
         <div className="md:mx-16 mx-auto rounded-2xl bg-primary md:px-14 py-10 md:py-8 md:relative">
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-6 md:gap-[10rem] ">
             <div className="flex flex-col w-full md:w-auto px-[0.55rem] md:pl-0 md:pt-[3rem]">
-              <input
+              <input name='applicant_name'
                 className="py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="text"
                 placeholder="Name"
               />
-              <input
+              <input name='applicant_phone_number'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="tel"
                 placeholder="Contact Number"
               />
-              <input
+              <input name='applicant_email'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="email"
                 placeholder="Email"
               />
-              <input
+              <input name='applicant_yoe'
                 className="py-2 md:py-4 px-6  mt-3  rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="number"
                 placeholder="Years of Experience"
               />
-              <textarea
+              <textarea name='applicant_message'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[20px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="text"
                 placeholder="Other Details"
@@ -86,7 +86,7 @@ const Career = () => {
                 Applying for which post
               </h2>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171] text-normal md:text-[20px]">
-                <input
+                <input name='applicant_post_designer'
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -96,7 +96,7 @@ const Career = () => {
                 Product Designer (UI/UX)
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input
+                <input name='applicant_post_pdt_mgr'
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -106,7 +106,7 @@ const Career = () => {
                 Project/Product Manager
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input
+                <input name='applicant_post_developer'
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -116,7 +116,7 @@ const Career = () => {
                 Software Developer
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input
+                <input name='applicant_post_marketer'
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -126,7 +126,7 @@ const Career = () => {
                 Digital Marketer
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input
+                <input name='applicant_post_instructor'
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -139,7 +139,7 @@ const Career = () => {
                 <h2 className="text-[18px]  md:text-[28px] mb-2 font-medium text-[#717171]">
                   Upload your resume
                 </h2>
-                <input
+                <input name='applicant_cv'
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
                   name=""
