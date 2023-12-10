@@ -4,7 +4,7 @@ import icon1 from "../../assets/icons/icon1.jpg"
 
 const FaqList = () => {
   return (
-    <ul className="faq-list mt-[30px]">
+    <ul>
     <div >
       {Faqs.map((faq, index) => (
         <div key={index} className="flex items-center gap-3">

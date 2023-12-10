@@ -11,9 +11,9 @@ const FaqItem = ({ item }) => {
   };
 
   return (
-    <div className={`faq-item ${isOpen ? 'open red-bg' : ''}`} onClick={toggleAccordion}>
+    <div className={`p-[0.7rem] border-[1px] border-[#D9DCE2] rounded-[10px] mb-4 cursor-pointer w-full ${isOpen ? 'open red-bg' : ''}`} onClick={toggleAccordion}>
       <div
-        className={`faq-header ${isOpen ? '' : ''} ${
+        className={`flex justify-between items-center ${isOpen ? '' : ''} ${
           isOpen ? '' : ''
         }`}
       >

@@ -15,8 +15,8 @@ import { address } from '../../utils/address';
 
 const Footer = () => {
     return (
-        <div className="bg-[#F1F1F1] w-full pt-8 center text-primary">
-            <div className="relative w-[95%] bg-gray py-10 rounded-[20px] flex-col center">
+        <div className="relative bg-[#F1F1F1] w-full pt-8 center text-primary">
+            <div className=" w-[95%] bg-gray py-10 rounded-[20px] flex-col center">
                 <div className="w-[90%] flex flex-wrap md:justify-center md:flex-nowrap justify-between lg:gap-0 gap-6  font-light">
                     <div className="md:w-[60%] mb-18 md:mb-0 flex-col gap-5 flex items-start">
                         <div className='center gap-1'>
@@ -98,7 +98,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='absolute md:static top-[13rem] md:top-0 mt-16 flex items-start w-[90%] gap-6'>
+                <div className='absolute md:static top-[21rem] md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6'>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                         <Link to='https://twiiter.com/' target='_blank'><FaTwitter /></Link>
                     </div>

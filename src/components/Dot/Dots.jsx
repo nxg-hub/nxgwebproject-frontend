@@ -7,7 +7,7 @@ function Dots({ activeIndex, onClick, slides }) {
         <span
           key={index}
           className={`${
-            activeIndex === index ? "bg-[#46a6c8]" : ""
+            activeIndex === index ? "!bg-[#46a6c8]" : ""
           } block bg-[#c9e5ef] w-[8px] h-[8px] md:w-[24px] md:h-[24px] rounded-full cursor-pointer transition-colors`}
           onClick={() => onClick(index)}
         ></span>

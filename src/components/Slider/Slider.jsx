@@ -57,8 +57,8 @@ const Slider = () => {
         return (
           <div
             className={`${
-              index === currentSlide ? "opacity-100 translate-x-0" : ""
-            } opacity-0 translate-x-[-40%] transition-all`}
+              index === currentSlide ? "opacity-100 !translate-x-0" : ""
+            } opacity-0 translate-x-[-40%] transition-all `}
             key={index}
           >
             {index === currentSlide && (
@@ -102,7 +102,6 @@ const Slider = () => {
         />
       </div>
     </div>
-    // <div style={{ backgroundImage: `url(${background})` }} className='slider relative'>
     //   <div className='ARROW'>
     //     <AiOutlineArrowLeft className=' arrow prev ' onClick={prevSlide} />
     //     <AiOutlineArrowRight className=' arrow next ' onClick={nextSlide} />
