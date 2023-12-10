@@ -222,11 +222,11 @@ const Home = () => {
         <form name='contact' method='POST' data-netlify='true'>
           <input type='hidden' name='form-name' value='contact' />
           <div  onClick={scrollToContactSection}>
-          <input  className="input" type="text" placeholder='Name' name='User_name' />
+          <input required className="input" type="text" placeholder='Name' name='User_name' />
           </div>
 
           <div>
-          <input className="input" type="number" placeholder='Phone Number' name='User_PhoneNumber' />
+          <input required className="input" type="number" placeholder='Phone Number' name='User_PhoneNumber' />
           </div>
 
           <div style={{margin:"0"}}>
@@ -234,7 +234,7 @@ const Home = () => {
           </div>
 
           <div style={{}}>
-          <textarea className='textarea' name="message" placeholder='Message' cols="30" rows="4"></textarea>
+          <textarea required className='textarea' name="message" placeholder='Message' cols="30" rows="4"></textarea>
           </div>
 
           <div className='contact-button'>
