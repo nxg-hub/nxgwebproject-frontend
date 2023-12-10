@@ -106,7 +106,7 @@ const Footer = () => {
                 </div>
                 <div className='absolute md:static top-[13rem] md:top-0 mt-16 flex items-start w-[90%] gap-6'>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
-                        <Link to='https://twiiter.com/' target='_blank'><FaTwitter /></Link>
+                        <Link to='https://twitter.com/' target='_blank'><FaTwitter /></Link>
                     </div>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                     <Link to='https://linkedin.com/company/nextgenhub-digital' target='_blank'><FaLinkedin /></Link>
@@ -115,7 +115,7 @@ const Footer = () => {
                     <Link to='https://instagram.com/' target='_blank'><FaInstagram /></Link>
                     </div>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
-                    <Link to='https://facebook.com' target='_blank'><FaFacebookSquare /></Link>
+                    <Link to='https://www.facebook.com/nextgenhubdigital' target='_blank'><FaFacebookSquare /></Link>
                     </div>
                 </div>
             </div>
