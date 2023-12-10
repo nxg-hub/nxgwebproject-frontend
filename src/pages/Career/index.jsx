@@ -48,7 +48,7 @@ const Career = () => {
           Job Opening At NXG-HUB Digital Technologies. Apply Now!
         </span>
       </div>
-      <form name='career-form' method='POST' data-netlify='true'>
+      <form name='career-form' encType="multipart/form-data" method='POST' data-netlify='true'>
         <input type='hidden' name='form-name' value='career-form' />
       <div className="bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:py-[3rem] md:px-4 px-8">
         <div className="md:mx-16 mx-auto rounded-2xl bg-primary md:px-14 py-10 md:py-8 md:relative">
@@ -142,7 +142,7 @@ const Career = () => {
                 <input
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
-                  name=""
+                  name="applicant_cv"
                   id=""
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">

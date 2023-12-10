@@ -22,7 +22,7 @@
 
   </form>
 
-  <form name='career-form' netlify netlify-honeypot="bot-field" hidden>
+  <form name='career-form' enctype="multipart/form-data" netlify netlify-honeypot="bot-field" hidden>
       <input  type="text" name='applicant_name' />
 
       <input  type="number" name='applicant_phone_number' />
@@ -35,7 +35,7 @@
 
       <input  type="text" name='post' />
 
-      <input  type="file" name='' />
+      <input  type="file" name='applicant_cv' />
 
   </form>
 
