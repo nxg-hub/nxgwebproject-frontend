@@ -219,7 +219,7 @@ const Home = () => {
 
       <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'  >
         {/*netlify for submission handling*/}
-        <form name='contact' action="/contact" method='POST' data-netlify='true'>
+        <form name='contact' method='POST' data-netlify='true'>
           <input type='hidden' name='form-name' value='contact' />
           <div  onClick={scrollToContactSection}>
           <input  className="input" type="text" placeholder='Name' name='User_name' />
