@@ -11,37 +11,18 @@
   </head>
   <body>
   <!-- A little help for the Netlify post-processing bots -->
-  <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="User_name" />
-    <input type="number" name="User_PhoneNumber" />
-    <input type="email" name="User_Email" />
-    <textarea name="message"></textarea>
+  <form name='contact-form' netlify netlify-honeypot="bot-field" hidden>
+      <input  type="text" name='User_name' />
+
+      <input  type="number" name='User_PhoneNumber' />
+
+      <input  type="email" name='User_Email' />
+
+      <textarea name="message"></textarea>
+
   </form>
-  <script type="text/babel">
 
-    ReactDOM.render(
-            <form name="contact-form" method="post">
-              <input type="hidden" name="form-name" value="contact-form" />
-              <p>
-                <label>Your Name: <input type="text" name="User_name"/></label>
-              </p>
-              <p>
-                <label>Your Phone: <input type="number" name="User_PhoneNumber"/></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="User_Email"/></label>
-              </p>
-              <p>
-                <label>Message: <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>,
-            document.getElementById("root")
-    );
 
-  </script>
   <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -219,8 +219,8 @@ const Home = () => {
 
       <div style={{paddingTop:"0px",paddingBottom:"30px",paddingRight:"30px"}} className='contact-section2'  >
         {/*netlify for submission handling*/}
-        <form name='contact-form' method='POST' data-netlify='true'>
-          <input type='hidden' name='form-name' value='contact-form' />
+        <form name='contact' action="/contact" method='POST' data-netlify='true'>
+          <input type='hidden' name='form-name' value='contact' />
           <div  onClick={scrollToContactSection}>
           <input  className="input" type="text" placeholder='Name' name='User_name' />
           </div>
@@ -230,7 +230,7 @@ const Home = () => {
           </div>
 
           <div style={{margin:"0"}}>
-          <input  className="input" type="email" placeholder='Email' name='User_Email' />
+          <input required className="input" type="email" placeholder='Email' name='User_Email' />
           </div>
 
           <div style={{}}>
