@@ -25,20 +25,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
   <body>
   <!-- A little help for the Netlify post-processing bots -->
-  <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="User_name" />
-    <input type="number" name="User_PhoneNumber" />
-    <input type="email" name="User_Email" />
+  <form name='contact-form' netlify netlify-honeypot="bot-field" hidden>
+    <input  type="text" name='User_name' />
+
+    <input  type="number" name='User_PhoneNumber' />
+
+    <input  type="email" name='User_Email' />
+
     <textarea name="message"></textarea>
+
   </form>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -49,30 +49,8 @@
      To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script type="text/babel">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
 
-    ReactDOM.render(
-            <form name="contact-form" method="post">
-              <input type="hidden" name="form-name" value="contact-form" />
-              <p>
-                <label>Your Name: <input type="text" name="User_name"/></label>
-              </p>
-              <p>
-                <label>Your Phone: <input type="number" name="User_PhoneNumber"/></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="User_Email"/></label>
-              </p>
-              <p>
-                <label>Message: <textarea name="message"></textarea></label>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>,
-            document.getElementById("root")
-    );
-
-  </script>
   </body>
 </html>
