@@ -142,7 +142,7 @@ const Career = () => {
                 <input
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
-                  name="applicant_cv"
+                  name=""
                   id=""
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">
