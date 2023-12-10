@@ -116,10 +116,10 @@ const Header = () => {
 
               <div className="platforms center h-full center">
                 <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-                  <FaLinkedin />
+                  <Link to='https://linkedin.com/company/nextgenhub-digital' target='_blank'><FaLinkedin /></Link>
                 </div>
                 <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-                  <FaFacebookSquare />
+                  <Link to='https://www.facebook.com/nextgenhubdigital' target='_blank'><FaFacebookSquare /></Link>
                 </div>
                 <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
                   <FaTwitter />
