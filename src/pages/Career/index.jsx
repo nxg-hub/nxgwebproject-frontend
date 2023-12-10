@@ -86,7 +86,7 @@ const Career = () => {
                 Applying for which post
               </h2>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171] text-normal md:text-[20px]">
-                <input name='applicant_post_designer'
+                <input
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -96,7 +96,7 @@ const Career = () => {
                 Product Designer (UI/UX)
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input name='applicant_post_pdt_mgr'
+                <input
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -106,7 +106,7 @@ const Career = () => {
                 Project/Product Manager
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input name='applicant_post_developer'
+                <input
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -116,7 +116,7 @@ const Career = () => {
                 Software Developer
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input name='applicant_post_marketer'
+                <input
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -126,7 +126,7 @@ const Career = () => {
                 Digital Marketer
               </div>
               <div className="p-2 font-medium pl-10 md:pl-8 flex text-[#717171]  text-normal md:text-[20px]">
-                <input name='applicant_post_instructor'
+                <input
                   className="mr-6"
                   type="radio"
                   name="post"
@@ -139,10 +139,10 @@ const Career = () => {
                 <h2 className="text-[18px]  md:text-[28px] mb-2 font-medium text-[#717171]">
                   Upload your resume
                 </h2>
-                <input name='applicant_cv'
+                <input
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
-                  name=""
+                  name="applicant_cv"
                   id=""
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">
