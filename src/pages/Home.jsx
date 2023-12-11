@@ -91,7 +91,7 @@ const Home = () => {
                   The World Through Technology.
                 </p>
               </div>
-              <button className="group p-[8px] border-[1px] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
+              <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
                   to="/about"
@@ -183,7 +183,7 @@ const Home = () => {
           </div>
 
           <div className="flex justify-center mt-8">
-            <button className="group p-[8px] border-[1px] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
+            <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
               <Link
                 className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
                 to="/services"
@@ -303,14 +303,14 @@ const Home = () => {
             </span>
           </div>
           <div className="flex justify-center w-full ">
-            <div className="w-auto md:w-1/2">
+            <div className="w-auto md:w-full">
               <div className="flex justify-center px-4">
                 <FaqList />
               </div>
             </div>
           </div>
           <div className="flex justify-center my-[50px]">
-            <button className="group">
+            <button className="group border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
               <div
                 className="flex font-normal text-[#717171] group-hover:translate-x-2 transition-transform p-2"
                 onClick={scrollToTop}
