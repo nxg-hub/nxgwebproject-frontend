@@ -1,7 +1,7 @@
-import vector1 from'../../assets/images/vector1.svg'
-import vector2 from'../../assets/images/vector2.svg'
-import vector3 from'../../assets/images/vector3.svg'
-import vector4 from'../../assets/images/vector4.svg'
+import vector1 from'../assets/images/vector1.svg'
+import vector2 from'../assets/images/vector2.svg'
+import vector3 from'../assets/images/vector3.svg'
+import vector4 from '../assets/images/vector4.svg'
 
 
 export const slides =[

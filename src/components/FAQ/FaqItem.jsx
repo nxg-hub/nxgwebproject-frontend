@@ -11,7 +11,7 @@ const FaqItem = ({ item }) => {
 
   return (
     <div
-      className={`p-[0.7rem] border-[1px] border-[#D9DCE2] hover:bg-[#717171] rounded-[10px] mb-4 cursor-pointer w-full ${
+      className={`p-[0.7rem] border-[1px] border-[#D9DCE2] hover:bg-[#e6e6e6] rounded-[10px] mb-4 cursor-pointer w-full transition-all ${
         isOpen ? "bg-[#e6e6e6]" : ""
       }`}
       onClick={toggleAccordion}

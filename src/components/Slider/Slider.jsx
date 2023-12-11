@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import "./Slider.css";
-import { slides } from "./slides";
+import { slides } from "../../utils/slides";
 import Dots from "../Dot/Dots";
 import background from "../../assets/images/background.jpg";
 import { NavLink, Link } from "react-router-dom";
@@ -58,11 +57,11 @@ const Slider = () => {
           <div
             className={`${
               index === currentSlide ? "opacity-100 !translate-x-0" : ""
-            } opacity-0 translate-x-[-40%] transition-all `}
+            } opacity-0 translate-x-[-40%] ease-in-out duration-500 transition-all relative`}
             key={index}
           >
             {index === currentSlide && (
-              <div className="md:w-full pt-[32px] px-[23px] flex md:flex-row flex-col md:p-40 gap-[40px] md:gap-80 items-center justify-around">
+              <div className="md:w-full pt-[32px] px-[23px] flex md:flex-row flex-col md:p-40 gap-[40px] items-center justify-between">
                 <div className="md:order-2">
                   <img
                     className="md:w-[477px] md:h-[312px] h-[180px] w-[276px]"
@@ -83,17 +82,20 @@ const Slider = () => {
                   >
                     {slide.description.replace(/\\n/g, "\n")}
                   </p>
-                  <CustomButton
-                    children="Learn More"
-                    className="text-sm gap-2 py-[16px] px-[32px] md:gap-0 md:py-0 md:px-0"
-                    onClick={() => (window.location.href = "/services")}
-                  />
                 </div>
               </div>
             )}
           </div>
         );
       })}
+      <div className="md:absolute bottom-32 left-40 static center">
+        <CustomButton
+        
+          children="Learn More"
+          className="text-sm gap-2 py-[16px] px-[32px] md:gap-0 md:py-0 md:px-0"
+          onClick={() => (window.location.href = "/services")}
+        />
+      </div>
       <div className="mt-[40px] md:mt-0">
         <Dots
           activeIndex={currentSlide}

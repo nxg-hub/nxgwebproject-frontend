@@ -98,7 +98,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='absolute md:static top-[21rem] md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6'>
+                <div className='absolute md:static top-[20rem] left-8 md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6'>
                     <div className='bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md'>
                         <Link to='https://twiiter.com/' target='_blank'><FaTwitter /></Link>
                     </div>

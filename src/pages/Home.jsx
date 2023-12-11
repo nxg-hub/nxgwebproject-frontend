@@ -65,7 +65,7 @@ const Home = () => {
                   </div>
 
                   <NavLink to="/about">
-                    <div className="bg-primary text-secondary px-[7px] py-[8px] rounded-full">
+                    <div className="bg-primary text-secondary hover:bg-[#717171] transition-colors px-[7px] py-[8px] rounded-full">
                       <BsArrowRight className="group-hover:text-primary w-6 h-5" />
                     </div>
                   </NavLink>
@@ -126,11 +126,11 @@ const Home = () => {
 
           {/* section 3 */}
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] gap-8 mt-8 md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] md:mt-7 w-full">
-            <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px]">
+            <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px] text-[#717171] hover:bg-[#717171] hover:text-primary transition-colors">
               <div>
                 <img className="w-full" src={consulting} alt="it_training" />
               </div>
-              <div className="md:mt-[32px] h-auto text-[#717171]">
+              <div className="md:mt-[32px] h-auto ">
                 <h1 className="md:my-0 my-[25px] md:font-medium font-semibold text-[18px] md:text-[28px]">
                   IT Training
                 </h1>
@@ -142,7 +142,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="text-[#717171] w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px]">
+            <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px] text-[#717171] hover:bg-[#717171] hover:text-primary transition-colors">
               <div>
                 <img
                   className="w-full"
@@ -163,15 +163,15 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px]">
+            <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px] text-[#717171] hover:bg-[#717171] hover:text-primary transition-colors">
               <div>
                 <img className="w-full" src={IT} alt="consulting_services" />
               </div>
               <div className="md:mt-[32px] h-auto">
-                <h1 className="md:my-0 my-[25px] text-[#717171] md:font-medium font-semibold text-[18px] md:text-[28px]">
+                <h1 className="md:my-0 my-[25px] md:font-medium font-semibold text-[18px] md:text-[28px]">
                   Consulting Services
                 </h1>
-                <div className="text-[#717171] text-[18px] font-normal">
+                <div className="text-[18px] font-normal">
                   We Offer IT Consultancy Services, Including Technical
                   Recruiting.{" "}
                   <Link className="underline" href="#contact">
@@ -198,7 +198,7 @@ const Home = () => {
         {/* section 4 */}
         <section id="contact" ref={contactSectionRef}>
           <div className="my-10 flex justify-center">
-            <div className="flex px-7 py-[10px] rounded-[20px] border-[#eef2f6] border-[0.5px]">
+            <div className="flex px-7 py-[10px] rounded-[32px] border-[#eef2f6] border-[0.5px]">
               <div>
                 <img src={icon2} alt="nxghub" />
               </div>
@@ -297,8 +297,8 @@ const Home = () => {
 
         {/* section 5 */}
         <section className="w-full">
-          <div className="flex mx-auto w-[150px] mt-[100px] mb-[40px] bg-[#A4CDDC] rounded-[32px] ">
-            <span className="px-[38px] py-[5px] text-[#717171] text-[36px] font-semibold">
+          <div className="flex mx-auto w-[60px] justify-center md:w-[150px] mt-[100px] mb-[40px] bg-[#A4CDDC] rounded-[32px] ">
+            <span className="py-2 px-[10px] md:px-[38px] md:py-[5px] text-[#717171] text-[20px] md:text-[36px] font-semibold">
               FAQ
             </span>
           </div>

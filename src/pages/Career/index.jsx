@@ -147,8 +147,8 @@ const Career = () => {
                     <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]">
                       Submit
                     </span>
-                    <span className="rounded-full p-2 text-[#46A6C8] bg-primary">
-                      <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
+                    <span className="group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary">
+                      <BsArrowUpRight size={25} />
                     </span>
                   </button>
                 </div>
