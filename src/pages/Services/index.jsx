@@ -107,6 +107,8 @@ const Services = ({ open }) => {
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
                   to="https://forms.gle/c7auu7gyrwbxwqeH8"
+                  target="_blank"
+                  rel="noopener noreferrer" // recommended for security
                 >
                   <span className="text-[#717171]">Here</span>
                   <BsArrowUpRight className="aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
