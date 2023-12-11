@@ -130,11 +130,11 @@ const Home = () => {
               <div>
                 <img className="w-full" src={consulting} alt="it_training" />
               </div>
-              <div className="md:mt-[32px] h-auto">
-                <h1 className="md:my-0 my-[25px] text-[#717171] md:font-medium font-semibold text-[18px] md:text-[28px]">
+              <div className="md:mt-[32px] h-auto text-[#717171]">
+                <h1 className="md:my-0 my-[25px] md:font-medium font-semibold text-[18px] md:text-[28px]">
                   IT Training
                 </h1>
-                <p className="text-[#717171] text-[16px] md:text-[18px] font-normal">
+                <p className="text-[16px] md:text-[18px] font-normal">
                   We Organize Software Development Training To Tech
                   Professionals And Aspiring Tech Professionals, Equipping Them
                   With Necessary Skills Required To Thrive In The Tech Industry.
@@ -142,7 +142,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px]">
+            <div className="text-[#717171] w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px]">
               <div>
                 <img
                   className="w-full"
@@ -151,10 +151,10 @@ const Home = () => {
                 />
               </div>
               <div className="md:mt-[32px] h-auto">
-                <h1 className="md:my-0 my-[25px] text-[#717171] md:font-medium font-semibold text-[18px] md:text-[28px]">
+                <h1 className="md:my-0 my-[25px] md:font-medium font-semibold text-[18px] md:text-[28px]">
                   Software Development
                 </h1>
-                <p className="text-[#717171] text-[16px] md:text-[18px] font-normal">
+                <p className="text-[16px] md:text-[18px] font-normal">
                   Our Team Of Professional Engineers Are Involved In Building
                   Real World Solutions And Applications From Conceptualization
                   To Deployment For Business Use Cases. Our Custom Software

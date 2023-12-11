@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import CustomButton from "../../components/Button";
 import NLogo from "../../assets/icons/n.png";
 import Footer from "../../components/Footer";
@@ -33,22 +32,31 @@ const About = () => {
       </div>
 
       {/* About */}
-      <div className="w-full center my-12 flex-col gap-10">
-        <div className="flex-col gap-6 center w-[80%]">
-          <div className="center">
-            <div className="flex items-start">
-              <img src={NLogo} alt="logo" />
-            </div>
-            <h2 className="text-secondary lg:text-[36px] md:text-[20px] font-semibold">
-              About us
-            </h2>
-          </div>
-        </div>
-      </div>
 
       {/* We Bring You Creativity At Its Best */}
       <section className="px-4 md:px-[9rem]">
-        <div className="between flex-col md:flex-row pb-20 md:pb-0">
+        <div className="flex justify-center mt-20">
+          <div className="md:hidden flex justify-center gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[50%] md:w-[20%] py-2">
+            <span>
+              <img src="/tag.png" alt="icon" />
+            </span>
+            <span>
+              <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px]">
+                About us
+              </h2>
+            </span>
+          </div>
+          <div className="hidden md:block gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2">
+            <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px] ml-4">
+              About us
+            </h2>
+            <span className="absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)] ml-2 md:ml-0">
+              <img src="/tag.png" alt="icon" className="px-4 " />
+            </span>
+          </div>
+        </div>
+
+        <div className="between flex-col md:flex-row pb-20 md:pb-10">
           <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
             <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
               We bring you Creativity at Its best!
@@ -70,8 +78,8 @@ const About = () => {
         </div>
 
         {/* OUR MISSION */}
-        <div className="between flex-col md:flex-row">
-          <div className="float-left flex justify-end">
+        <div className="between flex-col md:flex-row pb-0 md:pb-10">
+          <div className="md:order-first flex justify-end">
             <img src={second} alt="About" />
           </div>
           <div className="md:w-[60%] flex-col gap-4 items-start flex mb-[3rem] md:mb-0">

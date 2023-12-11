@@ -63,7 +63,7 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='flex flex-row md:justify-center md:gap-[6rem] mt-24 md:mt-0 gap-[4rem] w-full'>
+                    <div className='flex flex-row md:justify-center md:gap-[15rem] mt-24 md:mt-0 gap-[4rem] w-full'>
                     <div className="md:w-fit w-full flex-col gap-4 flex items-start">
                         <h2 className='text-secondary text-[20px] font-semibold'>
                             ABOUT US

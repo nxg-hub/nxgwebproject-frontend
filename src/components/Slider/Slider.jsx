@@ -12,7 +12,7 @@ const Slider = () => {
   const slideLength = slides.length;
   const autoScroll = true;
   let slideInterval;
-  let intervalTime = 5000
+  let intervalTime = 5000;
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
@@ -102,38 +102,6 @@ const Slider = () => {
         />
       </div>
     </div>
-    //   <div className='ARROW'>
-    //     <AiOutlineArrowLeft className=' arrow prev ' onClick={prevSlide} />
-    //     <AiOutlineArrowRight className=' arrow next ' onClick={nextSlide} />
-    //   </div>
-    //   {SliderData.map((slide, index) => {
-    //     return (
-    //       <div className={index === currentSlide ? "slide  current " : "slide current"} key={index}>
-    //         {index === currentSlide && (
-    //           <div>
-    //             <div className='vector-heading'>
-    //               <img className='vector' src={slide.image} alt="" />
-    //             </div>
-    //             <div className='content '>
-    //               <h2 style={{ whiteSpace: "pre-line" }} className='Title-slide text-center text-[28px] md:text-[64px] md:text-start'>{slide.title}</h2>
-    //               <p style={{ whiteSpace: "pre-line" }} className='Text-slide'>{slide.description.replace(/\\n/g, '\n')}</p>
-    //               <div className='Button-Container'>
-    //                 {/* Use a regular button instead of NavLink */}
-    //                 <button className='btn' onClick={() => window.location.href = "/services"}>
-    //                   Learn More
-    //                 </button>
-    //               </div>
-    //             </div>
-    //           </div>
-    //         )}
-    //       </div>
-    //     );
-    //   })}
-    //   <Dots
-    //     activeIndex={currentSlide}
-    //     SliderData={SliderData}
-    //     onClick={(activeIndex) => setCurrentSlide(activeIndex)} />
-    // </div>
   );
 };
 

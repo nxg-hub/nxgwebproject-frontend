@@ -10,10 +10,6 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Services = ({ open }) => {
   return (
     <>
-      {/* Dark overlay on page, when mobile menu is opened */}
-      <div className={`${open ? "overlay" : "hidden"}  md:hidden`}></div>
-
-      {/* Banner */}
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
         style={{ backgroundImage: "url(/serviceBg.png)" }}
@@ -36,15 +32,28 @@ const Services = ({ open }) => {
       {/* Services */}
       <div className="w-full center my-12 flex-col gap-10">
         <div className="flex-col gap-6 center w-[80%]">
-          <div className="center">
-            <div className="flex items-start">
-              <img src={NLogo} alt="logo" />
-            </div>
-            <h2 className="text-secondary lg:text-center text-[36px] md:text-center text-[20px] font-semibold">
-              Our Services
+         <div className="flex justify-center w-full flex-row mt-20">
+           <div className="md:hidden flex justify-center gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[50%] md:w-[20%] py-2">
+          <span>
+            <img src="/tag.png" alt="icon" />
+          </span>
+          <span>
+            <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px]">
+              Services  
             </h2>
-          </div>
-          <p className="lg:text-center text-[18px] md:text-center text-[16px] text-gray leading-[28px]">
+          </span>
+        </div>
+        <div className="hidden md:block gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2">
+          <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px] ml-4">
+            Services
+          </h2>
+          <span className="absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)] ml-2 md:ml-0">
+            <img src="/tag.png" alt="icon" className="px-4 " />
+          </span>
+        </div>
+        </div>
+     
+          <p className="lg:text-center md:text-center text-[16px] text-gray leading-[28px]">
             We Assist You In Constructing Top-Tier Digital Solutions And
             Products Following Best Practices, While Also Offering An Extensive
             Array Of Associated Professional Services. Our Commitment Is To

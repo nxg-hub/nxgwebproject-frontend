@@ -1,14 +1,4 @@
-/* Overlay styles */
-.overlay::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-/* Overlay styles ends */
+
 
 .services {
   background: linear-gradient(
