@@ -15,7 +15,7 @@ export const slides =[
   {
     image: vector2,
     title: 'IT Training',
-    description: 'We Organise Software DevelopmentTraining To Tech Professionals And Aspiring Tech Professionals,Equiping Them With Necessary Skills Required To Thrive In Techn Industry',
+    description: 'We Organise Software DevelopmentTraining To Tech Professionals And Aspiring Tech Professionals,Equiping Them With Necessary Skills Required To Thrive In the Tech Industry',
     route: '/services', // Specify the route for the first item
   },
  
