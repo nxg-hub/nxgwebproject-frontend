@@ -11,6 +11,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { address } from "../../utils/address";
+import FaqList from "../FAQ/FaqList";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -88,7 +90,7 @@ const Footer = () => {
               </h2>
               <p>
                 {" "}
-                <Link to="#">Training</Link>
+                <Link to="https://forms.gle/c7auu7gyrwbxwqeH8">Training</Link>
               </p>
               <p>
                 <Link to="#">NXG-Job-Hub</Link>
@@ -98,10 +100,10 @@ const Footer = () => {
                 <Link to="/career">Career</Link>
               </p>
               <p>
-                <Link to="#">Contact</Link>
+                <Link to="#contact">Contact</Link>
               </p>
               <p>
-                <Link to="#">FAQ</Link>
+                 <FaqList />FAQ
               </p>
             </div>
           </div>

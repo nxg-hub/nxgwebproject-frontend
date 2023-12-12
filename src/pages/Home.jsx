@@ -174,7 +174,7 @@ const Home = () => {
                 <div className="text-[18px] font-normal">
                   We Offer IT Consultancy Services, Including Technical
                   Recruiting.{" "}
-                  <Link className="underline" href="#contact">
+                  <Link className="underline" href="/#contact">
                     Contact Us Today!
                   </Link>
                 </div>
