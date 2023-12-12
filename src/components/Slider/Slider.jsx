@@ -61,7 +61,7 @@ const Slider = () => {
             key={index}
           >
             {index === currentSlide && (
-              <div className="md:w-full pt-[32px] px-[23px] flex md:flex-row flex-col md:p-40 gap-[40px] items-center justify-between">
+              <div className="md:w-full pt-[32px] px-[23px] flex md:flex-row flex-col md:p-20 md:pt-40 gap-[40px] items-center justify-between">
                 <div className="md:order-2">
                   <img
                     className="md:w-[477px] md:h-[312px] h-[180px] w-[276px]"
@@ -71,13 +71,11 @@ const Slider = () => {
                 </div>
                 <div className="flex flex-col items-center md:items-start md:text-left md:w-[743px]">
                   <h2
-                    style={{ whiteSpace: "pre-line" }}
                     className="text-center text-[28px] font-semibold md:text-[64px] md:text-start"
                   >
                     {slide.title}
                   </h2>
                   <p
-                    style={{ whiteSpace: "pre-line" }}
                     className="w-[339px] md:w-[700px] px-2 md:px-0 md:text-start text-center text-[16px] font-normal md:text-[28px] py-4 md:py-6"
                   >
                     {slide.description.replace(/\\n/g, "\n")}
@@ -88,7 +86,7 @@ const Slider = () => {
           </div>
         );
       })}
-      <div className="md:absolute bottom-32 left-40 static center">
+      <div className="md:absolute bottom-20 left-20 static center">
         <CustomButton
         
           children="Learn More"
