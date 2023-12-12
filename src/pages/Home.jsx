@@ -274,8 +274,8 @@ const Home = () => {
                 className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
                >
                 {/*netlify for submission handling*/}
-                <form name='contact' method='POST' data-netlify='true'>
-                  <input type='hidden' name='form-name' value='contact' />
+                <form name='contact-form' method='POST' data-netlify='true'>
+                  <input type='hidden' name='form-name' value='contact-form' />
                    <input required
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="text"
