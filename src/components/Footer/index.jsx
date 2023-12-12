@@ -134,10 +134,11 @@ const Footer = () => {
               Accomplish All Your Brand Or Career Requirements. Stay Tuned For
               Our Latest Updates By Subscribing Here.
             </p>
-            <div className="border border-primary rounded-md between p-1 w-full">
-              <form name='mail_subscription' method='POST' data-netlify='true'>
-                <input type='hidden' name='form-name' value='mail_subscription' />
-              <input
+            <form name='mail_subscription' method='POST' data-netlify='true'>
+              <input type='hidden' name='form-name' value='mail_subscription' />
+             <div className="border border-primary rounded-md between p-1 w-full">
+              {/* Netlify form for submission handling */}
+                <input
                 type="email"
                 placeholder="Email Address"
                 name="email"
@@ -150,10 +151,11 @@ const Footer = () => {
                 backgroundColor="#FFF"
                 textColor="#717171"
                 border="1px solid #fff"
+                type = "submit"
               />
-              </form>
             </div>
-          </div>
+            </form>
+           </div>
         </div>
         <div className="absolute md:static top-[20rem] left-8 md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6">
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
