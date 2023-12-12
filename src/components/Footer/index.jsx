@@ -11,8 +11,6 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { address } from "../../utils/address";
-import FaqList from "../FAQ/FaqList";
-import React from "react";
 
 const Footer = () => {
   return (
@@ -100,10 +98,10 @@ const Footer = () => {
                 <Link to="/career">Career</Link>
               </p>
               <p>
-                <Link to="#contact">Contact</Link>
+                <Link to="/#contact">Contact</Link>
               </p>
               <p>
-                 <FaqList />FAQ
+                <Link to="#">FAQ</Link>
               </p>
             </div>
           </div>
