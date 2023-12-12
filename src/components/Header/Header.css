@@ -99,6 +99,25 @@
   transform: translateX(20px) scale(1); /* Adjust the translation distance to your preference */
 }
 
+.nav_underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.3rem;
+  width: 50%;
+  height: 0.1em;
+  background-color: #2596BE;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav_underline:hover::after,
+.nav_underline:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+
 .backdrop {
   z-index: -1;
   position: fixed;

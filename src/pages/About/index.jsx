@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import CustomButton from "../../components/Button";
 import NLogo from "../../assets/icons/n.png";
 import Footer from "../../components/Footer";
@@ -8,7 +7,7 @@ import second from "../../assets/images/aboutTwo.jpg";
 import third from "../../assets/images/aboutThree.jpg";
 import LearnArrow from "../../assets/svgs/learnArrow.svg";
 import { BsArrowUpRight } from "react-icons/bs";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -34,22 +33,31 @@ const About = () => {
       </div>
 
       {/* About */}
-      <div className="w-full center my-12 flex-col gap-10">
-        <div className="flex-col gap-6 center w-[80%]">
-          <div className="center">
-            <div className="flex items-start">
-              <img src={NLogo} alt="logo" />
-            </div>
-            <h2 className="text-secondary lg:text-[36px] md:text-[20px] font-semibold">
-              About us
-            </h2>
-          </div>
-        </div>
-      </div>
 
       {/* We Bring You Creativity At Its Best */}
       <section className="px-4 md:px-[9rem]">
-        <div className="between flex-col md:flex-row pb-20 md:pb-0">
+        <div className="flex justify-center mt-20">
+          <div className="md:hidden flex justify-center gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[50%] md:w-[20%] py-2">
+            <span>
+              <img src="/tag.png" alt="icon" />
+            </span>
+            <span>
+              <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px]">
+                About us
+              </h2>
+            </span>
+          </div>
+          <div className="hidden md:block gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2">
+            <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px] ml-4">
+              About us
+            </h2>
+            <span className="absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)] ml-2 md:ml-0">
+              <img src="/tag.png" alt="icon" className="px-4 " />
+            </span>
+          </div>
+        </div>
+
+        <div className="between flex-col md:flex-row pb-20 md:pb-10">
           <div className="order-last md:order-first md:w-[60%] flex-col gap-4 items-start flex mb-[0rem] md:mb-0">
             <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
               We bring you Creativity at Its best!
@@ -66,14 +74,14 @@ const About = () => {
             </p>
           </div>
           <div className="order-first md:order-last md:w-[35%] flex justify-end">
-            <img src={first} alt="About" />
+            <img src={first} alt="About" className="w-full"/>
           </div>
         </div>
 
         {/* OUR MISSION */}
-        <div className="between flex-col md:flex-row">
-          <div className="float-left flex justify-end">
-            <img src={second} alt="About" />
+        <div className="between flex-col md:flex-row pb-0 md:pb-10">
+          <div className="order-first flex justify-end md:w-[35%]">
+            <img src={second} alt="About" className="w-full" />
           </div>
           <div className="md:w-[60%] flex-col gap-4 items-start flex mb-[3rem] md:mb-0">
             <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
@@ -107,10 +115,10 @@ const About = () => {
             </div>{" "}
             {/* Button */}
             <div className="mb-10 mx-auto md:mx-0">
-              <button className="group p-2">
+              <button className="group p-2 border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
-                  className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
-                  to="/career"
+                  className="flex items-center font-semibold text-gray-700 group-hover:text-primary group-hover:translate-x-2 transition-transform"
+                  to="/services"
                 >
                   <span className="text-[#717171] font-normal text-normal">
                     Learn More
@@ -121,7 +129,7 @@ const About = () => {
             </div>
           </div>
           <div className="order-first md:order-last md:w-[35%] flex justify-end">
-            <img src={third} alt="About" />
+            <img src={third} alt="About" className="w-full" />
           </div>
         </div>
       </section>

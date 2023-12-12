@@ -11,10 +11,6 @@ import { Link } from "react-router-dom";
 const Services = ({ open }) => {
   return (
     <>
-      {/* Dark overlay on page, when mobile menu is opened */}
-      <div className={`${open ? "overlay" : "hidden"}  md:hidden`}></div>
-
-      {/* Banner */}
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
         style={{ backgroundImage: "url(/serviceBg.png)" }}
@@ -37,15 +33,28 @@ const Services = ({ open }) => {
       {/* Services */}
       <div className="w-full center my-12 flex-col gap-10">
         <div className="flex-col gap-6 center w-[80%]">
-          <div className="center">
-            <div className="flex items-start">
-              <img src={NLogo} alt="logo" />
+          <div className="flex justify-center w-full flex-row mt-20">
+            <div className="md:hidden flex justify-center gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[50%] md:w-[20%] py-2">
+              <span>
+                <img src="/tag.png" alt="icon" />
+              </span>
+              <span>
+                <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px]">
+                  Services
+                </h2>
+              </span>
             </div>
-            <h2 className="text-secondary lg:text-center text-[36px] md:text-center text-[20px] font-semibold">
-              Our Services
-            </h2>
+            <div className="hidden md:block gap-2 text-center relative rounded-[20px] border-[#eef2f6] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2">
+              <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px] ml-4">
+                Services
+              </h2>
+              <span className="absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)] ml-2 md:ml-0">
+                <img src="/tag.png" alt="icon" className="px-4 " />
+              </span>
+            </div>
           </div>
-          <p className="lg:text-center text-[18px] md:text-center text-[16px] text-gray leading-[28px]">
+
+          <p className="text-center md:text-[18px] text-[16px] font-normal text-gray leading-[28px]">
             We Assist You In Constructing Top-Tier Digital Solutions And
             Products Following Best Practices, While Also Offering An Extensive
             Array Of Associated Professional Services. Our Commitment Is To
@@ -83,33 +92,46 @@ const Services = ({ open }) => {
       </div>
 
       {/* Training */}
-      <div className="w-full center my-8 flex-col gap-8 bg-[#F1F1F1]">
-        <div className="flex-col gap-6 center w-[80%]">
-          <div className="center">
-            <div className="flex items-start">
-              <img src={NLogo} alt="logo" />
+      <div className="w-full center my-12 flex-col gap-8 bg-[#F1F1F1]">
+        <div className="flex-col gap-6 center w-[80%] my-8">
+          <div className="flex justify-center w-full flex-row">
+            <div className="md:hidden flex justify-center gap-2 text-center relative border-[#ABBED1] rounded-[20px] border-[0.5px] mb-8 w-[50%] md:w-[20%] py-2">
+              <span>
+                <img src="/tag.png" alt="icon" />
+              </span>
+              <span>
+                <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px]">
+                  Training
+                </h2>
+              </span>
             </div>
-            <h2 className=" text-secondary lg:text-center text-[36px] md:text-center text-[20px] font-semibold">
-              Training
-            </h2>
+            <div className="hidden md:block gap-2 text-center relative rounded-[20px] border-[#ABBED1] border-[0.5px] mb-8 w-[40%] md:w-[20%] py-2">
+              <h2 className="text-[#2596BE] font-semibold text-md md:text-[36px] ml-4">
+                Training
+              </h2>
+              <span className="absolute md:top-4 md:flex md:justify-center md:w-[calc(100%-10rem)] ml-2 md:ml-0">
+                <img src="/tag.png" alt="icon" className="px-4 " />
+              </span>
+            </div>
           </div>
-          <div className="lg:text-[28px] md:text-[18px]">
-            <p className="text-center font-semibold text-gray leading-[36px]">
+          <div className="md:text-[28px] text-[18px]">
+            <p className="text-center font-semibold text-gray md:leading-[36px] leading-[24px]">
               Register For Our Next Cohort
             </p>
-            <p className="text-center font-semibold text-gray leading-[36px]">
+            <p className="text-center font-semibold text-gray md:leading-[36px] leading-[24px]">
               Click Here To Register For Our Next Tech BootCamp
             </p>
           </div>
           <div className="my-4">
-            <div className="learn-more-arrow1 grid place-content-center">
-              <button className="group p-[8px]">
+            <div className="grid place-content-center">
+              <button className="group border-[1px] p-2 hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
                   to="https://forms.gle/c7auu7gyrwbxwqeH8"
                   target="_blank"
                   rel="noopener noreferrer" // recommended for security
                 >
+
                   <span className="text-[#717171]">Here</span>
                   <BsArrowUpRight className="aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
                 </Link>

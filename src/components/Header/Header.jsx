@@ -75,7 +75,7 @@ const Header = () => {
         ></div>
       )}
       <header className="w-screen center">
-        <nav className="w-[95%] between gap-[10px] md:gap-0 my-3 h-[52px]">
+        <nav className="w-full mx-4 between gap-[10px] md:gap-0 my-3 h-[52px]">
           <div className="between gap-6 h-full">
             <div className="bg-secondary center w-[136%] h-full rounded-[3rem] p-0">
               <NavLink exact to="/">
@@ -208,7 +208,7 @@ const Header = () => {
             <li className="w-full border-b border-[#b2b2b2] py-2">
               <Link
                 to="#contact"
-                className="nav-links hover:underline"
+                className="nav-links relative nav_underline"
                 onClick={handleClickContact}
               >
                 Contact Us

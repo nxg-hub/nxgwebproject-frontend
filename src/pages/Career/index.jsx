@@ -58,26 +58,31 @@ const Career = () => {
                 className="py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="text"
                 placeholder="Name"
+                id="name"
               />
               <input name='applicant_phone_number'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="tel"
                 placeholder="Contact Number"
+                id="phone_number"
               />
               <input required name='applicant_email'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="email"
                 placeholder="Email"
+                id="email"
               />
               <input name='applicant_yoe'
                 className="py-2 md:py-4 px-6  mt-3  rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="number"
                 placeholder="Years of Experience"
+                id="experience"
               />
               <textarea name='applicant_message'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[20px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="text"
                 placeholder="Other Details"
+                id="other_details"
               />
               </div>
 
@@ -89,7 +94,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="product_designer"
                   id="product_designer"
                   value="product_designer"
                 />
@@ -99,7 +104,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="product_manager"
                   id="product_manager"
                   value="product_manager"
                 />
@@ -109,7 +114,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="software_developer"
                   id="software_developer"
                   value="software_developer"
                 />
@@ -119,7 +124,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="digital_marketer"
                   id="digital_marketer"
                   value="digital_marketer"
                 />
@@ -129,7 +134,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="it_instructor"
                   id="it_instructor"
                   value="it_instructor"
                 />
@@ -142,16 +147,16 @@ const Career = () => {
                 <input required
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
-                  name="applicant_cv"
-                  id=""
+                  name="resume"
+                  id="resume"
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">
                   <button type="submit" className="group text-primary rounded-[32px] py-2 my-[2.5rem] md:my-0 pr-2 md:ml-0 ml-[3rem] bg-[#2596be] hover:bg-[#2596be]  flex items-center sm:w-[200px]">
                     <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]">
                       Submit
                     </span>
-                    <span className="rounded-full p-2 text-[#46A6C8] bg-primary">
-                      <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
+                    <span className="group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary">
+                      <BsArrowUpRight size={25} />
                     </span>
                   </button>
 

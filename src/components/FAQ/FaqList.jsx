@@ -4,8 +4,8 @@ import icon1 from "../../assets/icons/icon1.jpg"
 
 const FaqList = () => {
   return (
-    <ul className="faq-list mt-[30px]">
-    <div >
+    <ul>
+    <div className="md:w-[50vw] w-full">
       {Faqs.map((faq, index) => (
         <div key={index} className="flex items-center gap-3">
           {/* Display the logo outside the styling of each question */}
