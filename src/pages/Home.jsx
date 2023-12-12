@@ -71,14 +71,14 @@ const Home = () => {
 
             <div className="md:items-start items-center text-[#717171] flex flex-col gap-4">
               <div className="bg-[#deeff5] rounded-[20px] p-4 md:p-8">
-                <div className="flex justify-between relative">
-                  <div className="">
+                <div className="flex justify-between items-center relative">
+                  <div>
                     <img
                       className="absolute rounded-full"
                       src={icon1}
                       alt="nxg"
                     />
-                    <h1 className="font-semibold md:font-medium text-[#717171] text-[20px] md:text-xl md:px-6 px-7">
+                    <h1 className="font-semibold text-[#717171] md:text-[36px] text-[20px] md:px-6 px-7">
                       ABOUT US
                     </h1>
                   </div>
@@ -110,6 +110,7 @@ const Home = () => {
                   The World Through Technology.
                 </p>
               </div>
+              <div className="h-full flex items-end">
               <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
@@ -119,6 +120,7 @@ const Home = () => {
                   <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
                 </Link>
               </button>
+              </div>
             </div>
           </div>
         </section>
@@ -234,7 +236,7 @@ const Home = () => {
             className="p-8 bg-cover bg-center rounded-[14.5px]"
           >
             <div className="p-2 bg-primary rounded-[20px] md:p-12 grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] md:gap-0 gap-[80px] md:pb-0">
-              <div className="flex flex-col mt-12 md:mt-0">
+              <div className="flex flex-col mt-12 md:mt-0 md:mr-4 mr-0">
                 <div className="flex items-start">
                   <img
                     style={{
@@ -245,7 +247,7 @@ const Home = () => {
                     src={icon1}
                     alt="nxghub"
                   />
-                  <h1 className="text-[18px] md:text-[36px] font-semibold">
+                  <h1 className="text-[18px] md:text-[36px] font-semibold text-[#717171]">
                     {" "}
                     LET'S START YOUR PROJECT{" "}
                   </h1>
@@ -307,8 +309,9 @@ const Home = () => {
                   id="messages"
                  />
 
-                 <div className="flex justify-end mt-[37px] mb-[62px] md:mb-0">
+                <div className="flex justify-end mt-[37px] mb-[62px] md:mb-10">
                   <button type="submit" className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
+
                     <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform">
                       Submit
                     </span>
