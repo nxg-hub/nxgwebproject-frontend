@@ -11,6 +11,26 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { address } from "../../utils/address";
+import React from "react";
+
+const handleClickContact = (event) => {
+  event.preventDefault();
+
+  // Build the anchor link to the home page and the contact section
+  const contactLink = `${window.location.origin}/#contact`;
+  // Navigate to the anchor link
+  window.location.href = contactLink;
+
+  // Assuming you have a function scrollToContactSection that scrolls to the contact section
+  // You can replace this with your actual scrolling logic
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  // Close the menu if it's open
+  setShowSidebar(false);
+};
 
 const Footer = () => {
   return (
@@ -88,7 +108,7 @@ const Footer = () => {
               </h2>
               <p>
                 {" "}
-                <Link to="#">Training</Link>
+                <Link to="https://forms.gle/c7auu7gyrwbxwqeH8">Training</Link>
               </p>
               <p>
                 <Link to="#">NXG-Job-Hub</Link>
@@ -98,7 +118,7 @@ const Footer = () => {
                 <Link to="/career">Career</Link>
               </p>
               <p>
-                <Link to="#">Contact</Link>
+                <Link to="#contact" onClick={handleClickContact}>Contact</Link>
               </p>
               <p>
                 <Link to="#">FAQ</Link>
@@ -114,8 +134,11 @@ const Footer = () => {
               Accomplish All Your Brand Or Career Requirements. Stay Tuned For
               Our Latest Updates By Subscribing Here.
             </p>
-            <div className="border border-primary rounded-md between p-1 w-full">
-              <input
+            <form name='mail_subscription' method='POST' data-netlify='true'>
+              <input type='hidden' name='form-name' value='mail_subscription' />
+             <div className="border border-primary rounded-md between p-1 w-full">
+              {/* Netlify form for submission handling */}
+                <input
                 type="email"
                 placeholder="Email Address"
                 name="email"
@@ -128,9 +151,11 @@ const Footer = () => {
                 backgroundColor="#FFF"
                 textColor="#717171"
                 border="1px solid #fff"
+                type = "submit"
               />
             </div>
-          </div>
+            </form>
+           </div>
         </div>
         <div className="absolute md:static top-[20rem] left-8 md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6">
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
@@ -152,7 +177,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-            <Link to="https://facebook.com" target="_blank">
+            <Link to="https://www.facebook.com/nextgenhubdigital" target="_blank">
               <FaFacebookSquare />
             </Link>
           </div>

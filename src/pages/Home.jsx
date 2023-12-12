@@ -14,6 +14,25 @@ import contactbackground from "../assets/images/contactbackground.svg";
 import Footer from "../components/Footer/index";
 import { FiArrowUpRight } from "react-icons/fi";
 
+const handleClickContact = (event) => {
+  event.preventDefault();
+
+  // Build the anchor link to the home page and the contact section
+  const contactLink = `${window.location.origin}/#contact`;
+  // Navigate to the anchor link
+  window.location.href = contactLink;
+
+  // Assuming you have a function scrollToContactSection that scrolls to the contact section
+  // You can replace this with your actual scrolling logic
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  // Close the menu if it's open
+
+};
+
 const Home = () => {
   const faqSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
@@ -176,7 +195,7 @@ const Home = () => {
                 <div className="text-[18px] font-normal">
                   We Offer IT Consultancy Services, Including Technical
                   Recruiting.{" "}
-                  <Link className="underline" href="#contact">
+                  <Link className="underline" to="#contact" onClick={handleClickContact}>
                     Contact Us Today!
                   </Link>
                 </div>
@@ -255,50 +274,57 @@ const Home = () => {
               <div
                 onClick={scrollToContactSection}
                 className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
-              >
-                <input
+               >
+                {/*netlify for submission handling*/}
+                <form name='contact-form' method='POST' data-netlify='true'>
+                  <input type='hidden' name='form-name' value='contact-form' />
+                   <input required
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="text"
                   placeholder="Name"
                   name="name"
                   id="name"
-                />
+                  />
 
-                <input
+                 <input required
                   className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="tel"
                   placeholder="Contact Number"
                   name="contact_number"
                   id="contact_number"
-                />
+                  />
 
-                <input
+                 <input required
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="email"
                   placeholder="Email"
                   name="email"
                   id="email"
-                />
+                 />
 
-                <textarea
+                  <textarea required
                   className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                   type="text"
                   placeholder="Messages"
                   name="messages"
                   id="messages"
-                />
+                 />
 
                 <div className="flex justify-end mt-[37px] mb-[62px] md:mb-10">
-                  <button className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
+                  <button type="submit" className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
+
                     <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform">
                       Submit
                     </span>
                     <span className="group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary">
                       <FiArrowUpRight size={25} />
                     </span>
-                  </button>
-                </div>
+                   </button>
+
+                   </div>
+                  </form>
               </div>
+
             </div>
           </div>
         </section>
