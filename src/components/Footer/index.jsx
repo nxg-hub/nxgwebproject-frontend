@@ -12,6 +12,25 @@ import {
 } from "react-icons/fa";
 import { address } from "../../utils/address";
 
+const handleClickContact = (event) => {
+  event.preventDefault();
+
+  // Build the anchor link to the home page and the contact section
+  const contactLink = `${window.location.origin}/#contact`;
+  // Navigate to the anchor link
+  window.location.href = contactLink;
+
+  // Assuming you have a function scrollToContactSection that scrolls to the contact section
+  // You can replace this with your actual scrolling logic
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  // Close the menu if it's open
+  setShowSidebar(false);
+};
+
 const Footer = () => {
   return (
     <div className="relative bg-[#F1F1F1] w-full pt-8 center text-primary">
@@ -98,7 +117,7 @@ const Footer = () => {
                 <Link to="/career">Career</Link>
               </p>
               <p>
-                <Link to="/#contact">Contact</Link>
+                <Link to="#contact" onClick={handleClickContact}>Contact</Link>
               </p>
               <p>
                 <Link to="#">FAQ</Link>
