@@ -218,7 +218,7 @@ const Home = () => {
             className="p-8 bg-cover bg-center rounded-[14.5px]"
           >
             <div className="p-2 bg-primary rounded-[20px] md:p-12 grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] md:gap-0 gap-[80px] md:pb-0">
-              <div className="flex flex-col mt-12 md:mt-0">
+              <div className="flex flex-col mt-12 md:mt-0 md:mr-4 mr-0">
                 <div className="flex items-start">
                   <img
                     style={{
