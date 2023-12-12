@@ -73,14 +73,14 @@ const About = () => {
             </p>
           </div>
           <div className="order-first md:order-last md:w-[35%] flex justify-end">
-            <img src={first} alt="About" />
+            <img src={first} alt="About" className="w-full"/>
           </div>
         </div>
 
         {/* OUR MISSION */}
         <div className="between flex-col md:flex-row pb-0 md:pb-10">
-          <div className="flex justify-end md:w-[35%]">
-            <img src={second} alt="About" />
+          <div className="order-first flex justify-end md:w-[35%]">
+            <img src={second} alt="About" className="w-full" />
           </div>
           <div className="md:w-[60%] flex-col gap-4 items-start flex mb-[3rem] md:mb-0">
             <h3 className="lg:text-[32px] py-4 md:py-0 text-[20px] font-semibold text-secondary">
@@ -128,7 +128,7 @@ const About = () => {
             </div>
           </div>
           <div className="order-first md:order-last md:w-[35%] flex justify-end">
-            <img src={third} alt="About" />
+            <img src={third} alt="About" className="w-full" />
           </div>
         </div>
       </section>
