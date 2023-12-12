@@ -27,8 +27,40 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+  <!-- A little help for the Netlify post-processing bots -->
+  <form name='contact' netlify netlify-honeypot="bot-field" hidden>
+    <input  type="text" name='User_name' />
+
+    <input  type="number" name='User_PhoneNumber' />
+
+    <input  type="email" name='User_Email' />
+
+    <textarea name="message"></textarea>
+
+  </form>
+
+  <form name='career-form' enctype="multipart/form-data" netlify netlify-honeypot="bot-field" hidden>
+    <input  type="text" name='applicant_name' />
+
+    <input  type="number" name='applicant_phone_number' />
+
+    <input  type="email" name='applicant_email' />
+
+    <input  type="number" name='applicant_yoe' />
+
+    <textarea name="applicant_message"></textarea>
+
+    <input  type="text" name='post' />
+
+    <input  type="file" name='applicant_cv' />
+
+  </form>
+
+  <form name='mail_subscription' netlify netlify-honeypot="bot-field" hidden>
+
+    <input type="email" name="email" required />
+  </form>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -36,8 +68,11 @@
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
+     To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
   </body>
 </html>

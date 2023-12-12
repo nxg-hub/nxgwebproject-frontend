@@ -7,6 +7,7 @@ import second from "../../assets/images/aboutTwo.jpg";
 import third from "../../assets/images/aboutThree.jpg";
 import LearnArrow from "../../assets/svgs/learnArrow.svg";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -115,15 +116,15 @@ const About = () => {
             {/* Button */}
             <div className="mb-10 mx-auto md:mx-0">
               <button className="group p-2 border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
-                <a
-                  className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
-                  href="/services"
+                <Link
+                  className="flex items-center font-semibold text-gray-700 group-hover:text-primary group-hover:translate-x-2 transition-transform"
+                  to="/services"
                 >
                   <span className="text-[#717171] font-normal text-normal">
                     Learn More
                   </span>
                   <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
-                </a>
+                </Link>
               </button>
             </div>
           </div>

@@ -2,12 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/nxg-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NextGenHub</title>
+    <title>NXG-Hub Digital Technologies</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+  <!-- A little help for the Netlify post-processing bots -->
+  <form name='contact' netlify netlify-honeypot="bot-field" hidden>
+      <input  type="text" name='User_name' />
+
+      <input  type="number" name='User_PhoneNumber' />
+
+      <input  type="email" name='User_Email' />
+
+      <textarea name="message"></textarea>
+
+  </form>
+
+  <form name='career-form' enctype="multipart/form-data" netlify netlify-honeypot="bot-field" hidden>
+      <input  type="text" name='applicant_name' />
+
+      <input  type="number" name='applicant_phone_number' />
+
+      <input  type="email" name='applicant_email' />
+
+      <input  type="number" name='applicant_yoe' />
+
+      <textarea name="applicant_message"></textarea>
+
+      <input  type="text" name='post' />
+
+      <input  type="file" name='applicant_cv' />
+
+  </form>
+
+  <form name='mail_subscription' netlify netlify-honeypot="bot-field" hidden>
+
+      <input type="email" name="email" required />
+  </form>
+
+  <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

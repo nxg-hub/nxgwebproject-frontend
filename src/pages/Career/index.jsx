@@ -3,6 +3,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import CustomButton from "../../components/Button";
 import Footer from "../../components/Footer";
 import { BsArrowUpRight } from "react-icons/bs";
+import React from "react";
 const Career = () => {
   return (
     <>
@@ -47,48 +48,45 @@ const Career = () => {
           Job Opening At NXG-HUB Digital Technologies. Apply Now!
         </span>
       </div>
+      <form name='career-form' encType="multipart/form-data" method='POST' data-netlify='true'>
+        <input type='hidden' name='form-name' value='career-form' />
       <div className="bg-gradient-to-r from-[#a0d9ed] via-[#89CFE8] to-[#D5D5D5] py-14 md:py-[3rem] md:px-4 px-8">
         <div className="md:mx-16 mx-auto rounded-2xl bg-primary md:px-14 py-10 md:py-8 md:relative">
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] gap-6 md:gap-[10rem] ">
             <div className="flex flex-col w-full md:w-auto px-[0.55rem] md:pl-0 md:pt-[3rem]">
-              <input
+              <input required name='applicant_name'
                 className="py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="text"
                 placeholder="Name"
-                name="name"
                 id="name"
               />
-              <input
+              <input name='applicant_phone_number'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="tel"
                 placeholder="Contact Number"
-                name="phone_number"
                 id="phone_number"
               />
-              <input
+              <input required name='applicant_email'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="email"
                 placeholder="Email"
-                name="email"
                 id="email"
               />
-              <input
+              <input name='applicant_yoe'
                 className="py-2 md:py-4 px-6  mt-3  rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="number"
                 placeholder="Years of Experience"
-                name="experience"
                 id="experience"
               />
-              <textarea
+              <textarea name='applicant_message'
                 className="py-2 md:py-4 px-6 mt-3 rounded-[20px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="text"
                 placeholder="Other Details"
-                name="other_details"
                 id="other_details"
               />
-            </div>
+              </div>
 
-            <div className="flex flex-col md:justify-self-end sm:justify-self-start ">
+             <div className="flex flex-col md:justify-self-end sm:justify-self-start ">
               <h2 className="text-[18px] pl-6 md:pl-0 md:text-[28px] mb-2 whitespace-nowrap font-medium text-[#717171]">
                 Applying for which post
               </h2>
@@ -146,14 +144,14 @@ const Career = () => {
                 <h2 className="text-[18px]  md:text-[28px] mb-2 font-medium text-[#717171]">
                   Upload your resume
                 </h2>
-                <input
+                <input required
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
                   name="resume"
                   id="resume"
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">
-                  <button className="group text-primary rounded-[32px] py-2 my-[2.5rem] md:my-0 pr-2 md:ml-0 ml-[3rem] bg-[#2596be] hover:bg-[#2596be]  flex items-center sm:w-[200px]">
+                  <button type="submit" className="group text-primary rounded-[32px] py-2 my-[2.5rem] md:my-0 pr-2 md:ml-0 ml-[3rem] bg-[#2596be] hover:bg-[#2596be]  flex items-center sm:w-[200px]">
                     <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem]">
                       Submit
                     </span>
@@ -161,12 +159,15 @@ const Career = () => {
                       <BsArrowUpRight size={25} />
                     </span>
                   </button>
+
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
+      </form>
       <Footer />
     </>
   );

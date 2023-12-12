@@ -3,11 +3,12 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { slides } from "../../utils/slides";
 import Dots from "../Dot/Dots";
 import background from "../../assets/images/background.jpg";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import CustomButton from "../Button";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
   const slideLength = slides.length;
   const autoScroll = true;
   let slideInterval;
@@ -29,11 +30,8 @@ const Slider = () => {
     // Clear the interval to stop auto-scrolling
     clearInterval(slideInterval);
 
-    // Delay the navigation to ensure it happens after the slider transition
-    setTimeout(() => {
-      // Navigate to the specified route
-      window.location.href = "/services";
-    }, 500); // Adjust the delay time as needed
+    // Navigate to the specified route
+    navigate(slides[currentSlide]?.route || "/default-route");
   };
 
   useEffect(() => {
@@ -50,7 +48,7 @@ const Slider = () => {
   return (
     <div
       style={{ backgroundImage: `url(${background})` }}
-      className="relative min-h-[550px] text-[#717171] font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
+      className="relative  text-[#717171] font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4 md:min-h-[700px]"
     >
       {slides.map((slide, index) => {
         return (
@@ -61,7 +59,7 @@ const Slider = () => {
             key={index}
           >
             {index === currentSlide && (
-              <div className="md:w-full pt-[32px] px-[23px] flex md:flex-row flex-col md:p-20 md:pt-40 gap-[40px] items-center justify-between">
+              <div className="md:w-full pt-[32px] px-[23px] flex md:flex-row flex-col md:p-20 md:pt-40 gap-[40px] items-center justify-between md:min-h-[700px]" >
                 <div className="md:order-2">
                   <img
                     className="md:w-[477px] md:h-[312px] h-[180px] w-[276px]"
@@ -70,14 +68,10 @@ const Slider = () => {
                   />
                 </div>
                 <div className="flex flex-col items-center md:items-start md:text-left md:w-[743px]">
-                  <h2
-                    className="text-center text-[28px] font-semibold md:text-[64px] md:text-start"
-                  >
+                  <h2 className="text-center text-[28px] font-semibold md:text-[64px] md:text-start">
                     {slide.title}
                   </h2>
-                  <p
-                    className="w-[339px] md:w-[700px] px-2 md:px-0 md:text-start text-center text-[16px] font-normal md:text-[28px] py-4 md:py-6"
-                  >
+                  <p className="w-[339px] md:w-[700px] px-2 md:px-0 md:text-start text-center text-[16px] font-normal md:text-[28px] py-4 md:py-6">
                     {slide.description.replace(/\\n/g, "\n")}
                   </p>
                 </div>
@@ -88,7 +82,6 @@ const Slider = () => {
       })}
       <div className="md:absolute bottom-20 left-20 static center">
         <CustomButton
-        
           children="Learn More"
           className="text-sm gap-2 py-[16px] px-[32px] md:gap-0 md:py-0 md:px-0"
           onClick={() => (window.location.href = "/services")}

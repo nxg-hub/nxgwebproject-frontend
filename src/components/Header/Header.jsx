@@ -1,7 +1,7 @@
 // Importing necessary modules and styles
 import React, { useState, useRef, useEffect } from "react";
 import "./Header.css"; // Styling for the header
-import { NavLink, useLocation } from "react-router-dom"; // Helps with navigation
+import { Link, NavLink, useLocation } from "react-router-dom"; // Helps with navigation
 import {
   FaBars,
   FaInstagram,
@@ -22,6 +22,11 @@ const Header = () => {
 
   const handleClickContact = (event) => {
     event.preventDefault();
+
+    // Build the anchor link to the home page and the contact section
+    const contactLink = `${window.location.origin}/#contact`;
+     // Navigate to the anchor link
+     window.location.href = contactLink;
 
     // Assuming you have a function scrollToContactSection that scrolls to the contact section
     // You can replace this with your actual scrolling logic
@@ -111,10 +116,10 @@ const Header = () => {
 
               <div className="platforms center h-full center">
                 <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-                  <FaLinkedin />
+                  <Link to='https://linkedin.com/company/nextgenhub-digital' target='_blank'><FaLinkedin /></Link>
                 </div>
                 <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-                  <FaFacebookSquare />
+                  <Link to='https://www.facebook.com/nextgenhubdigital' target='_blank'><FaFacebookSquare /></Link>
                 </div>
                 <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
                   <FaTwitter />
@@ -125,8 +130,8 @@ const Header = () => {
 
           <div className="pr-2 pl-6 bg-secondary rounded-[3rem] h-full between sm:hidden lg:flex">
             {/* Change from NavLink to anchor tag */}
-            <a
-              href="#contact"
+            <Link
+              to="#contact"
               className="between gap-3"
               onClick={handleClickContact}
             >
@@ -134,7 +139,7 @@ const Header = () => {
               <div className="bg-primary w-[40px] h-[40px] center rounded-full">
                 <img src={arrow} alt="arrow" />
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] w-[120%] flex flex-col items-end justify-center md:pr-2">
@@ -201,13 +206,13 @@ const Header = () => {
             </li>
 
             <li className="w-full border-b border-[#b2b2b2] py-2">
-              <a
-                href="#contact"
+              <Link
+                to="#contact"
                 className="nav-links relative nav_underline"
                 onClick={handleClickContact}
               >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="mt-10 flex justify-center gap-5">
