@@ -1,6 +1,7 @@
 import IT from '../assets/images/itServices.jpg'
 import software from'../assets/images/software.jpg'
 import consulting from '../assets/images/consultingServices.jpg'
+import { Link } from 'react-router-dom';
 
 export const ServicesUtils = [
     {
@@ -18,7 +19,9 @@ export const ServicesUtils = [
     {
         id: 3,
         title: "Consulting Services",
-        description: "We Offer IT Consultancy Services Including Technical Recruiting Contact Us Today!",
+        description: "We Offer IT Consultancy Services Including Technical Recruiting",
         image: consulting,
+        // Add the contactLink property with the desired link
+        contactLink: "/#contact", // You can replace "/contact" with the actual link
     },
 ]

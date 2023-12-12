@@ -213,7 +213,6 @@ const Home = () => {
             </button>
           </div>
         </section>
-
         {/* section 4 */}
         <section id="contact" ref={contactSectionRef}>
           <div className="my-10 flex justify-center">

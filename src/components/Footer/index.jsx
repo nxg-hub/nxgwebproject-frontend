@@ -28,8 +28,7 @@ const handleClickContact = (event) => {
     contactSection.scrollIntoView({ behavior: "smooth" });
   }
 
-  // Close the menu if it's open
-  setShowSidebar(false);
+
 };
 
 const Footer = () => {
