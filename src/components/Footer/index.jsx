@@ -11,6 +11,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { address } from "../../utils/address";
+import React from "react";
 
 const handleClickContact = (event) => {
   event.preventDefault();
@@ -134,6 +135,8 @@ const Footer = () => {
               Our Latest Updates By Subscribing Here.
             </p>
             <div className="border border-primary rounded-md between p-1 w-full">
+              <form name='mail_subscription' method='POST' data-netlify='true'>
+                <input type='hidden' name='form-name' value='mail_subscription' />
               <input
                 type="email"
                 placeholder="Email Address"
@@ -148,6 +151,7 @@ const Footer = () => {
                 textColor="#717171"
                 border="1px solid #fff"
               />
+              </form>
             </div>
           </div>
         </div>
@@ -171,7 +175,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-            <Link to="https://facebook.com" target="_blank">
+            <Link to="https://www.facebook.com/nextgenhubdigital" target="_blank">
               <FaFacebookSquare />
             </Link>
           </div>
