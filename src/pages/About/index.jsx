@@ -79,7 +79,7 @@ const About = () => {
 
         {/* OUR MISSION */}
         <div className="between flex-col md:flex-row pb-0 md:pb-10">
-          <div className="md:order-first flex justify-end">
+          <div className="flex justify-end md:w-[35%]">
             <img src={second} alt="About" />
           </div>
           <div className="md:w-[60%] flex-col gap-4 items-start flex mb-[3rem] md:mb-0">
@@ -114,7 +114,7 @@ const About = () => {
             </div>{" "}
             {/* Button */}
             <div className="mb-10 mx-auto md:mx-0">
-              <button className="group p-2">
+              <button className="group p-2 border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <a
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
                   href="/services"
