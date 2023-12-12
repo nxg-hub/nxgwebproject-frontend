@@ -117,7 +117,7 @@ const About = () => {
               <button className="group p-2">
                 <a
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
-                  href="/career"
+                  href="/services"
                 >
                   <span className="text-[#717171] font-normal text-normal">
                     Learn More

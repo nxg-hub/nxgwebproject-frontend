@@ -55,26 +55,36 @@ const Career = () => {
                 className="py-2 md:py-4 px-6 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="text"
                 placeholder="Name"
+                name="name"
+                id="name"
               />
               <input
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="tel"
                 placeholder="Contact Number"
+                name="phone_number"
+                id="phone_number"
               />
               <input
                 className="py-2 md:py-4 px-6 mt-3 rounded-[32px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="email"
                 placeholder="Email"
+                name="email"
+                id="email"
               />
               <input
                 className="py-2 md:py-4 px-6  mt-3  rounded-[32px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                 type="number"
                 placeholder="Years of Experience"
+                name="experience"
+                id="experience"
               />
               <textarea
                 className="py-2 md:py-4 px-6 mt-3 rounded-[20px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                 type="text"
                 placeholder="Other Details"
+                name="other_details"
+                id="other_details"
               />
             </div>
 
@@ -86,7 +96,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="product_designer"
                   id="product_designer"
                   value="product_designer"
                 />
@@ -96,7 +106,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="product_manager"
                   id="product_manager"
                   value="product_manager"
                 />
@@ -106,7 +116,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="software_developer"
                   id="software_developer"
                   value="software_developer"
                 />
@@ -116,7 +126,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="digital_marketer"
                   id="digital_marketer"
                   value="digital_marketer"
                 />
@@ -126,7 +136,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="post"
+                  name="it_instructor"
                   id="it_instructor"
                   value="it_instructor"
                 />
@@ -139,8 +149,8 @@ const Career = () => {
                 <input
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
-                  name=""
-                  id=""
+                  name="resume"
+                  id="resume"
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">
                   <button className="group text-primary rounded-[32px] py-2 my-[2.5rem] md:my-0 pr-2 md:ml-0 ml-[3rem] bg-[#2596be] hover:bg-[#2596be]  flex items-center sm:w-[200px]">

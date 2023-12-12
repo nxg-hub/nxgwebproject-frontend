@@ -258,26 +258,32 @@ const Home = () => {
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="text"
                   placeholder="Name"
-                  name=""
-                  id=""
+                  name="name"
+                  id="name"
                 />
 
                 <input
                   className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="tel"
                   placeholder="Contact Number"
+                  name="contact_number"
+                  id="contact_number"
                 />
 
                 <input
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="email"
                   placeholder="Email"
+                  name="email"
+                  id="email"
                 />
 
                 <textarea
                   className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                   type="text"
                   placeholder="Messages"
+                  name="messages"
+                  id="messages"
                 />
 
                 <div className="flex justify-end mt-[37px] mb-[62px] md:mb-0">
