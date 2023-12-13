@@ -1,4 +1,3 @@
-// import "./Home.css";
 import React, { useRef } from "react";
 import Slider from "../components/Slider/Slider";
 import { Link, NavLink } from "react-router-dom";
@@ -30,7 +29,6 @@ const handleClickContact = (event) => {
   }
 
   // Close the menu if it's open
-
 };
 
 const Home = () => {
@@ -111,15 +109,15 @@ const Home = () => {
                 </p>
               </div>
               <div>
-              <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
-                <Link
-                  className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
-                  to="/about"
-                >
-                  <span className="text-[#717171]">Learn More</span>
-                  <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
-                </Link>
-              </button>
+                <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
+                  <Link
+                    className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
+                    to="/about"
+                  >
+                    <span className="text-[#717171]">Learn More</span>
+                    <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -145,7 +143,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* section 3 */}
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] gap-8 mt-8 md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] md:mt-7 w-full">
             <div className="w-auto rounded-[20px] h-full md:p-4 p-3 items-start border-[#eef2f6] border-[0.5px] text-[#717171] hover:bg-[#717171] hover:text-primary transition-colors">
               <div>
@@ -195,7 +192,11 @@ const Home = () => {
                 <div className="text-[18px] font-normal">
                   We Offer IT Consultancy Services, Including Technical
                   Recruiting.{" "}
-                  <Link className="underline" to="#contact" onClick={handleClickContact}>
+                  <Link
+                    className="underline"
+                    to="#contact"
+                    onClick={handleClickContact}
+                  >
                     Contact Us Today!
                   </Link>
                 </div>
@@ -216,7 +217,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* section 4 */}
+        {/* section 3*/}
         <section id="contact" ref={contactSectionRef}>
           <div className="my-10 flex justify-center">
             <div className="flex px-7 py-[10px] rounded-[32px] border-[#eef2f6] border-[0.5px]">
@@ -270,59 +271,60 @@ const Home = () => {
                   </p>
                 </div>
               </div>
+              <form name="contact-form" method="POST" data-netlify="true">
+                <div
+                  onClick={scrollToContactSection}
+                  className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
+                >
+                  <input
+                    className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    id="name"
+                  />
 
-              <div
-                onClick={scrollToContactSection}
-                className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
-              >
-                <input
-                  className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
-                  type="text"
-                  placeholder="Name"
-                  name="name"
-                  id="name"
-                />
+                  <input
+                    className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
+                    type="tel"
+                    placeholder="Contact Number"
+                    name="contact_number"
+                    id="contact_number"
+                  />
 
-                <input
-                  className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
-                  type="tel"
-                  placeholder="Contact Number"
-                  name="contact_number"
-                  id="contact_number"
-                />
+                  <input
+                    className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                  />
 
-                <input
-                  className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  id="email"
-                />
+                  <textarea
+                    className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
+                    type="text"
+                    placeholder="Messages"
+                    name="messages"
+                    id="messages"
+                  />
 
-                <textarea
-                  className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
-                  type="text"
-                  placeholder="Messages"
-                  name="messages"
-                  id="messages"
-                />
-
-                <div className="flex justify-end mt-[37px] mb-[62px] md:mb-10">
-                  <button className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
-                    <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform">
-                      Submit
-                    </span>
-                    <span className="group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary">
-                      <FiArrowUpRight size={25} />
-                    </span>
-                  </button>
+                  <div className="flex justify-end mt-[37px] mb-[62px] md:mb-10">
+                    <button className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
+                      <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform">
+                        Submit
+                      </span>
+                      <span className="group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary">
+                        <FiArrowUpRight size={25} />
+                      </span>
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
 
-        {/* section 5 */}
+        {/* section 4 */}
         <section className="w-full">
           <div className="flex mx-auto w-[60px] justify-center md:w-[150px] mt-[100px] mb-[40px] bg-[#A4CDDC] rounded-[32px] ">
             <span className="py-2 px-[10px] md:px-[38px] md:py-[5px] text-[#717171] text-[20px] md:text-[36px] font-semibold">
