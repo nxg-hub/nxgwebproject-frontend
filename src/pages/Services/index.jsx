@@ -54,7 +54,7 @@ const Services = ({ open }) => {
             </div>
           </div>
 
-          <p className="text-center md:text-[18px] text-[16px] font-normal text-gray leading-[28px]">
+          <p className="text-center md:text-[18px] text-[16px] font-normal text-[#717171] leading-[28px]">
             We Assist You In Constructing Top-Tier Digital Solutions And
             Products Following Best Practices, While Also Offering An Extensive
             Array Of Associated Professional Services. Our Commitment Is To

@@ -69,8 +69,8 @@ const Home = () => {
           <div className="w-auto flex flex-col mt-8 md:mt-0 md:flex-row gap-6">
             <img className="max-w-full h-auto" src={about_us} alt="about us" />
 
-            <div className="md:items-start items-center text-[#717171] flex flex-col gap-4">
-              <div className="bg-[#deeff5] rounded-[20px] p-4 md:p-8">
+            <div className="md:items-start items-center text-[#717171] flex flex-col justify-between gap-4 w-full">
+              <div className="bg-[#deeff5] rounded-[20px] p-4 md:p-8 w-full">
                 <div className="flex justify-between items-center relative">
                   <div>
                     <img
@@ -102,7 +102,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="bg-[#deeff5] rounded-[20px] p-4 md:p-8">
+              <div className="bg-[#deeff5] rounded-[20px] p-4 md:p-8 w-full">
                 <p className="text-[12px] md:text-[18px] font-normal">
                   Our Collective Skills Result in A Dynamic Force That Can
                   Fulfill All The Requirement of Your Brand Or Career, No Matter
@@ -110,7 +110,7 @@ const Home = () => {
                   The World Through Technology.
                 </p>
               </div>
-              <div className="h-full flex items-end">
+              <div>
               <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
@@ -274,57 +274,50 @@ const Home = () => {
               <div
                 onClick={scrollToContactSection}
                 className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
-               >
-                {/*netlify for submission handling*/}
-                <form name='contact-form' method='POST' data-netlify='true'>
-                  <input type='hidden' name='form-name' value='contact-form' />
-                   <input required
+              >
+                <input
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="text"
                   placeholder="Name"
                   name="name"
                   id="name"
-                  />
+                />
 
-                 <input required
+                <input
                   className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="tel"
                   placeholder="Contact Number"
                   name="contact_number"
                   id="contact_number"
-                  />
+                />
 
-                 <input required
+                <input
                   className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                   type="email"
                   placeholder="Email"
                   name="email"
                   id="email"
-                 />
+                />
 
-                  <textarea required
+                <textarea
                   className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                   type="text"
                   placeholder="Messages"
                   name="messages"
                   id="messages"
-                 />
+                />
 
                 <div className="flex justify-end mt-[37px] mb-[62px] md:mb-10">
-                  <button type="submit" className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
-
+                  <button className="group text-primary rounded-[32px] py-2 pr-2 md:ml-0 ml-4 bg-[#2596be] flex items-center sm:w-[200px]">
                     <span className="text-[20px] font-bold mr-20 sm:ml-4 sm:mr-[3.9rem] group-hover:translate-x-2 transition-transform">
                       Submit
                     </span>
                     <span className="group-hover:rotate-45 transition-transform transform origin-center rounded-full p-2 text-[#46A6C8] bg-primary">
                       <FiArrowUpRight size={25} />
                     </span>
-                   </button>
-
-                   </div>
-                  </form>
+                  </button>
+                </div>
               </div>
-
             </div>
           </div>
         </section>
