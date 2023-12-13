@@ -8,6 +8,7 @@ import Footer from "../../components/Footer";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
+
 const Services = ({ open }) => {
   return (
     <>
@@ -84,6 +85,11 @@ const Services = ({ open }) => {
                   <p className="font-light leading-[28px]">
                     {service.description}
                   </p>
+                  {service.id === 3 && (
+                      <Link to={service.contactLink} className="text-primary underline mt-3">
+                        Contact Us Today!
+                      </Link>
+                  )}
                 </div>
               </div>
             ))}
