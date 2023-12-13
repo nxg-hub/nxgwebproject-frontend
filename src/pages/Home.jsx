@@ -272,11 +272,12 @@ const Home = () => {
                 </div>
               </div>
               <form name="contact-form" method="POST" data-netlify="true">
+                <input type='hidden' name='form-name' value='contact-form' />
                 <div
                   onClick={scrollToContactSection}
                   className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
                 >
-                  <input
+                  <input required
                     className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                     type="text"
                     placeholder="Name"
@@ -284,7 +285,7 @@ const Home = () => {
                     id="name"
                   />
 
-                  <input
+                  <input required
                     className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                     type="tel"
                     placeholder="Contact Number"
@@ -292,7 +293,7 @@ const Home = () => {
                     id="contact_number"
                   />
 
-                  <input
+                  <input required
                     className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                     type="email"
                     placeholder="Email"
@@ -300,7 +301,7 @@ const Home = () => {
                     id="email"
                   />
 
-                  <textarea
+                  <textarea required
                     className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                     type="text"
                     placeholder="Messages"
