@@ -94,7 +94,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="product_designer"
+                  name="post"
                   id="product_designer"
                   value="product_designer"
                 />
@@ -104,7 +104,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="product_manager"
+                  name="post"
                   id="product_manager"
                   value="product_manager"
                 />
@@ -114,7 +114,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="software_developer"
+                  name="post"
                   id="software_developer"
                   value="software_developer"
                 />
@@ -124,7 +124,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="digital_marketer"
+                  name="post"
                   id="digital_marketer"
                   value="digital_marketer"
                 />
@@ -134,7 +134,7 @@ const Career = () => {
                 <input
                   className="mr-6"
                   type="radio"
-                  name="it_instructor"
+                  name="post"
                   id="it_instructor"
                   value="it_instructor"
                 />
