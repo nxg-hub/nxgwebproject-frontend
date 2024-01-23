@@ -147,8 +147,8 @@ const Career = () => {
                 <input required
                   className="p-4 sm:pl-0 md:mb-[5rem]"
                   type="file"
-                  name="resume"
-                  id="resume"
+                  name="applicant_cv"
+                  id="applicant_cv"
                 />
                 <div className="md:ml-[3.2rem] md:absolute md:bottom-[20px]">
                   <button type="submit" className="group text-primary rounded-[32px] py-2 my-[2.5rem] md:my-0 pr-2 md:ml-0 ml-[3rem] bg-[#2596be] hover:bg-[#2596be]  flex items-center sm:w-[200px]">
