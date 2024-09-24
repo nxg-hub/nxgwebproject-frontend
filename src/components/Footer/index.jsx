@@ -27,8 +27,6 @@ const handleClickContact = (event) => {
   if (contactSection) {
     contactSection.scrollIntoView({ behavior: "smooth" });
   }
-
-
 };
 
 const Footer = () => {
@@ -107,7 +105,7 @@ const Footer = () => {
               </h2>
               <p>
                 {" "}
-                <Link to="https://forms.gle/c7auu7gyrwbxwqeH8">Training</Link>
+                <Link to="/training">Training</Link>
               </p>
               <p>
                 <Link to="#">NXG-Job-Hub</Link>
@@ -117,7 +115,9 @@ const Footer = () => {
                 <Link to="/career">Career</Link>
               </p>
               <p>
-                <Link to="#contact" onClick={handleClickContact}>Contact</Link>
+                <Link to="#contact" onClick={handleClickContact}>
+                  Contact
+                </Link>
               </p>
               <p>
                 <Link to="#">FAQ</Link>
@@ -133,28 +133,28 @@ const Footer = () => {
               Accomplish All Your Brand Or Career Requirements. Stay Tuned For
               Our Latest Updates By Subscribing Here.
             </p>
-            <form name='mail_subscription' method='POST' data-netlify='true'>
-              <input type='hidden' name='form-name' value='mail_subscription' />
-             <div className="border border-primary rounded-md between p-1 w-full">
-              {/* Netlify form for submission handling */}
+            <form name="mail_subscription" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="mail_subscription" />
+              <div className="border border-primary rounded-md between p-1 w-full">
+                {/* Netlify form for submission handling */}
                 <input
-                type="email"
-                placeholder="Email Address"
-                name="email"
-                id="email"
-                required
-                className=" placeholder-primary placeholder-opacity-80 border-none outline-none bg-gray pl-4 w-full"
-              />
-              <CustomButton
-                children="Subscribe"
-                backgroundColor="#FFF"
-                textColor="#717171"
-                border="1px solid #fff"
-                type = "submit"
-              />
-            </div>
+                  type="email"
+                  placeholder="Email Address"
+                  name="email"
+                  id="email"
+                  required
+                  className=" placeholder-primary placeholder-opacity-80 border-none outline-none bg-gray pl-4 w-full"
+                />
+                <CustomButton
+                  children="Subscribe"
+                  backgroundColor="#FFF"
+                  textColor="#717171"
+                  border="1px solid #fff"
+                  type="submit"
+                />
+              </div>
             </form>
-           </div>
+          </div>
         </div>
         <div className="absolute md:static top-[20rem] left-8 md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6">
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
@@ -165,8 +165,7 @@ const Footer = () => {
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
             <Link
               to="https://linkedin.com/company/nextgenhub-digital"
-              target="_blank"
-            >
+              target="_blank">
               <FaLinkedin />
             </Link>
           </div>
@@ -176,7 +175,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-            <Link to="https://www.facebook.com/nextgenhubdigital" target="_blank">
+            <Link
+              to="https://www.facebook.com/nextgenhubdigital"
+              target="_blank">
               <FaFacebookSquare />
             </Link>
           </div>

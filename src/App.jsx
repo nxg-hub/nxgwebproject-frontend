@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Career from "./pages/Career";
 import Header from "./components/Header/Header";
 import { useState } from "react";
+import Training from "./pages/Training";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/career" element={<Career />} />
+          <Route path="/training" element={<Training />} />
         </Routes>
       </div>
     </div>
