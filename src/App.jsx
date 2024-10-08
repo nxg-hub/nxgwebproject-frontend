@@ -7,6 +7,9 @@ import Career from "./pages/Career";
 import Header from "./components/Header/Header";
 import { useState } from "react";
 import Training from "./pages/Training";
+import Form from "./pages/Form";
+import SuccessfulApplication from "./pages/Form/components/SuccessfulApplication";
+import RegisterForm from "./pages/Form";
 
 function App() {
   return (
@@ -19,6 +22,11 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/career" element={<Career />} />
           <Route path="/training" element={<Training />} />
+          <Route path="/form" element={<RegisterForm />} />
+          <Route
+            path="/applicationSuccessful"
+            element={<SuccessfulApplication />}
+          />
         </Routes>
       </div>
     </div>
