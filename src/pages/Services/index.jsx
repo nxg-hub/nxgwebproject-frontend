@@ -8,14 +8,12 @@ import Footer from "../../components/Footer";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-
 const Services = ({ open }) => {
   return (
     <>
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
-        style={{ backgroundImage: "url(/serviceBg.png)" }}
-      >
+        style={{ backgroundImage: "url(/serviceBg.png)" }}>
         <div className="text-left pl-8 md:pl-20 pt-28 max-w-[60rem]">
           <p className="mt-16 text-[28px] md:text-[64px]">
             Engineering The Future <br /> Through Technology <br /> Innovation
@@ -69,8 +67,7 @@ const Services = ({ open }) => {
             {ServicesUtils.map((service) => (
               <div
                 key={service.id}
-                className="bg-gray md:h-[590px] lg:w-[32%] md:w-[48%] w-full p-4 flex-col flex rounded-[26px]"
-              >
+                className="bg-gray md:h-[590px] lg:w-[32%] md:w-[48%] w-full p-4 flex-col flex rounded-[26px]">
                 <div>
                   <img
                     src={service.image}
@@ -86,9 +83,11 @@ const Services = ({ open }) => {
                     {service.description}
                   </p>
                   {service.id === 3 && (
-                      <Link to={service.contactLink} className="text-primary underline mt-3">
-                        Contact Us Today!
-                      </Link>
+                    <Link
+                      to={service.contactLink}
+                      className="text-primary underline mt-3">
+                      Contact Us Today!
+                    </Link>
                   )}
                 </div>
               </div>
@@ -133,11 +132,9 @@ const Services = ({ open }) => {
               <button className="group border-[1px] p-2 hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primarycolor group-hover:translate-x-2 transition-transform"
-                  to="https://forms.gle/c7auu7gyrwbxwqeH8"
-                  target="_blank"
+                  to="/training"
                   rel="noopener noreferrer" // recommended for security
                 >
-
                   <span className="text-[#717171]">Here</span>
                   <BsArrowUpRight className="aboutarrow transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
                 </Link>
