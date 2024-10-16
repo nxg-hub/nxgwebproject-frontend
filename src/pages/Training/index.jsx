@@ -7,8 +7,8 @@ const Training = () => {
     <section className="w-full bg-lightGray">
       <div className="w-[90%] m-auto mt-11 ">
         <Link
-          to="https://docs.google.com/forms/d/e/1FAIpQLSc7IK-EomEuDziqtWkLMnJICFJc7gk7dmZo_rmLtt8A7N6DiQ/viewform"
-          target="_blank">
+          //   to="https://docs.google.com/forms/d/e/1FAIpQLSc7IK-EomEuDziqtWkLMnJICFJc7gk7dmZo_rmLtt8A7N6DiQ/viewform"
+          to="/form">
           <button className="bg-secondary px-4 py-2 rounded-full text-[#fff] font-bold md:w-[400px] text-md md:text-lg mt-11 hover:bg-opacity-80">
             Join Now
           </button>
