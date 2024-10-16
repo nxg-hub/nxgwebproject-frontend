@@ -89,7 +89,7 @@ const Training = () => {
             </p>
           </article>
         </div>
-        <p className="font-bold md:text-lg">Date:14th October, 2024</p>
+        {/*<p className="font-bold md:text-lg">Date:14th October, 2024</p>*/}
       </div>
       <Footer />
     </section>
