@@ -85,7 +85,7 @@ const Training = () => {
               </span>
             </p>
             <p className="font-bold md:text-lg mt-5">
-              Registeration Fee: N10,000
+              Registration Fee: N10,000
             </p>
           </article>
         </div>
