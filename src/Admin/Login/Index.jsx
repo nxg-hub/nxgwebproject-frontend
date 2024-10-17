@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import logo from "../../assets/images/nxg-logo.png";
+import { API_HOST_URL } from "../../utils/API/Api";
+import { useNavigate } from "react-router-dom";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 
 // Validation schema for the login form
 const LoginSchema = Yup.object().shape({
@@ -9,15 +12,20 @@ const LoginSchema = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
-const Login = () => {
+const Login = ({ setToken }) => {
   const [loginError, setLoginError] = useState("");
-
+  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
   const handleSubmit = async (values) => {
     const { email, password, rememberMe } = values;
-
+    setLoading(true);
     try {
       // Example of an API call to authenticate the user
-      const response = await fetch("https://your-api-url/login", {
+      const response = await fetch(`${API_HOST_URL}/api/v1/admin/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,21 +36,29 @@ const Login = () => {
       if (!response.ok) {
         throw new Error("Invalid credentials"); // Handle unsuccessful login
       }
+      console.log("Login successful:");
 
       const data = await response.json();
-      console.log("Login successful:", data);
+      const token = data.token;
+      if (response.ok) {
+        setToken(token);
+        navigate("/admin/dashboard");
+        setLoading(false);
+      }
 
       // Implement "Remember Me" logic here if needed
-      if (rememberMe) {
-        localStorage.setItem("email", email);
-      } else {
-        localStorage.removeItem("email");
-      }
+      // if (rememberMe) {
+      //   localStorage.setItem("email", email);
+      // } else {
+      //   localStorage.removeItem("email");
+      // }
 
       // Reset login error message
       setLoginError("");
     } catch (error) {
       setLoginError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -73,13 +89,13 @@ const Login = () => {
               />
               <ErrorMessage className="text-red" name="email" component="div" />
             </div>
-            <div className="">
+            <div className="relative">
               <label className="font-bold block md:text-md" htmlFor="password">
                 Password
               </label>
               <Field
                 className="w-full h-[50px] rounded-md px-2 border border-[#ddd] mb-3 focus:outline-none"
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
               />
               <ErrorMessage
@@ -87,20 +103,31 @@ const Login = () => {
                 name="password"
                 component="div"
               />
+              {showPassword ? (
+                <BsEye
+                  onClick={handleShowPassword}
+                  className="absolute top-[55px] right-[10px] cursor-pointer"
+                />
+              ) : (
+                <BsEyeSlash
+                  onClick={handleShowPassword}
+                  className="absolute top-[55px] right-[10px] cursor-pointer"
+                />
+              )}
             </div>
-            <div className="mt-5">
+            {/* <div className="mt-5">
               <Field type="checkbox" name="rememberMe" />
               <label className="mx-2" htmlFor="rememberMe">
                 Remember Me
               </label>
-            </div>
+            </div> */}
           </div>
           <div className="w-[80%] md:w-[60%] py-2 bg-secondary rounded-md m-auto mt-2 mb-4">
             <button
               className="text-center w-full text-primary font-bold"
               type="submit"
               disabled={isSubmitting}>
-              Login
+              {loading ? "Loading..." : "Login"}
             </button>
           </div>
         </Form>
