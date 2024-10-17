@@ -8,15 +8,16 @@ import third from "../../assets/images/aboutThree.jpg";
 import LearnArrow from "../../assets/svgs/learnArrow.svg";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 const About = () => {
   return (
     <>
       {/* Banner */}
+      <Header />
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
-        style={{ backgroundImage: "url(/aboutBg.png)" }}
-      >
+        style={{ backgroundImage: "url(/aboutBg.png)" }}>
         <div className="text-left pl-8 md:pl-20 pt-28 max-w-[60rem]">
           <p className="mt-16 text-[28px] md:text-[64px]">
             Engineering The Future <br /> Through Technology <br /> Innovation
@@ -74,7 +75,7 @@ const About = () => {
             </p>
           </div>
           <div className="order-first md:order-last md:w-[35%] flex justify-end">
-            <img src={first} alt="About" className="w-full"/>
+            <img src={first} alt="About" className="w-full" />
           </div>
         </div>
 
@@ -118,8 +119,7 @@ const About = () => {
               <button className="group p-2 border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                 <Link
                   className="flex items-center font-semibold text-gray-700 group-hover:text-primary group-hover:translate-x-2 transition-transform"
-                  to="/services"
-                >
+                  to="/services">
                   <span className="text-[#717171] font-normal text-normal">
                     Learn More
                   </span>
