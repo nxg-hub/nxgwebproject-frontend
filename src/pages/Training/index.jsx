@@ -51,49 +51,50 @@ const Training = () => {
               </div>
             </article>
 
-          <div className="md:w-[40%] bg-secondary rounded-3xl py-3 px-3 ">
-            <img
-              className=" object-contain rounded-full md:h-[400px] m-auto"
-              src={img}
-              alt="hero"
-            />
-          </div>
-        </div>
-        <div className="md:flex justify-between items-center mt-5">
-          <article>
-            <div className="bg-secondary  rounded-full text-[#fff] font-bold md:w-[400px] text-md md:text-lg py-2 mt-11 mb-5 ">
-              <h2 className="uppercase text-lg font-bold text-center">
-                training fee
-              </h2>
+            <div className="md:w-[40%] bg-secondary rounded-3xl py-3 px-3 ">
+              <img
+                className=" object-contain rounded-full md:h-[400px] m-auto"
+                src={img}
+                alt="hero"
+              />
             </div>
-            <p className="font-bold md:text-md">
-              <span>&#8226;</span>
-              N250,000 (3 months)
-            </p>
-            <p className="font-bold md:text-md">
-              <span>&#8226;</span>
-              N500,000 (6 months)
-            </p>
-            <p className="font-bold md:text-md my-5">
-              (Installment payments allowed)
-            </p>
-          </article>
-          <article>
-            <p className="font-bold md:text-lg">
-              Note: First 50 persons
-              <span className="text-[#fff] md:text-md px-3 py-2 rounded-2xl ml-2 bg-secondary">
-                20% off
-              </span>
-            </p>
-            <p className="font-bold md:text-lg mt-5">
-              Registration Fee: N10,000
-            </p>
-          </article>
+          </div>
+          <div className="md:flex justify-between items-center mt-5">
+            <article>
+              <div className="bg-secondary  rounded-full text-[#fff] font-bold md:w-[400px] text-md md:text-lg py-2 mt-11 mb-5 ">
+                <h2 className="uppercase text-lg font-bold text-center">
+                  training fee
+                </h2>
+              </div>
+              <p className="font-bold md:text-md">
+                <span>&#8226;</span>
+                N250,000 (3 months)
+              </p>
+              <p className="font-bold md:text-md">
+                <span>&#8226;</span>
+                N500,000 (6 months)
+              </p>
+              <p className="font-bold md:text-md my-5">
+                (Installment payments allowed)
+              </p>
+            </article>
+            <article>
+              <p className="font-bold md:text-lg">
+                Note: First 50 persons
+                <span className="text-[#fff] md:text-md px-3 py-2 rounded-2xl ml-2 bg-secondary">
+                  20% off
+                </span>
+              </p>
+              <p className="font-bold md:text-lg mt-5">
+                Registration Fee: N10,000
+              </p>
+            </article>
+          </div>
+          {/*<p className="font-bold md:text-lg">Date:14th October, 2024</p>*/}
         </div>
-        {/*<p className="font-bold md:text-lg">Date:14th October, 2024</p>*/}
-      </div>
-      <Footer />
-    </section>
+        <Footer />
+      </section>
+    </>
   );
 };
 
