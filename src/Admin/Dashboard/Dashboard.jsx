@@ -1,7 +1,6 @@
 // src/Dashboard.js
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import Profile from "./routes/Profile/profile";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
 
 const Dashboard = () => {
