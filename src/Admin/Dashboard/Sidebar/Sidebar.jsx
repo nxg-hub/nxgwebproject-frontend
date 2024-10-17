@@ -24,13 +24,7 @@ const Sidebar = () => {
               Partial Users
             </Link>
           </li>
-          <li className="mb-2">
-            <Link
-              to="/admin/profile"
-              className="text-white hover:bg-gray-700 block p-2 rounded">
-              Profile
-            </Link>
-          </li>
+
           <li className="mb-2">
             <Link
               to="/admin/settings"

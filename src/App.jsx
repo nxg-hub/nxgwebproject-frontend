@@ -9,7 +9,6 @@ import SuccessfulApplication from "./pages/Form/components/SuccessfulApplication
 import RegisterForm from "./pages/Form";
 import Login from "./Admin/Login/Index";
 import Registered from "./Admin/Dashboard/routes/Registered/Registered";
-import Profile from "./Admin/Dashboard/routes/Profile/profile";
 import Dashboard from "./Admin/Dashboard/Dashboard";
 import Setting from "./Admin/Dashboard/routes/Setting/Setting";
 import DetailedCard from "./Admin/Dashboard/routes/Registered/Components/DetailedCard";
@@ -42,7 +41,6 @@ function App() {
               path="/admin/registereduser/:id"
               element={<DetailedCard />}
             />
-            <Route path="/admin/profile" element={<Profile />} />
             <Route path="/admin/settings" element={<Setting />} />
           </Route>
         </Routes>
