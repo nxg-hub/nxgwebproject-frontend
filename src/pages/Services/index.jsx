@@ -7,10 +7,12 @@ import { ServicesUtils } from "../../utils/services";
 import Footer from "../../components/Footer";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 const Services = ({ open }) => {
   return (
     <>
+      <Header />
       <div
         className="relative min-h-[550px] text-primary font-medium rounded-[20px] bg-cover bg-center bg-no-repeat mx-4 md:mx-4"
         style={{ backgroundImage: "url(/serviceBg.png)" }}>

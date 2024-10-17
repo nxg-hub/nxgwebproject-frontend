@@ -12,6 +12,7 @@ import FaqList from "../components/FAQ/FaqList";
 import contactbackground from "../assets/images/contactbackground.svg";
 import Footer from "../components/Footer/index";
 import { FiArrowUpRight } from "react-icons/fi";
+import Header from "../components/Header/Header";
 
 const handleClickContact = (event) => {
   event.preventDefault();
@@ -60,6 +61,7 @@ const Home = () => {
 
   return (
     <>
+      <Header />
       <Slider />
       <div className="md:mt-16 px-4">
         {/* section one*/}
@@ -112,8 +114,7 @@ const Home = () => {
                 <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
                   <Link
                     className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
-                    to="/about"
-                  >
+                    to="/about">
                     <span className="text-[#717171]">Learn More</span>
                     <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
                   </Link>
@@ -195,8 +196,7 @@ const Home = () => {
                   <Link
                     className="underline"
                     to="#contact"
-                    onClick={handleClickContact}
-                  >
+                    onClick={handleClickContact}>
                     Contact Us Today!
                   </Link>
                 </div>
@@ -208,8 +208,7 @@ const Home = () => {
             <button className="group p-[8px] border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
               <Link
                 className="flex items-center font-semibold text-gray-700 group-hover:translate-x-2 transition-transform"
-                to="/services"
-              >
+                to="/services">
                 <span className="text-[#717171]">Learn More</span>
                 <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 text-[#717171] ml-[5px]" />
               </Link>
@@ -226,8 +225,7 @@ const Home = () => {
               </div>
               <div
                 className="text-[20px] md:text-[36px] md:font-normal font-semibold text-[#2596BE] ml-2"
-                onClick={scrollToContactSection}
-              >
+                onClick={scrollToContactSection}>
                 Get In Touch
               </div>
             </div>
@@ -235,8 +233,7 @@ const Home = () => {
 
           <div
             style={{ backgroundImage: `url(${contactbackground})` }}
-            className="p-8 bg-cover bg-center rounded-[14.5px]"
-          >
+            className="p-8 bg-cover bg-center rounded-[14.5px]">
             <div className="p-2 bg-primary rounded-[20px] md:p-12 grid grid-cols-[repeat(auto-fit,_minmax(100%,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(20rem,_1fr))] md:gap-0 gap-[80px] md:pb-0">
               <div className="flex flex-col mt-12 md:mt-0 md:mr-4 mr-0">
                 <div className="flex items-start">
@@ -272,12 +269,12 @@ const Home = () => {
                 </div>
               </div>
               <form name="contact-form" method="POST" data-netlify="true">
-                <input type='hidden' name='form-name' value='contact-form' />
+                <input type="hidden" name="form-name" value="contact-form" />
                 <div
                   onClick={scrollToContactSection}
-                  className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0"
-                >
-                  <input required
+                  className="flex flex-col w-full md:w-auto gap-2 md:gap-0 md:pl-0">
+                  <input
+                    required
                     className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                     type="text"
                     placeholder="Name"
@@ -285,7 +282,8 @@ const Home = () => {
                     id="name"
                   />
 
-                  <input required
+                  <input
+                    required
                     className="py-2 md:py-4 md:my-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                     type="tel"
                     placeholder="Contact Number"
@@ -293,7 +291,8 @@ const Home = () => {
                     id="contact_number"
                   />
 
-                  <input required
+                  <input
+                    required
                     className="py-2 md:py-4 px-6 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%] border border-[#A8D5E5]"
                     type="email"
                     placeholder="Email"
@@ -301,7 +300,8 @@ const Home = () => {
                     id="email"
                   />
 
-                  <textarea required
+                  <textarea
+                    required
                     className="py-2 md:py-4 px-6 md:mt-3 mt-0 md:rounded-[32px] rounded-[20.104px] focus:outline-0 md:w-[100%]  border border-[#A8D5E5]"
                     type="text"
                     placeholder="Messages"
@@ -343,8 +343,7 @@ const Home = () => {
             <button className="group border-[1px] hover:bg-[#A4CDDC] border-[#abbed1] w-[180px] rounded-[20px] flex justify-center">
               <div
                 className="flex font-normal text-[#717171] group-hover:translate-x-2 transition-transform p-2"
-                onClick={scrollToTop}
-              >
+                onClick={scrollToTop}>
                 Back to Top
                 <BsArrowUpRight className="transform transition-transform group-hover:rotate-45 w-6 h-5 mx-[5px]" />
               </div>
