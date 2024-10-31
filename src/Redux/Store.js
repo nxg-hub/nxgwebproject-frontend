@@ -1,16 +1,6 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import RegisteredUsers from "./RegisteredUsers";
-// import UserInputSlice from "./UserInputSlice";
-
-// const store = configureStore({
-//   reducer: { RegisteredUsers, UserInputSlice },
-// });
-
-// export default store;
-// src/store.js
-// import { configureStore } from "@reduxjs/toolkit";
 import RegisteredUsers from "./RegisteredUsers";
 import PartialUser from "./PartialUsersSlice";
+import ScholarshipUsers from "./ScholarshipSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
@@ -24,6 +14,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   RegisteredUsers,
   PartialUser,
+  ScholarshipUsers,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

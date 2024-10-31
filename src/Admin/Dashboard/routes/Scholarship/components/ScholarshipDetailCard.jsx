@@ -3,16 +3,13 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
 import dayjs from "dayjs";
 import { useSelector } from "react-redux";
-
-const DetailedCard = () => {
+const ScholarshipDetailCard = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-
-  const registeredUsers = useSelector((state) => state.RegisteredUsers.users);
-  const user = registeredUsers.find((user) => {
+  const scholarshipUsers = useSelector((state) => state.ScholarshipUsers.users);
+  const user = scholarshipUsers.find((user) => {
     return user.id === id;
   });
-
   return (
     <>
       <Link
@@ -117,15 +114,11 @@ const DetailedCard = () => {
               </span>
             </h2>
             <h2>
-              Transfer Status:
-              <span className="font-bold ">{user.transferStatus}</span>
-            </h2>
-            <h2>
-              Payment Reciept:
+              Intro Video Link:
               <span className=" text-secondary underline px-2 ">
                 {
-                  <a target="_blank" href={user.transferReceiptUrl}>
-                    {"View Reciept"}
+                  <a target="_blank" href={user.introVideoUrl}>
+                    {"View Intro Video"}
                   </a>
                 }
               </span>
@@ -137,4 +130,4 @@ const DetailedCard = () => {
   );
 };
 
-export default DetailedCard;
+export default ScholarshipDetailCard;

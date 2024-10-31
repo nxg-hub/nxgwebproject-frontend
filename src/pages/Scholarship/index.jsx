@@ -3,7 +3,6 @@ import {
   aboutUsOptions,
   durationOptions,
   laptopOptions,
-  paymentOptions,
   preferredStackOptions,
   programmingExperienceOptions,
   workExperienceOptions,
@@ -31,6 +30,7 @@ const StepOneSchema = Yup.object().shape({
     .test("fileType", "Unsupported File Format", (value) => {
       return value && ["image/jpeg", "image/png"].includes(value.type);
     }),
+  introVideoUrl: Yup.string().required("Required"),
 });
 
 const StepTwoSchema = Yup.object().shape({
@@ -54,22 +54,7 @@ const StepTwoSchema = Yup.object().shape({
     }),
 });
 
-const StepThreeSchema = Yup.object().shape({
-  transferReceiptUrl: Yup.mixed()
-    .required("A file is required")
-    .test("fileSize", "File size is too large", (value) => {
-      return value && value.size <= 5048576; // 5MB limit
-    })
-    .test("fileType", "Unsupported File Format", (value) => {
-      return (
-        value &&
-        ["image/jpeg", "image/png", "application/pdf"].includes(value.type)
-      );
-    }),
-
-  transferStatus: Yup.string().required("Required"),
-});
-const RegisterForm = () => {
+const ScholarshipForm = () => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
@@ -88,7 +73,7 @@ const RegisterForm = () => {
         .then(function (response) {
           setLoading(false);
           if (response.status === 201) {
-            navigate("/applicationSuccessful");
+            navigate("/scholarshipSuccessful");
           }
         });
     } catch (error) {
@@ -112,10 +97,9 @@ const RegisterForm = () => {
     preferredStack: "",
     duration: "",
     referralSource: "",
-    transferStatus: "",
     cvUrl: "",
     passportUrl: "",
-    transferReceiptUrl: "",
+    introVideoUrl: "",
   };
 
   const handleNext = (values, { setSubmitting }) => {
@@ -123,29 +107,12 @@ const RegisterForm = () => {
 
     setFormData({ ...formData, ...values });
 
-    if (step < 3) {
+    if (step < 2) {
       setStep(step + 1);
     } else {
       handleSubmit(formData);
     }
     setSubmitting(false);
-  };
-  const handleChange = async (e, setFieldValue, field, values) => {
-    const { name, value } = e.target;
-
-    setFieldValue(field, value); // Update Formik's state
-
-    // Trigger API call to update the corresponding field
-    try {
-      await axios.post(`${API_HOST_URL}/api/v1/api/partial-applicants/update`, {
-        email: values.email,
-        field: name,
-        value: value,
-      });
-      // console.log(`${name} updated successfully`);
-    } catch (error) {
-      console.error(`Error updating ${name}:`, error);
-    }
   };
 
   const handleSubmit = async (values, setSubmitting) => {
@@ -162,7 +129,7 @@ const RegisterForm = () => {
       } = values;
 
       // Create an array of file uploads
-      let uploadFiles = [cvUrl, passportUrl, transferReceiptUrl].map((file) => {
+      let uploadFiles = [cvUrl, passportUrl].map((file) => {
         const formData = new FormData();
         formData.append("file", file);
         formData.append("upload_preset", "tin4r1lt");
@@ -179,19 +146,23 @@ const RegisterForm = () => {
       // Get URLs of uploaded files
       let fileUrls = responses.map((response) => response.data);
 
-      [cvUrl, passportUrl, transferReceiptUrl] = fileUrls;
+      [cvUrl, passportUrl] = fileUrls;
+
       // Handle form submission with otherValues and the uploaded file URLs
       const submittedData = {
         ...otherValues,
         cvUrl: cvUrl,
         passportUrl: passportUrl,
-        transferReceiptUrl: transferReceiptUrl,
+
         //turning the below form data into a bolean value
         hasLaptop: hasLaptop === "Yes",
         hasProgrammingExperience: hasProgrammingExperience === "Yes",
         hasWorkExperience: hasWorkExperience === "Yes",
       };
-      submitForm(`${API_HOST_URL}/api/v1/applicants/apply`, submittedData);
+      submitForm(
+        `${API_HOST_URL}/api/v1/scholarship-applicants/apply`,
+        submittedData
+      );
       setLoading(false);
     } catch (error) {
       console.error("Error uploading files:", error);
@@ -199,7 +170,7 @@ const RegisterForm = () => {
       setLoading(false);
     }
   };
-  const validationSchemas = [StepOneSchema, StepTwoSchema, StepThreeSchema];
+  const validationSchemas = [StepOneSchema, StepTwoSchema];
   return (
     <>
       <Header />
@@ -256,9 +227,6 @@ const RegisterForm = () => {
                         className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
                         type="text"
                         name="firstName"
-                        onChange={(e) =>
-                          handleChange(e, setFieldValue, "firstName", values)
-                        }
                       />
                       <ErrorMessage
                         className="text-red"
@@ -274,9 +242,6 @@ const RegisterForm = () => {
                         className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
                         type="text"
                         name="lastName"
-                        onChange={(e) =>
-                          handleChange(e, setFieldValue, "lastName", values)
-                        }
                       />
                       <ErrorMessage
                         className="text-red"
@@ -292,9 +257,6 @@ const RegisterForm = () => {
                         className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
                         type="text"
                         name="phoneNumber"
-                        onChange={(e) =>
-                          handleChange(e, setFieldValue, "phoneNumber", values)
-                        }
                       />
                       <ErrorMessage
                         className="text-red"
@@ -312,18 +274,25 @@ const RegisterForm = () => {
                         className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
                         type="text"
                         name="schoolOrOrganisation"
-                        onChange={(e) =>
-                          handleChange(
-                            e,
-                            setFieldValue,
-                            "schoolOrOrganisation",
-                            values
-                          )
-                        }
                       />
                       <ErrorMessage
                         className="text-red"
                         name="schoolOrOrganisation"
+                        component="div"
+                      />
+                    </div>
+                    <div className="block w-[90%] md:w-[70%] m-auto mt-4  ">
+                      <label className="font-bold" htmlFor="introVideoUrl">
+                        Introduction Video Link
+                      </label>
+                      <Field
+                        className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
+                        type="text"
+                        name="introVideoUrl"
+                      />
+                      <ErrorMessage
+                        className="text-red"
+                        name="introVideoUrl"
                         component="div"
                       />
                     </div>
@@ -369,14 +338,6 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="hasLaptop"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "hasLaptop",
-                                  values
-                                )
-                              }
                             />
                             {title}
                           </label>
@@ -406,14 +367,6 @@ const RegisterForm = () => {
                                 type="radio"
                                 value={value}
                                 name="hasProgrammingExperience"
-                                onChange={(e) =>
-                                  handleChange(
-                                    e,
-                                    setFieldValue,
-                                    "hasProgrammingExperience",
-                                    values
-                                  )
-                                }
                               />
                               {title}
                             </label>
@@ -437,14 +390,6 @@ const RegisterForm = () => {
                         className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
                         type="number"
                         name="availableHoursPerWeek"
-                        onChange={(e) =>
-                          handleChange(
-                            e,
-                            setFieldValue,
-                            "availableHoursPerWeek",
-                            values
-                          )
-                        }
                       />
                       <ErrorMessage
                         className="text-red"
@@ -466,14 +411,6 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="hasWorkExperience"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "hasWorkExperience",
-                                  values
-                                )
-                              }
                             />
                             {title}
                           </label>
@@ -512,9 +449,6 @@ const RegisterForm = () => {
                         className="h-[50px] px-3 pt-3 w-[100%] m-auto rounded-lg border-none border-b-4 border-b-darkGray outline-none"
                         type="text"
                         name="motivation"
-                        onChange={(e) =>
-                          handleChange(e, setFieldValue, "motivation", values)
-                        }
                       />
                       <ErrorMessage
                         className="text-red"
@@ -537,14 +471,6 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="preferredStack"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "preferredStack",
-                                  values
-                                )
-                              }
                             />
                             {title}
                           </label>
@@ -571,14 +497,6 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="duration"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "duration",
-                                  values
-                                )
-                              }
                             />
                             {title}
                           </label>
@@ -605,14 +523,6 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="referralSource"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "referralSource",
-                                  values
-                                )
-                              }
                             />
                             {title}
                           </label>
@@ -626,125 +536,13 @@ const RegisterForm = () => {
                     </div>
                   </>
                 )}
-                {step === 3 && (
-                  <>
-                    <div className="flex flex-col w-[90%] md:w-[70%] m-auto mt-4 outline-none bg-primary rounded-lg">
-                      <div className="w-full bg-secondary h-[50px]">
-                        <h2 className="font-bold text-lg px-7 text-primary">
-                          Payment
-                        </h2>
-                      </div>
-                      <article className="w-[95%] m-auto pt-2">
-                        <p>
-                          Kindly Proceed with Payment of Ten Thousand Naira
-                          (N10,000) or 10USD Only to complete your registration.
-                          After Successful payment, kindly tick the Transaction
-                          status below, upload receipt and click submit. A
-                          Confirmation mail and further steps will be sent to
-                          you via mail.
-                        </p>
-                      </article>
-                    </div>
-
-                    <div className="flex flex-col w-[90%] md:w-[70%] m-auto mt-4 outline-none bg-primary rounded-lg py-4">
-                      <article className="w-[90%] m-auto">
-                        <p className="mb-5">Choose Payment Mode</p>
-
-                        <Link
-                          to="https://paystack.com/pay/nxg-reg"
-                          target="_blank"
-                          className="text-secondary underline md:text-md">
-                          Click Here To Pay With Card
-                        </Link>
-                        <p className="mt-5 font-bold">
-                          Or Make a Direct Deposit/Transfer to the Accounts
-                          below:
-                        </p>
-                        <p className="my-5">
-                          Account Details: Account Number: 1027147237 <br />
-                          Account Name: NXG HUB DIGITAL TECHNOLOGIES LTD, Bank:
-                          UBA
-                        </p>
-                        <p className="my-5">
-                          DOM Account Details(USD): Account Number: 3004434567{" "}
-                          <br />
-                          Account Name: NXG HUB DIGITAL TECHNOLOGIES LTD, Bank:
-                          UBA
-                        </p>
-                        <p className="my-5">
-                          DOM Account Details(GBP): Account Number: 3004434718{" "}
-                          <br />
-                          Account Name: NXG HUB DIGITAL TECHNOLOGIES LTD, Bank:
-                          UBA
-                        </p>
-                        <p className="my-5">
-                          Account Details: Account Number: 5610096099 <br />
-                          Account Name: NXG-HUB DIGITAL TECHNOLOGIES LTD, Bank:
-                          FIDELITY BANK *
-                        </p>
-                      </article>
-                      <div className="flex flex-col w-[90%] m-auto mt-4">
-                        <fieldset
-                          id="transferStatus"
-                          className="bg-primary py-4 px-2 rounded-lg"
-                          required>
-                          {paymentOptions.map(({ id, value, title }) => (
-                            <label key={id} className="block mt-2">
-                              <Field
-                                id={id}
-                                type="radio"
-                                value={value}
-                                name="transferStatus"
-                                onChange={(e) =>
-                                  handleChange(
-                                    e,
-                                    setFieldValue,
-                                    "transferStatus",
-                                    values
-                                  )
-                                }
-                              />
-                              {title}
-                            </label>
-                          ))}
-                        </fieldset>
-                        <ErrorMessage
-                          className="text-red"
-                          name="transferStatus"
-                          component="div"
-                        />
-                      </div>
-                    </div>
-                    <div className="w-[90%] md:w-[70%] m-auto mt-4">
-                      <label
-                        className="font-bold block"
-                        htmlFor="transferReceiptUrl">
-                        Kindly upload a Screenshot of your payment receipt
-                      </label>
-                      <input
-                        id="transferReceiptUrl"
-                        name="transferReceiptUrl"
-                        type="file"
-                        onChange={(event) => {
-                          const file = event.currentTarget.files[0];
-                          setFieldValue("transferReceiptUrl", file);
-                        }}
-                      />
-                      <ErrorMessage
-                        className="text-red"
-                        name="transferReceiptUrl"
-                        component="div"
-                      />
-                    </div>
-                  </>
-                )}
 
                 <div className="w-[40%] md:w-[30%] m-auto">
                   <button
                     disabled={isSubmitting}
                     className="w-[100%] rounded-full text-center py-2 my-10 text-primary font-bold m-auto bg-[#006A90]"
                     type="submit">
-                    {loading ? "Submitting..." : step < 3 ? "Next" : "Submit"}
+                    {loading ? "Submitting..." : step < 2 ? "Next" : "Submit"}
                   </button>
                 </div>
               </Form>
@@ -756,4 +554,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default ScholarshipForm;

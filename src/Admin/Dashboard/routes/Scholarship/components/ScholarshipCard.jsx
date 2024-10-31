@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ user }) => {
+const ScholarshipCard = ({ user }) => {
   return (
     <div className="w-full  h-[300px] border-2 border-[#fff] shadow-lg shadow-[#a0a0a0] rounded-lg ">
       <img
@@ -13,10 +13,10 @@ const Card = ({ user }) => {
         {user.firstName}
       </h2>
       <div className="w-[80%] m-auto text-center bg-secondary py-2 rounded-md text-primary font-bold mt-11">
-        <Link to={`/admin/registereduser/${user.id}`}>View Details</Link>
+        <Link to={`/admin/scholarshipuser/${user.id}`}>View Details</Link>
       </div>
     </div>
   );
 };
 
-export default Card;
+export default ScholarshipCard;

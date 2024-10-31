@@ -104,20 +104,21 @@ const Footer = () => {
                 USEFUL LINKS
               </h2>
               <p>
-                {" "}
                 <Link to="/training">Training</Link>
               </p>
               <p>
                 <Link to="#">NXG-Job-Hub</Link>
               </p>
               <p>
-                {" "}
                 <Link to="/career">Career</Link>
               </p>
               <p>
                 <Link to="#contact" onClick={handleClickContact}>
                   Contact
                 </Link>
+              </p>
+              <p>
+                <Link to="/scholarship">Scholarship</Link>
               </p>
               <p>
                 <Link to="#">FAQ</Link>
