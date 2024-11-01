@@ -15,6 +15,10 @@ import DetailedCard from "./Admin/Dashboard/routes/Registered/Components/Detaile
 import PartialUsers from "./Admin/Dashboard/routes/PartialUsers/PartialUsers";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import { useState } from "react";
+import ScholarshipForm from "./pages/Scholarship";
+import ScholarshipSuccessful from "./pages/Scholarship/components/ScholarshipSuccessful";
+import Scholarship from "./Admin/Dashboard/routes/Scholarship/Scholarship";
+import ScholarshipDetailCard from "./Admin/Dashboard/routes/Scholarship/components/ScholarshipDetailCard";
 
 function App() {
   const [token, setToken] = useState("");
@@ -28,9 +32,14 @@ function App() {
           <Route path="/career" element={<Career />} />
           <Route path="/training" element={<Training />} />
           <Route path="/form" element={<RegisterForm />} />
+          <Route path="/scholarship" element={<ScholarshipForm />} />
           <Route
             path="/applicationSuccessful"
             element={<SuccessfulApplication />}
+          />
+          <Route
+            path="/scholarshipSuccessful"
+            element={<ScholarshipSuccessful />}
           />
         </Routes>
         <Routes>
@@ -40,9 +49,14 @@ function App() {
             <Route exact path="/admin" element={<Dashboard />}>
               <Route path="/admin/dashboard" element={<Registered />} />
               <Route path="/admin/partialUsers" element={<PartialUsers />} />
+              <Route path="/admin/scholarship" element={<Scholarship />} />
               <Route
                 path="/admin/registereduser/:id"
                 element={<DetailedCard />}
+              />
+              <Route
+                path="/admin/scholarshipuser/:id"
+                element={<ScholarshipDetailCard />}
               />
               <Route path="/admin/settings" element={<Setting />} />
             </Route>
