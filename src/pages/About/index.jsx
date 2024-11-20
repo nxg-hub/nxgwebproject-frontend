@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CustomButton from "../../components/Button";
 import NLogo from "../../assets/icons/n.png";
 import Footer from "../../components/Footer";
@@ -11,6 +11,11 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 
 const About = () => {
+  useEffect(() => {
+    //page to scroll to top unmount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // document.documentElement.scrollTop = 0; // For most modern browsers
+  }, []);
   return (
     <>
       {/* Banner */}

@@ -10,18 +10,16 @@ import RegisterForm from "./pages/Form";
 import Login from "./Admin/Login/Index";
 import Registered from "./Admin/Dashboard/routes/Registered/Registered";
 import Dashboard from "./Admin/Dashboard/Dashboard";
-import Setting from "./Admin/Dashboard/routes/Setting/Setting";
 import DetailedCard from "./Admin/Dashboard/routes/Registered/Components/DetailedCard";
 import PartialUsers from "./Admin/Dashboard/routes/PartialUsers/PartialUsers";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import { useState } from "react";
 import ScholarshipForm from "./pages/Scholarship";
 import ScholarshipSuccessful from "./pages/Scholarship/components/ScholarshipSuccessful";
 import Scholarship from "./Admin/Dashboard/routes/Scholarship/Scholarship";
 import ScholarshipDetailCard from "./Admin/Dashboard/routes/Scholarship/components/ScholarshipDetailCard";
+import TrainingInfo from "./Admin/Dashboard/routes/TrainingInformation/TrainingInfo";
 
 function App() {
-  const [token, setToken] = useState("");
   return (
     <div className="relative md:static overflow-hidden">
       <div className="pages">
@@ -44,8 +42,8 @@ function App() {
         </Routes>
         <Routes>
           {/* Admin section */}
-          <Route path="/admin" element={<Login setToken={setToken} />} />
-          <Route element={<ProtectedRoute token={token} />}>
+          <Route path="/admin" element={<Login />} />
+          <Route element={<ProtectedRoute />}>
             <Route exact path="/admin" element={<Dashboard />}>
               <Route path="/admin/dashboard" element={<Registered />} />
               <Route path="/admin/partialUsers" element={<PartialUsers />} />
@@ -58,7 +56,10 @@ function App() {
                 path="/admin/scholarshipuser/:id"
                 element={<ScholarshipDetailCard />}
               />
-              <Route path="/admin/settings" element={<Setting />} />
+              <Route
+                path="/admin/trainng-information"
+                element={<TrainingInfo />}
+              />
             </Route>
           </Route>
         </Routes>

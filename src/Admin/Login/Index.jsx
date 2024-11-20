@@ -12,7 +12,7 @@ const LoginSchema = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
-const Login = ({ setToken }) => {
+const Login = () => {
   const [loginError, setLoginError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -41,7 +41,7 @@ const Login = ({ setToken }) => {
       const data = await response.json();
       const token = data.token;
       if (response.ok) {
-        setToken(token);
+        localStorage.setItem("ACCESSTOKEN", token);
         navigate("/admin/dashboard");
         setLoading(false);
       }

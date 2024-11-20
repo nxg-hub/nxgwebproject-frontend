@@ -3,9 +3,14 @@ import { FiArrowUpRight } from "react-icons/fi";
 import CustomButton from "../../components/Button";
 import Footer from "../../components/Footer";
 import { BsArrowUpRight } from "react-icons/bs";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header/Header";
 const Career = () => {
+  useEffect(() => {
+    //page to scroll to top unmount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // document.documentElement.scrollTop = 0; // For most modern browsers
+  }, []);
   return (
     <>
       <Header />

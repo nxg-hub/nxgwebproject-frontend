@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { BsArrowLeft } from "react-icons/bs";
-import dayjs from "dayjs";
 import { useSelector } from "react-redux";
 
 const DetailedCard = () => {
@@ -12,6 +11,23 @@ const DetailedCard = () => {
   const user = registeredUsers.find((user) => {
     return user.id === id;
   });
+  const formatDate = (dateArray) => {
+    // Assuming dateArray is in the form [year, month, day]
+    const [year, month, day] = dateArray;
+
+    // Create a Date object (note: JavaScript months are 0-indexed, so subtract 1 from the month)
+    const date = new Date(year, month - 1, day);
+
+    // Format the date as MM/DD/YYYY
+    const formattedDate =
+      date.getDate().toString().padStart(2, "0") +
+      "/" + // DD
+      (date.getMonth() + 1).toString().padStart(2, "0") +
+      "/" + // MM
+      date.getFullYear(); // YYYY
+
+    return formattedDate;
+  };
 
   return (
     <>
@@ -99,7 +115,7 @@ const DetailedCard = () => {
             <h2>
               Registeration Date:
               <span className="font-bold px-1">
-                {dayjs(user.registrationDate).format("YYYY-MM-DD")}
+                {formatDate(user.registrationDate)}
               </span>
             </h2>
             <h2>

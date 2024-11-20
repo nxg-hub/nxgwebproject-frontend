@@ -64,7 +64,80 @@ const paymentOptions = [
     title: "Direct Deposit/Transfer Not Successful",
   },
 ];
-
+const techStacks = [
+  {
+    value: "Product Design ",
+    label: "Product Design",
+  },
+  {
+    value: "Product Management",
+    label: "Product Management",
+  },
+  {
+    value: "Project Management",
+    label: "Project Management",
+  },
+  {
+    value: "Scrum Master",
+    label: "Scrum Master",
+  },
+  {
+    value: "Data Scientist",
+    label: "Data Scientist",
+  },
+  {
+    value: "Data Analyst",
+    label: "Data Analyst",
+  },
+  {
+    value: "Data Entry",
+    label: "Data Entry",
+  },
+  {
+    value: "Virtual Assistant",
+    label: "Virtual Assistant",
+  },
+  {
+    value: "Graphic Design",
+    label: "Graphic Design",
+  },
+  {
+    value: "Frontend Developer",
+    label: "Frontend Developer",
+  },
+  {
+    value: "Backend Developer",
+    label: "Backend Developer",
+  },
+  {
+    value: "Fullstack Developer",
+    label: "Fullstack Developer",
+  },
+  {
+    value: "Web Developer",
+    label: "Web Developer",
+  },
+  {
+    value: "Wordpress Developer",
+    label: "Wordpress Developer",
+  },
+  {
+    value: "Mobile Developer",
+    label: "Mobile Developer",
+  },
+  {
+    value: "Digital Marketer",
+    label: "Digital Marketer",
+  },
+  {
+    value: "Cyber Security",
+    label: "Cyber Security",
+  },
+  {
+    value: "Software Engineer",
+    label: "Software Engineer",
+  },
+];
 export {
   laptopOptions,
   programmingExperienceOptions,
@@ -73,4 +146,5 @@ export {
   aboutUsOptions,
   paymentOptions,
   workExperienceOptions,
+  techStacks,
 };
