@@ -12,7 +12,7 @@ const ScholarshipSuccessful = () => {
             Scholarship Application Successful
           </h2>
           <img className="m-auto mt-5" src={success} alt="congrats-img" />
-          <div className="w-f[90%] m-auto">
+          <div className="w-[90%] m-auto">
             <p className="mt-11 md:text-md">
               Congratulations, your Application was
               <span className="font-bold text-[#1e7a1e]"> Successful.</span>

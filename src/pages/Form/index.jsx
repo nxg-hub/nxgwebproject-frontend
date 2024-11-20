@@ -15,6 +15,8 @@ import * as Yup from "yup";
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import { API_HOST_URL } from "../../utils/API/Api";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTrainingInfo } from "../../Redux/TrainingInformationSlice";
 const StepOneSchema = Yup.object().shape({
   firstName: Yup.string().required("Required"),
   lastName: Yup.string().required("Required"),
@@ -70,6 +72,15 @@ const StepThreeSchema = Yup.object().shape({
   transferStatus: Yup.string().required("Required"),
 });
 const RegisterForm = () => {
+  const trainingInfo = useSelector(
+    (state) => state.TrainingInformation.trainingInfo
+  );
+  const latestInfo = trainingInfo[trainingInfo.length - 1];
+
+  useEffect(() => {
+    //page to scroll to top unmount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
@@ -530,10 +541,10 @@ const RegisterForm = () => {
                       <fieldset
                         className="bg-primary py-4 px-2 rounded-lg"
                         required>
-                        {preferredStackOptions.map(({ id, value, title }) => (
-                          <label key={id} className="block mt-2">
+                        {latestInfo.techTracks.map((value) => (
+                          <label key={value} className="block mt-2">
                             <Field
-                              id={id}
+                              id={value}
                               type="radio"
                               value={value}
                               name="preferredStack"
@@ -546,7 +557,7 @@ const RegisterForm = () => {
                                 )
                               }
                             />
-                            {title}
+                            {value}
                           </label>
                         ))}
                       </fieldset>

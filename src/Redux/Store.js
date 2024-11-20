@@ -1,6 +1,7 @@
 import RegisteredUsers from "./RegisteredUsers";
 import PartialUser from "./PartialUsersSlice";
 import ScholarshipUsers from "./ScholarshipSlice";
+import TrainingInformation from "./TrainingInformationSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   RegisteredUsers,
   PartialUser,
   ScholarshipUsers,
+  TrainingInformation,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -55,6 +55,11 @@ const StepTwoSchema = Yup.object().shape({
 });
 
 const ScholarshipForm = () => {
+  useEffect(() => {
+    //page to scroll to top unmount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // document.documentElement.scrollTop = 0; // For most modern browsers
+  }, []);
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});

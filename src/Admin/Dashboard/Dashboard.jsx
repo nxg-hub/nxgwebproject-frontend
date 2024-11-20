@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-grow p-6">
+      <div className="flex-grow p-6 ">
         <Outlet />
       </div>
     </div>

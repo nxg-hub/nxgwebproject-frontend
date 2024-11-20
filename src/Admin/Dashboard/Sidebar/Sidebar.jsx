@@ -21,8 +21,8 @@ const Sidebar = () => {
       name: "Scholarship Users",
     },
     {
-      path: "/admin/settings",
-      name: "Settings",
+      path: "/admin/trainng-information",
+      name: "Training Update",
     },
   ];
   return (
