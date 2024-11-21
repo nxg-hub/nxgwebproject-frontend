@@ -45,6 +45,7 @@ const Training = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     dispatch(fetchTrainingInfo("/api/v1/get-all"));
   }, []);
+
   return (
     <>
       <Header />
@@ -71,7 +72,9 @@ const Training = () => {
             <div className="md:flex justify-between items-center mt-5">
               <article className="mb-5">
                 <h2 className="uppercase text-lg font-bold items-center">
-                  <span className="px-2">{latestInfo.totalDurationMonths}</span>
+                  <span className="px-2">
+                    {latestInfo?.totalDurationMonths}
+                  </span>
                   months intensive mentor guided bootcamp
                 </h2>
                 <div className="bg-secondary  rounded-full text-[#fff] font-bold md:w-[400px] text-md md:text-lg py-2 mt-11 mb-5 ">
@@ -80,7 +83,7 @@ const Training = () => {
                   </h2>
                 </div>
                 <div>
-                  {latestInfo.techTracks.map((track) => {
+                  {latestInfo?.techTracks.map((track) => {
                     return (
                       <p className="font-bold md:text-md uppercase">
                         <span>&#8226;</span>
@@ -91,11 +94,11 @@ const Training = () => {
 
                   <p className="font-normal md:text-md">
                     <span>&#8226;</span>
-                    Basic ({latestInfo.basicDurationMonths} months)
+                    Basic ({latestInfo?.basicDurationMonths} months)
                   </p>
                   <p className="font-normal md:text-md">
                     <span>&#8226;</span>
-                    Basic + Advanced ({latestInfo.advancedDurationMonths}{" "}
+                    Basic + Advanced ({latestInfo?.advancedDurationMonths}{" "}
                     months)
                   </p>
                 </div>
@@ -104,7 +107,7 @@ const Training = () => {
               <div className="md:w-[40%] bg-secondary rounded-3xl py-3 px-3 ">
                 <img
                   className=" object-contain rounded-full md:h-[400px] m-auto"
-                  src={latestInfo.bannerUrl}
+                  src={latestInfo?.bannerUrl}
                   alt="hero"
                 />
               </div>
@@ -118,13 +121,13 @@ const Training = () => {
                 </div>
                 <p className="font-bold md:text-md">
                   <span>&#8226;</span>
-                  {formatAmount(latestInfo.basicFee)} (
-                  {latestInfo.basicDurationMonths} months)
+                  {formatAmount(latestInfo?.basicFee)} (
+                  {latestInfo?.basicDurationMonths} months)
                 </p>
                 <p className="font-bold md:text-md">
                   <span>&#8226;</span>
-                  {formatAmount(latestInfo.advancedFee)} (
-                  {latestInfo.advancedDurationMonths} months)
+                  {formatAmount(latestInfo?.advancedFee)} (
+                  {latestInfo?.advancedDurationMonths} months)
                 </p>
                 <p className="font-bold md:text-md my-5">
                   (Installment payments allowed)
@@ -138,12 +141,12 @@ const Training = () => {
                   </span>
                 </p>
                 <p className="font-bold md:text-lg mt-5">
-                  Registration Fee: {formatAmount(latestInfo.registrationFee)}
+                  Registration Fee: {formatAmount(latestInfo?.registrationFee)}
                 </p>
               </article>
             </div>
             {/* <p className="font-bold md:text-lg">
-              Date:{formatDate(latestInfo.commencementDate)}
+              Date:{formatDate(latestInfo?.commencementDate)}
             </p> */}
           </div>
           <Footer />
