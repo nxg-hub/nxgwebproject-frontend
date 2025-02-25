@@ -18,7 +18,6 @@ export const fetchTrainingInfo = createAsyncThunk(
       },
     })
       .then((res) => {
-        console.log("hey");
         return res.json();
       })
       .then((data) => {

@@ -15,8 +15,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import { API_HOST_URL } from "../../utils/API/Api";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchTrainingInfo } from "../../Redux/TrainingInformationSlice";
+import { useSelector } from "react-redux";
 const StepOneSchema = Yup.object().shape({
   firstName: Yup.string().required("Required"),
   lastName: Yup.string().required("Required"),
@@ -44,33 +43,34 @@ const StepTwoSchema = Yup.object().shape({
   preferredStack: Yup.string().required("Required"),
   duration: Yup.string().required("Required"),
   referralSource: Yup.string().required("Required"),
-  cvUrl: Yup.mixed()
-    .required("A file is required")
-    .test("fileSize", "File size is too large", (value) => {
-      return value && value.size <= 5048576; // 5MB limit
-    })
-    .test("fileType", "Unsupported File Format", (value) => {
-      return (
-        value && ["application/pdf", "application/msword"].includes(value.type)
-      );
-    }),
+  // cvUrl: Yup.mixed()
+  //   .required("A file is required")
+  //   .test("fileSize", "File size is too large", (value) => {
+  //     console.log(value);
+  //     return value && value.size <= 504857; // 5MB limit
+  //   })
+  //   .test("fileType", "Unsupported File Format", (value) => {
+  //     return (
+  //       value && ["application/pdf", "application/msword"].includes(value.type)
+  //     );
+  //   }),
 });
 
-const StepThreeSchema = Yup.object().shape({
-  transferReceiptUrl: Yup.mixed()
-    .required("A file is required")
-    .test("fileSize", "File size is too large", (value) => {
-      return value && value.size <= 5048576; // 5MB limit
-    })
-    .test("fileType", "Unsupported File Format", (value) => {
-      return (
-        value &&
-        ["image/jpeg", "image/png", "application/pdf"].includes(value.type)
-      );
-    }),
+// const StepThreeSchema = Yup.object().shape({
+//   transferReceiptUrl: Yup.mixed()
+//     .required("A file is required")
+//     .test("fileSize", "File size is too large", (value) => {
+//       return value && value.size <= 5048576; // 5MB limit
+//     })
+//     .test("fileType", "Unsupported File Format", (value) => {
+//       return (
+//         value &&
+//         ["image/jpeg", "image/png", "application/pdf"].includes(value.type)
+//       );
+//     }),
 
-  transferStatus: Yup.string().required("Required"),
-});
+//   transferStatus: Yup.string().required("Required"),
+// });
 const RegisterForm = () => {
   const trainingInfo = useSelector(
     (state) => state.TrainingInformation.trainingInfo
@@ -132,16 +132,17 @@ const RegisterForm = () => {
   const handleNext = (values, { setSubmitting }) => {
     // Store the current step's data
 
-    setFormData({ ...formData, ...values });
+    // setFormData({ ...formData, ...values });
 
-    if (step < 3) {
+    if (step < 2) {
       setStep(step + 1);
     } else {
-      handleSubmit(formData);
+      handleSubmit(values);
     }
     setSubmitting(false);
   };
   const handleChange = async (e, setFieldValue, field, values) => {
+    // console.log(values);
     const { name, value } = e.target;
 
     setFieldValue(field, value); // Update Formik's state
@@ -160,6 +161,7 @@ const RegisterForm = () => {
   };
 
   const handleSubmit = async (values, setSubmitting) => {
+    console.log(values);
     setLoading(true);
     try {
       let {
@@ -172,8 +174,8 @@ const RegisterForm = () => {
         ...otherValues
       } = values;
 
-      // Create an array of file uploads
-      let uploadFiles = [cvUrl, passportUrl, transferReceiptUrl].map((file) => {
+      // // Create an array of file uploads
+      let uploadFiles = [passportUrl].map((file) => {
         const formData = new FormData();
         formData.append("file", file);
         formData.append("upload_preset", "tin4r1lt");
@@ -184,24 +186,25 @@ const RegisterForm = () => {
         );
       });
 
-      // Wait for all uploads to complete
+      // // Wait for all uploads to complete
       let responses = await Promise.all(uploadFiles);
 
       // Get URLs of uploaded files
       let fileUrls = responses.map((response) => response.data);
 
-      [cvUrl, passportUrl, transferReceiptUrl] = fileUrls;
+      [passportUrl] = fileUrls;
       // Handle form submission with otherValues and the uploaded file URLs
       const submittedData = {
         ...otherValues,
-        cvUrl: cvUrl,
+        // cvUrl: cvUrl,
         passportUrl: passportUrl,
-        transferReceiptUrl: transferReceiptUrl,
+        // transferReceiptUrl: transferReceiptUrl,
         //turning the below form data into a bolean value
         hasLaptop: hasLaptop === "Yes",
         hasProgrammingExperience: hasProgrammingExperience === "Yes",
         hasWorkExperience: hasWorkExperience === "Yes",
       };
+      // console.log(submittedData);
       submitForm(`${API_HOST_URL}/api/v1/applicants/apply`, submittedData);
       setLoading(false);
     } catch (error) {
@@ -210,7 +213,7 @@ const RegisterForm = () => {
       setLoading(false);
     }
   };
-  const validationSchemas = [StepOneSchema, StepTwoSchema, StepThreeSchema];
+  const validationSchemas = [StepOneSchema, StepTwoSchema];
   return (
     <>
       <Header />
@@ -380,14 +383,8 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="hasLaptop"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "hasLaptop",
-                                  values
-                                )
-                              }
+                              checked={values.hasLaptop === value} // Ensure correct selection
+                              onChange={() => setFieldValue("hasLaptop", value)}
                             />
                             {title}
                           </label>
@@ -417,12 +414,13 @@ const RegisterForm = () => {
                                 type="radio"
                                 value={value}
                                 name="hasProgrammingExperience"
-                                onChange={(e) =>
-                                  handleChange(
-                                    e,
-                                    setFieldValue,
+                                checked={
+                                  values.hasProgrammingExperience === value
+                                } // Ensure correct selection
+                                onChange={() =>
+                                  setFieldValue(
                                     "hasProgrammingExperience",
-                                    values
+                                    value
                                   )
                                 }
                               />
@@ -477,13 +475,9 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="hasWorkExperience"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "hasWorkExperience",
-                                  values
-                                )
+                              checked={values.hasWorkExperience === value} // Ensure correct selection
+                              onChange={() =>
+                                setFieldValue("hasWorkExperience", value)
                               }
                             />
                             {title}
@@ -496,7 +490,7 @@ const RegisterForm = () => {
                         component="div"
                       />
                     </div>
-                    <div className="w-[90%] md:w-[70%] m-auto mt-4">
+                    {/* <div className="w-[90%] md:w-[70%] m-auto mt-4">
                       <label className="font-bold block" htmlFor="cvUrl">
                         Upload Cv
                       </label>
@@ -514,7 +508,7 @@ const RegisterForm = () => {
                         name="cvUrl"
                         component="div"
                       />
-                    </div>
+                    </div> */}
                     <div className="block w-[90%] md:w-[70%] m-auto mt-4  ">
                       <label className="font-bold" htmlFor="motivation">
                         Why do you want to participate in this Training?
@@ -541,21 +535,17 @@ const RegisterForm = () => {
                       <fieldset
                         className="bg-primary py-4 px-2 rounded-lg"
                         required>
-                        {latestInfo.techTracks.map((value) => (
-                          <label key={value} className="block mt-2">
+                        {latestInfo.techTracks.map((value, i) => (
+                          <label key={i} className="block mt-2">
                             <Field
-                              id={value}
+                              id={i}
                               type="radio"
                               value={value}
                               name="preferredStack"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "preferredStack",
-                                  values
-                                )
-                              }
+                              checked={values.preferredStack === value} // Ensure correct selection
+                              onChange={() =>
+                                setFieldValue("preferredStack", value)
+                              } // Directly update Formik state
                             />
                             {value}
                           </label>
@@ -571,30 +561,22 @@ const RegisterForm = () => {
                       <label className="font-bold" htmlFor="duration">
                         Duration
                       </label>
-
-                      <fieldset
-                        className="bg-primary py-4 px-2 rounded-lg"
-                        aria-required>
+                      <fieldset>
                         {durationOptions.map(({ id, value, title }) => (
                           <label key={id} className="block mt-2">
                             <Field
-                              id={id}
+                              id={`duration-${id}`} // Ensure unique `id`
                               type="radio"
-                              value={value}
                               name="duration"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "duration",
-                                  values
-                                )
-                              }
+                              value={value}
+                              checked={values.duration === value} // Ensure correct selection
+                              onChange={() => setFieldValue("duration", value)} // Directly update Formik state
                             />
                             {title}
                           </label>
                         ))}
                       </fieldset>
+
                       <ErrorMessage
                         className="text-red"
                         name="duration"
@@ -616,14 +598,11 @@ const RegisterForm = () => {
                               type="radio"
                               value={value}
                               name="referralSource"
-                              onChange={(e) =>
-                                handleChange(
-                                  e,
-                                  setFieldValue,
-                                  "referralSource",
-                                  values
-                                )
-                              }
+                              checked={values.referralSource === value} // Ensure correct selection
+                              onChange={() => {
+                                console.log(value);
+                                setFieldValue("referralSource", value);
+                              }}
                             />
                             {title}
                           </label>
@@ -706,13 +685,9 @@ const RegisterForm = () => {
                                 type="radio"
                                 value={value}
                                 name="transferStatus"
-                                onChange={(e) =>
-                                  handleChange(
-                                    e,
-                                    setFieldValue,
-                                    "transferStatus",
-                                    values
-                                  )
+                                checked={values.transferStatus === value} // Ensure correct selection
+                                onChange={() =>
+                                  setFieldValue("transferStatus", value)
                                 }
                               />
                               {title}
@@ -755,7 +730,7 @@ const RegisterForm = () => {
                     disabled={isSubmitting}
                     className="w-[100%] rounded-full text-center py-2 my-10 text-primary font-bold m-auto bg-[#006A90]"
                     type="submit">
-                    {loading ? "Submitting..." : step < 3 ? "Next" : "Submit"}
+                    {loading ? "Submitting..." : step < 2 ? "Next" : "Submit"}
                   </button>
                 </div>
               </Form>

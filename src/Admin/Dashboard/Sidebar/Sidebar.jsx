@@ -24,6 +24,10 @@ const Sidebar = () => {
       path: "/admin/trainng-information",
       name: "Training Update",
     },
+    {
+      path: "/admin",
+      name: "Sign Out",
+    },
   ];
   return (
     <div className="bg-secondary ">
