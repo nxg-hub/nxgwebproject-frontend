@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "../components/Slider/Slider";
 import { Link, NavLink } from "react-router-dom";
 import about_us from "../assets/images/about_us.jpg";
@@ -13,6 +13,8 @@ import contactbackground from "../assets/images/contactbackground.svg";
 import Footer from "../components/Footer/index";
 import { FiArrowUpRight } from "react-icons/fi";
 import Header from "../components/Header/Header";
+import { fetchTrainingInfo } from "../Redux/TrainingInformationSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const handleClickContact = (event) => {
   event.preventDefault();
@@ -35,6 +37,7 @@ const handleClickContact = (event) => {
 const Home = () => {
   const faqSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
+  const dispatch = useDispatch();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -50,7 +53,10 @@ const Home = () => {
       });
     }
   };
-
+  useEffect(() => {
+    //fetch data onMount
+    dispatch(fetchTrainingInfo("/api/v1/get-all"));
+  }, []);
   const scrollToContactSection = () => {
     if (contactSectionRef.current) {
       contactSectionRef.current.scrollIntoView({

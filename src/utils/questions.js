@@ -27,9 +27,10 @@ const preferredStackOptions = [
   { id: 1, value: "Project Management", title: " Project Management" },
 ];
 const durationOptions = [
-  { id: 0, value: "3 months - Basic", title: "3 months - Basic" },
+  { id: 0, value: "1 months - Beginner", title: "1 months - Beginner" },
+  { id: 1, value: "3 months - Basic", title: "3 months - Basic" },
   {
-    id: 1,
+    id: 2,
     value: "6 months - Basic + Advanced",
     title: "6 months - Basic + Advanced",
   },
@@ -66,77 +67,39 @@ const paymentOptions = [
 ];
 const techStacks = [
   {
-    value: "Product Design ",
-    label: "Product Design",
+    id: 0,
+    value: "Product Design/Ui-Ux Design ",
+    label: "Product Design/Ui-Ux Design",
   },
   {
+    id: 1,
     value: "Product Management",
     label: "Product Management",
   },
   {
-    value: "Project Management",
-    label: "Project Management",
+    id: 2,
+    value: "Project Management/Product Management",
+    label: "Project Management/Product Management",
   },
+  { id: 3, value: "Scrum Master", label: "Scrum Master" },
+  { id: 4, value: "Data Scientist", label: "Data Scientist" },
+  { id: 5, value: "Data Analyst", label: "Data Analyst" },
+  { id: 6, value: "Data Entry", label: "Data Entry" },
+  { id: 7, value: "Virtual Assistant", label: "Virtual Assistant" },
+  { id: 8, value: "Graphic Design", label: "Graphic Design" },
+  { id: 9, value: "Frontend Developer", label: "Frontend Developer" },
+  { id: 10, value: "Backend Developer", label: "Backend Developer" },
+  { id: 11, value: "Fullstack Developer", label: "Fullstack Developer" },
+  { id: 12, value: "Web Developer", label: "Web Developer" },
+  { id: 13, value: "Wordpress Developer", label: "Wordpress Developer" },
   {
-    value: "Scrum Master",
-    label: "Scrum Master",
-  },
-  {
-    value: "Data Scientist",
-    label: "Data Scientist",
-  },
-  {
-    value: "Data Analyst",
-    label: "Data Analyst",
-  },
-  {
-    value: "Data Entry",
-    label: "Data Entry",
-  },
-  {
-    value: "Virtual Assistant",
-    label: "Virtual Assistant",
-  },
-  {
-    value: "Graphic Design",
-    label: "Graphic Design",
-  },
-  {
-    value: "Frontend Developer",
-    label: "Frontend Developer",
-  },
-  {
-    value: "Backend Developer",
-    label: "Backend Developer",
-  },
-  {
-    value: "Fullstack Developer",
-    label: "Fullstack Developer",
-  },
-  {
-    value: "Web Developer",
-    label: "Web Developer",
-  },
-  {
-    value: "Wordpress Developer",
-    label: "Wordpress Developer",
-  },
-  {
+    id: 14,
     value: "Mobile Developer",
     label: "Mobile Developer",
   },
-  {
-    value: "Digital Marketer",
-    label: "Digital Marketer",
-  },
-  {
-    value: "Cyber Security",
-    label: "Cyber Security",
-  },
-  {
-    value: "Software Engineer",
-    label: "Software Engineer",
-  },
+  { id: 15, value: "Digital Marketer", label: "Digital Marketer" },
+  { id: 16, value: "Cyber Security", label: "Cyber Security" },
+  { id: 17, value: "Software Engineer", label: "Software Engineer" },
 ];
 export {
   laptopOptions,

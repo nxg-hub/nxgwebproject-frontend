@@ -35,16 +35,14 @@ const Training = () => {
   const trainingInfo = useSelector(
     (state) => state.TrainingInformation.trainingInfo
   );
+  useEffect(() => {
+    //page to scroll to top unmount
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const loading = useSelector((state) => state.TrainingInformation.loading);
   const error = useSelector((state) => state.TrainingInformation.error);
   //getting the latest data by picking the last object in the array
   const latestInfo = trainingInfo[trainingInfo.length - 1];
-
-  useEffect(() => {
-    //page to scroll to top unmount and fetch data onMount
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(fetchTrainingInfo("/api/v1/get-all"));
-  }, []);
 
   return (
     <>
@@ -91,7 +89,10 @@ const Training = () => {
                       </p>
                     );
                   })}
-
+                  <p className="font-normal md:text-md">
+                    <span>&#8226;</span>
+                    Beginner (1 month)
+                  </p>
                   <p className="font-normal md:text-md">
                     <span>&#8226;</span>
                     Basic ({latestInfo?.basicDurationMonths} months)
@@ -121,6 +122,10 @@ const Training = () => {
                 </div>
                 <p className="font-bold md:text-md">
                   <span>&#8226;</span>
+                  {formatAmount(120000)} ( 1 month)
+                </p>
+                <p className="font-bold md:text-md">
+                  <span>&#8226;</span>
                   {formatAmount(latestInfo?.basicFee)} (
                   {latestInfo?.basicDurationMonths} months)
                 </p>
@@ -140,14 +145,14 @@ const Training = () => {
                     20% off
                   </span>
                 </p>
-                <p className="font-bold md:text-lg mt-5">
+                {/* <p className="font-bold md:text-lg mt-5">
                   Registration Fee: {formatAmount(latestInfo?.registrationFee)}
-                </p>
+                </p> */}
               </article>
             </div>
-            {/* <p className="font-bold md:text-lg">
-              Date:{formatDate(latestInfo?.commencementDate)}
-            </p> */}
+            <p className="font-bold md:text-lg">
+              Commencement Date:{formatDate(latestInfo?.commencementDate)}
+            </p>
           </div>
           <Footer />
         </section>
