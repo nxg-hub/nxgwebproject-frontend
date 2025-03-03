@@ -6,6 +6,7 @@ const initialState = {
   trainingInfo: [],
   loading: false,
   error: "",
+  success: false,
 };
 
 export const fetchTrainingInfo = createAsyncThunk(
@@ -39,11 +40,13 @@ const trainingInfo = createSlice({
         state.loading = false;
         state.error = null;
         state.trainingInfo = action.payload;
+        state.success = true;
       })
       .addCase(fetchTrainingInfo.rejected, (state, action) => {
         state.loading = false;
         state.error = true;
         state.trainingInfo = [];
+        state.success = false;
       });
   },
 });
