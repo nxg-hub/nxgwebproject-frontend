@@ -78,8 +78,8 @@ const techStacks = [
   },
   {
     id: 2,
-    value: "Project Management/Product Management",
-    label: "Project Management/Product Management",
+    value: "Project /Product Management",
+    label: "Project /Product Management",
   },
   { id: 3, value: "Scrum Master", label: "Scrum Master" },
   { id: 4, value: "Data Scientist", label: "Data Scientist" },
