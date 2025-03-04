@@ -38,13 +38,13 @@ const Training = () => {
   useEffect(() => {
     //page to scroll to top unmount
     window.scrollTo({ top: 0, behavior: "smooth" });
-    if (success) {
-      return;
-    }
+    // if (success) {
+    //   return;
+    // }
     dispatch(fetchTrainingInfo("/api/v1/get-all"));
   }, []);
   const loading = useSelector((state) => state?.TrainingInformation?.loading);
-  const success = useSelector((state) => state?.TrainingInformation?.success);
+  // const success = useSelector((state) => state?.TrainingInformation?.success);
   const error = useSelector((state) => state?.TrainingInformation?.error);
   //getting the latest data by picking the last object in the array
   const latestInfo = trainingInfo[trainingInfo?.length - 1];
@@ -106,9 +106,9 @@ const Training = () => {
                 </div>
               </article>
 
-              <div className="md:w-[40%] bg-secondary rounded-3xl py-3 px-3 ">
+              <div className="md:w-[40%]  py-3 px-3 ">
                 <img
-                  className=" object-contain rounded-full md:h-[400px] m-auto"
+                  className=" object-fill rounded-xl w-full md:h-[500px] m-auto"
                   src={latestInfo?.bannerUrl}
                   alt="hero"
                 />
@@ -139,7 +139,7 @@ const Training = () => {
                   (Installment payments allowed)
                 </p>
               </article>
-              <article>
+              {/* <article>
                 <p className="font-bold md:text-lg">
                   Note: First 50 persons
                   <span className="text-[#fff] md:text-md px-3 py-2 rounded-2xl ml-2 bg-secondary">
@@ -149,7 +149,7 @@ const Training = () => {
                 <p className="font-bold md:text-lg mt-5">
                   Registration Fee: {formatAmount(latestInfo?.registrationFee)}
                 </p>
-              </article>
+              </article> */}
             </div>
             <p className="font-bold md:text-lg">
               Commencement Date:{formatDate(latestInfo?.commencementDate)}
