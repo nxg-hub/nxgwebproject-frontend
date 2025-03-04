@@ -33,27 +33,28 @@ const Training = () => {
   const dispatch = useDispatch();
   //geting the data from redux store
   const trainingInfo = useSelector(
-    (state) => state.TrainingInformation.trainingInfo
+    (state) => state?.TrainingInformation?.trainingInfo
   );
   useEffect(() => {
     //page to scroll to top unmount
     window.scrollTo({ top: 0, behavior: "smooth" });
+    if (success) {
+      return;
+    }
+    dispatch(fetchTrainingInfo("/api/v1/get-all"));
   }, []);
-  const loading = useSelector((state) => state.TrainingInformation.loading);
-  const error = useSelector((state) => state.TrainingInformation.error);
+  const loading = useSelector((state) => state?.TrainingInformation?.loading);
+  const success = useSelector((state) => state?.TrainingInformation?.success);
+  const error = useSelector((state) => state?.TrainingInformation?.error);
   //getting the latest data by picking the last object in the array
-  const latestInfo = trainingInfo[trainingInfo.length - 1];
+  const latestInfo = trainingInfo[trainingInfo?.length - 1];
 
   return (
     <>
       <Header />
       {loading ? (
-        <div className="bg-[#000] ">
-          <img
-            className="w-[40%] md:w-[5%] h-[300px] absolute top-[200px]  right-[45%]  m-auto mt-[50px]"
-            src={loader}
-            alt="loader"
-          />
+        <div>
+          <img className="m-auto w-[50px] mt-[15%]" src={loader} alt="loader" />
         </div>
       ) : !loading && error ? (
         <h2 className="mt-10 text-center">
@@ -99,7 +100,7 @@ const Training = () => {
                   </p>
                   <p className="font-normal md:text-md">
                     <span>&#8226;</span>
-                    Basic + Advanced ({latestInfo?.advancedDurationMonths}{" "}
+                    Basic + Advanced ({latestInfo?.advancedDurationMonths}
                     months)
                   </p>
                 </div>
@@ -145,9 +146,9 @@ const Training = () => {
                     20% off
                   </span>
                 </p>
-                {/* <p className="font-bold md:text-lg mt-5">
+                <p className="font-bold md:text-lg mt-5">
                   Registration Fee: {formatAmount(latestInfo?.registrationFee)}
-                </p> */}
+                </p>
               </article>
             </div>
             <p className="font-bold md:text-lg">

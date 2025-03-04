@@ -53,8 +53,12 @@ const Home = () => {
       });
     }
   };
+  const success = useSelector((state) => state?.TrainingInformation?.success);
   useEffect(() => {
     //fetch data onMount
+    if (success) {
+      return;
+    }
     dispatch(fetchTrainingInfo("/api/v1/get-all"));
   }, []);
   const scrollToContactSection = () => {
