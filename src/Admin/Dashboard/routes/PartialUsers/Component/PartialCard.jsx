@@ -2,7 +2,7 @@ import React from "react";
 
 const PartialCard = ({ user }) => {
   return (
-    <div className="w-full  py-5 bg-secondary border-2 border-[#fff] shadow-lg shadow-[#a0a0a0] rounded-lg ">
+    <div className="w-[80%] m-auto  py-5 bg-secondary border-2 border-[#fff] shadow-lg shadow-[#a0a0a0] rounded-lg ">
       <article className="text-primary px-3 ">
         <h2 className="text-center  mt-3 ">
           Name:

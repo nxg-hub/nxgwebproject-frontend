@@ -109,7 +109,7 @@ const TrainingInfo = () => {
     }
   };
   return (
-    <div className="bg-[#2596BE20] w-[90%] md:w-[70%] !m-auto mt-5 rounded-lg py-5">
+    <div className="bg-[#2596BE20]  w-[90%] md:w-[70%] !m-auto mt-5 rounded-lg py-5">
       <h2 className="text-center font-bold md:text-lg">
         Upload Training Information.
       </h2>

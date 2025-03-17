@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ScholarshipCard = ({ user }) => {
   return (
-    <div className="w-full  h-[300px] border-2 border-[#fff] shadow-lg shadow-[#a0a0a0] rounded-lg ">
+    <div className="w-[80%] m-auto  h-[300px] border-2 border-[#fff] shadow-lg shadow-[#a0a0a0] rounded-lg ">
       <img
         className=" h-[100px] w-[100px] md:h-[120px] md:w-[120px] m-auto mt-3 rounded-full border "
         src={user.passportUrl}

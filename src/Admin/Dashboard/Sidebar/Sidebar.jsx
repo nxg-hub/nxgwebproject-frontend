@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../../assets/images/nxg-logo.png";
 
 const Sidebar = () => {
-  const [active, setActive] = useState(false);
-  const handleClick = () => {
-    setActive(!active);
-  };
+  const location = useLocation();
+  const currentRoute = location.pathname;
   const sideBarItems = [
     {
       path: "/admin/dashboard",
@@ -41,7 +39,11 @@ const Sidebar = () => {
               <li key={i} className="mb-2">
                 <Link
                   to={item.path}
-                  className={`text-white hover:bg-gray-700 block p-2 rounded`}>
+                  className={`text-white hover:bg-gray-700 ${
+                    currentRoute === item.path
+                      ? "bg-primary text-secondary "
+                      : ""
+                  } block p-2 rounded`}>
                   {item.name}
                 </Link>
               </li>
