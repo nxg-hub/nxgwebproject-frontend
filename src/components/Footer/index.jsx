@@ -10,7 +10,7 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
-import { address } from "../../utils/address";
+import { address, address2 } from "../../utils/address";
 import React from "react";
 
 const handleClickContact = (event) => {
@@ -51,6 +51,16 @@ const Footer = () => {
               <p className="w-[60%]">
                 <Link to={address} target="_blank">
                   1, Chris Okafor Street Isolo, Lagos, Nigeria.
+                </Link>
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex items-start">
+                <img src={Location} alt="logo" />
+              </div>
+              <p className="w-[60%]">
+                <Link to={address2} target="_blank">
+                  Annex Office: 22 Lagos-Abeokuta Expressway, Sango-Otta, Lagos.
                 </Link>
               </p>
             </div>
@@ -157,7 +167,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
-        <div className="absolute md:static top-[20rem] left-8 md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6">
+        <div className="absolute md:static top-[25rem] left-8 md:top-0 md:mt-16 mt-0 flex items-start w-[90%] gap-6">
           <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
             <Link to="https://twiiter.com/" target="_blank">
               <FaTwitter />
