@@ -25,7 +25,9 @@ function Ignite() {
             </div>
 
             <header className="hero-section">
-                <img src={logo} alt="IGNITE Logo" className="logo"/>
+                <a href="https://nextgenhub.com.ng">
+                    <img src={logo} alt="IGNITE Logo" className="logo"/>
+                </a>
                 <p1>IGNITE</p1>
                 <p1>Impact Global Network for Innovation, Transformation & Empowerment</p1>
                 <a href="https://your-typeform-link.com" target="_blank" rel="noreferrer" className="cta-button">
