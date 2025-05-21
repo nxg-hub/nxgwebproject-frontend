@@ -17,14 +17,15 @@ function Ignite() {
                         className="globe-icon"
                         fill="currentColor"
                     >
-                        <circle cx="32" cy="32" r="30" stroke="black" strokeWidth="2" fill="none" />
-                        <path d="M32 2 A30 30 0 0 1 32 62 A30 30 0 0 1 32 2" stroke="black" strokeWidth="2" fill="none" />
+                        <circle cx="32" cy="32" r="30" stroke="black" strokeWidth="2" fill="none"/>
+                        <path d="M32 2 A30 30 0 0 1 32 62 A30 30 0 0 1 32 2" stroke="black" strokeWidth="2"
+                              fill="none"/>
                     </svg>
                 </div>
             </div>
 
             <header className="hero-section">
-                <img src={logo} alt="IGNITE Logo" className="logo" />
+                <img src={logo} alt="IGNITE Logo" className="logo"/>
                 <p1>IGNITE</p1>
                 <p1>Impact Global Network for Innovation, Transformation & Empowerment</p1>
                 <a href="https://your-typeform-link.com" target="_blank" rel="noreferrer" className="cta-button">
@@ -34,7 +35,8 @@ function Ignite() {
 
             <section className="about-section">
                 <p1>About IGNITE</p1>
-                <p>IGNITE is an initiative of NXG-HUB Digital Technologies. We seek to build the largest community of agile tech-driven minds that will drive global transformation in diverse sectors.</p>
+                <p>IGNITE is an initiative of NXG-HUB Digital Technologies. We seek to build the largest community of
+                    agile tech-driven minds that will drive global transformation in diverse sectors.</p>
             </section>
 
             <section className="features-section">
@@ -53,7 +55,9 @@ function Ignite() {
             </section>
 
             <section className="banner-section">
-                <img src={banner} alt="Join the IGNITE Network" className="banner-img" />
+                <a href="https://nextgenhub.com.ng" target="_blank" rel="noreferrer">
+                    <img src={banner} alt="Join the IGNITE Network" className="banner-img"/>
+                </a>
             </section>
 
             <footer className="footer">
