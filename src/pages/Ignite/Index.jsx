@@ -9,13 +9,13 @@ function Ignite() {
     <div className="Index">
       <header className="hero-section">
         <img src={logo} alt="IGNITE Logo" className="logo" />
-        <h1>IGNITE</h1>
+        <p1>IGNITE</p1>
         <p1>Impact Global Network for Innovation, Transformation & Empowerment</p1>
         <a href="https://your-typeform-link.com" target="_blank" rel="noreferrer" className="cta-button">Join Now - Membership is FREE</a>
       </header>
 
       <section className="about-section">
-        <h2>About IGNITE</h2>
+        <p1>About IGNITE</p1>
         <p>IGNITE is an initiative of NXG-HUB Digital Technologies. We seek to build the largest community of agile tech-driven minds that will drive global transformation in diverse sectors.</p>
       </section>
 
