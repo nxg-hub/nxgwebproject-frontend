@@ -30,7 +30,7 @@ function Ignite() {
                 </a>
                 <p1>IGNITE</p1>
                 <p1>Impact Global Network for Innovation, Transformation & Empowerment</p1>
-                <a href="https://your-typeform-link.com" target="_blank" rel="noreferrer" className="cta-button">
+                <a href="https://tally.so/r/n95a9E" target="_blank" rel="noreferrer" className="cta-button">
                     Join Now - Membership is FREE
                 </a>
             </header>
@@ -57,7 +57,7 @@ function Ignite() {
             </section>
 
             <section className="banner-section">
-                <a href="https://nextgenhub.com.ng" target="_blank" rel="noreferrer">
+                <a href="https://tally.so/r/n95a9E" target="_blank" rel="noreferrer">
                     <img src={banner} alt="Join the IGNITE Network" className="banner-img"/>
                 </a>
             </section>
