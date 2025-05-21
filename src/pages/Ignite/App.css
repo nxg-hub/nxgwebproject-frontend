@@ -1,0 +1,109 @@
+
+.Index {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  background: #0a1a3c;
+  color: white;
+  padding: 60px 20px;
+}
+
+/*.logo {*/
+/*  width: 80px;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 80px;
+}
+
+h1 {
+  display: block;
+  font-size: 3em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+p1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  unicode-bidi: isolate;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.cta-button {
+  background: #1e90ff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: blink 1.5s infinite;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6);
+}
+
+.cta-button:hover {
+  animation: none; /* 👈 stops blinking */
+  transform: scale(1.05);
+  opacity: 1; /* ensure full visibility when blinking stops */
+}
+
+
+
+/*.cta-button {*/
+/*  background: #1e90ff;*/
+/*  color: white;*/
+/*  padding: 12px 24px;*/
+/*  text-decoration: none;*/
+/*  border-radius: 5px;*/
+/*  display: inline-block;*/
+/*  margin-top: 20px;*/
+/*}*/
+
+.about-section, .features-section {
+  padding: 20px 20px;
+}
+
+.feature-card {
+  margin: 20px auto;
+  max-width: 300px;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.footer {
+  background: #0a1a3c;
+  color: white;
+  padding: 20px;
+}

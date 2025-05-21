@@ -18,6 +18,7 @@ import ScholarshipSuccessful from "./pages/Scholarship/components/ScholarshipSuc
 import Scholarship from "./Admin/Dashboard/routes/Scholarship/Scholarship";
 import ScholarshipDetailCard from "./Admin/Dashboard/routes/Scholarship/components/ScholarshipDetailCard";
 import TrainingInfo from "./Admin/Dashboard/routes/TrainingInformation/TrainingInfo";
+import Ignite from "./pages/Ignite";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/training" element={<Training />} />
           <Route path="/form" element={<RegisterForm />} />
           <Route path="/scholarship" element={<ScholarshipForm />} />
+          <Route path="/ignite" element={<Ignite/>}/>
           <Route
             path="/applicationSuccessful"
             element={<SuccessfulApplication />}

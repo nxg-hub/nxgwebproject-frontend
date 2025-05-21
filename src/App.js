@@ -6,6 +6,8 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Career from './pages/Career';
 import Header from './components/Header/Header';
+import Index from "./pages/Ignite";
+import Ignite from "./pages/Ignite";
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/services" element={<Services/>}/>
       <Route path="/career" element={<Career/>}/>
+      <Route path="/ignite" element={<Ignite/>}/>
       
     </Routes>
     </div>
