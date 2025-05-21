@@ -18,7 +18,7 @@ import ScholarshipSuccessful from "./pages/Scholarship/components/ScholarshipSuc
 import Scholarship from "./Admin/Dashboard/routes/Scholarship/Scholarship";
 import ScholarshipDetailCard from "./Admin/Dashboard/routes/Scholarship/components/ScholarshipDetailCard";
 import TrainingInfo from "./Admin/Dashboard/routes/TrainingInformation/TrainingInfo";
-import Ignite from "./pages/Ignite";
+import Ignite from "./pages/Ignite/Index";
 
 function App() {
   return (
