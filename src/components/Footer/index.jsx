@@ -120,6 +120,9 @@ const Footer = () => {
                 <Link to="#">NXG-Job-Hub</Link>
               </p>
               <p>
+                <Link to="/ignite">IGNITE</Link>
+              </p>
+              <p>
                 <Link to="/career">Career</Link>
               </p>
               <p>
