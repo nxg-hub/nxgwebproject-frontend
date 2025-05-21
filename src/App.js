@@ -6,8 +6,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Career from './pages/Career';
 import Header from './components/Header/Header';
-import Index from "./pages/Ignite";
-import Ignite from "./pages/Ignite";
+import Ignite from "./pages/Ignite/Index";
 
 
 function App() {
