@@ -62,6 +62,23 @@ function Ignite() {
                 </a>
             </section>
 
+            <section className="whatsapp-section">
+                <a
+                    href="https://chat.whatsapp.com/FMra9l7PHx2Lgz6oj4GN4w"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="whatsapp-link"
+                >
+                    <img
+                        src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+                        alt="Join WhatsApp Group"
+                        className="whatsapp-icon blink"
+                    />
+                    <span className="join-text">Join our WhatsApp Group</span>
+                </a>
+            </section>
+
+
             <footer className="footer">
                 <p>&copy; {new Date().getFullYear()} IGNITE by NXG-HUB Digital Technologies LTD</p>
             </footer>

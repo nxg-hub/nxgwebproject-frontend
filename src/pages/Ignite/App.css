@@ -170,3 +170,34 @@ p2 {
   stroke: currentColor;
 }
 
+.whatsapp-section {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #25D366;
+}
+
+.whatsapp-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
