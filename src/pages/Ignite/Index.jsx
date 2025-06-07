@@ -1,10 +1,21 @@
 // Ignite.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import './App.css';
 import logo from './assets/logo.png';
 import banner from './assets/banner.png';
 
 function Ignite() {
+
+    const [showPopup, setShowPopup] = useState(false);
+
+    useEffect(() => {
+        const referrer = document.referrer;
+        if (referrer.includes('https://tally.so/r/n95a9E')) {
+            setShowPopup(true);
+        }
+    }, []);
+
     return (
         <div className="Index">
 
@@ -64,7 +75,7 @@ function Ignite() {
 
             <section className="whatsapp-section">
                 <a
-                    href="https://chat.whatsapp.com/FMra9l7PHx2Lgz6oj4GN4w"
+                    href="https://chat.whatsapp.com/I1N1UyuFePQ5A5fUyJ9CPq"
                     target="_blank"
                     rel="noreferrer"
                     className="whatsapp-link"
@@ -74,11 +85,32 @@ function Ignite() {
                         alt="Join WhatsApp Group"
                         className="whatsapp-icon blink"
                     />
-                    <span className="join-text">Join our WhatsApp Group</span>
+                    <span className="join-text">Join our WhatsApp Community</span>
                 </a>
             </section>
 
+            {showPopup && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <h3>🎉 Your registration is completed!</h3>
+                        <p>You&#39;re officially on the path to global impact. Thank you for joining IGNITE!</p>
+                        <p>Stay tuned for your welcome email and upcoming opportunities.</p>
+                        <p>
+                            👉 You can also join our WhatsApp Community here:<br />
+                            <a
+                                href="https://chat.whatsapp.com/I1N1UyuFePQ5A5fUyJ9CPq"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                https://chat.whatsapp.com/I1N1UyuFePQ5A5fUyJ9CPq
+                            </a>
+                        </p>
+                        <button onClick={() => setShowPopup(false)} className="popup-close">Close</button>
+                    </div>
+                </div>
+            )}
 
+            
             <footer className="footer">
                 <p>&copy; {new Date().getFullYear()} IGNITE by NXG-HUB Digital Technologies LTD</p>
             </footer>
