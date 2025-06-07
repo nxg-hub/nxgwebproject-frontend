@@ -23,7 +23,7 @@ function Ignite() {
         const queryParams = new URLSearchParams(location.search);
         if (queryParams.get('source') === 'tally') {
             setShowPopup(true);
-            setTimeout(() => setShowPopup(false), 10000); // Auto close after 10s
+            setTimeout(() => setShowPopup(false), 20000); // Auto close after 10s
         }
     }, [location.search]);
 
