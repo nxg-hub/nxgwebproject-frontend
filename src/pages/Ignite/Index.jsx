@@ -4,17 +4,28 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import logo from './assets/logo.png';
 import banner from './assets/banner.png';
+import {useLocation} from "react-router-dom";
 
 function Ignite() {
 
+    // const [showPopup, setShowPopup] = useState(false);
+    //
+    // useEffect(() => {
+    //     const referrer = document.referrer;
+    //     if (referrer.includes('https://tally.so/r/n95a9E')) {
+    //         setShowPopup(true);
+    //     }
+    // }, []);
+    const location = useLocation();
     const [showPopup, setShowPopup] = useState(false);
 
     useEffect(() => {
-        const referrer = document.referrer;
-        if (referrer.includes('https://tally.so/r/n95a9E')) {
+        const queryParams = new URLSearchParams(location.search);
+        if (queryParams.get('source') === 'tally') {
             setShowPopup(true);
+            setTimeout(() => setShowPopup(false), 10000); // Auto close after 10s
         }
-    }, []);
+    }, [location.search]);
 
     return (
         <div className="Index">
