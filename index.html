@@ -1,49 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/images/nxg-logo.png" />
+    <link rel="icon" type="image" href="/src/assets/images/nxg-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="google-site-verification" content="31wm2AeAmW7UtKUo5KuHWqpUQ8J8kaur7_8JkQOymUY" />
+    <meta
+      name="google-site-verification"
+      content="31wm2AeAmW7UtKUo5KuHWqpUQ8J8kaur7_8JkQOymUY" />
     <title>NXG-Hub Digital Technologies</title>
   </head>
   <body>
-  <!-- A little help for the Netlify post-processing bots -->
-  <form name='contact-form' netlify netlify-honeypot="bot-field" hidden>
-      <input  type="text" name='name' />
+    <!-- A little help for the Netlify post-processing bots -->
+    <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
 
-      <input  type="number" name='contact_number' />
+      <input type="number" name="contact_number" />
 
-      <input  type="email" name='email' />
+      <input type="email" name="email" />
 
       <textarea name="messages"></textarea>
+    </form>
 
-  </form>
+    <form
+      name="career-form"
+      enctype="multipart/form-data"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden>
+      <input type="text" name="applicant_name" />
 
-  <form name='career-form' enctype="multipart/form-data" netlify netlify-honeypot="bot-field" hidden>
-      <input  type="text" name='applicant_name' />
+      <input type="number" name="applicant_phone_number" />
 
-      <input  type="number" name='applicant_phone_number' />
+      <input type="email" name="applicant_email" />
 
-      <input  type="email" name='applicant_email' />
-
-      <input  type="number" name='applicant_yoe' />
+      <input type="number" name="applicant_yoe" />
 
       <textarea name="applicant_message"></textarea>
 
-      <input  type="text" name='post' />
+      <input type="text" name="post" />
 
-      <input  type="file" name='applicant_cv' />
+      <input type="file" name="applicant_cv" />
+    </form>
 
-  </form>
-
-  <form name='mail_subscription' netlify netlify-honeypot="bot-field" hidden>
-
+    <form name="mail_subscription" netlify netlify-honeypot="bot-field" hidden>
       <input type="email" name="email" required />
-  </form>
+    </form>
 
-
-  <div id="root"></div>
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
