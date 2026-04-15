@@ -1,0 +1,237 @@
+
+.Index {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  background: #0a1a3c;
+  color: white;
+  padding: 60px 20px;
+}
+
+/*.logo {*/
+/*  width: 80px;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 80px;
+}
+
+h1 {
+  display: block;
+  font-size: 3em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h1, h2, h3, h4, h5, h6{
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+p1 {
+  font-size: 3em;
+}
+
+p2 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  unicode-bidi: isolate;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.cta-button {
+  background: #1e90ff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: blink 1.5s infinite;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.6);
+}
+
+.cta-button:hover {
+  animation: none; /* 👈 stops blinking */
+  transform: scale(1.05);
+  opacity: 1; /* ensure full visibility when blinking stops */
+}
+
+
+
+/*.cta-button {*/
+/*  background: #1e90ff;*/
+/*  color: white;*/
+/*  padding: 12px 24px;*/
+/*  text-decoration: none;*/
+/*  border-radius: 5px;*/
+/*  display: inline-block;*/
+/*  margin-top: 20px;*/
+/*}*/
+
+.about-section, .features-section {
+  padding: 20px 20px;
+}
+
+.feature-card {
+  margin: 20px auto;
+  font-weight: bold;
+  max-width: 300px;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.feature-card h3{
+  font-weight: bold;
+}
+
+.feature-card p{
+  font-weight: normal;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.footer {
+  background: #0a1a3c;
+  color: white;
+  padding: 20px;
+}
+
+.background-globe-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.background-globe {
+  width: 100%;
+  height: 100%;
+  filter: blur(12px);
+  opacity: 0.15;
+  will-change: transform;
+  animation: spiralRotate 20s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes spiralRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Optional: make globe icon stroke blue */
+.globe-icon {
+  color: #0077ff;
+  stroke: currentColor;
+}
+
+.whatsapp-section {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #25D366;
+}
+
+.whatsapp-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+  margin-top: 1rem;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
+

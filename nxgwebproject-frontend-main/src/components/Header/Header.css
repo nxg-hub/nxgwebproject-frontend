@@ -1,0 +1,107 @@
+/* Platforms container */
+.platforms {
+  gap: 2rem;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.nav-list {
+  background-color: #2596be;
+  text-align: center;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Navigation links */
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0px 14px;
+  white-space: nowrap;
+  transition: transform 300ms ease-out;
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+/* Active navigation link */
+.nav_item .active {
+  color: #2596be;
+  background: white;
+  border-radius: 2.5rem;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0px 14px;
+  transition: transform 300ms ease-out;
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+/* Nav underline effect */
+.nav_underline {
+  position: relative;
+}
+
+.nav_underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.3rem;
+  width: 50%;
+  height: 0.1em;
+  background-color: #2596BE;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav_underline:hover::after,
+.nav_underline:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+/* Backdrop overlay */
+.backdrop {
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+}
+
+.backdrop.active {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 21rem;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  background-color: #4d4d4d;
+  transform: translateX(21rem);
+  transition: 0.3s ease-out;
+  overflow: hidden;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+  z-index: 100;
+}
