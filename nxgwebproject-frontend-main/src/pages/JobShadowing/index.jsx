@@ -50,12 +50,12 @@ const testimonials = [
     track: "Frontend Development",
     body: "My internship experience at NXG Hub was really helpful for my growth as a frontend developer. It gave me the chance to work in a practical environment, improve my skills, and understand better how real projects are handled. During the internship, I learned a lot about building user interfaces, writing better code, and paying attention to details while working on tasks. I also appreciated the support and guidance I received, which made learning easier and encouraged me to keep improving.",
   },
-  {
-    name: "Onyinye Okugo",
-    role: "Product Management Intern",
-    track: "Product Management",
-    body: "First of all, big shout out to the management of NXG Hub Digital Technologies for the internship programme. The NXG internship programme is structured in a way that allows one to actually practise what they've learned. You are not just learning theory; you are already practicing in a real work environment. You experience what it really feels like to work in your field, solve problems, collaborate with people, and deliver results. Because nobody spoon-feeds you, you are forced to think, learn, and grow on your own, and that makes the learning stick. When you leave the internship, you are actually ready to work. When you enter the job market, you are not scared or confused, but prepared and confident because you have already worked in a real environment and understand how things work. The internship was pivotal to my journey in Product Management, and I will be forever grateful for the opportunity. A few months after my internship, I got a job in a fintech company, and I can confidently say that the internship played a huge role in preparing me for that opportunity. Special thanks to Mr. Joseph for his leadership, encouragement, and for creating such an opportunity for people like me to grow. If you are looking for an internship programme that delivers real value, NXG Hub is the best place to be.",
-  },
+{
+  name: "Onyinye Okugo",
+  role: "Product Management Intern",
+  track: "Product Management",
+  body: "My internship experience at NXG Hub was truly transformative for my journey in Product Management. The programme is structured around real practice, not just theory — you solve actual problems, collaborate with others, and deliver results. The hands-on environment pushed me to think independently and grow fast. A few months after completing the internship, I landed a role at a fintech company, and I credit NXG Hub for preparing me for that opportunity. Special thanks to Mr. Joseph for his leadership and encouragement.",
+},
   {
     name: "Jubril Bucknor",
     role: "Software Engineering Intern",
