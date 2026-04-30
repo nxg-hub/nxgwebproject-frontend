@@ -10,6 +10,7 @@ import {
 } from "../../components/Carousel";
 import "./JobShadowing.css";
 
+
 const companies = [
   { name: "Tony Elumelu Foundation", logo: "/jobshadowing/logos/tef-social-banner.jpg" },
   { name: "Nomba", logo: "/jobshadowing/logos/nomba.png" },
