@@ -47,19 +47,19 @@ const benefits = [
 const testimonials = [
   {
     name: "Queen Samuel",
-    role: "Frontend Developer Intern",
+    role: "Frontend Developer ",
     track: "Frontend Development",
     body: "My internship experience at NXG Hub was really helpful for my growth as a frontend developer. It gave me the chance to work in a practical environment, improve my skills, and understand better how real projects are handled. During the internship, I learned a lot about building user interfaces, writing better code, and paying attention to details while working on tasks. I also appreciated the support and guidance I received, which made learning easier and encouraged me to keep improving.",
   },
 {
   name: "Onyinye Okugo",
-  role: "Product Management Intern",
+  role: "Product Managemen",
   track: "Product Management",
   body: "My internship experience at NXG Hub was truly transformative for my journey in Product Management. The programme is structured around real practice, not just theory — you solve actual problems, collaborate with others, and deliver results. The hands-on environment pushed me to think independently and grow fast. A few months after completing the internship, I landed a role at a fintech company, and I credit NXG Hub for preparing me for that opportunity. Special thanks to Mr. Joseph for his leadership and encouragement.",
 },
   {
     name: "Jubril Bucknor",
-    role: "Software Engineering Intern",
+    role: "Software Engineerin",
     track: "Software Engineering",
     body: "My experience at NXG-Hub was very valuable to my early career. It was my first real professional experience in tech, and it helped me understand how a real development team works. During my time there, I had the opportunity to work with a great team and contribute to the delivery of two products. The environment was very supportive, and the senior engineers were always willing to help and guide us whenever we were stuck, especially Mr. Joe. Overall, it was a great learning experience.",
   },

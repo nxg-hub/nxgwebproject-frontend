@@ -84,54 +84,41 @@ function EbooksPage() {
               <h2>Get access to all ebooks</h2>
 
               <p>
-                Open the quick form, submit your details, and unlock the full
+                Click any guide, fill the quick form, and unlock the full
                 resource library instantly.
               </p>
 
               <ul>
-                <li>Open the form in a new tab</li>
+                <li>Choose a guide</li>
                 <li>Enter your details</li>
                 <li>Get instant access to all guides</li>
               </ul>
             </div>
 
-            <div className="ebooks-form">
-              <h3>Unlock Resources</h3>
-
-              <p className="ebooks-form-desc">
-                Takes less than a minute. Fill the form to access all guides.
-              </p>
-
-              <a
-                href="https://forms.gle/8rucS7Dvsjg84jGEA"
-                className="ebooks-form-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Fill the Form →
-              </a>
-            </div>
           </div>
 
           {/* EBOOK LIST */}
           <div className="ebooks-grid">
-            {EBOOKS.map((book, index) => (
-              <article
-                key={book.id}
-                className="ebook-card ebooks-reveal"
-                style={{ transitionDelay: `${index * 0.1}s` }}
-              >
-                <div className="ebook-card-head">
-                  <span>{book.category}</span>
-                  <h3>{book.title}</h3>
-                  <p>{book.subtitle}</p>
-                </div>
+            {EBOOKS.map((book, index) => {
+              return (
+                <Link
+                  key={book.id}
+                  to="/jobshadowing/ebooks/form"
+                  className="ebook-card ebook-card-link ebooks-reveal"
+                  style={{ transitionDelay: `${index * 0.1}s` }}
+                >
+                  <div className="ebook-card-head">
+                    <span>{book.category}</span>
+                    <h3>{book.title}</h3>
+                    <p>{book.subtitle}</p>
+                  </div>
 
-                <div className="ebook-card-body">
-                  <p>{book.description}</p>
-                </div>
-              </article>
-            ))}
+                  <div className="ebook-card-body">
+                    <p>{book.description}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
         </section>
