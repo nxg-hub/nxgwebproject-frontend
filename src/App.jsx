@@ -5,6 +5,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Career from "./pages/Career";
 import Training from "./pages/Training";
+import JobShadowing from  "./pages/JobShadowing";
+import EbooksPage from  "./pages/JobShadowing/ebooks";
 import SuccessfulApplication from "./pages/Form/components/SuccessfulApplication";
 import RegisterForm from "./pages/Form";
 import Login from "./Admin/Login/Index";
@@ -30,6 +32,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/career" element={<Career />} />
           <Route path="/training" element={<Training />} />
+          <Route path="/jobshadowing" element={<JobShadowing />} />
+          <Route path="/jobshadowing/ebooks" element={<EbooksPage />} />
           <Route path="/form" element={<RegisterForm />} />
           <Route path="/scholarship" element={<ScholarshipForm />} />
           <Route path="/ignite" element={<Ignite/>}/>
