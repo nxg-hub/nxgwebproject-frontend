@@ -1,0 +1,775 @@
+/* ── Page Shell ───────────────────────────────── */
+.jobshadowing-page {
+  --js-bg: #f8fafc;
+  --js-white: #ffffff;
+  --js-ink: #1e293b;
+  --js-ink-soft: #475569;
+  --js-blue: #2596BE;
+  --js-blue-soft: #d9eef5;
+  --js-cream: #f8f4ee;
+  --js-dark: #1e1a16;
+  background: linear-gradient(180deg, #f0f9fc 0%, #f8fafc 100%);
+  color: var(--js-ink);
+}
+
+/* ── Shared Containers ────────────────────────── */
+.jobshadowing-hero-inner,
+.jobshadowing-about,
+.jobshadowing-roadmap,
+.jobshadowing-companies {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* ── Eyebrow — two variants ───────────────────── */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(37, 150, 190, 0.08);
+  color: var(--js-blue);
+  margin-bottom: 18px;
+}
+
+.section-eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2596BE;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-eyebrow-line::before {
+  content: '';
+  width: 28px;
+  height: 1.5px;
+  background: #2596BE;
+  flex-shrink: 0;
+}
+
+/* ── Hero ─────────────────────────────────────── */
+.jobshadowing-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 110px 24px 96px;
+}
+
+.jobshadowing-hero-inner {
+  text-align: center;
+  max-width: 860px;
+}
+
+.jobshadowing-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.jobshadowing-hero h1,
+.jobshadowing-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.05;
+}
+
+.jobshadowing-hero h1 {
+  color: #fff;
+  font-size: clamp(2.9rem, 6vw, 5.8rem);
+  margin: 0 0 22px;
+}
+
+.jobshadowing-hero h1 em,
+.jobshadowing-page h2 em {
+  color: #9dd5e6;
+  font-style: italic;
+}
+
+.jobshadowing-hero p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 34px;
+}
+
+.jobshadowing-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── Buttons ──────────────────────────────────── */
+.jobshadowing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: 15px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.jobshadowing-btn:hover { transform: translateY(-2px); }
+.jobshadowing-btn.primary { background: var(--js-blue); color: #fff; }
+.jobshadowing-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  color: #fff;
+}
+.jobshadowing-btn.wide {
+  width: 100%;
+  border-radius: 14px;
+  margin-top: 18px;
+  min-width: unset;
+  background: #2596BE;
+  font-size: 1rem;
+  padding: 16px 28px;
+}
+.jobshadowing-btn.wide:hover {
+  background: #1e7da0;
+}
+
+/* ── Strip ────────────────────────────────────── */
+.jobshadowing-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(37, 150, 190, 0.08);
+  margin: 0 auto;
+  width: min(1180px, 92%);
+  transform: translateY(-26px);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(37, 150, 190, 0.08);
+}
+
+.jobshadowing-strip div {
+  background: #fff;
+  padding: 22px 20px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--js-ink);
+}
+
+/* ── About ────────────────────────────────────── */
+.jobshadowing-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 42px 0 84px;
+}
+
+.jobshadowing-page h2 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  margin: 0 0 18px;
+  color: var(--js-dark);
+}
+
+.jobshadowing-copy p,
+.roadmap-left p,
+.timeline-step p {
+  color: var(--js-ink-soft);
+  line-height: 1.8;
+}
+
+.jobshadowing-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.benefit-card {
+  background: var(--js-cream);
+  border: 1px solid rgba(37, 150, 190, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.benefit-card.dark { background: #1f2937; }
+
+.benefit-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: var(--js-dark);
+}
+
+.benefit-card.dark h3,
+.benefit-card.dark p { color: #f8fafc; }
+
+/* ── Testimonials ─────────────────────────────── */
+.jobshadowing-testimonials {
+  width: 100%;
+  background: #1E1A16;
+  padding: 84px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.jobshadowing-testimonials::before {
+  content: '\201C';
+  position: absolute;
+  top: 10px;
+  left: calc((100% - min(1180px, 92%)) / 2 + 20px);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14rem;
+  line-height: 1;
+  color: rgba(37, 150, 190, 0.07);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.jobshadowing-testimonials-wrap {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.jobshadowing-testimonials h2 {
+  color: #F5EFE6;
+  margin-bottom: 48px;
+}
+
+.jobshadowing-testimonials h2 em {
+  color: #2596BE;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Testimonial card base ── */
+.testimonial-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 239, 230, 0.08);
+  background: rgba(245, 239, 230, 0.04);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+/* ── Shine sweep ── */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.04) 38%,
+    rgba(255, 255, 255, 0.10) 50%,
+    rgba(255, 255, 255, 0.04) 62%,
+    transparent 80%
+  );
+  transform: skewX(-18deg);
+  animation: card-shine 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.testimonial-card:nth-child(1)::after { animation-delay: 0s; }
+.testimonial-card:nth-child(2)::after { animation-delay: 1.6s; }
+.testimonial-card:nth-child(3)::after { animation-delay: 3.2s; }
+
+.testimonial-card.featured::after {
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(37, 150, 190, 0.06) 38%,
+    rgba(37, 150, 190, 0.18) 50%,
+    rgba(37, 150, 190, 0.06) 62%,
+    transparent 80%
+  );
+}
+
+@keyframes card-shine {
+  0%   { left: -140%; }
+  45%  { left: 160%; }
+  100% { left: 160%; }
+}
+
+.testimonial-card.ts-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-card.ts-visible:hover {
+  background: rgba(245, 239, 230, 0.09);
+  transform: translateY(-6px);
+  border-color: rgba(37, 150, 190, 0.35);
+}
+
+.testimonial-card.featured {
+  border-color: #2596BE;
+  background: rgba(37, 150, 190, 0.1);
+}
+
+.testimonial-card.featured.ts-visible:hover {
+  background: rgba(37, 150, 190, 0.16);
+}
+
+/* ── Featured badge ── */
+.featured-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #2596BE;
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+/* ── Track pill ── */
+.testimonial-track {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(37, 150, 190, 0.12);
+  border: 1px solid rgba(37, 150, 190, 0.25);
+  color: #9dd5e6;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  width: fit-content;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Stars ── */
+.ts-stars {
+  color: #D4A843;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Body copy ── */
+.testimonial-card p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.12rem;
+  font-style: italic;
+  color: rgba(245, 239, 230, 0.88);
+  line-height: 1.65;
+  margin: 0;
+  padding-bottom: 24px;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Person row ── */
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(245, 239, 230, 0.1);
+  position: relative;
+  z-index: 3;
+}
+
+.ts-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2596BE, #1e7da0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.testimonial-person strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #F5EFE6;
+  line-height: 1.2;
+}
+
+.testimonial-person span {
+  display: block;
+  font-size: 0.74rem;
+  color: rgba(245, 239, 230, 0.42);
+  margin-top: 2px;
+}
+
+/* ── Companies ────────────────────────────────── */
+.jobshadowing-companies {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  text-align: center;
+}
+
+.jobshadowing-companies .section-eyebrow {
+  display: inline-flex;
+  margin-bottom: 40px;
+}
+
+.company-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.company-card {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+}
+
+.company-card img {
+  width: 100%;
+  height: 92px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* ── CTA ──────────────────────────────────────── */
+.jobshadowing-cta {
+  text-align: center;
+  padding: 84px 24px 48px;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.jobshadowing-cta .section-eyebrow-line {
+  justify-content: center;
+}
+
+.jobshadowing-cta .section-eyebrow-line::before {
+  display: none;
+}
+
+.jobshadowing-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: var(--js-dark);
+  margin-bottom: 18px;
+}
+
+.jobshadowing-cta p {
+  color: var(--js-ink-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+/* ── Roadmap ──────────────────────────────────── */
+.jobshadowing-roadmap { padding-bottom: 84px; }
+
+.jobshadowing-roadmap-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0f172a;
+  color: #fff;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
+}
+
+.roadmap-left,
+.roadmap-right { padding: 42px; }
+
+.roadmap-left { border-right: 1px solid rgba(255, 255, 255, 0.08); }
+
+.roadmap-left h2,
+.roadmap-right h3,
+.timeline-step h4 { color: #fff; }
+
+/* ── Stats ── */
+.roadmap-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 28px 0;
+}
+
+.roadmap-stats div {
+  background: rgba(255, 255, 255, 0.06);
+  text-align: center;
+  padding: 20px 14px;
+  transition: background 0.3s ease;
+}
+
+.roadmap-stats div:hover {
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.roadmap-stats strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  color: #fff;
+  animation: count-in 0.6s ease both;
+}
+
+.roadmap-stats div:nth-child(1) strong { animation-delay: 0.1s; }
+.roadmap-stats div:nth-child(2) strong { animation-delay: 0.25s; }
+.roadmap-stats div:nth-child(3) strong { animation-delay: 0.4s; }
+
+@keyframes count-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.roadmap-stats span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.roadmap-pricing p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.84rem;
+}
+
+.roadmap-pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  background: rgba(37, 150, 190, 0.14);
+  border: 1px solid rgba(157, 213, 230, 0.24);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.roadmap-pricing small {
+  display: block;
+  color: #c4e8f4;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+}
+
+.roadmap-pricing h3,
+.roadmap-right h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ── Timeline steps — staggered slide-in ── */
+.timeline-step {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: start;
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.jobshadowing-roadmap-card.visible .timeline-step:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.15s;
+}
+.jobshadowing-roadmap-card.visible .timeline-step:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.jobshadowing-roadmap-card.visible .timeline-step:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.45s;
+}
+
+/* ── Number circle — ambient pulse ── */
+.timeline-step span {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(217, 158, 61, 0.15);
+  border: 1.5px solid rgba(217, 158, 61, 0.55);
+  color: #D99E3D;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  animation: circle-pulse 3s ease-in-out infinite;
+}
+
+.timeline-step:nth-child(1) span { animation-delay: 0s; }
+.timeline-step:nth-child(2) span { animation-delay: 1s; }
+.timeline-step:nth-child(3) span { animation-delay: 2s; }
+
+@keyframes circle-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(217, 158, 61, 0); }
+  50%       { box-shadow: 0 0 0 6px rgba(217, 158, 61, 0.12); }
+}
+
+/* ── Month label above step title ── */
+.timeline-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2596BE;
+  margin-bottom: 4px;
+}
+
+.timeline-step h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.timeline-step p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+
+/* ── Perks list — fade-up on reveal ── */
+.roadmap-perks {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roadmap-perks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.jobshadowing-roadmap-card.visible .roadmap-perks li:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+.jobshadowing-roadmap-card.visible .roadmap-perks li:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.75s;
+}
+
+.roadmap-perks li::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: rgba(37, 150, 190, 0.2);
+  border: 1.5px solid #2596BE;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 6l2.5 2.5 4.5-4.5' stroke='%232596BE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+}
+
+/* ── Reveal animation ─────────────────────────── */
+.jobshadowing-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.jobshadowing-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 900px) {
+  .jobshadowing-about,
+  .jobshadowing-roadmap-card,
+  .testimonial-grid,
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobshadowing-strip { grid-template-columns: 1fr 1fr; }
+  .jobshadowing-benefits { grid-template-columns: 1fr; }
+
+  .roadmap-left {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 640px) {
+  .jobshadowing-hero { padding: 84px 18px 76px; }
+
+  .jobshadowing-strip {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-left,
+  .roadmap-right { padding: 28px 22px; }
+
+  .roadmap-pricing,
+  .roadmap-stats { grid-template-columns: 1fr; }
+}
