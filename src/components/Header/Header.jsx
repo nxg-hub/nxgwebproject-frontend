@@ -42,19 +42,16 @@ const Header = () => {
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
       // If the mobile menu is open and clicked target is not within the menu
-      if (open && ref.current && !ref.current.contains(e.target)) {
-        // close the menu
+      if (showSidebar && ref.current && !ref.current.contains(e.target)) {
         setShowSidebar(false);
       }
     };
-    // Listen to click outside the target and execute function
     document.addEventListener("mousedown", checkIfClickedOutside);
 
     return () => {
-      // Cleanup the event listener
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
-  }, [open]);
+  }, [showSidebar]);
 
   useEffect(() => {
     // close mobile menu on location change
@@ -83,9 +80,9 @@ const Header = () => {
               </NavLink>
             </div>
 
-            <div className="nav-list w-full between h-full px-[0.40rem] rounded-[4rem] sm:hidden lg:flex gap-[8rem]">
+            <div className="nav-list w-full between h-full px-[0.40rem] rounded-[4rem] sm:hidden lg:flex gap-[0.8rem]">
               <ul
-                className={`nav-menu h-full between ${
+                className={`nav-menu h-full ${
                   active ? "active center" : ""
                 }`}
               >
@@ -110,6 +107,11 @@ const Header = () => {
                 <li className="nav_item h-full center">
                   <NavLink exact to="/career" className="nav-links">
                     Career
+                  </NavLink>
+                </li>
+                <li className="nav_item h-full center">
+                  <NavLink exact to="/jobshadowing" className="nav-links">
+                    Job Shadowing
                   </NavLink>
                 </li>
               </ul>
@@ -202,6 +204,16 @@ const Header = () => {
                 className="nav-links relative nav_underline"
               >
                 Careers
+              </NavLink>
+            </li>
+
+            <li className="w-full border-b border-[#b2b2b2] py-2">
+              <NavLink
+                exact
+                to="/jobshadowing"
+                className="nav-links relative nav_underline"
+              >
+                Job Shadowing
               </NavLink>
             </li>
 

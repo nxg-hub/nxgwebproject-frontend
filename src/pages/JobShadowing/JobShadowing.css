@@ -455,7 +455,41 @@
   margin-bottom: 40px;
 }
 
-.company-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* ── Marquee ── */
+.marquee-track {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.marquee-inner {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover .marquee-inner {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 .company-card {
   background: #fff;
@@ -464,6 +498,8 @@
   padding: 18px;
   text-align: center;
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+  min-width: 180px;
+  flex-shrink: 0;
 }
 
 .company-card img {
@@ -471,6 +507,13 @@
   height: 92px;
   object-fit: contain;
   margin-bottom: 12px;
+}
+
+.company-card span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--js-ink-soft);
 }
 
 /* ── CTA ──────────────────────────────────────── */
@@ -572,11 +615,7 @@
   text-transform: uppercase;
 }
 
-.roadmap-pricing p {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.84rem;
-}
-
+/* ── Pricing ── */
 .roadmap-pricing {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -595,6 +634,11 @@
   font-weight: 700;
   font-size: 0.7rem;
   margin-bottom: 10px;
+}
+
+.roadmap-pricing p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.84rem;
 }
 
 .roadmap-pricing h3,
@@ -745,8 +789,7 @@
 @media (max-width: 900px) {
   .jobshadowing-about,
   .jobshadowing-roadmap-card,
-  .testimonial-grid,
-  .company-grid {
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
@@ -772,4 +815,6 @@
 
   .roadmap-pricing,
   .roadmap-stats { grid-template-columns: 1fr; }
+
+  .company-card { min-width: 140px; }
 }
