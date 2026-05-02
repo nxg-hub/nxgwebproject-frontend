@@ -88,10 +88,21 @@ function EbooksPage() {
                 resource library instantly.
               </p>
 
-              <ul>
-                <li>Choose a guide</li>
-                <li>Enter your details</li>
-                <li>Get instant access to all guides</li>
+              <p className="ebooks-click-note">
+                Click any ebook below to open the form.
+              </p>
+
+              <ul className="ebooks-access-steps">
+                <li>
+                  <span>Choose a guide</span>
+                </li>
+                <li>
+                  <span>Enter your details</span>
+                </li>
+                <li className="is-arrow-step">
+                  <span>Get instant access to all guides</span>
+                  <span className="ebooks-step-arrow" aria-hidden="true"></span>
+                </li>
               </ul>
             </div>
 
@@ -115,6 +126,10 @@ function EbooksPage() {
 
                   <div className="ebook-card-body">
                     <p>{book.description}</p>
+                  </div>
+
+                  <div className="ebook-card-cta">
+                    Click this ebook to fill the form
                   </div>
                 </Link>
               );

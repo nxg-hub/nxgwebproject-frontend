@@ -115,6 +115,8 @@ function TestimonialCard({ item, index }) {
 }
 
 function JobShadowing() {
+  const [activeHeroAction, setActiveHeroAction] = useState("resources");
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -181,16 +183,36 @@ function JobShadowing() {
               mentors, and real work rhythms.
             </p>
 
-            <div className="jobshadowing-actions">
-              <Link to="/jobshadowing/ebooks" className="jobshadowing-btn primary">
+            <div
+              className={`jobshadowing-actions ${
+                activeHeroAction === "apply" ? "is-apply-active" : ""
+              }`}
+              onMouseLeave={() => setActiveHeroAction("resources")}
+            >
+              <Link
+                to="/jobshadowing/ebooks"
+                className={`jobshadowing-btn hero-action-btn ${
+                  activeHeroAction === "resources" ? "is-active" : ""
+                }`}
+                onMouseEnter={() => setActiveHeroAction("resources")}
+                onFocus={() => setActiveHeroAction("resources")}
+                onTouchStart={() => setActiveHeroAction("resources")}
+                onClick={() => setActiveHeroAction("resources")}
+              >
                 Explore Resources
               </Link>
 
               <a
                 href="https://bit.ly/nxghubjobshadowing2026"
-                className="jobshadowing-btn secondary"
+                className={`jobshadowing-btn hero-action-btn ${
+                  activeHeroAction === "apply" ? "is-active" : ""
+                }`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={() => setActiveHeroAction("apply")}
+                onFocus={() => setActiveHeroAction("apply")}
+                onTouchStart={() => setActiveHeroAction("apply")}
+                onClick={() => setActiveHeroAction("apply")}
               >
                 Apply Now
               </a>

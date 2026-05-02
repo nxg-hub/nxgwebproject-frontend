@@ -46,6 +46,25 @@
       <input type="email" name="email" required />
     </form>
 
+    <form
+      name="ebook-resource-form"
+      method="POST"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden>
+      <input type="hidden" name="form-name" value="ebook-resource-form" />
+      <input type="hidden" name="recipient_emails" value="info@nextgenhub.com.ng, admin@nextgenhub.com.ng" />
+      <input type="text" name="name" />
+      <input type="text" name="careerTrack" />
+      <input type="text" name="city" />
+      <textarea name="socialMediaHandles"></textarea>
+      <input type="email" name="email" />
+      <input type="text" name="careerPosition" />
+      <input type="text" name="careerStage" />
+      <input type="text" name="referralSource" />
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

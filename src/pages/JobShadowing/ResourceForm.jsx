@@ -27,9 +27,42 @@ const downloadEbooks = () => {
   });
 };
 
+const COMMON_EMAIL_DOMAIN_FIXES = {
+  "gmai.com": "gmail.com",
+  "gmail.con": "gmail.com",
+  "gmial.com": "gmail.com",
+  "gnail.com": "gmail.com",
+  "yaho.com": "yahoo.com",
+  "yahooo.com": "yahoo.com",
+  "outlok.com": "outlook.com",
+  "outloo.com": "outlook.com",
+  "hotmai.com": "hotmail.com",
+};
+
+const validateEmailInput = (value) => {
+  const email = value.trim().toLowerCase();
+
+  if (!email) {
+    return "Please enter your email address.";
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  if (!emailPattern.test(email)) {
+    return "Enter a valid email address, for example name@gmail.com.";
+  }
+
+  const [, domain = ""] = email.split("@");
+  if (COMMON_EMAIL_DOMAIN_FIXES[domain]) {
+    return `Did you mean ${email.split("@")[0]}@${COMMON_EMAIL_DOMAIN_FIXES[domain]}?`;
+  }
+
+  return "";
+};
+
 function ResourceForm() {
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -43,6 +76,20 @@ function ResourceForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     formData.set("form-name", "ebook-resource-form");
+
+    const emailField = form.elements.email;
+    const emailError = validateEmailInput(emailField.value);
+    if (emailError) {
+      setStatus("error");
+      setMessage(emailError);
+      setEmailError(emailError);
+      emailField.setCustomValidity(emailError);
+      emailField.reportValidity();
+      return;
+    }
+
+    setEmailError("");
+
     downloadEbooks();
 
     try {
@@ -54,6 +101,7 @@ function ResourceForm() {
 
       setStatus("success");
       setMessage("Submitted successfully. Your download has started.");
+      setEmailError("");
       form.reset();
     } catch {
       setStatus("error");
@@ -63,6 +111,13 @@ function ResourceForm() {
     }
   };
 
+  const handleEmailValidation = (event) => {
+    const fieldValue = event.target.value.trim();
+    const errorMessage = fieldValue ? validateEmailInput(fieldValue) : "";
+    event.target.setCustomValidity(errorMessage);
+    setEmailError(errorMessage);
+  };
+
   return (
     <>
       <Header />
@@ -70,7 +125,7 @@ function ResourceForm() {
         <section className="ebooks-form-page">
           <div className="ebooks-form-panel">
             <Link to="/jobshadowing/ebooks" className="ebooks-back-link dark">
-              Back to Resources
+              <span aria-hidden="true">←</span> Back to Resources
             </Link>
 
             <div className="ebooks-form-heading">
@@ -116,7 +171,18 @@ function ResourceForm() {
 
               <label>
                 Email Address*
-                <input type="email" name="email" required />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="name@gmail.com"
+                  className={emailError ? "ebooks-input-error" : ""}
+                  onInput={handleEmailValidation}
+                  onBlur={handleEmailValidation}
+                />
+                {emailError && (
+                  <span className="ebooks-field-error">{emailError}</span>
+                )}
               </label>
 
               <fieldset>

@@ -79,7 +79,9 @@
   text-decoration: none;
   transition: 0.2s;
   animation: fadeUp 0.8s ease 0.55s both;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .ebooks-back-link:hover {
@@ -134,6 +136,12 @@
   max-width: 720px;
 }
 
+.ebooks-click-note {
+  margin-top: 14px;
+  font-weight: 700;
+  color: #2596BE;
+}
+
 .ebooks-access-copy ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -151,6 +159,9 @@
   padding: 14px 16px 14px 42px;
   position: relative;
   line-height: 1.45;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
 }
 
 .ebooks-access-copy li::before {
@@ -162,6 +173,28 @@
   height: 9px;
   background: #2596BE;
   border-radius: 50%;
+}
+
+.ebooks-access-steps .is-arrow-step {
+  padding-bottom: 34px;
+}
+
+.ebooks-access-steps .is-arrow-step span:first-child {
+  display: block;
+}
+
+.ebooks-step-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border-right: 4px solid #2596BE;
+  border-bottom: 4px solid #2596BE;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  animation: ebooksArrowBounce 1.4s ease-in-out infinite;
 }
 
 /* ── Form Panel ── */
@@ -225,6 +258,7 @@
   color: inherit;
   display: block;
   text-decoration: none;
+  position: relative;
 }
 
 .ebook-card:nth-child(1) { animation-delay: 0.1s; }
@@ -269,6 +303,25 @@
   line-height: 1.7;
 }
 
+.ebook-card-cta {
+  margin: 0 20px 20px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(37, 150, 190, 0.1);
+  color: #2596BE;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid rgba(37, 150, 190, 0.18);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.ebook-card:hover .ebook-card-cta {
+  background: #2596BE;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .ebooks-unlock {
   margin-top: 18px;
   border-top: 1px solid #e2e8f0;
@@ -303,6 +356,20 @@
   font: inherit;
   margin-top: 7px;
   padding: 11px 12px;
+}
+
+.ebooks-resource-form .ebooks-input-error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.ebooks-field-error {
+  display: block;
+  margin-top: 8px;
+  color: #b91c1c;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .ebooks-resource-form textarea {
@@ -430,6 +497,15 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes ebooksArrowBounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(6px);
   }
 }
 
