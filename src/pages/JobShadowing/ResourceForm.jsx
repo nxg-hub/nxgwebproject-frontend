@@ -46,9 +46,9 @@ const validateEmailInput = (value) => {
     return "Please enter your email address.";
   }
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.com$/;
   if (!emailPattern.test(email)) {
-    return "Enter a valid email address, for example name@gmail.com.";
+    return "Enter a valid .com email address, for example name@gmail.com.";
   }
 
   const [, domain = ""] = email.split("@");
