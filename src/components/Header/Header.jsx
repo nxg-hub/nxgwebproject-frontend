@@ -66,14 +66,6 @@ const Header = () => {
     setShowSidebar(false);
   }, [location]);
 
-  useEffect(() => {
-    document.body.style.overflow = showSidebar ? "hidden" : "";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showSidebar]);
-
   const handleBackdropClick = () => {
     setShowSidebar(false);
   };
@@ -88,15 +80,15 @@ const Header = () => {
         ></div>
       )}
       <header className="w-full center px-4">
-        <nav className="header-nav w-full max-w-[1280px] gap-3 my-3">
-          <div className="header-main-row between gap-3 h-full flex-1 min-w-0">
-            <div className="header-brand bg-secondary center h-full rounded-[3rem] px-5 shrink-0">
+        <nav className="w-full max-w-[1280px] between gap-3 my-3 h-[52px]">
+          <div className="between gap-3 h-full flex-1 min-w-0">
+            <div className="bg-secondary center h-full rounded-[3rem] px-5 shrink-0">
               <NavLink exact to="/">
                 <img src={logo} alt="Logo" className="object-cover" />
               </NavLink>
             </div>
 
-            <div className="nav-list header-desktop-nav w-full between h-full px-[0.40rem] rounded-[4rem]">
+            <div className="nav-list hidden w-full between h-full px-[0.40rem] rounded-[4rem] lg:flex">
               <ul
                 className={`nav-menu h-full between ${
                   active ? "active center" : ""
@@ -123,74 +115,45 @@ const Header = () => {
                 </div>
               </div>
             </div>
-
-            <div className="header-contact header-desktop-contact pr-2 pl-6 bg-secondary rounded-[3rem] h-full between shrink-0">
-              <Link
-                to="#contact"
-                className="between gap-3"
-                onClick={handleClickContact}
-              >
-                <div style={{ color: "white" }}> Contact Us </div>
-                <div className="bg-primary w-[40px] h-[40px] center rounded-full">
-                  <img src={arrow} alt="arrow" />
-                </div>
-              </Link>
-            </div>
-
-          </div>
-        </nav>
-
-        <div className="mobile-visible-links-bar">
-          <div className="mobile-visible-links">
-            <NavLink exact to="/" className="mobile-visible-link">
-              Home
-            </NavLink>
-            <NavLink exact to="/about" className="mobile-visible-link">
-              About
-            </NavLink>
-            <NavLink exact to="/services" className="mobile-visible-link">
-              Services
-            </NavLink>
           </div>
 
-          <div className="header-mobile-toggle mobile-inline-toggle bg-secondary rounded-[3rem] px-2 flex items-center justify-center shrink-0">
-            <button
-              type="button"
+          <div className="hidden pr-2 pl-6 bg-secondary rounded-[3rem] h-full between lg:flex shrink-0">
+            {/* Change from NavLink to anchor tag */}
+            <Link
+              to="#contact"
+              className="between gap-3"
+              onClick={handleClickContact}
+            >
+              <div style={{ color: "white" }}> Contact Us </div>
+              <div className="bg-primary w-[40px] h-[40px] center rounded-full">
+                <img src={arrow} alt="arrow" />
+              </div>
+            </Link>
+          </div>
+
+          <div className="lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] px-2 flex items-center justify-center shrink-0">
+            <div
               className="text-secondary hover:bg-[#4D4D4D] transition duration-400 hover:text-primary bg-primary rounded-full p-[0.7rem] flex items-center"
               onClick={() => setShowSidebar(!showSidebar)}
-              aria-label={showSidebar ? "Close menu" : "Open menu"}
-              aria-expanded={showSidebar}
-              aria-controls="mobile-navigation"
             >
               <FaBars size={20} />
-            </button>
+            </div>
           </div>
-        </div>
-
+        </nav>
         {/* mobile nav */}
         <div
           className={`${
             showSidebar ? "sidebar active" : "sidebar"
-          } header-mobile-panel px-4 py-6 text-primary`}
-          ref={ref}
-          id="mobile-navigation"
+          } md:hidden px-4 py-6 text-primary`}
         >
-          <div className="mobile-menu-top">
-            <NavLink to="/" className="mobile-menu-brand">
-              <img src={logo} alt="Logo" className="object-cover" />
-            </NavLink>
-
-            <button
-              type="button"
-              className="mobile-menu-close"
-              onClick={() => setShowSidebar(!showSidebar)}
-              aria-label="Close menu"
-            >
-              <FaTimes size={26} />
-            </button>
+          <div
+            className="mobile-menu-close"
+            onClick={() => setShowSidebar(!showSidebar)}
+          >
+            <FaTimes size={30} />
           </div>
 
-          <ul className="mobile-nav-list flex-col gap-3 flex w-full">
+          <ul className="mobile-nav-list flex-col gap-3 flex w-full pt-12">
             {navItems.map((item) => (
               <li key={item.to} className="mobile-nav-item">
                 <NavLink
@@ -215,29 +178,18 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-
-          <div className="mobile-menu-footer">
-            <div className="mobile-socials">
-              <Link
-                to="https://linkedin.com/company/nextgenhub-digital"
-                target="_blank"
-                className="mobile-social-link"
-              >
-                <FaLinkedin />
-              </Link>
-              <Link
-                to="https://www.facebook.com/nextgenhubdigital"
-                target="_blank"
-                className="mobile-social-link"
-              >
-                <FaFacebookSquare />
-              </Link>
-              <div className="mobile-social-link">
-                <FaTwitter />
-              </div>
-              <div className="mobile-social-link">
-                <FaInstagram />
-              </div>
+          <div className="mt-10 flex justify-center gap-5">
+            <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <FaTwitter />
+            </div>
+            <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <FaLinkedin />
+            </div>
+            <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <FaInstagram />
+            </div>
+            <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <FaFacebookSquare />
             </div>
           </div>
         </div>
