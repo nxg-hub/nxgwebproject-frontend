@@ -18,7 +18,7 @@ const companies = [
   { name: "Deloitte", logo: "/jobshadowing/logos/deloitte-new.png" },
   { name: "Interswitch", logo: "/jobshadowing/logos/interswitch.png" },
   { name: "UBA", logo: "/jobshadowing/logos/uba.png" },
-  { name: "OPay", logo: "/jobshadowing/logos/opay.png" },
+  { name: "OPay", logo: "/jobshadowing/logos/opay.jpg" },
 ];
 
 const benefits = [

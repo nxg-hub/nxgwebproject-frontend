@@ -99,14 +99,11 @@ function EbooksPage() {
                 <li>
                   <span>Enter your details</span>
                 </li>
-                <li>
+                <li className="is-arrow-step">
                   <span>Get instant access to all guides</span>
+                  <span className="ebooks-step-arrow" aria-hidden="true"></span>
                 </li>
               </ul>
-
-              <div className="ebooks-down-arrow-wrap" aria-hidden="true">
-                <span className="ebooks-step-arrow"></span>
-              </div>
             </div>
 
           </div>

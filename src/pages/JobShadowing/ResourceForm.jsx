@@ -1,23 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import "./Ebooks.css";
 
 const EBOOK_DOWNLOADS = [
   {
-    href: "/jobshadowing/ebooks/job-readiness-checklist.pdf",
-    filename: "Job Readiness Checklist.pdf",
-  },
-  {
-    href: "/jobshadowing/ebooks/how-to-build-a-tech-portfolio.pdf",
-    filename: "How to Build a Tech Portfolio.pdf",
+    href: "/jobshadowing/ebooks/nxg-hub-job-shadowing-guides.pdf",
+    filename: "NXG-Hub-Job-Shadowing-Guides.pdf",
   },
 ];
-
-const EBOOK_NOTIFICATION_LABEL = EBOOK_DOWNLOADS.map(
-  (ebook) => ebook.filename
-).join(", ");
 
 const encodeFormData = (data) =>
   new URLSearchParams(data).toString();
@@ -68,7 +60,6 @@ const validateEmailInput = (value) => {
 };
 
 function ResourceForm() {
-  const navigate = useNavigate();
   const [status, setStatus] = useState("idle");
   const [message, setMessage] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -85,7 +76,6 @@ function ResourceForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     formData.set("form-name", "ebook-resource-form");
-    formData.set("ebooksRequested", EBOOK_NOTIFICATION_LABEL);
 
     const emailField = form.elements.email;
     const emailError = validateEmailInput(emailField.value);
@@ -113,9 +103,6 @@ function ResourceForm() {
       setMessage("Submitted successfully. Your download has started.");
       setEmailError("");
       form.reset();
-      window.setTimeout(() => {
-        navigate("/jobshadowing/ebooks");
-      }, 1200);
     } catch {
       setStatus("error");
       setMessage(
@@ -157,11 +144,6 @@ function ResourceForm() {
             >
               <input type="hidden" name="form-name" value="ebook-resource-form" />
               <input type="hidden" name="recipient_emails" value="info@nextgenhub.com.ng, admin@nextgenhub.com.ng" />
-              <input
-                type="hidden"
-                name="ebooksRequested"
-                value={EBOOK_NOTIFICATION_LABEL}
-              />
               <label className="ebooks-hidden-field">
                 Do not fill this out if you are human:
                 <input name="bot-field" />
@@ -201,16 +183,6 @@ function ResourceForm() {
                 {emailError && (
                   <span className="ebooks-field-error">{emailError}</span>
                 )}
-              </label>
-
-              <label>
-                Phone Number*
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  required
-                  placeholder="08012345678"
-                />
               </label>
 
               <fieldset>
