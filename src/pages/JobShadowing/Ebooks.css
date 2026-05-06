@@ -144,12 +144,13 @@
 
 .ebooks-access-copy ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   list-style: none;
   margin-top: 24px;
   padding-left: 0;
   color: #334155;
+  align-items: stretch;
 }
 
 .ebooks-access-copy li {
@@ -175,26 +176,37 @@
   border-radius: 50%;
 }
 
-.ebooks-access-steps .is-arrow-step {
-  padding-bottom: 34px;
+.ebooks-down-arrow-wrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  min-height: 60px;
+  position: relative;
 }
 
-.ebooks-access-steps .is-arrow-step span:first-child {
-  display: block;
+.ebooks-down-arrow-wrap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(37, 150, 190, 0.1), rgba(37, 150, 190, 0.55), rgba(37, 150, 190, 0.08));
+  transform: translateX(-50%);
 }
 
 .ebooks-step-arrow {
-  position: absolute;
-  left: 50%;
-  bottom: 12px;
-  width: 16px;
-  height: 16px;
-  margin-left: -8px;
+  position: relative;
+  width: 18px;
+  height: 18px;
   border-right: 4px solid #2596BE;
   border-bottom: 4px solid #2596BE;
-  transform: rotate(45deg);
   border-radius: 2px;
-  animation: ebooksArrowBounce 1.4s ease-in-out infinite;
+  box-shadow: 0 0 0 10px rgba(37, 150, 190, 0.08);
+  transform: rotate(45deg);
+  animation: ebooksArrowDrop 1.6s ease-in-out infinite;
+  z-index: 1;
 }
 
 /* ── Form Panel ── */
@@ -500,20 +512,27 @@
   }
 }
 
-@keyframes ebooksArrowBounce {
+@keyframes ebooksArrowDrop {
   0%, 100% {
-    transform: rotate(45deg) translateY(0);
+    transform: translateY(0) rotate(45deg);
   }
   50% {
-    transform: rotate(45deg) translateY(6px);
+    transform: translateY(8px) rotate(45deg);
   }
 }
 
 /* ── Responsive ───────────────────────────────── */
 @media (max-width: 900px) {
-  .ebooks-access-copy ul,
   .ebooks-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ebooks-access-copy ul {
+    grid-template-columns: 1fr;
+  }
+
+  .ebooks-down-arrow-wrap {
+    min-height: 48px;
   }
 
   .ebooks-access-card {
