@@ -37,8 +37,8 @@
   justify-content: center;
   height: 100%;
   transition: transform 300ms ease-out;
-  transform-origin: left center; /* Set the transform origin to the left */
-  transform: scale(1); /* Set the initial scale */
+  transform-origin: left center;
+  transform: scale(1);
 }
 
 /* Active navigation link */
@@ -53,13 +53,13 @@
   font-size: 20px;
   font-weight: 700;
   transition: transform 300ms ease-out;
-  transform-origin: left center; /* Set the transform origin to the left */
-  transform: scale(1.1); /* Set the initial scale for the active state */
+  transform-origin: left center;
+  transform: scale(1);
 }
 
 /* Expand and shift other buttons to the right when one button is active */
 .nav_item .active ~ .nav-links {
-  transform: translateX(20px) scale(1); /* Adjust the translation distance to your preference */
+  transform: translateX(20px) scale(1);
 }
 
 .nav_underline::after {
@@ -113,59 +113,4 @@
 .sidebar.active {
   transform: translateX(0);
   z-index: 100;
-}
-
-.mobile-menu-close {
-  width: 48px;
-  height: 48px;
-  margin-left: auto;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f4f7fb;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.mobile-menu-close:hover {
-  background: rgba(37, 150, 190, 0.22);
-  transform: scale(1.02);
-}
-
-.mobile-nav-list {
-  padding-top: 3rem;
-}
-
-.mobile-nav-item {
-  width: 100%;
-  list-style: none;
-}
-
-.mobile-nav-link {
-  width: 100%;
-  min-height: 58px;
-  padding: 0 18px;
-  justify-content: flex-start;
-  border-radius: 18px;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: #f4f7fb;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.mobile-nav-link:hover,
-.mobile-nav-link:focus {
-  transform: none;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav-link-active {
-  color: #102130;
-  background: #ffffff;
-  border-color: #ffffff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }

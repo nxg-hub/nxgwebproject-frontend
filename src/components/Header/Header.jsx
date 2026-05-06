@@ -15,14 +15,6 @@ import arrow from "../../assets/svgs/arrowNav.svg";
 
 // Define the Header component
 const Header = () => {
-  const navItems = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/services", label: "Services" },
-    { to: "/career", label: "Career" },
-    { to: "/jobshadowing", label: "Job Shadowing" },
-  ];
-
   const [active, setActive] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const ref = useRef();
@@ -79,28 +71,49 @@ const Header = () => {
           onClick={handleBackdropClick}
         ></div>
       )}
-      <header className="w-full center px-4">
-        <nav className="w-full max-w-[1280px] between gap-3 my-3 h-[52px]">
-          <div className="between gap-3 h-full flex-1 min-w-0">
-            <div className="bg-secondary center h-full rounded-[3rem] px-5 shrink-0">
+      <header className="w-screen center">
+        <nav className="w-full mx-4 between gap-[10px] md:gap-0 my-3 h-[52px]">
+          <div className="between gap-6 h-full">
+            <div className="bg-secondary center w-[136%] h-full rounded-[3rem] p-0">
               <NavLink exact to="/">
                 <img src={logo} alt="Logo" className="object-cover" />
               </NavLink>
             </div>
 
-            <div className="nav-list hidden w-full between h-full px-[0.40rem] rounded-[4rem] lg:flex">
+            <div className="nav-list w-full between h-full px-[0.40rem] rounded-[4rem] sm:hidden lg:flex gap-[0.8rem]">
               <ul
-                className={`nav-menu h-full between ${
+                className={`nav-menu h-full ${
                   active ? "active center" : ""
                 }`}
               >
-                {navItems.map((item) => (
-                  <li key={item.to} className="nav_item h-full center">
-                    <NavLink exact to={item.to} className="nav-links">
-                      {item.label}
-                    </NavLink>
-                  </li>
-                ))}
+                <li className="nav_item h-full center">
+                  <NavLink exact to="/" className="nav-links ">
+                    Home
+                  </NavLink>
+                </li>
+
+                <li className="nav_item h-full center">
+                  <NavLink exact to="/about" className="nav-links">
+                    About
+                  </NavLink>
+                </li>
+
+                <li className="nav_item h-full center">
+                  <NavLink exact to="/services" className="nav-links">
+                    Services
+                  </NavLink>
+                </li>
+
+                <li className="nav_item h-full center">
+                  <NavLink exact to="/career" className="nav-links">
+                    Career
+                  </NavLink>
+                </li>
+                <li className="nav_item h-full center">
+                  <NavLink exact to="/jobshadowing" className="nav-links">
+                    Job Shadowing
+                  </NavLink>
+                </li>
               </ul>
 
               <div className="platforms center h-full center">
@@ -117,7 +130,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="hidden pr-2 pl-6 bg-secondary rounded-[3rem] h-full between lg:flex shrink-0">
+          <div className="pr-2 pl-6 bg-secondary rounded-[3rem] h-full between sm:hidden lg:flex">
             {/* Change from NavLink to anchor tag */}
             <Link
               to="#contact"
@@ -131,9 +144,9 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] px-2 flex items-center justify-center shrink-0">
+          <div className="lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] w-[120%] flex flex-col items-end justify-center md:pr-2">
             <div
-              className="text-secondary hover:bg-[#4D4D4D] transition duration-400 hover:text-primary bg-primary rounded-full p-[0.7rem] flex items-center"
+              className="text-secondary hover:bg-[#4D4D4D] transition duration-400 hover:text-primary bg-primary rounded-full md:text-xl lg:hidden p-[0.7rem] mr-2 md:mr-0 flex items-center md:px-2.5 md:w-1/5"
               onClick={() => setShowSidebar(!showSidebar)}
             >
               <FaBars size={20} />
@@ -144,34 +157,70 @@ const Header = () => {
         <div
           className={`${
             showSidebar ? "sidebar active" : "sidebar"
-          } md:hidden px-4 py-6 text-primary`}
+          } md:hidden px-2 py-6 text-primary`}
         >
           <div
-            className="mobile-menu-close"
+            className="float-right hover:bg-[#4D4D4D] duration-400 hover:text-secondary"
             onClick={() => setShowSidebar(!showSidebar)}
           >
             <FaTimes size={30} />
           </div>
 
-          <ul className="mobile-nav-list flex-col gap-3 flex w-full pt-12">
-            {navItems.map((item) => (
-              <li key={item.to} className="mobile-nav-item">
-                <NavLink
-                  exact
-                  to={item.to}
-                  className={({ isActive }) =>
-                    `nav-links mobile-nav-link ${isActive ? "mobile-nav-link-active" : ""}`
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
+          <ul className={`flex-col gap-4 flex w-full pt-10`}>
+            <li className="w-full border-b border-[#b2b2b2] py-4 ">
+              <NavLink
+                exact
+                to="/"
+                className="nav-links transition-all relative nav_underline"
+              >
+                Home
+              </NavLink>
+            </li>
 
-            <li className="mobile-nav-item">
+            <li className="w-full border-b border-[#b2b2b2] pb-2 py-2">
+              <NavLink
+                exact
+                to="/about"
+                className="nav-links relative nav_underline"
+              >
+                About
+              </NavLink>
+            </li>
+
+            <li className="w-full border-b border-[#b2b2b2] py-2">
+              <NavLink
+                exact
+                to="/services"
+                className="nav-links relative nav_underline"
+              >
+                Services
+              </NavLink>
+            </li>
+
+            <li className="w-full border-b border-[#b2b2b2] py-2">
+              <NavLink
+                exact
+                to="/career"
+                className="nav-links relative nav_underline"
+              >
+                Careers
+              </NavLink>
+            </li>
+
+            <li className="w-full border-b border-[#b2b2b2] py-2">
+              <NavLink
+                exact
+                to="/jobshadowing"
+                className="nav-links relative nav_underline"
+              >
+                Job Shadowing
+              </NavLink>
+            </li>
+
+            <li className="w-full border-b border-[#b2b2b2] py-2">
               <Link
                 to="#contact"
-                className="nav-links mobile-nav-link"
+                className="nav-links relative nav_underline"
                 onClick={handleClickContact}
               >
                 Contact Us
