@@ -1,59 +1,54 @@
-// Importing necessary modules and styles
-import React, { useState, useRef, useEffect } from "react";
-import "./Header.css"; // Styling for the header
-import { Link, NavLink, useLocation } from "react-router-dom"; // Helps with navigation
+import React, { useEffect, useRef, useState } from "react";
+import "./Header.css";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import {
   FaBars,
-  FaInstagram,
   FaFacebookSquare,
+  FaInstagram,
   FaLinkedin,
   FaTimes,
   FaTwitter,
-} from "react-icons/fa"; // Icons for social media
+} from "react-icons/fa";
 import logo from "../../assets/svgs/logo.svg";
 import arrow from "../../assets/svgs/arrowNav.svg";
 
-// Define the Header component
-const Header = () => {
-  const navItems = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/services", label: "Services" },
-    { to: "/career", label: "Career" },
-    { to: "/jobshadowing", label: "Job Shadowing" },
-  ];
+const navItems = [
+  { to: "/", label: "Home", end: true },
+  { to: "/about", label: "About" },
+  { to: "/services", label: "Services" },
+  { to: "/career", label: "Career" },
+  { to: "/jobshadowing", label: "Job Shadowing" },
+];
 
-  const [active, setActive] = useState(false);
+const mobileNavItems = navItems.slice(0, 3);
+
+const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const ref = useRef();
+  const ref = useRef(null);
   const location = useLocation();
 
   const handleClickContact = (event) => {
     event.preventDefault();
+    setShowSidebar(false);
 
-    // Build the anchor link to the home page and the contact section
-    const contactLink = `${window.location.origin}/#contact`;
-     // Navigate to the anchor link
-     window.location.href = contactLink;
-
-    // Assuming you have a function scrollToContactSection that scrolls to the contact section
-    // You can replace this with your actual scrolling logic
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname === "/") {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
     }
 
-    // Close the menu if it's open
-    setShowSidebar(false);
+    window.location.href = `${window.location.origin}/#contact`;
   };
 
   useEffect(() => {
-    const checkIfClickedOutside = (e) => {
-      // If the mobile menu is open and clicked target is not within the menu
-      if (showSidebar && ref.current && !ref.current.contains(e.target)) {
+    const checkIfClickedOutside = (event) => {
+      if (showSidebar && ref.current && !ref.current.contains(event.target)) {
         setShowSidebar(false);
       }
     };
+
     document.addEventListener("mousedown", checkIfClickedOutside);
 
     return () => {
@@ -62,142 +57,131 @@ const Header = () => {
   }, [showSidebar]);
 
   useEffect(() => {
-    // close mobile menu on location change
     setShowSidebar(false);
   }, [location]);
 
-  useEffect(() => {
-    document.body.style.overflow = showSidebar ? "hidden" : "";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showSidebar]);
-
-  const handleBackdropClick = () => {
-    setShowSidebar(false);
-  };
-
   return (
     <>
-      {/* mobile backdrop */}
       {showSidebar && (
         <div
           className={`${showSidebar ? "backdrop active" : "backdrop"} md:hidden`}
-          onClick={handleBackdropClick}
-        ></div>
+          onClick={() => setShowSidebar(false)}
+        />
       )}
-      <header className="w-full center px-4">
-        <nav className="header-nav w-full max-w-[1280px] gap-3 my-3">
-          <div className="header-main-row between gap-3 h-full flex-1 min-w-0">
-            <div className="header-brand bg-secondary center h-full rounded-[3rem] px-5 shrink-0">
-              <NavLink exact to="/">
+
+      <header className="w-screen center">
+        <nav className="header-shell w-full mx-4 between gap-[10px] md:gap-0 my-3 h-[52px]">
+          <div className="between gap-3 h-full">
+            <div className="header-brand bg-secondary center h-full rounded-[3rem] px-6 shrink-0">
+              <NavLink to="/" end>
                 <img src={logo} alt="Logo" className="object-cover" />
               </NavLink>
             </div>
 
-            <div className="nav-list header-desktop-nav w-full between h-full px-[0.40rem] rounded-[4rem]">
-              <ul
-                className={`nav-menu h-full between ${
-                  active ? "active center" : ""
-                }`}
-              >
+            <div className="mobile-quick-links lg:hidden">
+              {mobileNavItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.end}
+                  className={({ isActive }) =>
+                    `mobile-quick-link ${isActive ? "mobile-quick-link-active" : ""}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+
+            <div className="nav-list header-desktop-nav hidden w-full between h-full px-[0.40rem] rounded-[4rem] lg:flex gap-8 xl:gap-12">
+              <ul className="nav-menu h-full between">
                 {navItems.map((item) => (
                   <li key={item.to} className="nav_item h-full center">
-                    <NavLink exact to={item.to} className="nav-links">
+                    <NavLink
+                      to={item.to}
+                      end={item.end}
+                      className={({ isActive }) =>
+                        `nav-links ${isActive ? "nav-links-active" : ""}`
+                      }
+                    >
                       {item.label}
                     </NavLink>
                   </li>
                 ))}
               </ul>
 
-              <div className="platforms center h-full center">
-                <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-                  <Link to='https://linkedin.com/company/nextgenhub-digital' target='_blank'><FaLinkedin /></Link>
-                </div>
-                <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
-                  <Link to='https://www.facebook.com/nextgenhubdigital' target='_blank'><FaFacebookSquare /></Link>
-                </div>
-                <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <div className="platforms center h-full text-md">
+                <a
+                  href="https://linkedin.com/company/nextgenhub-digital"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://www.facebook.com/nextgenhubdigital"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center"
+                >
+                  <FaFacebookSquare />
+                </a>
+                <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center">
                   <FaTwitter />
                 </div>
               </div>
             </div>
-
-            <div className="header-contact header-desktop-contact pr-2 pl-6 bg-secondary rounded-[3rem] h-full between shrink-0">
-              <Link
-                to="#contact"
-                className="between gap-3"
-                onClick={handleClickContact}
-              >
-                <div style={{ color: "white" }}> Contact Us </div>
-                <div className="bg-primary w-[40px] h-[40px] center rounded-full">
-                  <img src={arrow} alt="arrow" />
-                </div>
-              </Link>
-            </div>
-
-          </div>
-        </nav>
-
-        <div className="mobile-visible-links-bar">
-          <div className="mobile-visible-links">
-            <NavLink exact to="/" className="mobile-visible-link">
-              Home
-            </NavLink>
-            <NavLink exact to="/about" className="mobile-visible-link">
-              About
-            </NavLink>
-            <NavLink exact to="/services" className="mobile-visible-link">
-              Services
-            </NavLink>
           </div>
 
-          <div className="header-mobile-toggle mobile-inline-toggle bg-secondary rounded-[3rem] px-2 flex items-center justify-center shrink-0">
+          <div className="header-contact header-desktop-contact hidden pr-2 pl-6 bg-secondary rounded-[3rem] h-full between lg:flex shrink-0">
+            <Link
+              to="#contact"
+              className="between gap-3"
+              onClick={handleClickContact}
+            >
+              <div style={{ color: "white" }}>Contact Us</div>
+              <div className="bg-primary w-[40px] h-[40px] center rounded-full">
+                <img src={arrow} alt="arrow" />
+              </div>
+            </Link>
+          </div>
+
+          <div className="header-mobile-menu lg:hidden bg-secondary cursor-pointer h-full rounded-[3rem] flex items-center justify-center shrink-0 px-2">
             <button
               type="button"
-              className="text-secondary hover:bg-[#4D4D4D] transition duration-400 hover:text-primary bg-primary rounded-full p-[0.7rem] flex items-center"
-              onClick={() => setShowSidebar(!showSidebar)}
+              className="text-secondary hover:bg-[#4D4D4D] transition duration-400 hover:text-primary bg-primary rounded-full md:text-xl lg:hidden p-[0.7rem] mr-2 md:mr-0 flex items-center md:px-2.5 md:w-1/5"
+              onClick={() => setShowSidebar((prev) => !prev)}
               aria-label={showSidebar ? "Close menu" : "Open menu"}
-              aria-expanded={showSidebar}
-              aria-controls="mobile-navigation"
             >
               <FaBars size={20} />
             </button>
           </div>
-        </div>
+        </nav>
 
-        {/* mobile nav */}
         <div
+          ref={ref}
           className={`${
             showSidebar ? "sidebar active" : "sidebar"
-          } header-mobile-panel px-4 py-6 text-primary`}
-          ref={ref}
-          id="mobile-navigation"
+          } md:hidden px-2 py-6 text-primary`}
         >
-          <div className="mobile-menu-top">
-            <NavLink to="/" className="mobile-menu-brand">
-              <img src={logo} alt="Logo" className="object-cover" />
-            </NavLink>
+          <button
+            type="button"
+            className="float-right hover:bg-[#4D4D4D] duration-400 hover:text-secondary"
+            onClick={() => setShowSidebar(false)}
+            aria-label="Close menu"
+          >
+            <FaTimes size={30} />
+          </button>
 
-            <button
-              type="button"
-              className="mobile-menu-close"
-              onClick={() => setShowSidebar(!showSidebar)}
-              aria-label="Close menu"
-            >
-              <FaTimes size={26} />
-            </button>
-          </div>
-
-          <ul className="mobile-nav-list flex-col gap-3 flex w-full">
+          <ul className="flex-col gap-4 flex w-full pt-10">
             {navItems.map((item) => (
-              <li key={item.to} className="mobile-nav-item">
+              <li key={item.to} className="w-full border-b border-[#b2b2b2] py-2">
                 <NavLink
-                  exact
                   to={item.to}
+                  end={item.end}
                   className={({ isActive }) =>
-                    `nav-links mobile-nav-link ${isActive ? "mobile-nav-link-active" : ""}`
+                    `nav-links relative nav_underline ${isActive ? "nav-links-active" : ""}`
                   }
                 >
                   {item.label}
@@ -205,10 +189,10 @@ const Header = () => {
               </li>
             ))}
 
-            <li className="mobile-nav-item">
+            <li className="w-full border-b border-[#b2b2b2] py-2">
               <Link
                 to="#contact"
-                className="nav-links mobile-nav-link"
+                className="nav-links relative nav_underline"
                 onClick={handleClickContact}
               >
                 Contact Us
@@ -216,29 +200,29 @@ const Header = () => {
             </li>
           </ul>
 
-          <div className="mobile-menu-footer">
-            <div className="mobile-socials">
-              <Link
-                to="https://linkedin.com/company/nextgenhub-digital"
-                target="_blank"
-                className="mobile-social-link"
-              >
-                <FaLinkedin />
-              </Link>
-              <Link
-                to="https://www.facebook.com/nextgenhubdigital"
-                target="_blank"
-                className="mobile-social-link"
-              >
-                <FaFacebookSquare />
-              </Link>
-              <div className="mobile-social-link">
-                <FaTwitter />
-              </div>
-              <div className="mobile-social-link">
-                <FaInstagram />
-              </div>
+          <div className="mt-10 flex justify-center gap-5">
+            <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <FaTwitter />
             </div>
+            <a
+              href="https://linkedin.com/company/nextgenhub-digital"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md"
+            >
+              <FaLinkedin />
+            </a>
+            <div className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md">
+              <FaInstagram />
+            </div>
+            <a
+              href="https://www.facebook.com/nextgenhubdigital"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-primary rounded-full h-[40px] w-[40px] text-secondary center text-md"
+            >
+              <FaFacebookSquare />
+            </a>
           </div>
         </div>
       </header>
